@@ -1,0 +1,12 @@
+.label {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--html-themewin-com-alto, #ddd);
+  color: var(--html-themewin-com-nevada, #5f6c76);
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

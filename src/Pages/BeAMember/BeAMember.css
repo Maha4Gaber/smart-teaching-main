@@ -1,0 +1,91 @@
+.main-membership-img{
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../../assests/MemberShip/Rectangle\ 13415.png);  
+}
+.main-membership-img figcaption{
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+}
+
+@media screen and (max-width: 768px) {
+    .main-membership-img figcaption{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+.main-membership-img h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.membership{
+    padding: 2.5rem 3.75rem;
+    background: var(--gray-color);
+}
+
+@media screen and (max-width: 768px) {
+    .membership{
+        padding: 1rem;
+    }
+}
+
+.membership .member-type , .membership .join-community, .membership .membership-plans{
+    border-radius: 0.75rem;
+    background: var(--white-color);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+}
+
+.membership h2{
+    font-family: Arial;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.membership ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.membership .simple-icon {
+    width: 1.00125rem;
+    height: 1rem;  
+    color: var(--darkgreen-color);
+}
+
+.membership .membership-plans{
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.membership .membership-plans .row{
+    margin-bottom: 6.25rem;  
+}
+
+.membership .membership-plans h2{
+    margin-bottom: 3.81rem;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    
+    .membership-plans .row{
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+}
+
+
+
+
+
+

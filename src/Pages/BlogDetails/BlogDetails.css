@@ -1,0 +1,67 @@
+.blog-details{
+    background-color: var(--gray-color);
+}
+.blog-details .section-bg{
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #191B1E;
+    background-color: #F5F5FE;
+    /* margin-bottom: 3.76rem; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../../assests/BlogDetails/main-img.jpeg);
+}
+
+.section-bg h1{
+    font-family: Arial;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.section-bg a, .section-bg span{
+    font-family: Arial;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section-bg a{
+    color: #191B1E;
+}
+
+.blog-details .blog-details-container{
+    padding: 3.67rem
+}
+
+@media screen and (max-width: 768px) {
+    .blog-details .blog-details-container{
+        padding: 1rem;
+    }
+}
+
+
+.blog-box{
+    padding: 1.94rem;
+    border: 1px solid #DDD;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.02);
+    margin-bottom: 3.75rem;
+}
+
+.blog-box h3{
+    font-family: Arial;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0 .38rem;
+    margin-bottom: 1.56rem;
+    border-left: 0.125rem solid var(--darkgreen-color);
+} 
+

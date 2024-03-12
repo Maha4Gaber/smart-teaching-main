@@ -1,0 +1,74 @@
+.main-expert-acd-img{
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../../assests/ExpertTeachingAcd/main-img.png);  
+}
+
+.main-expert-acd-img figcaption{
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+}
+
+@media screen and (max-width: 768px) {
+    .main-expert-acd-img figcaption{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+.main-expert-acd-img h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #DEBD63;
+}
+
+.expert-academy{
+    padding: 2.5rem 3.75rem;
+    background: var(--gray-color);
+}
+
+@media screen and (max-width: 768px) {
+    .expert-academy{
+        padding: 1rem;
+    }
+}
+
+.expert-academy .expert-teacher-sidebar , .expert-academy .expert-academy-details{
+    border-radius: 0.75rem;
+    background: var(--white-color);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+}
+
+.expert-academy .expert-academy-details{
+    padding: 1.5rem 1.25rem;
+}
+
+.expert-academy h2{
+    font-family: Arial;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.expert-academy h3{
+    text-align: center;
+    font-family: Arial;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 2rem;
+    color: var(--darkgreen-color);
+}
+
+.expert-academy-card{
+    width: auto !important;
+    padding: 1rem !important;
+    height: 100% !important;
+}

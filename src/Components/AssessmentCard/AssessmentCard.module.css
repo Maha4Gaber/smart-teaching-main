@@ -1,0 +1,71 @@
+.assessmentCard {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 0px 15px 2px rgba(95, 45, 237, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+      height: 100%;
+        justify-content: space-around;
+}
+.assessmentCard__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.assessmentCard__logo img {
+  width: 82px;
+  height: 82px !important;
+  margin: 10px;
+}
+.assessmentCard h3 {
+  color: #000 !important;
+  align-self: self-start !important;
+  /* 24 Medium */
+  font-family: Arial;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 15px 10px !important;
+}
+.assessmentCard h4 {
+  color: #000;
+
+  /* 18 Regular */
+  font-family: Arial;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 5px 10px;
+}
+.assessmentCard__item {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.assessmentCard span {
+  width: 20px;
+  height: 20px;
+  background-color: #1d6d5d;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 10px;
+}
+.assessmentCard li {
+  list-style: none;
+  color: var(--Smoky-Black, #0f0f0f);
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

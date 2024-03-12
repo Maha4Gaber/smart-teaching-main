@@ -1,0 +1,10 @@
+.profile {
+  padding: 40px;
+  background: #fbfbfb;
+}
+.profile_layout {
+  display: grid;
+  grid-template-columns: 427px 475px 339px;
+  gap: 10px;
+  margin: 20px 0px;
+}

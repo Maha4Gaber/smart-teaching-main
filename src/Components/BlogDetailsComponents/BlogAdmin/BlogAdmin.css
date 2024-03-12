@@ -1,0 +1,39 @@
+.blog-admin{
+    padding: 2rem 1rem !important;
+}
+.blog-admin .blog-admin-img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    background-color: var(--white-color);
+}
+
+.blog-admin .blog-admin-img img{
+    width: auto !important;
+    height: auto !important;
+}
+
+.blog-admin h2{
+    font-family: Arial !important;
+    font-size: 1.5rem !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: normal !important;
+    text-align: center !important;
+    margin-bottom: 1.25rem ;
+}
+
+.blog-admin p{
+    color: #5F6C76;
+    font-family: Arial;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 2rem;
+    text-align: center !important;
+}

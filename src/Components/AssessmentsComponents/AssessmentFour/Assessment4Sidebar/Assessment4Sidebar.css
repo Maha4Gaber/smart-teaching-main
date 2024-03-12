@@ -1,0 +1,19 @@
+.ass4-sidebar h3{
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: Arial;
+    font-style: normal;
+    line-height: normal;
+    margin-bottom: 1.25rem;
+    color: var(--darkgreen-color);
+}
+
+.ass4-side-img{
+    width: 16.625rem;
+    height: 16.6875rem;
+}
+
+.ass4-sidebar a img{
+    height: 5.875rem;
+    width: 15.0625rem;
+}

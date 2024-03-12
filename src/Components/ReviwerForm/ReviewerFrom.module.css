@@ -1,0 +1,98 @@
+.reviewer_From {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.reviewer_From h3 {
+  color: var(--html-themewin-com-black, #000);
+
+  /* 24 Bold */
+  font-family: Arial;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.form_review {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form_review input[type='text'] {
+  border-radius: 4px;
+  border: 1px solid var(--html-themewin-com-alto, #ddd);
+  background: none;
+  padding: 15px 20px;
+  max-height: 60px;
+}
+.reviewer_From input::placeholder {
+  color: var(--html-themewin-com-boulder, #757575);
+
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.reviewer_From textarea {
+  resize: none;
+  border-radius: 4px;
+  border: 1px solid var(--html-themewin-com-alto, #ddd);
+  background: none;
+  padding: 15px 20px;
+  height: 209px;
+}
+.reviewer_From textarea::placeholder {
+  color: var(--html-themewin-com-boulder, #757575);
+
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.reviewer_From__check {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.reviewer_From__check input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #214a4a;
+}
+.reviewer_From__check label {
+  color: var(--html-themewin-com-nevada, #5f6c76);
+
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.actions button {
+  border-radius: 4px;
+  background: var(--Green, #214a4a);
+  border: none;
+  color: var(--white, var(--white, #fff));
+  text-align: center;
+
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 16px 80px;
+  margin-bottom: 30px;
+}

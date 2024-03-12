@@ -1,0 +1,32 @@
+.recent-blog{
+    margin-bottom: 1.25rem;
+}
+.recent-blog img{
+    width: 5.6875rem;
+    height: 4.625rem;
+}
+
+.recent-blog-date{
+    color: var(--darkgreen-color);
+    font-family: Arial;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.recent-blog-details{
+    overflow: hidden;
+}
+
+.recent-blog-desc{
+    overflow: hidden;
+    color: var(--black-color);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Arial;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

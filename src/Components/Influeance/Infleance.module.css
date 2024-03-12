@@ -1,0 +1,31 @@
+.influeance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 0px;
+}
+.influeance img {
+  max-width: 132px;
+  max-height: 127px;
+  border-radius: 4px;
+}
+.influeance h5 {
+  olor: #000;
+
+  /* 18 Regular */
+  font-family: Arial;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 400px) {
+  .influeance img {
+    width: 55px;
+    max-height: 100px;
+  }
+  .influeance h5 {
+    font-size: 12px;
+  }
+}

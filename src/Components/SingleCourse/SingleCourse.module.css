@@ -1,0 +1,35 @@
+.single_course {
+  display: flex;
+  gap: 20px;
+}
+
+.single_course img {
+  width: 90px;
+  height: 74px;
+}
+.desc__price {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.desc__price p {
+  color: var(--Green, #214a4a);
+  margin: 0;
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.desc__price span {
+  color: var(--html-themewin-com-black, #000);
+
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 180px;
+}

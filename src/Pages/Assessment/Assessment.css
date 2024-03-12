@@ -1,0 +1,36 @@
+.assessment__left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.assessment__left h3 {
+  color: var(--Black, #0f0f0f);
+  text-align: center;
+
+  font-family: Arial;
+  font-size: 24px;
+  margin: 10px auto;
+  max-width: 288px;
+  font-weight: 400;
+}
+.assessment__left h5 {
+  color: var(--Green, #214a4a);
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.assessment__left p {
+  color: var(--Black, #0f0f0f);
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.assessment__left img {
+  margin-top: -10px;
+}

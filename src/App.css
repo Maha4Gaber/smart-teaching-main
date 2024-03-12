@@ -1,0 +1,76 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+ul {
+  padding-left: 0px;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.resource__layout {
+  background: var(--Gray-BG, #f2f2f2);
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(33, 74, 74);
+}
+.info__layout {
+  display: grid;
+  padding: 20px 70px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+@media (max-width: 900px) {
+  .info__layout {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .info__layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 590px) {
+  .info__layout {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.modal.custom .modal-dialog {
+  width: 50%;
+  margin: 0 auto;
+  /*add what you want here*/
+}

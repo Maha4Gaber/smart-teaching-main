@@ -1,0 +1,131 @@
+.main-ass5-img{
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../../assests/Assessments/Assessment5/main-bg.png);  
+}
+
+.main-ass5-img figcaption{
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+}
+
+@media screen and (max-width: 768px) {
+    .main-ass5-img figcaption{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+.main-ass5-img h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.main-ass5-img h4{
+    color: #DEBD63;
+    font-weight: 700;
+    font-size: 2.25rem;
+    font-family: Arial;
+    font-style: normal;
+    line-height: normal;
+}
+
+
+.ass5{
+    padding: 2.5rem 3.75rem;
+    background: var(--gray-color);
+}
+
+.ass5 .ass5-sidebar , .ass5 .ass5-details{
+    border-radius: 0.75rem;
+    background: var(--white-color);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+}
+
+.ass5 h2{
+    font-family: Arial;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.ass5 .special-p{
+    color: #0F0F0F;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: Arial;
+    font-style: normal;
+    line-height: normal;
+    padding-left: .75rem;
+    margin-bottom: 1.25rem;
+    border-left: 2px solid var(--darkgreen-color);
+}
+
+.ass5 .special-p span{
+    color: var(--darkgreen-color);
+}
+
+.ass5 ul{
+    padding: 0;
+}
+
+.ass5 ul li{
+    align-items: baseline;
+    list-style-type: none;
+}
+
+.ass5 .desc{
+    color: #0F0F0F;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: Arial;
+    font-style: normal;
+    line-height: normal;
+}
+
+.ass5 .simple-icon {
+    height: 1rem;  
+    width: 1.00125rem;
+    color: var(--darkgreen-color);
+}
+
+@media screen and (min-width: 1200px) {
+    .special-font{
+        font-size: .75rem !important;
+    }
+    .L-2{
+        left: 2%;
+    }
+    
+}
+
+
+.large-mb{
+    margin-bottom: 3.75rem !important;
+}
+
+.high-mb{
+    margin-bottom: 2.5rem !important;
+}
+
+.med-mb{
+    margin-bottom: 2rem !important;
+}
+
+@media screen and (max-width: 1200px) {
+    .ass5 .main-row{
+        flex-direction: column-reverse !important;
+    }
+}
+
+@media screen and (max-width: 723px)  {
+    .section-p-sm{
+        padding: 1rem !important;
+    }
+}

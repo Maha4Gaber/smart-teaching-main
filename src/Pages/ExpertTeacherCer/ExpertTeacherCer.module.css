@@ -1,0 +1,12 @@
+.ETC {
+  background: var(--Gray-BG, #f2f2f2);
+  padding: 10px 30px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+@media (max-width: 980px) {
+  .ETC {
+    grid-template-columns: 1fr;
+  }
+}

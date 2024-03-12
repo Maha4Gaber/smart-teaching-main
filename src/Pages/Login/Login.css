@@ -1,0 +1,36 @@
+.login-sec{
+    background-image: url(../../assests/Login/login-bg.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    /* height: 61rem; */
+    height: 100vh;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 95vh; */
+}
+
+/* .login-sec{
+    overflow-x: hidden;
+} */
+
+.login-sec .login-img img{
+    
+    width: 8.3125rem;
+    height: 5.07006rem;
+}
+
+@media screen and (max-width: 548px) {
+    .login-sec .login-form{
+        max-width: 90%;
+    }
+
+    .login-sec form input{
+        max-width: 100% !important;
+    }
+    
+    .login-sec .modal-content{
+        max-width: 90% !important; 
+    }
+}

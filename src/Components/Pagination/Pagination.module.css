@@ -1,0 +1,25 @@
+.Pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding-left: 0px;
+  margin-top: 20px;
+}
+.Pagination button {
+  display: flex;
+  max-width: 63.471px;
+  max-height: 63.471px;
+  padding: 16.735px 16.735px 15.736px 16.736px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--gray, #f0f1f3);
+  background: var(--white, #fff);
+  cursor: pointer;
+
+  color: #000;
+  font-family: Arial;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
