@@ -45,22 +45,22 @@ const MiddleAssessment = () => {
           <TextAssessment> {t("testAssessment15")}</TextAssessment>
           <h3 className={classes.h3}> {t("testAssessment16")}</h3>
           <TextAssessment> {t("testAssessment17")}</TextAssessment>
-          <div className="row justify-content-center flex-wrap g-5 mx-3">
-              <div className="col-lg-6 col-sm-12 ">
+          <div className="row justify-content-center  g-1 mx-1">
+              <div className="col-lg-4 col-sm-6 ">
                   <AssessmentCard
                       items={items}
                       logo={Logoone}
                       title={t("teachingSkills")}
                   />
               </div>
-              <div className="col-lg-6 col-sm-12 ">
+              <div className="col-lg-4 col-sm-6 ">
                   <AssessmentCard
                       items={items}
                       logo={LogoTwo}
                       title={t("CO")}
                   />
               </div>
-              <div className="col-lg-6 col-sm-12 ">
+              <div className="col-lg-4 col-sm-6 ">
                   <AssessmentCard
                       items={Sitems}
                       logo={LogoThree}

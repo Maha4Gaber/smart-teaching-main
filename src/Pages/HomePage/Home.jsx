@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from "react-router-dom";
 
 import Blogs from "../../Components/Blogs/Blogs";
 import Slider from "react-slick";
@@ -32,10 +34,18 @@ import { BiRightArrowAlt } from "react-icons/bi";
 import ServiceCard from "../../Components/ServiceCard/ServiceCard";
 import TeamCards from "../../Components/TeamCards/TeamCards";
 import FeatureCards from "../../Components/FeatureCards/FeatureCards";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { fetchinfluences } from "../../Slices/home/influences";
 
 const Home = () => {
+    const blogs = useSelector((state) => state.influences);
+    const dispatch = useDispatch();
+	const navigate = useNavigate();
+		useEffect(() => {
+			dispatch(fetchinfluences())    
+		},[5])
+
+
     const {t} = useTranslation()
     const settings2 = {
         infinite: true,
@@ -97,7 +107,6 @@ const Home = () => {
         <main className="position-relative">
             <figure className="main-home-img d-flex align-items-center m-0">
                 <figcaption data-aos="fade-right">
-                    <h2>{t("learningOutcome")}</h2>
                     <h1 className="text-center">
                     {t("newSystematic")}  {t("approachToMax")} {" "}
                     {t("yourStudents")}  {t("learningOutcome")}

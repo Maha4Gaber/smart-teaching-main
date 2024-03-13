@@ -11,10 +11,11 @@ import MiddleAssessment from '../../Components/MiddleAssessment/MiddleAssessment
 import SidebarLinks from '../../Components/SidebarLinks/SidebarLinks';
 import { expertTeacherLinks } from '../../data';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 function Assessment() {
     const {t} = useTranslation()
   return (
-      <>
+      <div>
           <SmartHeading
               Img={Img}
               heading={t("TEAST")}
@@ -34,23 +35,24 @@ function Assessment() {
                       <h3>{t("TEAST")}</h3>
                       <h5>{t("TCA")}</h5>
                       <p>{t("TCA-text")}</p>
-                      <img src={LeftOne} alt="left-img" />
+                      <Link className='member-link' to='/TeacherCompetencyAssessment'><img src={LeftOne} alt="left-img" /></Link>
+                      
                       <h5>{t("STCA")}</h5>
                       <p>{t("STCA-text")}</p>
-                      <img src={LeftThree} alt="left-three" />
+                      <Link className='member-link' to='/SimplifiedTeachersCompetencyAssessment'><img src={LeftThree} alt="left-three" /></Link>
                       <h5>{t("CO")}</h5>
                       <p>{t("CO-text")}</p>
-                      <img src={LeftTwo} alt="left-two" />
+                      <Link className='member-link' to='/ClassroomObservationInstruments'><img src={LeftTwo} alt="left-tow" /></Link>
                       <h5>{t("SPS")}</h5>
-                      <p>{t("SPS-text")}</p>
-                      <img src={LeftFour} alt="last" />
+                      <p>{t("SPS-text")}</p>                    
+                      <Link className='member-link' to='/StudentsRatingtheirTeachers'><img src={LeftFour} alt="last" /></Link>
                   </div>
               </AsideSmart>
                   </div>
               </div>
           </section>
 
-      </>
+      </div>
   );
 }
 

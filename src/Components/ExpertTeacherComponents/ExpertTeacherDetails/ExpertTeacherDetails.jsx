@@ -24,18 +24,19 @@ const tableStyles = {
 
   const headerCellStyle = {
     border: '1px solid black',
-    borderBottom: '1px solid black',
+    textAlign:'center', borderBottom: '1px solid black',
     borderLeft: '1px solid black',
     borderRight: '1px solid black',
     backgroundColor:'#0070c0ff',
-    color:'white'
+    color:'white',
+    textAlign: 'center',
   };
 
   const cellStyle = {
     border: '1px solid black',
     borderLeft: '1px solid black',
     borderRight: '1px solid black',
-    // textAlign: 'center',
+    margin:"5px 10px"
     
   };
 
@@ -67,7 +68,7 @@ return (
 
         <div className="row justify-content-center expert-cards gy-4 mb-4">
             {expertTeacherCards.map((card, idx) =>
-            <div className={`col-md-6  d-flex card${idx+1}`} key={idx}>
+            <div className={`col-md-4  d-flex card${idx+1}`} key={idx}>
                 <ExpertTeacherCard {...card}/>
             </div>
             
@@ -116,7 +117,7 @@ return (
             )}
             
             <div className='custom-margin'></div>
-            <table className='bg-dardk'  style={tableStyles}>
+            <table className='' border={2}  style={tableStyles}>
             
             <colgroup>
                 <col style={{ width: '50%' }} />
@@ -135,18 +136,18 @@ return (
         <tbody>
         <tr style={{backgroundColor:'#f2f2f2'}}>
             <td style={cellStyle}> 
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' ,width: '10%' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr1td1")}
                     </td>
                 </tr>
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr1td2")}
                     </td>
                 </tr>
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr1td3")}
                     </td>
                 </tr>
@@ -158,22 +159,22 @@ return (
             </td>
             <td style={cellStyle}> 
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' ,width: '10%' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' ,width: '10%' }}> 
                     1.1
                     </td>
                 </tr>
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' }}> 
                     1.2
                     </td>
                 </tr>
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' }}> 
                     1.3
                     </td>
                 </tr>
                 <tr>
-                    <td > 
+                    <td style={{textAlign:'center',}} > 
                     1.4
                     </td>
                 </tr>
@@ -190,18 +191,18 @@ return (
 
         <tr style={{backgroundColor:'#ddddff'}}>
             <td style={cellStyle}> 
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' ,width: '10%' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr2td1")}
                     </td>
                 </tr>
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr2td2")}
                     </td>
                 </tr>
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr2td3")}
                     </td>
                 </tr>
@@ -213,22 +214,22 @@ return (
             </td>
             <td style={cellStyle}> 
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' ,width: '10%' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' ,width: '10%' }}> 
                     2.1
                     </td>
                 </tr>
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' }}> 
                     2.2
                     </td>
                 </tr>
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' }}> 
                     2.3
                     </td>
                 </tr>
                 <tr>
-                    <td > 
+                    <td style={{textAlign:'center'}}> 
                     2.4
                     </td>
                 </tr>
@@ -245,18 +246,18 @@ return (
 
         <tr style={{backgroundColor:'#ccffccff'}}>
             <td style={cellStyle}> 
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' ,width: '10%' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr3td1")}
                     </td>
                 </tr>
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr3td2")}
                     </td>
                 </tr>
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr3td3")}
                     </td>
                 </tr>
@@ -268,22 +269,22 @@ return (
             </td>
             <td style={cellStyle}> 
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' ,width: '10%' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' ,width: '10%' }}> 
                     3.1
                     </td>
                 </tr>
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' }}> 
                     3.2
                     </td>
                 </tr>
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' }}> 
                     3.3
                     </td>
                 </tr>
                 <tr>
-                    <td > 
+                    <td style={{textAlign:'center',}}> 
                     3.4
                     </td>
                 </tr>
@@ -300,18 +301,18 @@ return (
 
         <tr style={{backgroundColor:'#ffcccc'}}>
             <td style={cellStyle}> 
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' ,width: '10%' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr4td1")}
                     </td>
                 </tr>
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr4td2")}
                     </td>
                 </tr>
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr4td3")}
                     </td>
                 </tr>
@@ -323,22 +324,22 @@ return (
             </td>
             <td style={cellStyle}> 
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' ,width: '10%' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' ,width: '10%' }}> 
                     4.1
                     </td>
                 </tr>
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' }}> 
                     4.2
                     </td>
                 </tr>
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' }}> 
                     4.3
                     </td>
                 </tr>
                 <tr>
-                    <td > 
+                    <td style={{textAlign:'center',}}> 
                     4.4
                     </td>
                 </tr>
@@ -355,18 +356,18 @@ return (
 
         <tr style={{backgroundColor:'#ffffccff'}}>
             <td style={cellStyle}> 
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' ,width: '10%' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr5td1")}
                     </td>
                 </tr>
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr5td2")}
                     </td>
                 </tr>
-                <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                <tr style={{  borderBottom: '1px solid black' ,width: '100%' ,display:'block' }}>
+                    <td > 
                     {t("tabletr5td3")}
                     </td>
                 </tr>
@@ -378,22 +379,22 @@ return (
             </td>
             <td style={cellStyle}> 
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' ,width: '10%' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' ,width: '10%' }}> 
                     5.1
                     </td>
                 </tr>
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' }}> 
                     5.2
                     </td>
                 </tr>
                 <tr>
-                    <td style={{ borderBottom: '1px solid black' }}> 
+                    <td style={{ textAlign:'center', borderBottom: '1px solid black' }}> 
                     5.3
                     </td>
                 </tr>
                 <tr>
-                    <td style={{ borderBottolm: '1px solid black' }}> 
+                    <td style={{textAlign:'center', borderBottolm: '1px solid black' }}> 
                     5.4
                     </td>
                 </tr>

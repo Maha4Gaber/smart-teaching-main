@@ -234,11 +234,11 @@ function App() {
         },
     ]);
     return (
-        <>
+        <div>
             <SkeletonTheme baseColor="#306c62" highlightColor="#f8b401">
                 <RouterProvider router={router} />
             </SkeletonTheme>
-        </>
+        </div>
     );
 }
 
