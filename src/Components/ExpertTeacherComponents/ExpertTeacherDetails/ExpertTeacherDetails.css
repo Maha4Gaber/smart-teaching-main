@@ -83,10 +83,28 @@
 }
 
 
+table{
+    text-align: center;
+}
 table th{
     padding: 5px;
 }
 
 table tr{
     padding: 5px;
+}
+table .tht{
+    font-size: 9px !important;
+    background-color:'#002060';
+    color:white;
+    padding: 0px !important;
+}
+table .trt
+{
+    font-size: 9px !important;
+    
+}
+table .trt td{
+    padding: 5px 0px !important; 
+
 }

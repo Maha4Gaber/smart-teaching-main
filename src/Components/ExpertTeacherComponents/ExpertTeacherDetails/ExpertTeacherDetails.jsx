@@ -19,7 +19,7 @@ let isRTL = lang =='en'?'ltr':'rtl'
 const tableStyles = {
     borderCollapse: 'collapse',
     direction: isRTL  ,
-    width:'100%',
+    maxWidth:'100% !important',
   };
 
   const headerCellStyle = {
@@ -29,7 +29,6 @@ const tableStyles = {
     borderRight: '1px solid black',
     backgroundColor:'#0070c0ff',
     color:'white',
-    textAlign: 'center',
   };
 
   const cellStyle = {
@@ -101,8 +100,52 @@ return (
 
         <h3 className={`${lang === "en" ? "text-start" : "text-end"} mb-4 text-black`}>{t("explainFollowingTable")}</h3>
 
-        <ImageComp className='phases-table' src={table} alt= 'Phases Table' />
+        <div className='margin-top-bottom w-100'>
+
+        <table className="table  text-center table-bordered border-primary" style={tableStyles}>
+            <colgroup>
+<col>
+</col>
+        </colgroup>
+        <thead className=''  >
+            <tr className='tht'>
+                <th  style={{ width: '1% !important' ,backgroundColor:'#002060', color:'white'}}>{t("phase")}</th>
+                <th  style={{backgroundColor:'#002060', color:'white'}}>{t("from")}</th>
+                <th  style={{backgroundColor:'#002060', color:'white'}}>{t("to")} </th>
+                <th  style={{backgroundColor:'#002060', color:'white'}}>{t("focus")} </th>
+                <th  style={{ width: '100%', backgroundColor:'#002060', color:'white'}}>{t("common")} </th>
+            </tr>
+            </thead>
+            <tbody >
+                <tr className='trt' style={{fontSize:'12px !important'}}>
+                    <td>  {t('phaseA1')}  </td>
+                    <td>  {t('phaseA2')}  </td>
+                    <td>  {t('phaseA3')}  </td>
+                    <td>  {t('phaseA4')}  </td>
+                    <td>  {t('phaseA5')}  </td>
+                </tr>
+                <tr className='trt' style={{fontSize:'12px !important;'}}>
+                    <td>  {t('phaseB1')}  </td>
+                    <td>  {t('phaseB2')}  </td>
+                    <td>  {t('phaseB3')}  </td>
+                    <td>  {t('phaseB4')}  </td>
+                    <td>  {t('phaseB5')}  </td>
+                </tr>
+                <tr className='trt' style={{fontSize:'12px !important;'}}>
+                    <td>  {t('phaseC1')}  </td>
+                    <td>  {t('phaseC2')}  </td>
+                    <td>  {t('phaseC3')}  </td>
+                    <td>  {t('phaseC4')}  </td>
+                    <td >  {t('phaseC5')}  </td>
+                </tr>
+            </tbody>
+        </table>
         
+
+        </div>
+
+
+
         <div className='custom-margin'></div>
 
         {phasesDesc.map(({name, desc}, idx) => 
@@ -117,6 +160,7 @@ return (
             )}
             
             <div className='custom-margin'></div>
+
             <table className='' border={2}  style={tableStyles}>
             
             <colgroup>
