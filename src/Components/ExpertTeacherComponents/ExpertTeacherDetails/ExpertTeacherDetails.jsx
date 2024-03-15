@@ -94,7 +94,7 @@ return (
 
             <div className="col-md-12 d-flex justify-content-center align-items-center">
                 
-                <ImageComp src={graph} className="graph" alt= 'Phases Graph'/> 
+                <img src={graph} className="graph" alt= 'Phases Graph'/> 
             </div>
         </div>
 
