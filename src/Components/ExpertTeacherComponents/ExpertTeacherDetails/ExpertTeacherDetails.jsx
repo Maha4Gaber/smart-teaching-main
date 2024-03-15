@@ -5,7 +5,8 @@ import ExpertTeacherCard from './../ExpertTeacherCard/ExpertTeacherCard';
 import ImageComp from '../../ImageComp/ImageComp';
 
 import table from '../../../assests/ExpertTeacher/table.png'
-import tableA from '../../../assests/ExpertTeacher/table-phaseA.png'
+// import tableA from '../../../assests/ExpertTeacher/table-phaseA.png'
+import graph from '../../../assests/ExpertTeacher/graph.png'
 import arrow from '../../../assests/ExpertTeacher/arrow.png'
 import PhaseDetails from '../PhaseDetails/PhaseDetails';
 import { Link } from 'react-router-dom';
@@ -67,7 +68,7 @@ return (
 
         <div className="row justify-content-center expert-cards gy-4 mb-4">
             {expertTeacherCards.map((card, idx) =>
-            <div className={`col-md-4 justify-content-center  d-flex card${idx+1}`} key={idx}>
+            <div className={`col-md-4  justify-content-center  d-flex card${idx+1}`} key={idx}>
                 <ExpertTeacherCard {...card}/>
             </div>
             
@@ -92,9 +93,8 @@ return (
             </div>
 
             <div className="col-md-12 d-flex justify-content-center align-items-center">
-                <div className="phases-graph w-100">
-                </div>
-                {/* <ImageComp src={graph} alt= 'Phases Graph'/> */}
+                
+                <ImageComp src={graph} className="graph" alt= 'Phases Graph'/> 
             </div>
         </div>
 

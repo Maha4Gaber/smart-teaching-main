@@ -14,7 +14,7 @@ const ExpertTeacherCard = ({img, id, title, desc= null, className= null}) => {
 
     <h2 className='text-center m-0'>{t(title)}</h2>
     {desc && <p className='text-center'>{t(desc)}</p>}
-    <div className="d-flex justify-content-between align-items-center justify-content-lg-between mb-4 w-100">
+    <div className="d-flex justify-content-around align-items-center justify-content-lg-between  w-100">
         <div className= {`rounded-circle card-img-box`}>
             <ImageComp src={img} alt={title}/>
         </div>
