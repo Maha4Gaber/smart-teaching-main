@@ -22,19 +22,10 @@ function SmartTeaching() {
                   <div className="col-lg-3 px-3">
                       <SidebarLinks links={expertTeacherLinks} />
                   </div>
-                  <div className="col-lg-6 px-3">
+                  <div className="col-lg-8 px-3">
                       <MiddleSmartTeaching />
                   </div>
-                  <div className="col-lg-3 px-3">
-                      <AsideSmart >
-              <div className="asideLeft">
-                  <p>
-                      {t("barometerTitle")}
-                  </p>
-                  <img src={ImgSrc} alt="asideImg" />
-              </div>
-          </AsideSmart>
-                  </div>
+
               </div>
           </section>
           

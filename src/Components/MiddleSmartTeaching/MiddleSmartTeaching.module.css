@@ -26,12 +26,12 @@
 }
 .middleSmart__z {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: space-between; align-items: center;
+  gap: 10px;
   margin: 10px 0;
 }
 .middleSmart__z img {
-  width: 230px;
+  width: 100%;
 }
 .z__content h4 {
   color: var(--Black, #0f0f0f);
@@ -63,3 +63,8 @@
     order: 2;
   }
 }
+@media (min-width: 1200px) {
+  .middleSmart__z {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }}

@@ -113,3 +113,7 @@ background-color: var(--darkgreen-color);
 .side-img{
   width: 50%;
 }
+small{
+  display: inline;
+  font-size: 12px !important;
+}
