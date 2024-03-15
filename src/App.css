@@ -98,11 +98,13 @@ ul {
   background-color: #0000004e;
 }
 .main-img figcaption h1,
-   figcaption h2{
-
+  .main-img figcaption h2{
+  width: 100%;
+  padding: 20px;
+  font-size: 3rem;
+    font-weight: 700;
   text-align: center !important;
 }
-
 .member-link:hover{
   scale: 1.1;
 color: wheat !important;

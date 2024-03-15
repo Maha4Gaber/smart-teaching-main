@@ -107,7 +107,7 @@ const Home = () => {
         <main className="position-relative">
             <figure className="main-home-img d-flex align-items-center m-0">
                 <figcaption data-aos="fade-right">
-                    <h1 className="text-center">
+                    <h1 className="text-center " style={{fontSize: "2rem"}}>
                     {t("newSystematic")}  {t("approachToMax")} {" "}
                     {t("yourStudents")}  {t("learningOutcome")}
                     </h1>
