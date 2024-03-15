@@ -67,7 +67,7 @@ return (
 
         <div className="row justify-content-center expert-cards gy-4 mb-4">
             {expertTeacherCards.map((card, idx) =>
-            <div className={`col-md-4  d-flex card${idx+1}`} key={idx}>
+            <div className={`col-md-4 justify-content-center  d-flex card${idx+1}`} key={idx}>
                 <ExpertTeacherCard {...card}/>
             </div>
             
@@ -109,11 +109,11 @@ return (
         </colgroup>
         <thead className=''  >
             <tr className='tht'>
-                <th  style={{ width: '1% !important' ,backgroundColor:'#002060', color:'white'}}>{t("phase")}</th>
-                <th  style={{backgroundColor:'#002060', color:'white'}}>{t("from")}</th>
-                <th  style={{backgroundColor:'#002060', color:'white'}}>{t("to")} </th>
-                <th  style={{backgroundColor:'#002060', color:'white'}}>{t("focus")} </th>
-                <th  style={{ width: '100%', backgroundColor:'#002060', color:'white'}}>{t("common")} </th>
+                <th  >{t("phase")}</th>
+                <th  >{t("from")}</th>
+                <th  >{t("to")} </th>
+                <th  >{t("focus")} </th>
+                <th  style={{ width: '100%'}}>{t("common")} </th>
             </tr>
             </thead>
             <tbody >
