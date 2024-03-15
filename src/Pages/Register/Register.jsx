@@ -3,14 +3,21 @@ import reImg from "../../assests/Register/hero image.png";
 import ImageComp from "../../Components/ImageComp/ImageComp";
 import SingleStepForm from "../../Components/RegisterComponents/SinleStepForm/SingleStepForm";
 import FounderStepForm from '../../Components/RegisterComponents/FounderStepForm/FounderStepForm';
-
+import { useTranslation } from 'react-i18next'
 import "./Register.css";
+
 const Register = () => {
+    const {t,i18n} = useTranslation()
+const lang = i18n.language;
   const [singleForm, setSingleForm] = useState(true);
   const [multiForm, setMultiForm] = useState(false);
+  let isRTL = lang =='en'?'ltr':'rtl'
+  const sectionStyles = {
+      direction: isRTL  ,
+    };
 
   return (
-      <section className="register">
+      <section className="register" >
           <div className="container-lg px-3 px-sm-5 px-lg-0">
               <div className="row">
                   {/* Register Image */}

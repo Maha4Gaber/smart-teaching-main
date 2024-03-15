@@ -14,7 +14,7 @@ return (
 
     <div>
 
-    <figure className='main-expert-teacher-img d-flex align-items-center '>
+    <figure className='main-expert-teacher-img  main-img d-flex align-items-center '>
         <figcaption>
             <h1 className='m-0 text-center w-100' >{parse(t("expertTeacherTitle"))} </h1>
         </figcaption>

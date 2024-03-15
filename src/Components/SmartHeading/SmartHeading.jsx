@@ -7,8 +7,11 @@ function SmartHeading({ Img, heading, subheading }) {
       className={classes.smart__header}
       style={{ backgroundImage: `url(${Img})` }}
     >
-      <h2>{heading}</h2>
-      <h3>{subheading}</h3>
+    <figcaption>
+    <h2>{heading}</h2>
+    <h3>{subheading}</h3>
+    </figcaption>
+      
     </header>
   );
 }

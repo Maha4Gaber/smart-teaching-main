@@ -11,7 +11,7 @@ const ExpertTeachingAcd = () => {
 
 return (
     <>
-    <figure className='main-expert-acd-img d-flex align-items-center m-0'>
+    <figure className='main-expert-acd-img main-img d-flex align-items-center '>
         <figcaption>
             <h1 className='m-0'>{t("STA")}</h1>
         </figcaption>

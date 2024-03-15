@@ -158,16 +158,20 @@ const SingleStepForm = () => {
   //     setTransitionClass("");
   //   }, 500);
   // };
-
+  let isRTL = lang =='en'?'ltr':'rtl'
+  const sectionStyles = {
+      direction: isRTL  ,
+    };
 
   return (
-    <>
+    <div>
       <form onSubmit={formik.handleSubmit} className={`multi-form ${step} ${transitionClass}`}>
         
-          <div className= {`col-lg-8 col-md-10 mx-auto px-md-0 px-4 step step-1 `}>
+          <div className= {`col-lg-8 col-md-10 mx-auto px-md-0 px-4 step step-1 ${isRTL}`}>
             {/* Name Input */}
             <div className="form-floating name-input mt-5 mb-4">
               <input
+              style={sectionStyles}
                 type="text"
                 className={`form-control ${formik.values.name&& 'input-border-color'}`}
                 id="floatingName"
@@ -186,7 +190,7 @@ const SingleStepForm = () => {
                 Name
               </label>
 
-              <span className= {formik.values.name&& 'icon-active'}><FaUser/></span>
+              <span className= {formik.values.name&& 'icon-active' } ><FaUser/></span>
 
               {formik.errors.name && formik.touched.name ? (
                 <div className="alert alert-danger error my-0 py-2">
@@ -198,6 +202,7 @@ const SingleStepForm = () => {
             {/* Email Input */}
             <div className="form-floating mb-4 ">
               <input
+              style={sectionStyles}
                 type="email"
                 className={`form-control ${formik.values.email&& 'input-border-color'}`}
                 id="floatingEmail"
@@ -226,7 +231,7 @@ const SingleStepForm = () => {
             </div>
 
             {/* Phone Input */}
-            <div className="form-floating mb-4">
+            <div className="form-floating mb-4 phone">
               <PhoneInput
                 defaultCountry="SA"
                 className={`form-control ${formik.values.phone&& 'input-border-color'}`}
@@ -267,6 +272,7 @@ const SingleStepForm = () => {
             {/* Password Input */}
             <div className="form-floating mb-4">
               <input
+              style={sectionStyles}
                 type={showPassword ? 'text' : 'password'}
                 className={`form-control ${formik.values.password&& 'input-border-color'}`}
                 id="floatingPassword"
@@ -298,6 +304,7 @@ const SingleStepForm = () => {
             {/* Repassword Input */}
             <div className="form-floating mb-4 ">
               <input
+              style={sectionStyles}
                 type={showPassword ? 'text' : 'password'}
                 className={`form-control ${formik.values.rePassword&& 'input-border-color'}`}
                 id="floatingRepassword"
@@ -414,10 +421,11 @@ const SingleStepForm = () => {
               </div>
             </div>
 
-            <div className="d-flex justify-content-between align-items-center mb-4">
+            <div className="d-flex confirm  justify-content-between align-items-center mb-4">
 
               <div className='d-flex  justify-content-start'>
-                <input className='checkbox mt-1' type="checkbox" name='remember' value= 'value' id='remember' />
+                <input
+                style={sectionStyles} className='checkbox mt-1' type="checkbox" name='remember' value= 'value' id='remember' />
                 <label className='mx-2' htmlFor="remember">I agree to the <span className="condition-color">terms</span> and <br/> <span className="condition-color">privacy policy</span> </label>
               </div>
 
@@ -503,6 +511,7 @@ const SingleStepForm = () => {
               <div className="form-floating d-flex justify-content-between">
                 {[1, 2, 3, 4].map((index) => (
                   <input
+                  style={sectionStyles}
                     key={index}
                     type="number"
                     // pattern="\d*"
@@ -580,7 +589,7 @@ const SingleStepForm = () => {
       </div>
 
       <RegisterFooter />
-    </>
+    </div>
   );
 };
 

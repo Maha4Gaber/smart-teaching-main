@@ -74,7 +74,7 @@ const Login = ({ saveUserData }) => {
     };
 
   return (
-    <>
+    <div>
     <section className="login-sec">
         <form onSubmit={formik.handleSubmit} className="bg-white form-padding login-form">
 
@@ -198,7 +198,7 @@ const Login = ({ saveUserData }) => {
 
 
     </div>
-    </>
+    </div>
 );
 };
 
