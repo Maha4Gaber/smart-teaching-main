@@ -470,7 +470,7 @@ return (
 
         </div>
 
-        <h2>{t("phaseATitle")}</h2>
+        <h1>{t("phaseATitle")}</h1>
 
         <p className='desc'>{t("phaseAInfo")}</p>
         
