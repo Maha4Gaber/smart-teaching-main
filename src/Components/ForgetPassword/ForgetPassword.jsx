@@ -179,11 +179,11 @@ const ForgetPassword = () => {
 
 return (
 
-<>
+<div>
 <div className='forget-pass'>
 
     <Link  data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
-        Forget Password?
+    {t("ForgetPassword")}
     </Link>
     
 
@@ -434,7 +434,7 @@ return (
 </div>
 
 
-</>
+</div>
 
 
 

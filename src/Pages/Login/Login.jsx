@@ -72,11 +72,11 @@ const Login = ({ saveUserData }) => {
         navigate('/');
     }, 2000);
     };
-
+    let isRTL = lang =='en'?'ltr':'rtl'
   return (
     <div>
-    <section className="login-sec">
-        <form onSubmit={formik.handleSubmit} className="bg-white form-padding login-form">
+    <section className="login-sec multi-form">
+        <form onSubmit={formik.handleSubmit} className={`bg-white form-padding login-form ${isRTL}`}>
 
 
         <div className="login-img text-center">
@@ -102,7 +102,7 @@ const Login = ({ saveUserData }) => {
                 className={`mx-2 ${lang === 'ar' ? ' end-0' : 'start-0'}`}
                 htmlFor= 'floatingEmail'
             >
-                email
+            {t("email")}
             </label>
 
             <span className= {formik.values.email&& 'icon-active'}><MdEmail/></span>
@@ -126,7 +126,7 @@ const Login = ({ saveUserData }) => {
                 className={`mx-2 ${lang === 'ar' ? ' end-0' : 'start-0'}`}
                 htmlFor= 'floatingPassword'
             >
-                Password
+            {t("password")}
             </label>
 
             <span className= {`cursor-pointer ${formik.values.password&& 'icon-active'}`} onClick={() => setShowPassword(!showPassword)}>
@@ -144,7 +144,7 @@ const Login = ({ saveUserData }) => {
         <div className=' d-flex justify-content-between align-items-center mb-4'>
             <div className='d-flex align-items-center'>
                 <input className='checkbox' type="checkbox" name='remember' value= 'value' id='remember' />
-                <label className='mx-1' htmlFor="remember">Remember Me</label>
+                <label className='mx-1' htmlFor="remember">{t("RememberMe")}</label>
             </div>
             
             <ForgetPassword/>
@@ -161,7 +161,7 @@ const Login = ({ saveUserData }) => {
             }}
             data-bs-target="#exampleModalToggle4" data-bs-toggle="modal"
             >
-                Login
+                {t("login")}
         </button>}
 
 

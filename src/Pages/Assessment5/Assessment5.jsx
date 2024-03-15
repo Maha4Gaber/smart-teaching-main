@@ -10,30 +10,30 @@ const Assessment5 = () => {
 
 return (
     <div>
-    <figure className='main-ass5-img d-flex align-items-center m-0'>
+    <figure className='main-ass5-img main-img d-flex align-items-center '>
         <figcaption>
-            <h1 className='med-mb'>Student Rating Their Teacher</h1>
+            <h1 className=''>Student Rating Their Teacher</h1>
             <h4>Tools For Your Professional Growth</h4>
         </figcaption>
     </figure>
 
-    <section className="ass5 p-3 p-md-5">
+    <section className="ass5 p-3 p-md-4">
 
-        <div className="row gy-4 main-row">
+        <div className="row gy-4 ">
 
-            <div className="col-xl-3 px-3">
+            <div className="col-lg-3 px-3">
 
                 <SidebarLinks links={expertTeacherLinks}/>
 
             </div>
 
-            <div className="col-xl-6 px-3">
+            <div className="col-lg-6 px-3">
 
                 <Assessment5Details/>
 
             </div>
 
-            <div className="col-xl-3 px-3">
+            <div className="col-lg-3 px-3">
                 
                 <Assessment5Sidebar/>
                 

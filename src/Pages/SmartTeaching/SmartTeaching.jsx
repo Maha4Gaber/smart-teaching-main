@@ -19,13 +19,13 @@ function SmartTeaching() {
           />
           <section className="ass4 p-3 p-md-5">
               <div className="row gy-4 main-row">
-                  <div className="col-xl-3 px-3">
+                  <div className="col-lg-3 px-3">
                       <SidebarLinks links={expertTeacherLinks} />
                   </div>
-                  <div className="col-xl-6 px-3">
+                  <div className="col-lg-6 px-3">
                       <MiddleSmartTeaching />
                   </div>
-                  <div className="col-xl-3 px-3">
+                  <div className="col-lg-3 px-3">
                       <AsideSmart >
               <div className="asideLeft">
                   <p>

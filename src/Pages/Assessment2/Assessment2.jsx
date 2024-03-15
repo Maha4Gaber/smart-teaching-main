@@ -11,7 +11,7 @@ return (
     
     <div>
 
-    <figure className='main-ass2-img d-flex align-items-center m-0'>
+    <figure className='main-ass2-img main-img d-flex align-items-center '>
         <figcaption>
             <h1 className='m-0'>Using Teacher Competency <br/> Assessment (TCA) to Drive <br/> Teacher Excellence</h1>
         </figcaption>
@@ -20,21 +20,21 @@ return (
 
     <section className='ass2 p-3 p-md-5'>
 
-        <div className="row gy-4 main-row">
+        <div className="row gy-4 ">
 
-            <div className="col-xl-3 px-3">
+            <div className="col-lg-3 px-3">
 
                 <SidebarLinks links={expertTeacherLinks}/>
 
             </div>
 
-            <div className="col-xl-6 px-3">
+            <div className="col-lg-6 px-3">
 
                 <Assessment2Details/>
 
             </div>
 
-            <div className="col-xl-3 px-3">
+            <div className="col-lg-3 px-3">
                 
                 <Assessment2Sidebar/>
                 

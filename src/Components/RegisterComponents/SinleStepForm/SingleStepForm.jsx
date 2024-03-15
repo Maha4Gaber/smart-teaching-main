@@ -187,7 +187,7 @@ const SingleStepForm = () => {
                 className={` ${lang === "ar" ? " end-0" : "start-0"}`}
                 htmlFor="floatingName"
               >
-                Name
+              {t("name")}
               </label>
 
               <span className= {formik.values.name&& 'icon-active' } ><FaUser/></span>
@@ -218,7 +218,7 @@ const SingleStepForm = () => {
                 className={`${lang === "ar" ? " end-0" : "start-0"}`}
                 htmlFor="floatingEmail"
               >
-                Email
+                {t("email")}
               </label>
 
               <span className= {formik.values.email&& 'icon-active'}><MdEmail/></span>
@@ -236,7 +236,7 @@ const SingleStepForm = () => {
                 defaultCountry="SA"
                 className={`form-control ${formik.values.phone&& 'input-border-color'}`}
                 id="floatingPhone"
-                placeholder="Phone"
+                placeholder={`${t("phone")}`}
                 name="phone"
                 onBlur={(e) => {
                   const clonedEvent = e ? Object.assign({}, e) : null; // Create a copy of the event if it's not null
@@ -257,7 +257,7 @@ const SingleStepForm = () => {
                 className={`mx-2 ${lang === "ar" ? " end-0" : "start-0"}`}
                 htmlFor="floatingPhone"
               >
-                {langs[lang].ContactForm.phone}
+                {langs[lang].ContactForm.p{t("name")}
               </label> */}
 
               <span className= {formik.values.phone&& 'icon-active'}><MdPhone/></span>
@@ -287,7 +287,7 @@ const SingleStepForm = () => {
                 className={`mx-2 ${lang === "ar" ? " end-0" : "start-0"}`}
                 htmlFor="floatingPassword"
               >
-                Password
+                {t("password")}
               </label>
 
               <span className= {`cursor-pointer ${formik.values.password&& 'icon-active'}`} onClick={() => setShowPassword(!showPassword)}>
@@ -319,7 +319,7 @@ const SingleStepForm = () => {
                 className={`mx-2 ${lang === "ar" ? " end-0" : "start-0"}`}
                 htmlFor="floatingRepassword"
               >
-                PassConfirmation
+                {t("repassowrd")}
               </label>
 
               <span  className= {`cursor-pointer ${formik.values.rePassword&& 'icon-active'}`} onClick={() => setShowPassword(!showPassword)}>
@@ -344,7 +344,7 @@ const SingleStepForm = () => {
                 onBlur={formik.handleBlur}
               >
                 <option value="" disabled>
-                  Job Title...
+                  {t("job")}
                 </option>
                 <hr />
                 <option value="teacher">Teacher</option>
@@ -372,7 +372,7 @@ const SingleStepForm = () => {
                   onBlur={formik.handleBlur}
                 >
                   <option value="" disabled>
-                    Your Country...
+                  {t("country")}                     
                   </option>
 
                   {Country.getAllCountries().map((country) => (
@@ -400,8 +400,8 @@ const SingleStepForm = () => {
                   onBlur={formik.handleBlur}
                 >
                   <option value="" disabled>
-                    {" "}
-                    Your City...
+                    {t("city")}
+                    
                   </option>
 
                   {State.getStatesOfCountry(formik.values.country).map(
@@ -443,7 +443,7 @@ const SingleStepForm = () => {
                   data-bs-target="#exampleModalToggle"
                   data-bs-toggle="modal"
                 >
-                  Create
+                {t("signUp")}
                 </button>
               )}
             </div>
