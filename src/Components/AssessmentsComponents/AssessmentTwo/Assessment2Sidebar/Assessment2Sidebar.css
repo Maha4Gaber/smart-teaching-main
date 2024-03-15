@@ -1,9 +1,11 @@
 .ass2-side-img{
-    width: 9.375rem;
-    height: 9.42856rem;
+    /* width: 9.375rem; */
+    width: 50%;
+    /* height: 9.42856rem; */
 }
 
 .ass2-side-img2{
+    
     height: 5.883rem;
     width: 15.0625rem;
 }

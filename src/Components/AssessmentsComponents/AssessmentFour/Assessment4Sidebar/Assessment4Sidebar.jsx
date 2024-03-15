@@ -15,7 +15,7 @@ return (
     <aside className='ass4-sidebar p-4'>
 
         <div className='d-flex justify-content-center mb-4'>
-            <div className='ass4-side-img'>
+            <div className='side-img'>
                 <ImageComp src={img1} />
             </div>
         </div>

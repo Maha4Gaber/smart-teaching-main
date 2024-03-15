@@ -110,3 +110,6 @@ ul {
 color: wheat !important;
 background-color: var(--darkgreen-color);
 }
+.side-img{
+  width: 50%;
+}

@@ -18,7 +18,7 @@ const Assessment2Sidebar = () => {
     <aside className='ass2-sidebar p-3'>
         
         <div className='d-flex justify-content-center mb-4'>
-            <div className='ass2-side-img'>
+            <div className='side-img'>
                 <ImageComp src={img1} />
             </div>
         </div>
