@@ -29,7 +29,7 @@ let navigate = useNavigate();
 async function handleLogin(values) {
 setLoading(true);
 try {
-    let { data } = await axios.post("https://sts.pythonanywhere.com/api/v2/login/", values);
+    let { data } = await axios.post("api/v2/login/", values);
 
     if (data) {
     console.log(data);
