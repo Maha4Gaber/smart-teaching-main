@@ -7,60 +7,60 @@ import { useTranslation } from 'react-i18next'
 import "./Register.css";
 
 const Register = () => {
-    const {t,i18n} = useTranslation()
+const {t,i18n} = useTranslation()
 const lang = i18n.language;
-  const [singleForm, setSingleForm] = useState(true);
-  const [multiForm, setMultiForm] = useState(false);
-  let isRTL = lang =='en'?'ltr':'rtl'
-  const sectionStyles = {
-      direction: isRTL  ,
-    };
+const [singleForm, setSingleForm] = useState(true);
+const [multiForm, setMultiForm] = useState(false);
+let isRTL = lang =='en'?'ltr':'rtl'
+const sectionStyles = {
+    direction: isRTL  ,
+};
 
-  return (
-      <section className="register" >
-          <div className="container-lg px-3 px-sm-5 px-lg-0">
-              <div className="row">
-                  {/* Register Image */}
-                  <div className="col-lg-6 p-0 col-shadow  register-img">
-                      <ImageComp src={reImg} alt="Register Now" />
-                  </div>
+return (
+    <section className="register" >
+        <div className="container-lg px-3 px-sm-5 px-lg-0">
+            <div className="row">
+                {/* Register Image */}
+                <div className="col-lg-6 p-0 col-shadow  register-img">
+                    <ImageComp src={reImg} alt="Register Now" />
+                </div>
 
-                  {/* Slider Form */}
-                  <div className="col-lg-6 p-0 pt-5 pt-lg-0 position-relative bg-white register-forms">
-                      <div className="select-form">
-                          <button
-                              onClick={(e) => {
-                                  setSingleForm(true);
-                                  setMultiForm(false);
-                              }}
-                              className={`show-form1 ${
-                                  singleForm ? "" : "active"
-                              }`}
-                          >
-                              Sign Up
-                          </button>
+                {/* Slider Form */}
+                <div className="col-lg-6 p-0 pt-5 pt-lg-0 position-relative bg-white register-forms">
+                    <div className="select-form">
+                        <button
+                            onClick={(e) => {
+                                setSingleForm(true);
+                                setMultiForm(false);
+                            }}
+                            className={`show-form1 ${
+                                singleForm ? "" : "active"
+                            }`}
+                        >
+                            Sign Up
+                        </button>
 
-                          <button
-                              onClick={(e) => {
-                                  setSingleForm(false);
-                                  setMultiForm(true);
-                              }}
-                              className={`show-form2 ${
-                                  multiForm ? "" : "active"
-                              }`}
-                          >
-                              Sign Up As a founder
-                          </button>
-                      </div>
+                        <button
+                            onClick={(e) => {
+                                setSingleForm(false);
+                                setMultiForm(true);
+                            }}
+                            className={`show-form2 ${
+                                multiForm ? "" : "active"
+                            }`}
+                        >
+                            Sign Up As a founder
+                        </button>
+                    </div>
 
-                      {singleForm && <SingleStepForm />}
+                    {singleForm && <SingleStepForm />}
 
-                      {multiForm && <FounderStepForm />}
-                  </div>
-              </div>
-          </div>
-      </section>
-  );
+                    {multiForm && <FounderStepForm />}
+                </div>
+            </div>
+        </div>
+    </section>
+);
 };
 
 export default Register;

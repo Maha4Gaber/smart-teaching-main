@@ -66,6 +66,8 @@
 .footer {
   width: 100%;
   background: var(--Green, #306c62);
+  position: sticky;
+  bottom: 0;
 }
 .two {
   display: grid;

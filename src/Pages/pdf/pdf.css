@@ -1,0 +1,19 @@
+.bg{
+  /* rotate: 90deg; */
+  margin-top: 18vh;
+}
+.print{
+  display: block;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.print:hover{
+  scale: 1.1;
+  font-weight: bold;
+  color: #ccffccff
+  
+}
+tr {
+  border: 20px solid transparent !important;
+}

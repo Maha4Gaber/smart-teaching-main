@@ -9,7 +9,7 @@ const Assessment3 = () => {
 
 return (
     
-    <>
+    <div>
     <figure className='main-ass3-img main-img d-flex align-items-center '>
         <figcaption>
             <h1 className='med-mb'>Classroom Observation <br/> instrument</h1>
@@ -42,7 +42,7 @@ return (
         </div>
 
     </div>
-    </>
+    </div>
 )
 }
 

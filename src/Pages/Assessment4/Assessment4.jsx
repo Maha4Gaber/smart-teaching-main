@@ -9,7 +9,6 @@ import './Assessment4.css'
 const Assessment4 = () => {
 
 return (
-    
     <section className="ass4 p-3 p-md-5 mt-5">
 
         <div className="row gy-4 mt-5 ">
