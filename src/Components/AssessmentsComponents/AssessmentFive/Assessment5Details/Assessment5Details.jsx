@@ -3,11 +3,14 @@ import { FaCheck } from "react-icons/fa6";
 
 
 import './Assessment5Details.css'
-import { ass3Questions, ass5EvaluationTable, ass5QuestionsPartOne, ass5QuestionsPartOneTitles, ass5QuestionsPartTwo, ass5QuestionsPartTwoTitles, ass5StudentPerspectives } from '../../../../data';
+import {  ass5EvaluationTable, ass5QuestionsPartOne, ass5QuestionsPartOneTitles, ass5QuestionsPartTwo, ass5QuestionsPartTwoTitles, ass5StudentPerspectives } from '../../../../data';
 import EvaluationTable from '../../EvaluationTable/EvaluationTable';
 import AssessmentTable from './../../AssessmentThree/AssessmentTable/AssessmentTable';
+import { useTranslation } from "react-i18next";
 const Assessment5Details = () => {
-
+    const {t,i18n} = useTranslation()
+    const lang = i18n.language;
+    let isRTL = lang =='en'?'ltr':'rtl'
 return (
     <div className='ass5-details'>
 
@@ -77,11 +80,6 @@ return (
         <div className='mb-4'></div>
 
         <AssessmentTable Questions={ass5QuestionsPartTwo} tableName={ass5QuestionsPartTwoTitles} adjustCell={true} btnName= 'Submit'/>
-
-        
-
-
-
 
 
 

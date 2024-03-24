@@ -1367,22 +1367,22 @@ export const assTwoSidebar2 = [
 
 export const classRoomInstruments = [
     {
-        desc: 'Stallings Observation System (SOS)'
+        desc: 'ass3inst1'
     },
     {
-        desc: 'Brophy-Good Dyadic Interaction System'
+        desc: 'ass3inst2'
     },
     {
-        desc: 'Attending Round Observation System’ (AROS)'
+        desc: 'ass3inst3'
     },
     {
-        desc: 'Code for Instructional Structure and Student Academic Response’ (CISSAR)'
+        desc: 'ass3inst4'
     },
     {
-        desc: 'The Flourishing Classroom Observation Measure (FCOM)'
+        desc: 'ass3inst5'
     },
     {
-        desc: 'Classroom Observation Measure (COM)'
+        desc: 'ass3inst6'
     }
 ]
 
@@ -1397,10 +1397,10 @@ export const classRoomInstrumentsEx = [
 
 export const ass3Directions = [
     {
-        desc: 'Please respond to the following questions by placing a mark in the appropriate box as they relate to your course and instructor'
+        desc: 'ass3dir'
     },
     {
-        desc: 'Please respond to the following questions by placing a mark in the appropriate box as they relate to your course and instructor'
+        desc: 'ass3dir2'
     }
 ]
 
@@ -1439,7 +1439,7 @@ export const ass3EvaluationTable = [
 
 export const ass3Questions = [
     {
-        category: 'Professional Knowledge',
+        category: 'ass3cat1',
         answers: [
             {
                 answer: 1
@@ -1457,36 +1457,36 @@ export const ass3Questions = [
         questions: [
             { 
                 id: 1, 
-                text: '1. Addresses appropriate curriculum standards' 
+                text: 'ass3q1' 
             },
             { 
                 id: 2, 
-                text: '2. Facilitates students’ use of higher level thinking skills' 
+                text: 'ass3q2' 
             },
             {
                 id: 3,
-                text: '3. Demonstrates ability to link present content with past and future learning'
+                text: 'ass3q3'
             },
             {
                 id: 4,
-                text: '4. Demonstrates an accurate knowledge of the subject matter checking for understanding'
+                text: 'ass3q4'
             },
             {
                 id: 5,
-                text: '5. Demonstrates skills relevant to subject area(s) utilizing best practices  based on current research'
+                text: 'ass3q5'
             },
             {
                 id: 6,
-                text: '6. Bases instruction on goals that reflect high expectations'
+                text: 'ass3q6'
             },
             {
                 id: 7,
-                text: '7. Demonstrates an understanding of the knowledge of development'
+                text: 'ass3q7'
             }
         ]
     },
     {
-        category: 'Instructional Planning',
+        category: 'ass3cat2',
         answers: [
             {
                 answer: 1
@@ -1504,28 +1504,28 @@ export const ass3Questions = [
         questions: [
             {
                 id: 8,
-                text: '8. Analyses and uses student learning data to inform planning.'
+                text: 'ass3q8'
             },
             {
                 id: 9,
-                text: '9. Plans instruction and time for realistic pacing'
+                text: 'ass3q9'
             },
             {
                 id: 10,
-                text: '10. Plans for differentiated instruction'
+                text: 'ass3q10'
             },
             {
                 id: 11,
-                text: '11. Develops appropriate long- and short-range plans and adapts plans'
+                text: 'ass3q11'
             },
             {
                 id: 12,
-                text: '12. Coordinates plans with appropriate colleagues'
+                text: 'ass3q12'
             }
         ]
     },
     {
-        category: 'Instructional Delivery',
+        category: 'ass3cat3',
         answers: [
             {
                 answer: 1
@@ -1543,28 +1543,28 @@ export const ass3Questions = [
         questions: [
             {
                 id: 13,
-                text: '13. Addresses individual learning differences'
+                text: 'ass3q13'
             },
             {
                 id: 14,
-                text: '14. Uses rigorous instructional strategies Use instructional technology'
+                text: 'ass3q14'
             },
             {
                 id: 15,
-                text: '15. Engages students'
+                text: 'ass3q15'
             },
             {
                 id: 16,
-                text: '16. Builds on prior knowledge Communicates clearly'
+                text: 'ass3q16'
             },
             {
                 id: 17,
-                text: '17. Maximizes instructional learning time'
+                text: 'ass3q17'
             }
         ]
     },
     {
-        category: 'Assessment of and for Student Learning',
+        category: 'ass3cat4',
         answers: [
             {
                 answer: 1
@@ -1582,31 +1582,31 @@ export const ass3Questions = [
         questions: [
             {
                 id: 18,
-                text: '18. Analyses data from benchmarks'
+                text: 'ass3q18'
             },
             {
                 id: 19,
-                text: '19. Uses assessment tools based on division curriculum and pacing guides'
+                text: 'ass3q19'
             },
             {
                 id: 20,
-                text: '20. Uses a variety of valid, appropriate assessments'
+                text: 'ass3q20'
             },
             {
                 id: 21,
-                text: '21. Maintains assessment information'
+                text: 'ass3q21'
             },
             {
                 id: 22,
-                text: '22. Uses pre-/post-assessment data on each student'
+                text: 'ass3q22'
             },
             {
                 id: 23,
-                text: '23. Maintains appropriate records'
+                text: 'ass3q23'
             },
             {
                 id: 24,
-                text: '24. Gives constructive feedback'
+                text: 'ass3q24'
             }
         ]
     }
@@ -2010,11 +2010,11 @@ export const ass5QuestionsPartOne = [
         questions: [
             { 
                 id: 1, 
-                text: 'My teacher in this class makes me feel that s/he really cares about me.' 
+                text: 'ass5p1q1' 
             },
             { 
                 id: 2, 
-                text: 'My teacher really tries to understand how students feel about things.' 
+                text: 'ass5p1q2' 
             },
         ]
     },
@@ -2037,11 +2037,11 @@ export const ass5QuestionsPartOne = [
         questions: [
             { 
                 id: 3, 
-                text: 'Students in this class treat the teacher with respect.' 
+                text: 'ass5p1q3' 
             },
             { 
                 id: 4, 
-                text: 'Our class stays busy and doesn’t waste time.' 
+                text: 'ass5p1q4' 
             },
         ]
     },
@@ -2064,11 +2064,11 @@ export const ass5QuestionsPartOne = [
         questions: [
             { 
                 id: 5, 
-                text: 'My teacher has several good ways to explain each topic that we cover in this class.' 
+                text: 'ass5p1q5' 
             },
             { 
                 id: 6, 
-                text: 'My teacher explains difficult things clearly.' 
+                text: 'ass5p1q6' 
             },
         ]
     },
@@ -2091,11 +2091,11 @@ export const ass5QuestionsPartOne = [
         questions: [
             { 
                 id: 7, 
-                text: 'In this class, we learn a lot almost every day.' 
+                text: 'ass5p1q7' 
             },
             { 
                 id: 8, 
-                text: 'In this class, we learn to correct our mistakes.' 
+                text: 'ass5p1q8' 
             },
         ]
     },
@@ -2118,11 +2118,11 @@ export const ass5QuestionsPartOne = [
         questions: [
             { 
                 id: 9, 
-                text: 'My teacher makes lessons interesting' 
+                text: 'ass5p1q9' 
             },
             { 
                 id: 10, 
-                text: 'I like the ways we learn in this class.' 
+                text: 'ass5p1q10' 
             },
         ]
     },
@@ -2145,11 +2145,11 @@ export const ass5QuestionsPartOne = [
         questions: [
             { 
                 id: 11, 
-                text: 'Students speak up and share their ideas about class work.' 
+                text: 'ass5p1q11' 
             },
             { 
                 id: 12, 
-                text: 'My teacher respects my ideas and suggestions.' 
+                text: 'ass5p1q12' 
             },
         ]
     },
@@ -2172,11 +2172,11 @@ export const ass5QuestionsPartOne = [
         questions: [
             { 
                 id: 13, 
-                text: 'My teacher checks to make sure we understand what s/he is teaching us.' 
+                text: 'ass5p1q13' 
             },
             { 
                 id: 14, 
-                text: 'The comments that I get on my work in this class help me understand how to improve.' 
+                text: 'ass5p1q14' 
             },
         ]
     },
@@ -2207,15 +2207,15 @@ export const ass5QuestionsPartTwo = [
         questions: [
             { 
                 id: 1, 
-                text: '1. My teacher makes me feel that he/she cares about me.' 
+                text: 'ass5p2q1' 
             },
             { 
                 id: 2, 
-                text: '2. My teacher encourages me to do my best.' 
+                text: 'ass5p2q2' 
             },
             {
                 id: 3,
-                text: '3. My teacher is helpful when I ask questions.'
+                text: 'ass5p2q3'
             }
         ]
     },
@@ -2238,19 +2238,19 @@ export const ass5QuestionsPartTwo = [
         questions: [
             { 
                 id: 4, 
-                text: '4. Our class stays busy and does not waste time.' 
+                text: 'ass5p2q4' 
             },
             { 
                 id: 5, 
-                text: '5. My teacher’s classroom rules and ways of doing things are fair.' 
+                text: 'ass5p2q5' 
             },
             {
                 id: 6,
-                text: '6. My classmates’ misbehavior slows down the learning process.'
+                text: 'ass5p2q6'
             },
             {
                 id: 7,
-                text: '7. My classmates and I know what we should be doing and learning.'
+                text: 'ass5p2q7'
             }
         ]
     },
@@ -2273,19 +2273,19 @@ export const ass5QuestionsPartTwo = [
         questions: [
             { 
                 id: 8, 
-                text: '8. My teacher checks to make sure we understand what he/she is teaching us.' 
+                text: 'ass5p2q8' 
             },
             { 
                 id: 9, 
-                text: '9. My teacher explains another way if you don’t understand something.' 
+                text: 'ass5p2q9' 
             },
             {
                 id: 10,
-                text: '10. My teacher takes time to summarize what we learn each day'
+                text: 'ass5p2q10'
             },
             {
                 id: 11,
-                text: '11. My teacher helps me when I need it or don’t understand something.'
+                text: 'ass5p2q11'
             },
         ]
     },
@@ -2308,27 +2308,27 @@ export const ass5QuestionsPartTwo = [
         questions: [
             { 
                 id: 12, 
-                text: '12. My teacher accepts nothing less than our full effort.' 
+                text: 'ass5p2q12' 
             },
             { 
                 id: 13, 
-                text: '13. My teacher knows when I work hard and am doing my best' 
+                text: 'ass5p2q11' 
             },
             {
                 id: 14,
-                text: '14. We learn to correct our mistakes.'
+                text: 'ass5p2q14'
             },
             {
                 id: 15,
-                text: '15. My teacher wants us to improve our thinking skills'
+                text: 'ass5p2q15'
             },
             {
                 id: 16,
-                text: '16. My teacher wants me to explain my thinking.'
+                text: 'ass5p2q16'
             },
             {
                 id: 17,
-                text: '17. We learn a lot almost every day.'
+                text: 'ass5p2q17'
             },
         ]
     },
@@ -2351,27 +2351,27 @@ export const ass5QuestionsPartTwo = [
         questions: [
             { 
                 id: 18, 
-                text: '18. My teacher tells us what we are learning and why.' 
+                text: 'ass5p2q18' 
             },
             { 
                 id: 19, 
-                text: '19. My teacher helps us set goals for our learning and keep track of our progress.' 
+                text: 'ass5p2q19' 
             },
             {
                 id: 20,
-                text: '20. My teacher makes school work interesting.'
+                text: 'ass5p2q20'
             },
             {
                 id: 21,
-                text: '21. We get choices in how to complete activities.'
+                text: 'ass5p2q21'
             },
             {
                 id: 22,
-                text: '22. My teacher makes me work hard so I learn what I need to know'
+                text: 'ass5p2q22'
             },
             {
                 id: 23,
-                text: '23. My teacher assigns homework that helps me learn.'
+                text: 'ass5p2q23'
             },
         ]
     },
@@ -2394,11 +2394,11 @@ export const ass5QuestionsPartTwo = [
         questions: [
             { 
                 id: 24, 
-                text: '24. When my teacher marks my work, he/she writes on my papers to help me understand.' 
+                text: 'ass5p2q24' 
             },
             { 
                 id: 25, 
-                text: '25. The comments that I get on my work help me understand how to do my work better.' 
+                text: 'ass5p2q25' 
             },
         ]
     },

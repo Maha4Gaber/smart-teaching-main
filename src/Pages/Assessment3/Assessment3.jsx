@@ -5,15 +5,18 @@ import Assessment3Details from '../../Components/AssessmentsComponents/Assessmen
 import Assessment3Sidebar from './../../Components/AssessmentsComponents/AssessmentThree/Assessment3Sidebar/Assessment3Sidebar';
 
 import './Assessment3.css'
+import { useTranslation } from 'react-i18next';
 const Assessment3 = () => {
-
+    const {t,i18n} = useTranslation()
+    const lang = i18n.language;
+    let isRTL = lang =='en'?'ltr':'rtl'
 return (
     
     <div>
     <figure className='main-ass3-img main-img d-flex align-items-center '>
         <figcaption>
-            <h1 className='med-mb'>Classroom Observation <br/> instrument</h1>
-            <h4>Tools For Your Professional Growth</h4>
+            <h1 className='med-mb'>{t('ass3h2')}</h1>
+            <h4>{t('ass3tool')}</h4>
         </figcaption>
     </figure>
 

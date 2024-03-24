@@ -5,37 +5,40 @@ import './Assessment3Details.css'
 import { ass3Directions, ass3EvaluationTable, ass3Questions, classRoomInstruments } from '../../../../data';
 import AssessmentTable from '../AssessmentTable/AssessmentTable';
 import EvaluationTable from '../../EvaluationTable/EvaluationTable';
+import { useTranslation } from 'react-i18next';
 
 const Assessment3Details = () => {
-
+    const {t,i18n} = useTranslation()
+    const lang = i18n.language;
+    let isRTL = lang =='en'?'ltr':'rtl'
     return (
 
     <div className='ass3-details'>
 
-        <h2 className='mb-4'>Classroom Observation Instruments</h2>
+        <h2 className='mb-4'>{t('ass3h2')}</h2>
         
-        <h3 className='px-0 px-lg-4 large-mb'>Using Competency-Based Assessment to Drive Teacher Excellence</h3>
+        <h3 className='px-0 px-lg-4 large-mb'>{t('ass3h3')}</h3>
 
         <p className='special-p'>
-            There is no one method will sufficiently answer all critical educational questions. Multiple measures or indicators of teaching are needed to help capture a more comprehensive picture of what goes on in classrooms. Observation is one of the methods through which we assess the quality of teaching and learn how to develop further.
+            {t('ass3p1')}
         </p>
 
         <p className='special-p'>
-            Classroom Observation is a process by which a consultant sits in on one or more class sessions, records the instructor’s teaching practices and student actions, and then meets with the teacher to discuss the observations.
+            {t('ass3p2')}
         </p>
 
         <p className='special-p'>
-            The main purpose behind the classroom observation is to allow a teacher to get feedback from an objective, experienced observer and to involve in context-specific discussions about teaching with adviser.
+            {t('ass3p3')}
         </p>
 
         <p className='special-p large-mb'>
-            The process of observation and evaluation require a very high degree of professional ethics and objectivity. Effective peer observation requires training in observational and analytical skills.
+            {t('ass3p4')}
         </p>
 
-        <h2 className='large-mb'>Classroom Observation Instruments</h2>
+        <h2 className='large-mb'>{t('ass3h22')}</h2>
 
         <p className='special-p'>
-            There are several types of observational procedures that have been used to examine effective teaching (e.g., charts, rating scales, checklists, and narrative descriptions). Some of the widely used Classroom Observation Instruments:
+            {t('ass3p5')}
         </p>
 
         <ul className='ps-4 mb-4'>
@@ -43,13 +46,13 @@ const Assessment3Details = () => {
                 <li className='d-flex mb-4'>
                     <span className='simple-icon'><FaCheck/></span>
                     <span className='mx-2'></span>
-                    <span className = 'desc'>Classroom Assessment Scoring System (CLASS) instrument</span>
+                    <span className = 'desc'>{t('ass3span')}</span>
                 </li>
             
         </ul>
 
         <p className='special-p mb-4'>
-            The Classroom Assessment Scoring System™ was developed by Robert Pianta at the University of Virginia, Curry School of Education, Center for Advanced Study of Teaching and Learning (CASTL).
+        {t('ass3p6')}
         </p>
 
         <ul className='ps-4 med-mb'>
@@ -59,19 +62,19 @@ const Assessment3Details = () => {
                 <li className='d-flex mb-4' key={idx}>
                     <span className='simple-icon'><FaCheck/></span>
                     <span className='mx-2'></span>
-                    <span className = 'desc'> {desc} </span>
+                    <span className = 'desc'> {t(desc)} </span>
                 </li>
             )}    
         </ul>
 
         <p className='special-p large-mb'>
-            Both the SOS and the CISSAR were designed for elementary and secondary education settings and involve recording teachers’ and students’ overt behaviors for short periods at specified time intervals.
+            {t('ass3p7')}
         </p>
 
-        <h2 className='large-mb'>Example of a Classroom Observation Tool</h2>
+        <h2 className='large-mb'>{t('ass3h23')}</h2>
 
         <p className='special-p'>
-            Directions:
+            {t('ass3p7')}
         </p>
 
         <ul className='ps-4 med-mb'>
@@ -81,7 +84,7 @@ const Assessment3Details = () => {
                 <li className='d-flex mb-4' key={idx}>
                     <span className='simple-icon'><FaCheck/></span>
                     <span className='mx-2'></span>
-                    <span className = 'desc'> {desc} </span>
+                    <span className = 'desc'> {t(desc)} </span>
                 </li>
                 
             )}    

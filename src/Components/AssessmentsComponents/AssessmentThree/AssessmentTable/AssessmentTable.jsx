@@ -7,6 +7,7 @@ import { useReactToPrint } from "react-to-print";
 
 import { Chart } from "react-google-charts";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 const AssessmentTable = ({
 Questions,
 columnHead = null,
@@ -14,6 +15,9 @@ tableName,
 adjustCell,
 btnName,
 }) => {
+  const {t,i18n} = useTranslation()
+  const lang = i18n.language;
+  let isRTL = lang =='en'?'ltr':'rtl'
 // const [showError, setShowError] = useState(false);
 const navigate=useNavigate()
 const [selectedAnswers, setSelectedAnswers] = useState({});
@@ -31,22 +35,28 @@ const handleAnswerClick = (questionId, answerId) => {
     [questionId]: answerId,
   }));
 };
+// console.log();
 
+  let url = 'api/v1/TCA/'
+  let cat = "ABCDEFGH";
 
+  if(Questions[0].category==='ass3cat1'){
+    url='api/v1/COI/'
+    cat='ABCD'
+  }
 async function handleSendData(values) {
   try {
-    let { data } = await axios.post("api/v1/TCA/", values);
+    let { data } = await axios.post(url, values);
 
     if (data) {
       console.log(data);
       let newdata=data.data.percentage_level_score
-      let cat = "ABCDEFGH";
       cat = cat.split("");
       cat.forEach((el,index)=>{
         let color ='blue'
         
         if (newdata[el][0]>25 && newdata[el][0] <37.5) {
-          color='lightred'
+          color='red'
         } else if(newdata[el][0]>37.5 && newdata[el][0] <62.5) {
           color='yellow'
           
@@ -54,7 +64,7 @@ async function handleSendData(values) {
         else if(newdata[el][0]<87.5 && newdata[el][0] >62.5) {
           color='green'
         }
-          recievddata.push([Questions[index]['category'],newdata[el][0],
+          recievddata.push([t(Questions[index]['category']),newdata[el][0],
             color,newdata[el][1]
           ])
         })
@@ -119,7 +129,7 @@ const isCalculateButtonDisabled = () => {
     )
   );
 };
-
+console.log(Questions);
 
 
 // console.log(data);
@@ -221,9 +231,9 @@ return (
                 <th scope="col" className={adjustCell && `p-3`}>
                   {" "}
                   {adjustCell ? (
-                    <span>{category}</span>
+                    <span>{t(category)}</span>
                   ) : (
-                    <div>{category}</div>
+                    <div>{t(category)}</div>
                   )}{" "}
                 </th>
 
@@ -244,11 +254,11 @@ return (
             <tbody>
               {questions.map((question, idx) => (
                 <tr key={idx}>
-                  <th scope="col" className={adjustCell && `py-2 px-3`}>
+                  <th scope="col" className={adjustCell && `py-3 px-3`}>
                     {adjustCell ? (
-                      <span>{question.text}</span>
+                      <span> {t(question.text)}</span>
                     ) : (
-                      <div>{question.text}</div>
+                      <div>  {t(question.text)}</div>
                     )}
                   </th>
 
@@ -282,7 +292,7 @@ return (
       onClick={printSelectedAnswers}
       disabled={isCalculateButtonDisabled()}
     >
-      {btnName}
+      {t('submit')}
       
     </button>
 
