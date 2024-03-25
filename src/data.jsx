@@ -1919,22 +1919,22 @@ export const ass4Sidebar = [
 
 export const ass5StudentPerspectives = [
     {
-        desc: 'teachers as they work to improve'
+        desc: 'ass5Per1'
     },
     {
-        desc: 'leaders as they set professional development priorities for teachers'
+        desc: 'ass5Per2'
     },
     {
-        desc: 'Attending Round Observation System’ (AROS)'
+        desc: 'ass5Per3'
     },
     {
-        desc: 'coaches and mentors in supporting teachers'
+        desc: 'ass5Per4'
     },
     {
-        desc: 'higher education institutions as they'
+        desc: 'ass5Per5'
     },
     {
-        desc: 'develop teacher training programs'
+        desc: 'ass5Per6'
     }
 ]
 
@@ -1992,7 +1992,7 @@ export const ass5QuestionsPartOneTitles = {
 
 export const ass5QuestionsPartOne = [
     {
-        category: 'CARE',
+        category: 'ass5p1cat1',
         answers: [
             {
                 answer: 1
@@ -2019,7 +2019,7 @@ export const ass5QuestionsPartOne = [
         ]
     },
     {
-        category: 'CONTROL',
+        category: 'ass5p1cat2',
         answers: [
             {
                 answer: 1
@@ -2046,7 +2046,7 @@ export const ass5QuestionsPartOne = [
         ]
     },
     {
-        category: 'CLARIFY',
+        category: 'ass5p1cat3',
         answers: [
             {
                 answer: 1
@@ -2073,7 +2073,7 @@ export const ass5QuestionsPartOne = [
         ]
     },
     {
-        category: 'CHALLENGE',
+        category: 'ass5p1cat4',
         answers: [
             {
                 answer: 1
@@ -2100,7 +2100,7 @@ export const ass5QuestionsPartOne = [
         ]
     },
     {
-        category: 'CAPTIVATE',
+        category: 'ass5p1cat5',
         answers: [
             {
                 answer: 1
@@ -2127,7 +2127,7 @@ export const ass5QuestionsPartOne = [
         ]
     },
     {
-        category: 'CONFER',
+        category: 'ass5p1cat6',
         answers: [
             {
                 answer: 1
@@ -2154,7 +2154,7 @@ export const ass5QuestionsPartOne = [
         ]
     },
     {
-        category: 'CONSOLIDATE',
+        category: 'ass5p1cat7',
         answers: [
             {
                 answer: 1
@@ -2189,7 +2189,7 @@ export const ass5QuestionsPartTwoTitles = {
 
 export const ass5QuestionsPartTwo = [
     {
-        category: 'Students in the classroom feel cared for',
+        category: 'ass5p2cat1',
         answers: [
             {
                 answer: 1
@@ -2220,7 +2220,7 @@ export const ass5QuestionsPartTwo = [
         ]
     },
     {
-        category: 'Student behavior is managed to enable learning',
+        category: 'ass5p2cat2',
         answers: [
             {
                 answer: 1
@@ -2255,7 +2255,7 @@ export const ass5QuestionsPartTwo = [
         ]
     },
     {
-        category: 'Students receive support and scaffolding',
+        category: 'ass5p2cat3',
         answers: [
             {
                 answer: 1
@@ -2290,7 +2290,7 @@ export const ass5QuestionsPartTwo = [
         ]
     },
     {
-        category: 'Students experience a challenging work environment',
+        category: 'ass5p2cat4',
         answers: [
             {
                 answer: 1
@@ -2333,7 +2333,7 @@ export const ass5QuestionsPartTwo = [
         ]
     },
     {
-        category: 'Students are invested in classroom learning',
+        category: 'ass5p2cat5',
         answers: [
             {
                 answer: 1
@@ -2376,7 +2376,7 @@ export const ass5QuestionsPartTwo = [
         ]
     },
     {
-        category: 'Students receive descriptive feedback',
+        category: 'ass5p2cat6',
         answers: [
             {
                 answer: 1
@@ -2406,10 +2406,13 @@ export const ass5QuestionsPartTwo = [
 
 export const ass5Sidebar = [
     {
-        desc: '“No one has a bigger stake in teaching effectiveness than students. Nor are there any better experts on how teaching is experienced by its intended beneficiaries. But only recently have many policymakers and practitioners come to recognize that—when asked the right questions, in the right ways—students can be an important source of information on the quality of teaching and the learning environment in individual classrooms.”'
+        desc: 'ass5sid1'
     },
     {
-        desc: 'MET project. Student Perception Surveys and Their Implementation. Bill & Melinda Gates Foundation.'
+        desc: 'ass5sid2'
+    },
+    {
+        desc: 'ass5sid3'
     }
 
 ]

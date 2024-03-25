@@ -18,6 +18,11 @@ btnName,
   const {t,i18n} = useTranslation()
   const lang = i18n.language;
   let isRTL = lang =='en'?'ltr':'rtl'
+  let isright=lang =='en'?'5%':'auto'
+  const tableStyles = {
+    direction: isRTL,
+    left:isright
+    };
 // const [showError, setShowError] = useState(false);
 const navigate=useNavigate()
 const [selectedAnswers, setSelectedAnswers] = useState({});
@@ -43,6 +48,10 @@ const handleAnswerClick = (questionId, answerId) => {
   if(Questions[0].category==='ass3cat1'){
     url='api/v1/COI/'
     cat='ABCD'
+  }
+  else if(Questions[0].category==='ass5p1cat1'){
+    url='api/v1/SRT/'
+    cat='ABCDEFG'
   }
 async function handleSendData(values) {
   try {
@@ -141,7 +150,7 @@ const handlePrint = useReactToPrint({
 return (
   <div>
     {columnHead ? (
-      <table className="table table-bordered ass-table">
+      <table className="table table-bordered ass-table"  style={tableStyles}>
         <thead>
           <tr>
             <td className="position-relative W-23 W-22 W-17 W-18">
@@ -172,14 +181,14 @@ return (
                   {idx === 0 && (
                     <td
                       rowSpan={questions.length}
-                      className="W-28 W-23 W-22 W-17 W-18"
+                      className="W-28 W-23 W-22 W-13 W-18"
                     >
-                      <div className="text-dark ">{category}</div>
+                      <div className="text-dark ">{t(category)}</div>
                     </td>
                   )}
 
-                  <th className="W-60" scope="col">
-                    <div>{question.text}</div>
+                  <th  className="W-60" scope="col">
+                    <div style={tableStyles}>{t(question.text)}</div>
                   </th>
 
                   {[1, 2, 3, 4].map((answerId) => (
@@ -193,7 +202,7 @@ return (
                       }
                     >
                       {selectedAnswers[question.id] === answerId && (
-                        <div>
+                        <div >
                           <FaCheck />
                         </div>
                       )}
@@ -206,7 +215,7 @@ return (
         </tbody>
       </table>
     ) : (
-      <table className="table table-bordered ass-table">
+      <table className="table table-bordered ass-table" style={tableStyles}>
         {tableName && (
           <thead>
             <tr>
