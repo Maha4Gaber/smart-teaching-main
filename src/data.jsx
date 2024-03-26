@@ -1614,32 +1614,32 @@ export const ass3Questions = [
 
 export const ass4Structure = [
     {
-        desc: 'The Simplified TCA assessment tool is made up of the 19 Indicators and 8 Domains.'
+        desc: 'ass4Str1'
     },
     {
-        desc: 'The assessment tool uses a four-level rating scale:'
+        desc: 'ass4Str2'
     },
     {
-        desc: 'The rating to the indicators are expressed as:'
+        desc: 'ass4Str3'
     }
 ]
 
 export const ass4RatingIndicators = [
     {   
-        name: 'Low level:',
-        desc: '1. Does Not Meet Standards – Unacceptable performance leading to an improvement plan, intensive support, and, if improvement isn’t made within a reasonable amount of time, dismissal.'
+        name: 'ass4Ratn1',
+        desc: 'ass4Ratd1'
     },
     {
-        name: 'Fair level:',
-        desc: '2. Improvement Necessary – Performance is mediocre; no teacher should be content to remain at this level.'
+        name: 'ass4Ratn2',
+        desc: 'ass4Ratd2'
     },
     {
-        name: 'Satisfactory level:',
-        desc: '3. Effective – Solid, expected professional performance; teachers should feel good about scoring at this level.'
+        name: 'ass4Ratn3',
+        desc: 'ass4Ratd3'
     },
     {
-        name: 'High level:',
-        desc: '4. Master teacher performance that meets very demanding criteria'
+        name: 'ass4Ratn4',
+        desc: 'ass4Ratd4'
     }
 ]
 
@@ -1678,7 +1678,7 @@ export const ass4EvaluationTable = [
 
 export const ass4Questions = [
     {
-        category: 'Indicators',
+        category: 'ass4cat1',
         answers: [
             {
                 answer: 1
@@ -1696,12 +1696,12 @@ export const ass4Questions = [
         questions: [
             {
                 id: 1,
-                text: '1. The teacher is up to date regarding curriculum content and understands the central concepts, tools of inquiry, and structures of the discipline and developmental tasks so as to create learning experiences that make these concepts meaningful for students.'
+                text: 'ass4q1'
             },
         ]
     },
     {
-        category: 'EFFECTIVE PLANNING AND ASSESSMENT OF CURRICULUM AND INSTRUCTION',
+        category: 'ass4cat2',
         answers: [
             {
                 answer: 1
@@ -1719,20 +1719,20 @@ export const ass4Questions = [
         questions: [
             {
                 id: 2,
-                text: '2. The teacher plans instruction effectively utilizing materials and resources to achieve the objectives of the curriculum.'
+                text: 'ass4q2'
             },
             {
                 id: 3,
-                text: '3. The teacher plans assessment of student learning effectively.'
+                text: 'ass4q3'
             },
             {
                 id: 4,
-                text: '4. The teacher monitors students’ understanding of the curriculum effectively and adjusts instruction, materials, or assessments when appropriate.'
+                text: 'ass4q4'
             }
         ]
     },
     {
-        category: 'EFFECTIVE MANAGEMENT OF CLASSROOM ENVIRONMENT',
+        category: 'ass4cat3',
         answers: [
             {
                 answer: 1
@@ -1750,16 +1750,16 @@ export const ass4Questions = [
         questions: [
             {
                 id: 5,
-                text: '5. The teacher creates an environment that is positive for student learning and involvement.'
+                text: 'ass4q5'
             },
             {
                 id: 6,
-                text: '6. The teacher maintains appropriate standards of behaviour, mutual respect and safety.'
+                text: 'ass4q6'
             }
         ]
     },
     {
-        category: 'EFFECTIVE INSTRUCTION',
+        category: 'ass4cat4',
         answers: [
             {
                 answer: 1
@@ -1777,24 +1777,24 @@ export const ass4Questions = [
         questions: [
             {
                 id: 7,
-                text: '7. The teacher makes learning goals clear to students.'
+                text: 'ass4q7'
             },
             {
                 id: 8,
-                text: '8. The teacher uses appropriate instructional techniques.'
+                text: 'ass4q8'
             },
             {
                 id: 9,
-                text: '9. The teacher uses appropriate questioning techniques.'
+                text: 'ass4q9'
             },
             {
                 id: 10,
-                text: '10. The teacher evaluates, tries innovative approaches, and refines instructional strategies, including the effective use of technologies, to increase student learning and confidence to learn.'
+                text: 'ass4q10'
             }
         ]
     },
     {
-        category: 'PROMOTION OF HIGH STANDARDS AND EXPECTATIONS FOR STUDENT ACHIEVEMENT',
+        category: 'ass4cat5',
         answers: [
             {
                 answer: 1
@@ -1812,16 +1812,16 @@ export const ass4Questions = [
         questions: [
             {
                 id: 11,
-                text: '11. The teacher communicates learning goals and high standards and expectations to students.'
+                text: 'ass4q11'
             },
             {
                 id: 12,
-                text: '12. The teacher promotes confidence and perseverance in the student that stimulate increased personal student responsibility for achieving the goals of the curriculum.'
+                text: 'ass4q12'
             }
         ]
     },
     {
-        category: 'PROMOTION OF EQUITY AND APPRECIATION OF DIVERSITY',
+        category: 'ass4cat6',
         answers: [
             {
                 answer: 1
@@ -1839,16 +1839,16 @@ export const ass4Questions = [
         questions: [
             {
                 id: 13,
-                text: '13. The teacher strives to ensure equitable opportunities for student learning.'
+                text: 'ass4q13'
             },
             {
                 id: 14,
-                text: 'The teacher demonstrates appreciation for and sensitivity to the diversity among individuals.'
+                text: 'ass4q14'
             }
         ]
     },
     {
-        category: 'FULFILLMENT OF PROFESSIONAL RESPONSIBILITIES',
+        category: 'ass4cat7',
         answers: [
             {
                 answer: 1
@@ -1866,20 +1866,20 @@ export const ass4Questions = [
         questions: [
             {
                 id: 15,
-                text: '15. The teacher is constructive and cooperative in interactions with parents and receptive to their contributions.'
+                text: 'ass4q15'
             },
             {
                 id: 16,
-                text: '16. The teacher shares responsibility for accomplishing the goals and priorities of his/her grade/team/department, building and school district.'
+                text: 'ass4q16'
             },
             {
                 id: 17,
-                text: '17. The teacher is a reflective and continuous learner.'
+                text: 'ass4q17'
             }
         ]
     },
     {
-        category: 'STUDENT OUTCOMES',
+        category: 'ass4cat8',
         answers: [
             {
                 answer: 1
@@ -1897,11 +1897,11 @@ export const ass4Questions = [
         questions: [
             {
                 id: 18,
-                text: '18. The teacher effectively facilitates student learning and growth.'
+                text: 'ass4q18'
             },
             {
                 id: 19,
-                text: '19. Students demonstrate appropriate mastery of the knowledge and/or skills which are the objectives of the staff member’s work.'
+                text: 'ass4q19'
             }
         ]
     }
@@ -1910,10 +1910,10 @@ export const ass4Questions = [
 
 export const ass4Sidebar = [
     {
-        desc: 'The Simplified TCA assessment tool is made up of 19 items (Indicators) and 8 Domains.'
+        desc: 'ass4Sid1'
     },
     {
-        desc: 'The full version (112 items, 19 Indicators and 8 Domains) is only available for certified Expert Teachers. This tool may be used by Self, Principal, Peers, Supervisors and Experts.'
+        desc: 'ass4Sid2'
     }
 ]
 

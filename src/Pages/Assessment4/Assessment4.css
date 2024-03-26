@@ -1,3 +1,8 @@
+
+.main-ass2-img{
+
+    background-image: url(../../assests/Assessments/Assessment4/main.jpeg);  
+}
 .ass4{
     padding: 2.5rem 3.75rem;
     background: var(--gray-color);
