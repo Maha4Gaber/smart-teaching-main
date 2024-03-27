@@ -9,7 +9,8 @@ function MiddleExpert() {
   const {t} = useTranslation()
   return (
     <section className={classes.middle__expert}>
-      <div>
+    
+      <div >
         <SpeedMoter />
       </div>
       <div className={classes.empact__teaching}>
