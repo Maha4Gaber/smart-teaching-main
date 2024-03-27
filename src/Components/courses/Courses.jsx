@@ -8,7 +8,7 @@ const { t } = useTranslation();
 const [courses, setCourses] = useState([]);
 async function getdata() {
 await axios.get("api/v1/courses/").then((res) => {
-    console.log(res.data);
+    // console.log(res.data);
     setCourses(res.data);
 });
 }
@@ -31,9 +31,9 @@ return (
     </div>
 
     <div className="row p-5">
-        {courses.map((card, idx) => (
-        <div key={idx} className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            <Course course={card} />
+        {courses.map((cours, id) => (
+        <div key={id} className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+            <Course id={cours.id} />
         </div>
         ))}
     {/* <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
