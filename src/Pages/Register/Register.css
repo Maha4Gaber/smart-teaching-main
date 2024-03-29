@@ -1,9 +1,13 @@
 .register {
     background: #F3F3F3;
     padding: 6.5rem 0;
-    overflow-x: hidden;
-    padding-top: 23vh;
-
+    /* overflow-x: hidden; */
+    /* padding-top: 23vh; */
+    margin-top: 10vh ;
+    /* padding-bottom: 50px !important; */
+    height: 150vh;
+    margin-bottom: 150px;
+    
 }
 
 .col-shadow{

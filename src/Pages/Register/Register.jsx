@@ -37,7 +37,7 @@ return (
                                 singleForm ? "" : "active"
                             }`}
                         >
-                            Sign Up
+                            {t("signUp")}
                         </button>
 
                         <button
@@ -49,7 +49,8 @@ return (
                                 multiForm ? "" : "active"
                             }`}
                         >
-                            Sign Up As a founder
+                        {t("signUpfounder")}
+                            
                         </button>
                     </div>
 
