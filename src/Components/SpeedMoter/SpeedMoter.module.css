@@ -29,7 +29,7 @@
 }
 .inf__selcets select {
   display: flex;
-  max-width: 508px;
+  max-width: 300px;
   padding: 12px;
   justify-content: center;
   align-items: center;
@@ -67,6 +67,10 @@
 }
 .speed__moter svg {
   margin-top: 2rem;
+}
+.selcet
+{
+  width: 80% ;
 }
 @media (max-width: 722px) {
   .inf__selcets {
