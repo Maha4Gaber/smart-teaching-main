@@ -27,7 +27,7 @@ return (
 
                 {/* Slider Form */}
                 <div className="col-lg-6 p-0 pt-5 pt-lg-0 position-relative bg-white register-forms">
-                    <div className="select-form">
+                    <div className= {`${isRTL} select-form`} >
                         <button
                             onClick={(e) => {
                                 setSingleForm(true);
