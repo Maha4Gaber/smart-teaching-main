@@ -223,6 +223,12 @@ input,
 
 .PhoneInputInput {
   border: none;
+  text-align: end;
+}
+.ltr .PhoneInputInput {
+  flex: 1;
+  text-align: start;
+  min-width: 0;
 }
 
 .PhoneInputInput:focus-visible {
