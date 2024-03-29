@@ -222,7 +222,8 @@ return (
             ></button>
 
             <h1 className="modal-title mb-0" id="exampleModalToggleLabel4">
-            Welcome Back
+            Evaluation completed successfully
+
             </h1>
 
             <img className="right-img mt-4" src={rightLogo} alt="" />

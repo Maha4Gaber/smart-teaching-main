@@ -16,7 +16,7 @@ getdata();
 return (
 <>
     <div data-aos="zoom-in" className={classes.coures_content}>
-    <h5 className="text-center">{t("eduPaths")}</h5>
+    {/* <h5 className="text-center">{t("eduPaths")}</h5>
     <h3 className="text-center">{t("eduPathsSubTitle")}</h3>
     <ul>
         <li className={classes.active}>{t("all")}</li>
@@ -27,7 +27,7 @@ return (
     <ul>
         <li>{t("teacherEvaluation")}</li>
         <li>{t("threeLevelHost")}</li>
-    </ul>
+    </ul> */}
     </div>
 
     <div className="row p-5">

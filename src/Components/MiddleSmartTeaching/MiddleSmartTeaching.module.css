@@ -26,12 +26,14 @@
 }
 .middleSmart__z {
   display: flex;
-  justify-content: space-between; align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 10px; */
   margin: 10px 0;
 }
 .middleSmart__z img {
-  width: 100%;
+  width: 100% !important;
+  height: auto !important;
 }
 .z__content h4 {
   color: var(--Black, #0f0f0f);

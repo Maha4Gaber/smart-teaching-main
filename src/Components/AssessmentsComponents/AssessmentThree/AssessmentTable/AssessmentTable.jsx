@@ -4,6 +4,7 @@ import axios from "axios";
 
 import "./AssessmentTable.css";
 import { useReactToPrint } from "react-to-print";
+import rightLogo from "../../../../assests/Register/right.png";
 
 import { Chart } from "react-google-charts";
 import { useNavigate } from "react-router-dom";
@@ -83,7 +84,9 @@ const AssessmentTable = ({
 
         localStorage.data = JSON.stringify(recievddata);
         setTimeout(() => {
-          nav ?? navigate("/pdf");
+          let close = document.querySelector(".close-login");
+    close.click();
+          if(nav) navigate("/pdf");
         }, 2000);
         // console.log(recievddata);
       }
@@ -304,31 +307,39 @@ const AssessmentTable = ({
         className="submit-ass"
         onClick={printSelectedAnswers}
         disabled={isCalculateButtonDisabled()}
+        data-bs-target="#exampleModalToggle4"
         data-bs-toggle="modal"
-        data-bs-target="#exampleModalToggle"
       >
         {t("submit")}
       </button>
-        <div className="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-        <div className="modal-dialog modal-dialog-centered">
-          <div className="modal-content">
-            <div className="modal-header">
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div className="modal-body">
+      <div
+    className="done modal fade"
+    id="exampleModalToggle4"
+    aria-hidden="true"
+    aria-labelledby="exampleModalToggleLabel4"
+    tabIndex="-1"
+    >
+    <div className="modal-dialog modal-dialog-centered">
+        {/* Modal Content */}
+        <div className="modal-content w-75 p-5">
+        <div className="modal-header text-center p-0">
+            <button
+            type="button"
+            className="btn-close close-login d-none"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+            ></button>
+
+            <h1 className="modal-title mb-0" id="exampleModalToggleLabel4">
             Evaluation completed successfully
-            </div>
-            <div className="modal-footer">
-            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
+
+            </h1>
+
+            <img className="right-img mt-4" src={rightLogo} alt="" />
         </div>
-      </div>
+        </div>
+    </div>
+    </div>
       {/* {nav ?? (
       )} */}
       {/* {showError && (

@@ -7,52 +7,52 @@ import StudentImg from '../../assests/boy.png';
 import AnaPic from '../../assests/analyes.png';
 import { t } from 'i18next';
 import { useTranslation } from 'react-i18next';
+import parse from 'html-react-parser';
 const MiddleSmartTeaching = () => {
   const {t} = useTranslation()
   return (
-    <section className={classes.middleSmart}>
-      <h3>{t("smartTeachingSystem")}<small>®</small></h3>
-      <div className={classes.middleSmart__top}>
+    <section className={` position-relative ${classes.middleSmart}`}>
+      <h3>{parse(t("smartTeachingSystem"))}  <small>®</small>  </h3>
+      <div className={ ` position-relative ${classes.middleSmart__top}`}>
         <SmartText>
-          {t("whatIsSTS1")}<small>®</small>
-          {t("whatIsSTS11")}
+          {parse(t("whatIsSTS1"))}  <small>®</small>    {parse(t("whatIsSTS11"))}
         </SmartText>
         <SmartText>
-        {t("whatIsSTS2")}
+        {parse(t("whatIsSTS2"))}
         </SmartText>
         <SmartText>
-        {t("whatIsSTS3")}
+        {parse(t("whatIsSTS3"))}
         </SmartText>
       </div>
-      <h3>{t("becomeSmartSchool")}
+      <h3>{parse(t("becomeSmartSchool"))}
       
       </h3>
       <div className={` row ${classes.middleSmart__z}`}>
-        <div className='col-4'> 
+        <div className='col-6'> 
           <img
           src={promImg}
           alt='teacher'
         /> 
         </div>
-        <div className={`col-7 ${classes.z__content}`}        >
+        <div className={`col-6 ${classes.z__content}`}        >
           <h4>
-          {t("becomeSmartSchoolTitle1")}
+          {parse(t("becomeSmartSchoolTitle1"))}
           </h4>
           <SmartText>
-          {t("becomeSmartSchoolTitle1")}
+          {parse(t("becomeSmartSchoolInfo1"))}
           </SmartText>
           <SmartText>
-          {t("becomeSmartSchoolInfo2")}
+          {parse(t("becomeSmartSchoolInfo2"))}
           </SmartText>
           <SmartText>
-          {t("becomeSmartSchoolInfo3")}
+          {parse(t("becomeSmartSchoolInfo3"))}
           </SmartText>
         </div>
       </div>
       <div className={` row ${classes.middleSmart__z}`}>
         
 
-        <div className={`col-7 ${classes.z__content} ${classes.blockA}`}>
+        <div className={`col-6 ${classes.z__content} ${classes.blockA}`}>
           <h4>{t("becomeSmartSchoolTitle2")}
           <small>®</small>
           {t("becomeSmartSchoolTitle22")}
@@ -66,7 +66,7 @@ const MiddleSmartTeaching = () => {
             {t("becomeSmartSchoolInfo55")}
           </SmartText>
         </div>
-        <div className='col-4'> 
+        <div className='col-6'> 
           <img
           src={Teacher}
           alt='teacher'
@@ -75,7 +75,7 @@ const MiddleSmartTeaching = () => {
         </div>
       </div>
       <div className={` row ${classes.middleSmart__z}`}>
-      <div className='col-4'>
+      <div className='col-6'>
       <img
           src={StudentImg}
           alt='teacher'
@@ -84,11 +84,12 @@ const MiddleSmartTeaching = () => {
       </div>
         
         <div
-          className={`col-7 ${classes.z__content}`}
+          className={`col-6 po ${classes.z__content}`}
           id='blockD'
+          
         >
-          <h4>
-          {t("becomeSmartSchoolTitle3")}<small>®</small>
+          <h4 className='position-relative'>
+          {parse(t("becomeSmartSchoolTitle3"))}<small>®</small>
           {t("becomeSmartSchoolTitle33")}
           </h4>
           <SmartText>
@@ -100,7 +101,7 @@ const MiddleSmartTeaching = () => {
         </div>
       </div>
       <div className={` row ${classes.middleSmart__z}`}>
-        <div className={`col-7 ${classes.z__content} ${classes.blockZ}`}>
+        <div className={`col-6 ${classes.z__content} ${classes.blockZ}`}>
           <h4>{t("becomeSmartSchoolTitle4")}</h4>
           <SmartText>
             {t("becomeSmartSchoolInfo8")}
@@ -109,7 +110,7 @@ const MiddleSmartTeaching = () => {
             {t("becomeSmartSchoolInfo9")}
           </SmartText>
         </div>
-        <div className='col-4'>
+        <div className='col-6 '>
         <img
           src={AnaPic}
           alt='teacher'
