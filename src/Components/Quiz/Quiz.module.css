@@ -1,0 +1,37 @@
+.quiz__layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+.quiz__para {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.quiz__para p {
+  color: var(--html-themewin-com-black, #000);
+
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.quiz__locked {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.quiz__layout p {
+  color: var(--html-themewin-com-shark, #212529);
+
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}

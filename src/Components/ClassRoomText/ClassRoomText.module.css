@@ -1,0 +1,25 @@
+.main__coures_desc {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  /* align-items: center; */
+}
+.main__coures_desc p:first-child {
+  color: var(--html-themewin-com-nevada, #5c727d);
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main__coures_desc p:last-child {
+  color: var(--html-themewin-com-elephant, #133344);
+
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

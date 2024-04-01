@@ -1,0 +1,38 @@
+.member-type h2{
+    margin-bottom: 1.13rem !important;
+}
+
+.member-type p{
+    font-family: Arial;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.member-type h3{
+    color: var(--Green, #214A4A);
+    font-family: Arial;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 1.31rem;
+}
+
+.member-type desc{
+    color: var(--black-color);
+    font-family: Arial;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: justify;
+}
+
+.member-type div:not(:last-child) {
+    margin-bottom: 2.63rem !important;
+}
+

@@ -1,0 +1,19 @@
+.blog-contact form input, .blog-contact form textarea{
+    width: 100% !important;
+    border-radius: 0.25rem !important;
+    border: none !important;
+    border-bottom: 1px solid #ddd !important;
+}
+
+.blog-contact form textarea{
+    height: auto !important;
+    background-color: transparent !important;
+}
+
+.blog-contact #floatingTextarea{
+    height: auto !important;
+}
+
+.blog-contact form button{
+    border-radius: 0.25rem !important; 
+}

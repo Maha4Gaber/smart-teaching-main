@@ -1,0 +1,46 @@
+.touch__form {
+  max-width: 370px;
+  padding: 20px;
+  border: 1px solid var(--html-themewin-com-alto, #ddd);
+  background: var(--html-themewin-com-nero-02, rgba(255, 255, 255, 0));
+
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.02);
+  margin: 20px;
+}
+.form__touch {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__touch input {
+  width: 90% !important;
+  outline: none;
+  border: none;
+  background: none;
+  border-bottom: 1px solid var(--html-themewin-com-alto, #ddd);
+  padding: 15px 0px;
+}
+.form__touch input::placeholder {
+  color: var(--html-themewin-com-boulder, #757575);
+
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.form__touch button {
+  border-radius: 4px;
+  border: 2px solid var(--Yellow, #debd63);
+  background: var(--Yellow, #debd63);
+  padding: 17px 80px;
+  color: var(--white, var(--white, #fff));
+
+  /* 18 Regular */
+  font-family: Arial;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

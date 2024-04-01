@@ -1,0 +1,11 @@
+.blog-icon-box{
+    width: 2.4375rem;
+    height: 2.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    color: var(--black-color);
+    background: #F2F6F7;
+    padding: 0.6875rem 0.74875rem 0.6875rem 0.6875rem;
+}

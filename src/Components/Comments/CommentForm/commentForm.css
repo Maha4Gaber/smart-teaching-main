@@ -1,0 +1,68 @@
+.comment-form{
+    padding: 3.75rem 0 4.68rem;
+}
+
+.comment-form h3{
+    font-family: Hind;
+    font-size: 1.625rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.875rem;
+    margin-bottom: 2.81rem;
+}
+
+.comment-form form input, .comment-form form textarea{
+    width: 100% !important;
+    border-radius: 0.25rem !important;
+    border: 1px solid #ddd !important;
+}
+
+.comment-form form .checkbox{
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    border-color: var(--darkgreen-color) !important;
+}
+.comment-form form .checkLabel{
+    color: #5F6C76  ;
+    font-family: Arial;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.comment-form form button{
+    border: none !important;
+    margin-bottom: 4.68rem !important;
+    width: 16.1875rem !important;
+    height: 3.4375rem !important;
+    font-family: Arial !important;
+    font-size: 1rem !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+    text-align: center !important;
+    border-radius: 0.25rem !important;
+    color: var(--white-color) !important;
+    background-color: var(--darkgreen-color) !important;
+    transition: all .3s !important;
+}
+
+.comment-form form button:hover{
+    color: var(--darkgreen-color) !important;
+    background-color: var(--white-color) !important;
+    border: 1px solid var(--darkgreen-color) !important;
+}
+
+.comment-form form button:disabled {
+    color: var(--white-color) !important;
+    background-color: var(--darkgreen-color) !important;
+    opacity: .5;
+    transition: none;
+}
+
+.comment-form form button:hover:not(:disabled) {
+    color: var(--darkgreen-color) !important;
+    background-color: var(--white-color) !important;
+    border: 1px solid var(--darkgreen-color) !important;
+}

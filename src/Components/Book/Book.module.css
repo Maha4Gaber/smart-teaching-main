@@ -1,0 +1,109 @@
+.book {
+  max-width: 320px;
+  border-radius: 16px;
+  background: var(--white, #fff);
+  box-shadow: 0px 0px 20px 10px rgba(95, 45, 237, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  margin: 10px 15px;
+  transition: 0.1s all ease-out;
+}
+
+.book .book__container {
+  width: 100%;
+  height: 90%;
+}
+.book__container img {
+  border-radius: 16px 16px 0px 0px;
+}
+.container__tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container__tag span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.16);
+  width: 30px;
+  height: 30px;
+}
+.container__tag button {
+  padding: 5px 4px;
+  border-radius: 3px;
+  background: var(--Yellow, #f8b401);
+  color: var(--white, #fff);
+  border: none;
+  text-align: center;
+  font-family: 'Tajawal';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+}
+.book h4 {
+  color: #000;
+  font-family: 'Tajawal';
+  font-size: 20px;
+  font-weight: 700;
+}
+.book hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #acacac;
+  margin: 1em 0;
+  padding: 0;
+}
+.book__tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btnRead {
+  color: var(--defult, #214a4a);
+  /* 18 Regular */
+  font-family: Arial;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.btnRead svg {
+  fill: #214a4a;
+}
+.book__tag span {
+  color: var(--defult, #214a4a);
+  /* 18 Regular */
+  font-family: Arial;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.book:hover {
+  background: var(--defult, #214a4a);
+  color: #fff;
+}
+.book:hover > h4 {
+  background: var(--defult, #214a4a);
+  color: #fff;
+}
+.book:hover > .book__tag span {
+  background: var(--defult, #214a4a);
+  color: #fff;
+}
+.book:hover > .book__tag a {
+  background: var(--defult, #214a4a);
+  color: #fff;
+}
+.book:hover > .book__tag svg {
+  fill: #fff;
+}

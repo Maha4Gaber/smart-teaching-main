@@ -1,0 +1,30 @@
+.middle_assessment {
+  max-width: 100%;  
+  flex-shrink: 0;
+  padding: 10px;
+  border-radius: 12px;
+  background: var(--white, #fff);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.middle_assessment .h3 {
+  color: var(--Black, #0f0f0f);
+  text-align: center;
+  /* 24 Medium */
+  font-family: Arial;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 530px;
+  text-align: center;
+  margin: 20px auto;
+}
+.middle_assessment__layout {
+  margin: 10px 20px;
+}
+.middle_assessment img {
+  width: 100%;
+}
+
+
+

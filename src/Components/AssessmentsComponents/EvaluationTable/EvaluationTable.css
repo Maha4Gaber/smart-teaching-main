@@ -1,0 +1,26 @@
+.simple-table{
+    margin-bottom: 2rem;
+    border: 1px solid #656567;
+}
+
+.simple-table th, .simple-table td{
+    width: 25%;
+    position: relative;
+}
+
+.simple-table tr{
+    height: 5rem !important;
+}
+
+.simple-table th div, .simple-table td div{
+    color: #656567;
+    font-family: Arial;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    top: 50%;
+    right: 50%;
+    position: absolute;
+    transform: translateY(-50%) translateX(50%);
+}

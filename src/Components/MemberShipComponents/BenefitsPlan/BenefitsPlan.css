@@ -1,0 +1,33 @@
+table{
+    border: 1px solid #B9B9B9 !important;
+    border-radius: .5rem !important;
+}
+
+table .main-head tr th{
+    background-color: var(--darkgreen-color);
+}
+
+table:first-child{
+    font-weight: 600 !important;
+}
+
+table th{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: .75rem;
+}
+
+table td{
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+table tr th:first-child{
+    width: 25% !important;
+}
+
+table tr{
+    display: table-row;
+}
+
+

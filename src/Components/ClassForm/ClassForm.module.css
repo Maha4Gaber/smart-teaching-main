@@ -1,0 +1,116 @@
+.form__class {
+  max-width: 800px;
+}
+.form__class h4 {
+  color: var(--html-themewin-com-black, #000);
+
+  /* html.themewin.com/Hind/SemiBold 26 */
+  font-family: 'roboto';
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 115.385% */
+  margin: 30px 0;
+}
+.form__class input {
+  border-radius: 4px;
+  border: 1px solid var(--html-themewin-com-alto, #ddd);
+  height: 50px;
+  background: #fff;
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+.form__class input::placeholder {
+  color: var(--html-themewin-com-boulder, #757575);
+
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.form_layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+}
+.textarea {
+  border-radius: 4px;
+  border: 1px solid var(--html-themewin-com-alto, #ddd);
+  width: 100%;
+  height: 209px;
+  background: #fff;
+  padding: 10px 15px;
+  color: var(--html-themewin-com-boulder, #757575);
+
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  resize: none;
+}
+.form__submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.check__box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.check__box input {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.check__box span {
+  color: var(--html-themewin-com-nevada, #5f6c76);
+
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -14px;
+}
+.from_btn {
+  width: 259px;
+  height: 55px;
+  border-radius: 4px;
+
+  background: var(--Green, #214a4a);
+  color: var(--white, var(--white, #fff));
+  text-align: center;
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* padding: 10px 50px; */
+  border: none;
+  margin-bottom: 30px;
+}
+@media (max-width: 700px) {
+  .form_layout {
+    grid-template-columns: 1fr;
+  }
+  .form__class input {
+    max-width: 100%;
+  }
+  .textarea {
+    max-width: 100%;
+  }
+}

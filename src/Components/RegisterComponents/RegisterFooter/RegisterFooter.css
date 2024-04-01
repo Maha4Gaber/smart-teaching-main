@@ -1,0 +1,36 @@
+.or{
+    font-size: 1.25rem;
+}
+
+.or::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 0.0625rem;
+    width: 40%;
+    background: rgba(172, 172, 172, 0.80);
+}
+.or::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 0.0625rem;
+    width: 40%;
+    background: rgba(172, 172, 172, 0.80);
+}
+
+.form-icons{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.form-icons img{
+    width: 2.8125rem !important;
+    height: 2.8125rem !important;
+}
+
+.form-icons a:hover img{
+    transform: scale(1.1);
+}

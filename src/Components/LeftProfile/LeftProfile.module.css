@@ -1,0 +1,43 @@
+.left_profile {
+  width: 100%;
+
+  border-radius: 10px;
+  background: var(--white, #fff);
+  box-shadow: 0px 0px 20px 10px rgba(95, 45, 237, 0.02);
+  padding: 40px 30px 10px 30px;
+  max-height: 480px;
+}
+.left_profile header {
+  color: var(--Gray-Text, #656567);
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  background: var(--Gray-BG, #f2f2f2);
+  padding: 8px 10px;
+
+  margin-bottom: 6px;
+}
+.left_lead {
+  color: var(--Gray-Text, #656567);
+
+  /* 16 Regular */
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.left_profile h5 {
+  color: var(--Black, #0f0f0f);
+  font-family: Arial;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}

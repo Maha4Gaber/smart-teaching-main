@@ -1,0 +1,13 @@
+.left_heading {
+  color: var(--html-themewin-com-black, #000);
+
+  /* 24 Bold */
+  font-family: Arial;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 5px;
+  border-left: 2px solid #214a4a;
+  margin: 10px 0px 20px;
+}

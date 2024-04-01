@@ -1,0 +1,11 @@
+.category-box{
+    color: #ACACAC;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    font-size: 1.125rem;
+    margin: 1.25rem 0;
+    padding: .5rem .75rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ACACAC;
+}

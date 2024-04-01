@@ -1,0 +1,23 @@
+.join-community h2{
+    margin-bottom: 2.81rem !important;
+}
+
+.join-community h4{
+    font-family: Arial;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-left: 2px solid var(--darkgreen-color);
+    padding-left: .75rem;
+    padding-right: .75rem;
+}
+
+.join-community li{
+    padding-left: 2.88rem ;
+    padding-right: 2.88rem ;
+}
+
+.join-community li:not(:last-child){
+    margin-bottom: 2.62rem ;
+}

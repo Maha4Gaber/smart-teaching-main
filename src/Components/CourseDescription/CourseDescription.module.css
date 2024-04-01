@@ -1,0 +1,30 @@
+.course__desc {
+}
+.course__desc h2 {
+  color: var(--html-themewin-com-black, #000);
+
+  /* 24 Bold */
+  font-family: Arial;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 10px;
+  border-left: 3px solid #214a4a;
+  margin-bottom: 20px;
+}
+.course__desc .course_detail {
+  display: grid;
+  max-width: 800px;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  /* height: 500px; */
+  background: var(--html-themewin-com-athens-gray, #f4f4f8);
+  border-radius: 2px;
+  padding: 50px;
+}
+@media (max-width: 800px) {
+  .course__desc .course_detail {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,5 @@
+.assessmentCard__item {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}

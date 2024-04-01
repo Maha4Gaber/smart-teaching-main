@@ -1,0 +1,43 @@
+.tags{
+    padding-top: 2rem ;
+    padding-bottom: 2rem;
+    margin-top: 1.25rem;
+    margin-bottom: 3.75rem;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.tags h4{
+    font-family: Arial;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: .25rem;
+    margin-bottom: 0;
+}
+
+.tags a{
+    color: #5F6C76;
+    border-radius: 0.25rem;
+    border: 1px solid #ddd;
+    
+}
+
+.tags .tag-links a{
+    padding: 0.63188rem 0.58306rem 0.61813rem 0.60756rem;
+}
+
+.social-tag a{
+    padding: 0.69438rem 0.80931rem 0.74313rem 0.81569rem;
+}
+
+@media screen and (max-width: 699px) {
+    .tags{
+        flex-direction: column-reverse !important;
+    }
+    .tags .social-tag{
+        margin-bottom: 1rem !important;
+    }
+}
+

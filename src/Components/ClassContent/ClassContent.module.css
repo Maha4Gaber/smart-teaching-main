@@ -1,0 +1,48 @@
+.class__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  gap: 4px;
+}
+.nav_content {
+  display: flex;
+  padding: 0;
+  margin: 20px 0;
+  gap: 4px;
+}
+.nav_content button {
+  background: none;
+  border: none;
+  background: #fff;
+  color: var(--html-themewin-com-black, #000);
+  text-align: center;
+
+  /* html.themewin.com/Inter/Regular 16 */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.8px; /* 180% */
+  background: var(--white, #fff);
+  padding: 20px 45px;
+  box-shadow: 0px 0px 50px 10px rgba(95, 45, 237, 0.1);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.class__content svg {
+  stroke: #214a4a;
+}
+.nav_content .active {
+  background: #214a4a;
+  color: #fff;
+}
+.active svg {
+  stroke: #fff;
+}
+@media (max-width: 800px) {
+  .nav_content button {
+    padding: 5px 10px;
+    font-size: 8px;
+  }
+}
