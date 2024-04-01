@@ -1,9 +1,0 @@
-.pop__courses {
-  max-width: 370px;
-  padding: 20px;
-  border: 1px solid var(--html-themewin-com-alto, #ddd);
-  background: var(--html-themewin-com-nero-02, rgba(255, 255, 255, 0));
-  background: var(--html-themewin-com-nero-02, rgba(255, 255, 255, 0));
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.02);
-  margin: 20px;
-}
