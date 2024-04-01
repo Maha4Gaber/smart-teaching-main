@@ -18,7 +18,7 @@ function SpeedMoter() {
   const lang = i18n.language;
   let isEn = lang == "en" ? true : false;
   const [rate, setRate] = useState([]);
-  const [value, setValue] = useState(-0.9);
+  const [value, setValue] = useState(.41);
   const [rank, setRank] = useState(7);
   const [soi, setSoi] = useState("6%");
   const [inful, setInful] = useState("ADHD");
@@ -72,7 +72,7 @@ function SpeedMoter() {
         </div>
       </div>
       <div className={classes.inf__selcets}>
-        <ResultInf title="rank" value={rank} />
+        <ResultInf title={t('rank')} value={rank} />
         <select
           value={inful}
           className={classes.select}
@@ -87,17 +87,17 @@ function SpeedMoter() {
             </option>
           ))}
         </select>
-        <ResultInf title="Effect Size" value={value} />
+        <ResultInf title={t('Effect Size')}  value={value} />
       </div>
       <div className={classes.speed__moter}>
         <ReactSpeedometer
           value={value}
-          maxValue={2}
+          maxValue={1.5}
           maxSegmentLabels={5}
           segments={4}
-          minValue={-1}
+          minValue={-.5}
           segmentColors={["firebrick", "tomato", "gold", "limegreen"]}
-          customSegmentStops={[-1, -0.5, 0, 1, 2]}
+          customSegmentStops={[-.5, 0,.2, .41, 1.5, ]}
           textColor="#000"
         />
       </div>

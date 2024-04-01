@@ -86,7 +86,7 @@ const AssessmentTable = ({
         setTimeout(() => {
           let close = document.querySelector(".close-login");
     close.click();
-          if(nav) navigate("/pdf");
+           navigate("/pdf");
         }, 2000);
         // console.log(recievddata);
       }

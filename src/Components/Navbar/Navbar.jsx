@@ -22,7 +22,18 @@ const Navbar = () => {
   useEffect(() => {
     setLang(i18n.language);
   }, [i18n.language]);
+  const [userData, setuserData] = useState('');
 
+  function saveUserData() {
+    let Token = localStorage.token;
+    setuserData(Token);
+    
+  }
+  useEffect(() => {
+    if (localStorage.getItem("token") !== null && userData === null) {
+        saveUserData();
+    }
+    }, []);
   return (
     <>
       <nav className="active navbar navbar-expand-lg py-lg-0 py-3">
@@ -327,9 +338,13 @@ const Navbar = () => {
             </ul>
 
             <div className="auth ">
-              <Link to="/login">
-                <MainBtn shadow>{t("login")}</MainBtn>
+            <Link to={userData?'/login':'/logout'}>
+                <MainBtn shadow>{userData?t("login"):t("logout")}</MainBtn>
               </Link>
+            
+              
+              
+              
               <span className="p-2 cursor-pointer" onClick={()=>changeLanguage(lang === "en" ? "ar" : "en" )}>
                 {lang === "en" ? "Ar" : "En"} <FaAngleDown />
               </span>

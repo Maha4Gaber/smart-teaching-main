@@ -35,7 +35,7 @@ function Pdf() {
   };
 
   function printDocument() {
-    const input = document.body;
+    const input = document.getElementById('divToPrint');
     html2canvas(input)
       .then((canvas) => {
         let imgWidth = 208;
