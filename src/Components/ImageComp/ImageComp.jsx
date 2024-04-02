@@ -14,10 +14,10 @@ const ImageComp = ({ src, alt, imgStyle }) => {
   }, [src, alt]);
 
   return (
-    <>
+    <div>
       {!imgLoaded && (
-        <div style={{width: '100%', height: '100%' }}>
-          <Skeleton width='100%' height="100%" />
+        <div style={{width: '100%', height: 'auto' }}>
+          <Skeleton width='100%'  />
         </div>
       )}
       <img
@@ -25,7 +25,7 @@ const ImageComp = ({ src, alt, imgStyle }) => {
         alt={alt}
         style={{ display: imgLoaded ? 'inline-block' : 'none', ...imgStyle }}
       />
-    </>
+    </div>
   );
 };
 

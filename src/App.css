@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+      background-color: #f2f2f2;
+    background-image: none;
 }
 
 .App-logo {
@@ -79,8 +81,8 @@ ul {
 
 .main-img{
   width: calc(100% - 100px);
-  margin: 18vh 50px 0 50px !important; 
-  height: 80vh;
+  margin: 12vh 50px 0 50px !important; 
+  height: 60vh;
   background-position: center left;
   background-repeat: no-repeat;
   background-size: cover;
@@ -101,8 +103,9 @@ ul {
 .main-img figcaption h1,
   .main-img figcaption h2{
   width: 100%;
-  padding: 20px;
-  font-size: 3rem;
+  padding: 0px;
+  font-size: 3.25rem;
+  margin: 0 !important;
     font-weight: 700;
   text-align: center !important;
 }

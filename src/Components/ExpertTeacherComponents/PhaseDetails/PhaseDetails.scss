@@ -1,8 +1,8 @@
 .phase-details span{
     font-family: Inter;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     font-style: normal;
-    font-weight: 600;
+    font-weight: bold;
     line-height: normal;
     color: var(--darkgreen-color);
 }
@@ -25,5 +25,6 @@
         border-left: 0;
         padding-right: .75rem;
         padding-left: 0;
+        font-size: 20px;
     } 
 }

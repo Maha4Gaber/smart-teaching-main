@@ -22,7 +22,7 @@ const Navbar = () => {
   useEffect(() => {
     setLang(i18n.language);
   }, [i18n.language]);
-  const [userData, setuserData] = useState('');
+  const [userData, setuserData] = useState(null);
 
   function saveUserData() {
     let Token = localStorage.token;
@@ -35,7 +35,7 @@ const Navbar = () => {
     }
     }, []);
   return (
-    <>
+    <div>
       <nav className="active navbar navbar-expand-lg py-lg-0 py-3">
         <div className="container-fluid">
           <Link className="navbar-brand d-lg-none" href="/">
@@ -43,8 +43,8 @@ const Navbar = () => {
               src={Logo}
               alt="logo"
               className="logo"
-              width={133}
-              height={81}
+              width={110}
+              height={50}
             />
           </Link>
           <button
@@ -338,21 +338,21 @@ const Navbar = () => {
             </ul>
 
             <div className="auth ">
-            <Link to={userData?'/login':'/logout'}>
-                <MainBtn shadow>{userData?t("login"):t("logout")}</MainBtn>
+              <Link to={userData ? "/logout" : "/login"}>
+                <MainBtn shadow>{userData ? t("logout") : t("login")}</MainBtn>
               </Link>
-            
-              
-              
-              
-              <span className="p-2 cursor-pointer" onClick={()=>changeLanguage(lang === "en" ? "ar" : "en" )}>
+
+              <span
+                className="p-2 cursor-pointer"
+                onClick={() => changeLanguage(lang === "en" ? "ar" : "en")}
+              >
                 {lang === "en" ? "Ar" : "En"} <FaAngleDown />
               </span>
             </div>
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 

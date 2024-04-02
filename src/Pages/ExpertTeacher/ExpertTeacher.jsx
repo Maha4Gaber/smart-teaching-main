@@ -25,13 +25,13 @@ return (
 
     <div className="row gy-4 ">
 
-    <div className="col-lg-3 col-md-3 col-lg-3 px-2">
+    <div className="col-lg-2 col-md-3  px-2">
 
         <SidebarLinks links={expertTeacherLinks}/>
 
     </div>
 
-    <div className="col-lg-6   col-md-7  px-2">
+    <div className="col-lg-7   col-md-7  px-2">
 
         <ExpertTeacherDetails/>
 

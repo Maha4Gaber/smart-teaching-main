@@ -1,10 +1,6 @@
 .smart__header {
   background: url('../../assests/smartteaching.png');
-  width: calc(100% - 100px);
-  margin: 0 50px 0 50px !important; 
-  
-  margin-top: 18vh !important; 
-  height: 80vh;
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

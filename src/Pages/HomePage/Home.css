@@ -1,23 +1,34 @@
 main {
+
     overflow-x: hidden !important;
 }
 
 /* Header Img */
 .main-home-img {
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(89deg, rgba(19, 92, 81, 0.60) 28.11%, rgba(19, 92, 81, 0.00) 98.5%), url(../../assests/main-home.png), lightgray -146.39px 0px / 136.151% 100.399%;
-    background-size: 136.151% 100.399%;
-    background-size: cover;
+    height: 70vh;
+    /* background: linear-gradient(89deg, rgba(19, 92, 81, 0.60) 28.11%, rgba(19, 92, 81, 0.00) 98.5%), url(../../assests/main-home.png), lightgray -146.39px 0px / 136.151% 100.399%; */
+    /* background-size: 136.151% 100.399%; */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* background-position: 60% center */
+    ;
+        background-image: url(../../assests/main-home.png);
+    background-position: center center;
     background-repeat: no-repeat;
-    background-position: 60% center;
+    background-size: cover;
 }
 
 
 
 .main-home-img figcaption {
-    padding-left: 3.75rem;
-    padding-right: 3.75rem;
+    padding: 0 5rem;
+    /* padding-right: 3.75rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -46,7 +57,9 @@ main {
     color: var(--white-color);
     text-align: center;
     margin: 5rem 200px;
+    font-size: 50px;
     margin-bottom: 1.25rem;
+    width: 100%;
 }
 
 @media screen and (max-width: 992px) {
@@ -176,14 +189,23 @@ main button:hover {
 
 /* Evidence Home */
 .evidence-home h1 {
-    font-size: 2.25rem !important;
+    font-size: 3rem !important;
 }
 
 .custom-padding {
     padding: 0 2rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-padding img
+{
+    width: 100%;
+    height: auto;
+    transition: all 0.3s;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:991px) {
     .custom-padding {
         padding: 0 1rem !important;
     }
@@ -194,6 +216,18 @@ main button:hover {
 
     .special-evidence-row {
         flex-direction: column-reverse !important;
+    }
+    .custom-padding {
+        padding: 0 2rem !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .custom-padding img
+    {
+        width: 70%;
+        height: 80%;
+        transition: all 0.3s;
     }
 
 }
@@ -223,16 +257,22 @@ main button:hover {
 /* About Home */
 .about-home p {
     text-align: justify;
+    font-size: 18px;
 }
 
 .about-home button {
     color: var(--black-color);
 }
+.about-home h2 small{
+    font-size: 18px !important;
+    transform: translate(5px,-15px) !important;
+}
 
 /* Evidence Home */
 .evidence-home h1 {
-    font-size: 2.25rem !important;
+    font-size: 3rem !important;
 }
+
 
 .custom-padding {
     padding: 0 2rem !important;

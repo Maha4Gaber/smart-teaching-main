@@ -30,15 +30,17 @@ function SpeedMoter() {
     let s = Number(singleItem.size);
     setValue(s);
     if (singleItem.category_en.toLowerCase() === "student") {
-      isEn ? setSoi("48%") : setSoi("48%");
+      isEn ? setSoi("56%") : setSoi("39%");
     } else if (singleItem.category_en.toLowerCase() === "home") {
-      isEn ? setSoi("7%") : setSoi("90%");
+      isEn ? setSoi("23%") : setSoi("72%");
     } else if (singleItem.category_en.toLowerCase() === "teaching") {
       isEn ? setSoi("90%") : setSoi("6%");
     } else if (singleItem.category_en.toLowerCase() === "teacher") {
-      isEn ? setSoi("69%") : setSoi("27%");
+      isEn ? setSoi("69%") : setSoi("23%");
     } else if (singleItem.category_en.toLowerCase() === "school") {
-      isEn ? setSoi("27%") : setSoi("69%");
+      isEn ? setSoi("39%") : setSoi("56%");
+    } else if (singleItem.category_en.toLowerCase() === "ؤurricula") {
+      isEn ? setSoi("6%") : setSoi(" 90%");
     }
   }
 
@@ -59,7 +61,7 @@ function SpeedMoter() {
     <section className={classes.influncers}>
       <h6>{t("learnImpactOfFactors")}</h6>
       <div className={classes.inf__images}>
-        {/* <Influeance img={CirInf} title="" /> */}
+         <Influeance img={CirInf} title="Curricula" /> *
         <Influeance img={HomeInf} title="HOME" />
         <Influeance img={SchoolInf} title="school" />
         <Influeance img={StudentInf} title="student" />

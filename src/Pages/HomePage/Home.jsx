@@ -6,6 +6,7 @@ import Blogs from "../../Components/Blogs/Blogs";
 import Slider from "react-slick";
 import Courses from "../../Components/courses/Courses";
 import "./Home.css";
+import parse from "html-react-parser";
 
 // Import Components
 import BgImg from "./../../Components/BgImg/BgImg";
@@ -104,176 +105,195 @@ const Home = () => {
     };
 
     return (
-        <main className="position-relative">
-            <figure className="main-home-img d-flex align-items-center m-0">
-                <figcaption data-aos="fade-right">
-                    <h1 className="text-center " style={{fontSize: "2rem"}}>
-                    {t("newSystematic")}  {t("approachToMax")} {" "}
-                    {t("yourStudents")}  {t("learningOutcome")}
-                    </h1>
+      <main className="container position-relative">
+        <figure className="main-home-img d-flex align-items-center m-0">
+          <figcaption data-aos="fade-right">
+            <h1 className="text-center " style={{ fontSize: "3rem" }}>
+              {t("newSystematic")} {t("approachToMax")} {t("yourStudents")}
+            </h1>
 
-                    <button>
-                        <Link to="/login" className="p-0     text-dark">
-                            {t("getStarted")}{" "}
-                            <BiRightArrowAlt className="ms-3 fs-4" />{" "}
-                        </Link>
-                    </button>
-                </figcaption>
-            </figure>
+            <button>
+              <Link to="/login" className="p-0     text-dark">
+                {t("getStarted")} <BiRightArrowAlt className="ms-3 fs-4" />{" "}
+              </Link>
+            </button>
+          </figcaption>
+        </figure>
 
-            <Link
-                to="/contactus"
-                className="contact-link d-flex align-items-center"
+        <Link
+          to="/contactus"
+          className="contact-link d-flex align-items-center"
+        >
+          <SiGooglemessages className="contact-icon-box" />
+        </Link>
+
+        {/* Partners Section */}
+        <section
+          className="partner-home py-5 section-padding partner-home"
+          data-aos="zoom-in"
+        >
+          <h1 className="text-center mb-5">{t("stsPartner")}</h1>
+
+          <div className="row">
+            <Slider {...settings2}>
+              {partners?.map((partner, idx) => (
+                <div
+                  className="section-padding d-flex justify-content-center align-items-center"
+                  key={idx}
+                >
+                  <div
+                    key={idx}
+                    className="overflow-hidden custom-size position-relative"
+                  >
+                    <ImageComp src={partner.img} alt="Our Clients" />
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section className="about-home py-5 section-padding">
+          <div className="row py-5">
+            <div className="col-lg-5 col-md-7" data-aos="fade-right">
+              <ImageComp src={aboutImg} />
+            </div>
+            <div
+              className="col-lg-6 col-md-5 offset-lg-1 py-5"
+              data-aos="fade-left"
             >
-                <SiGooglemessages className="contact-icon-box" />
-            </Link>
-
-            {/* Partners Section */}
-            <section className="partner-home py-5 section-padding partner-home" data-aos="zoom-in">
-                <h1 className="text-center mb-5">{t("stsPartner")}</h1>
-
-                <div className="row">
-                    <Slider {...settings2}>
-                        {partners?.map((partner, idx) => (
-                            <div
-                                className="section-padding d-flex justify-content-center align-items-center"
-                                key={idx}
-                            >
-                                <div
-                                    key={idx}
-                                    className="overflow-hidden custom-size position-relative"
-                                >
-                                    <ImageComp
-                                        src={partner.img}
-                                        alt="Our Clients"
-                                    />
-                                </div>
-                            </div>
-                        ))}
-                    </Slider>
-                </div>
-            </section>
-
-            {/* About Section */}
-            <section className="about-home py-5 section-padding">
-                <div className="row py-5">
-                    <div className="col-lg-5 col-md-7" data-aos="fade-right">
-                        <ImageComp src={aboutImg} />
-                    </div>
-                    <div className="col-lg-6 col-md-5 offset-lg-1 py-5" data-aos="fade-left">
-                        <div className="ps-0 ps-lg-0 ps-md-4">
-                            <h5 className="green-color mb-3">{t("aboutUs")}</h5>
-                            <h2 className="blue-color head-title mb-4">
-                            {t("smartTeachingSystem")}
-                            </h2>
-                            <p className="silver-color mb-5">
-                                {t("aboutUsDetails")}
-                            </p>
-                            <button>
-                                {" "}
-                                <Link
-                                    className="p-0 text-dark d-flex align-items-center"
-                                    to="/expertteacher"
-                                >
-                                    {" "}
-                                    {t("getStarted")}{" "}
-                                    <BiRightArrowAlt className="ms-3 fs-4" />{" "}
-                                </Link>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Evidence Section */}
-            <section className="evidence-home py-5 section-padding">
-                <h1 className="text-center head-title mb-5" data-aos="zoom-in">
-                    {t("evidenceAndSystematic")} <br />
-                    {t("eductation")}
-                </h1>
-
-                <div className="row g-4 py-5">
-                    <div className="col-md-7 d-flex align-items-center" data-aos="fade-right">
-                        <EvidenceDesc
-                            title={t(evidence[0].title)}
-                            desc={t(evidence[0].desc)}
-                            className="hide"
-                        />
-                    </div>
-
-                    <div className="col-lg-4 offset-lg-1 col-md-5 custom-padding" data-aos="fade-left">
-                        <BgImg src={evidenceOne} className="left" />
-                    </div>
-                </div>
-
-                <div className="row g-4 py-5 special-evidence-row">
-                    <div className="col-lg-4 col-md-5 custom-padding" data-aos="fade-right">
-                        <BgImg src={evidenceTwo} className="right" />
-                    </div>
-
-                    <div className="col-md-6 offset-lg-1 d-flex align-items-center offset-md-1" data-aos="fade-left">
-                        <EvidenceDesc
-                            title={t(evidence[1].title)}
-                            desc={t(evidence[1].desc)}
-                            className="hide"
-                        />
-                    </div>
-                </div>
-
-                <div className="row g-4 py-4">
-                    <div className="col-md-7 d-flex align-items-center" data-aos="fade-right">
-                        <EvidenceDesc
-                            title={t(evidence[2].title)}
-                            desc={t(evidence[2].desc)}
-                        />
-                    </div>
-
-                    <div className="col-lg-4 offset-lg-1 col-md-5 custom-padding" data-aos="fade-left">
-                        <BgImg src={evidenceThree} className="left" />
-                    </div>
-                </div>
-            </section>
-
-            {/* Services Section */}
-            <section className="p-5 service-home">
-                <h5 className="green-color text-center" data-aos="zoom-in">{t("services")}</h5>
-                <h1 className="text-center my-2 fw-bold" data-aos="zoom-in">
-                    {t("serviceTitle")}
-                </h1>
-                <p className="text-center" data-aos="zoom-in">
-                    {t("serviceDetails1")}
-                    <br /> {t("serviceDetails2")}
+              <div className="ps-0 ps-lg-0 ps-md-4">
+                <h5 className="green-color mb-3">{t("aboutUs")}</h5>
+                <h2 className="blue-color head-title mb-4">
+                  {t("smartTeachingSystem")}
+                  <small>®</small>
+                </h2>
+                <p className="silver-color mb-5">
+                  {parse(t("aboutUsDetails"))}
                 </p>
+                <button>
+                  {" "}
+                  <Link
+                    className="p-0 text-dark d-flex align-items-center"
+                    to="/expertteacher"
+                  >
+                    {" "}
+                    {t(
+                      "getStarted"
+                    )} <BiRightArrowAlt className="ms-3 fs-4" />{" "}
+                  </Link>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                <div className="row gy-4">
-                    {serviceCards.map((card, idx) => (
-                        <div className="col-md-6 col-lg-3" data-aos="flip-left" key={idx}>
-                            <ServiceCard {...card} />
-                        </div>
-                    ))}
-                </div>
-            </section>
+        {/* Evidence Section */}
+        <section className="evidence-home py-5 section-padding">
+          <h1 className="text-center head-title mb-5" data-aos="zoom-in">
+            {t("evidenceAndSystematic")} <br />
+          </h1>
 
-            <Courses />
-            {/* Teachers Section */}
-            <section className="p-5 mb-4 teachers-home">
-                <h5 className="green-color text-center" data-aos="zoom-in">{t("ExpertTeacher")}</h5>
-                <h1 className="text-center fw-bold" data-aos="zoom-in">
-                    {t("makeBigDifference")} <br />
-                    {t("ExpertTeacher")}
-                </h1>
+          <div className="row  py-5">
+            <div
+              className="col-lg-3 col-sm-12  custom-padding "
+              data-aos="fade-left"
+            >
+              <img src={evidenceOne} className="left" />
+            </div>
+            <div
+              className="col-lg-9 col-sm-12 d-flex align-items-center"
+              data-aos="fade-right"
+            >
+              <EvidenceDesc
+                title={t(evidence[0].title)}
+                desc={t(evidence[0].desc)}
+                className="hide"
+              />
+            </div>
+          </div>
 
-                <TeamCards cards={homeTeam} />
-            </section>
+          <div className="row  py-5 ">
+            <div
+              className="col-lg-3 col-sm-12   custom-padding"
+              data-aos="fade-right"
+            >
+              <img src={evidenceTwo} className="left" />
+            </div>
 
-            {/* <Bg.Img src={logo} /> */}
-            <section className="p-5 ">
-                <FeatureCards cards={homeFeatures} />
-            </section>
-            <Blogs />
-            {/* Features Section */}
-            <FooterLinks />
-        </main>
+            <div
+              className="col-lg-9 col-sm-12 d-flex align-items-center "
+              data-aos="fade-left"
+            >
+              <EvidenceDesc
+                title={t(evidence[1].title)}
+                desc={t(evidence[1].desc)}
+                className="hide"
+              />
+            </div>
+          </div>
+
+          <div className="row  py-4">
+            <div
+              className="col-lg-3 col-sm-12   custom-padding"
+              data-aos="fade-left"
+            >
+              <img src={evidenceThree} />
+            </div>
+            <div className="col-lg-9 col-sm-12" data-aos="fade-right">
+              <EvidenceDesc
+                title={t(evidence[2].title)}
+                desc={t(evidence[2].desc)}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="p-5 service-home">
+          <h5 className="green-color text-center" data-aos="zoom-in">
+            {t("services")}
+          </h5>
+          <h1 className="text-center my-2 fw-bold" data-aos="zoom-in">
+            {t("serviceTitle")}
+          </h1>
+          <p className="text-center" data-aos="zoom-in">
+            {t("serviceDetails1")}
+            <br /> {t("serviceDetails2")}
+          </p>
+
+          <div className="row gy-4">
+            {serviceCards.map((card, idx) => (
+              <div className="col-md-6 col-lg-3" data-aos="flip-left" key={idx}>
+                <ServiceCard {...card} />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <Courses />
+        {/* Teachers Section */}
+        <section className="p-5 mb-4 teachers-home">
+          <h5 className="green-color text-center" data-aos="zoom-in">
+            {t("ExpertTeacher")}
+          </h5>
+          <h1 className="text-center fw-bold" data-aos="zoom-in">
+            {t("makeBigDifference")} <br />
+            {t("ExpertTeacher")}
+          </h1>
+
+          <TeamCards cards={homeTeam} />
+        </section>
+
+        {/* <Bg.Img src={logo} /> */}
+        <section className="p-5 ">
+          <FeatureCards cards={homeFeatures} />
+        </section>
+        <Blogs />
+        {/* Features Section */}
+        <FooterLinks />
+      </main>
     );
 };
 

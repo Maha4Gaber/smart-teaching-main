@@ -8,6 +8,7 @@
     display: block;
     color: var(--black-color);
     text-decoration: none;
+    font-size: 18px;
     padding: .94rem .62rem;
     border-bottom: 1px solid var(--gray-color);
 }

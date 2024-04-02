@@ -40,9 +40,9 @@
 
 .expert-academy h2{
     font-family: Arial;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
     line-height: normal;
     text-align: center;
     margin-bottom: 2rem;
@@ -51,7 +51,7 @@
 .expert-academy h3{
     text-align: center;
     font-family: Arial;
-    font-size: 1.125rem;
+    font-size: 1.75rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
