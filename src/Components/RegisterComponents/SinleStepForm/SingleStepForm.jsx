@@ -320,7 +320,7 @@ const SingleStepForm = () => {
                 className={`form-control ${formik.values.password2&& 'input-border-color'}`}
                 id="floatingpassword2"
                 name="password2"
-                placeholder="Confirm Password"
+                placeholder={t("repassowrd")}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.password2}
@@ -436,7 +436,7 @@ const SingleStepForm = () => {
               <div className='d-flex  justify-content-start'>
                 <input
                 style={sectionStyles} className='checkbox mt-1' type="checkbox" name='remember' value= 'value' id='remember' />
-                <label className='mx-2' htmlFor="remember">I agree to the <span className="condition-color">terms</span> and <br/> <span className="condition-color">privacy policy</span> </label>
+                <label className='mx-2' htmlFor="remember">{t('privacyPolicy')}</label>
               </div>
 
               {/* <ConfirmRegister formik={formik} loading={loading} name={formik.values.full_name}/> */}
