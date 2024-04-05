@@ -1267,80 +1267,80 @@ export const blogCategories = [
 
 export const assTwoTeacherDomain = [
     {
-        desc: 'Understanding the Curriculum'
+        desc: 'ass2tecdoman1'
     },
     {
-        desc: 'Planning and Assessment of Instruction'
+        desc: 'ass2tecdoman2'
     },
     {
-        desc: 'Management of Classroom'
+        desc: 'ass2tecdoman3'
     },
     {
-        desc: 'Instruction'
+        desc: 'ass2tecdoman4'
     },
     {
-        desc: 'Standards for Student Achievement'
+        desc: 'ass2tecdoman5'
     },
     {
-        desc: 'Appreciation of Diversity'
+        desc: 'ass2tecdoman6'
     },
     {
-        desc: 'Professional Responsibilities'
+        desc: 'ass2tecdoman7'
     },
     {
-        desc: 'Student Outcomes'
+        desc: 'ass2tecdoman8'
     }
 ]
 
 export const ass2Table = [
     {
-        index: 'Expert',
-        desc: 'Teacher has almost all the competencies for effective teaching at high level. These are the identified strengths. Strengths have to be sustained and enhanced; however professional development needs have to be continuously address.'
+        index: 'expert',
+        desc: 'ass2Tabledesc1'
     },
     {
-        index: 'Effective',
-        desc: 'Teacher has majority of the competencies at high level for effective teaching. Strengths have to be enhanced. Training and professional development needs have to be addressed.'
+        index: 'ass2Tablein2',
+        desc: 'ass2Tabledesc2'
     },
     {
-        index: 'Developing',
-        desc: 'Teacher has average of all the competencies at high level for effective teaching. These strengths have to be enhanced; however, training needs have to be addressed as priority.'
+        index: 'ass2Tablein3',
+        desc: 'ass2Tabledesc3'
     },
     {
-        index: 'Beginning',
-        desc: 'Teacher has very few of the competencies at high level for effective teaching. Training needs have to be given priority and addressed urgently.'
+        index: 'ass2Tablein4',
+        desc: 'ass2Tabledesc4'
     }
 ]
 
 export const teacherCompetencies = [
     {
-        desc: 'Self-assessment: Teachers may assess their own knowledge and skills by using the self-assessment tool that has been developed for the teacher competencies.'
+        desc: 'ass2teccomp1'
     },
     {
-        desc: 'Job descriptions: To assist with staff recruitment and hiring, administrators will find the competencies useful in developing job descriptions for a range of program positions.'
+        desc: 'ass2teccomp2'
     },
     {
-        desc: 'Appraisals of performance: Administrators may use the competencies as a tool in conducting performance appraisals. An administrator and an instructor can view the competencies as a tool for identifying instructor strengths as well as areas for improvement, and then design a professional development plan appropriate for the individual.'
+        desc: 'ass2teccomp3'
     },
     {
-        desc: 'Peer supervisors and mentors: The competencies can guide supervisors and mentors as they employ these emerging and increasingly popular forms of professional development.'
+        desc: 'ass2teccomp4'
     },
     {
-        desc: 'Professional development plans: Administrators and instructors can collaboratively identify elements of the competencies relevant to their program to design both a program-wide professional development plan as well as individual professional development plans.'
+        desc: 'ass2teccomp5'
     }
 ]
 
 export const teacherCompetencies2 = [
     {
-        desc: 'individual educators (teachers and principals) planning their own professional development.'
+        desc: 'ass2teccom21'
     },
     {
-        desc: 'planners of professional development.'
+        desc: 'ass2teccom22'
     },
     {
-        desc: 'providers of professional development.'
+        desc: 'ass2teccom23'
     },
     {
-        desc: 'evaluators of existing professional development programs and systems.'
+        desc: 'ass2teccom24'
     }
 ]
 

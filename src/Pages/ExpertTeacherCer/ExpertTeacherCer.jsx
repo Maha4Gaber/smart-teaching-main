@@ -9,7 +9,7 @@ import parse from "html-react-parser";
 function ExpertTeacherCer() {
   const { t } = useTranslation();
   return (
-    <div className="">
+    <div className=" container">
       <figure className=" mainimg  main-img d-flex align-items-center ">
         <figcaption>
           <h1 className="m-0 text-center w-100">
@@ -18,11 +18,11 @@ function ExpertTeacherCer() {
         </figcaption>
       </figure>
       <section className="ass4 pading-top p-3 p-md-5">
-        <div className="row gy-4 main-row">
-          <div className="col-lg-4 px-3">
+        <div className="row ">
+          <div className="col-lg-3 px-3">
             <SidebarLinks links={expertTeacherLinks} />
           </div>
-          <div className="col-lg-8 px-3 mt-5">
+          <div className="col-lg-9 px-3 ">
             <MiddleExpert />
           </div>
         </div>

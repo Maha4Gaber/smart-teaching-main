@@ -24,7 +24,9 @@ body {
   font-size: 16px;
   padding: 0 !important;
   overflow-x: hidden !important;
-  font-family: var(--fontFamily) !important;
+  /* font-family: var(--fontFamily) !important; */
+      background-color: #f2f2f2;
+    background-image: none;
 }
 
 /* Yellow Color & Background */

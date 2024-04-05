@@ -6,7 +6,7 @@
     text-align: center;
     position: relative;
     font-weight: 600;
-    font-size: 1.125em;
+    font-size: 1.5em;
     font-style: normal;
     line-height: normal;
     color: var(--darkgreen-color);
@@ -15,7 +15,7 @@
 .ass2-table td{
     color: var(--Black, #0F0F0F);
     font-family: Arial;
-    font-size: 1em;
+    font-size: 1.25em;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
