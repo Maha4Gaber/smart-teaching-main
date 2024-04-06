@@ -25,13 +25,11 @@ function Pdf() {
     content: () => componentRef.current,
   });
   var options = {
-    title: "Motivation Level Throughout the Day",
-    hAxis: {
-      title: "level",
-    },
-    vAxis: {
-      title: "100%",
-    },
+    // ttitle: "Density of Precious Metals, in g/cm^3",
+    // width: 600,
+    // height: 400,
+    bar: { groupWidth: "70%" },
+    legend: { position: "none" },
   };
 
   function printDocument() {
@@ -63,12 +61,12 @@ function Pdf() {
           </div>
           <div className="col-9  chart">
             <Chart
-              chartType="ColumnChart"
+              chartType="BarChart"
               width="100%"
               height="400px"
               data={data}
               className=""
-              // options={options}
+              options={options}
             />
           </div>
           <div className="col-12">

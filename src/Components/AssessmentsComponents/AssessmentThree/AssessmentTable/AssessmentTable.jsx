@@ -78,7 +78,7 @@ const AssessmentTable = ({
             t(Questions[index]["category"]),
             newdata[el][0],
             color,
-            newdata[el][1],
+            newdata[el][0],
           ]);
         });
 
