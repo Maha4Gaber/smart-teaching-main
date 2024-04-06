@@ -18,16 +18,17 @@ const sectionStyles = {
 
 return (
     <section className="register" >
-        <div className="container-lg px-3 px-sm-5 px-lg-0">
+        <div className="container px-3 px-sm-5 px-lg-0">
             <div className="row">
                 {/* Register Image */}
-                <div className="col-lg-6 p-0 col-shadow  register-img">
+                {/* <div className="col-lg-6 p-0 col-shadow  register-img">
                     <ImageComp src={reImg} alt="Register Now" />
-                </div>
+                </div> */}
 
                 {/* Slider Form */}
-                <div className="col-lg-6 p-0 pt-5 pt-lg-0 position-relative bg-white register-forms">
-                    <div className= {`${isRTL} select-form`} >
+                <div className="col-lg-2 "></div>
+                <div className="col-lg-8 p-0 pt-5 pt-lg-0 position-relative bg-white register-forms">
+                    {/* <div className= {`${isRTL} select-form`} >
                         <button
                             onClick={(e) => {
                                 setSingleForm(true);
@@ -52,12 +53,13 @@ return (
                         {t("signUpfounder")}
                             
                         </button>
-                    </div>
+                    </div> */}
 
                     {singleForm && <SingleStepForm />}
 
                     {multiForm && <FounderStepForm />}
                 </div>
+                <div className="col-lg-2 "></div>
             </div>
         </div>
     </section>

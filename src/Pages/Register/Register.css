@@ -1,12 +1,14 @@
 .register {
-    background: #F3F3F3;
+    background-image: url(../../assests/Login/login-bg.png);
+    background-repeat: no-repeat;
+    /* background: #F3F3F3; */
     padding: 6.5rem 0;
     /* overflow-x: hidden; */
     /* padding-top: 23vh; */
     margin-top: 10vh ;
     /* padding-bottom: 50px !important; */
     min-height: 150vh;
-    margin-bottom: 150px;
+    padding-bottom: 150px;background-size: 100% 100%;
     
 }
 
@@ -19,7 +21,7 @@
     overflow: hidden;
 }
 .register-forms{
-    border-radius: 0 1.875rem 1.875rem 0 !important;
+    border-radius: 1.875rem ;
 }
 
 @media screen and (max-width: 992px) {
