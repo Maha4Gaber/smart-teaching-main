@@ -25,7 +25,7 @@
 
 .ass4 .special-p{
     color: #0F0F0F;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: 400;
     font-family: Arial;
     font-style: normal;
@@ -33,6 +33,7 @@
     padding-left: .75rem;
     margin-bottom: 1.25rem;
     border-left: 2px solid var(--darkgreen-color);
+    font-size: 20px !important;
 }
 
 .ass4 .special-p span{
@@ -50,7 +51,7 @@
 
 .ass4 .desc{
     color: #0F0F0F;
-    font-size: 1rem;
+    font-size: 20px;
     font-weight: 400;
     font-family: Arial;
     font-style: normal;

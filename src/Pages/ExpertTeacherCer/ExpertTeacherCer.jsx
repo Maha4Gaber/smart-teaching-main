@@ -10,14 +10,15 @@ function ExpertTeacherCer() {
   const { t } = useTranslation();
   return (
     <div className=" container">
-      <figure className=" mainimg  main-img d-flex align-items-center ">
+      {/* <figure className=" mainimg  main-img d-flex align-items-center ">
         <figcaption>
           <h1 className="m-0 text-center w-100">
             {parse(t("expertTeacherTitle"))}{" "}
           </h1>
         </figcaption>
       </figure>
-      <section className="ass4 pading-top p-3 p-md-5">
+      s;dkfep */}
+      <section className="ass4 pading-top mt-5 p-3 p-md-5">
         <div className="row ">
           <div className="col-lg-3 px-3">
             <SidebarLinks links={expertTeacherLinks} />

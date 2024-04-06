@@ -85,8 +85,8 @@ const AssessmentTable = ({
         localStorage.data = JSON.stringify(recievddata);
         setTimeout(() => {
           let close = document.querySelector(".close-login");
-    close.click();
-           navigate("/pdf");
+          close.click();
+          navigate("/pdf");
         }, 2000);
         // console.log(recievddata);
       }
@@ -243,7 +243,13 @@ const AssessmentTable = ({
           {Questions.map(({ category, answers, questions }, idx) => (
             <React.Fragment key={idx}>
               <thead>
-                <tr>
+              {/* <tr ><td className="text-center position-relative">Index</td>
+              <td className="text-center position-relative">1</td>
+              <td className="text-center position-relative">2</td>
+              <td className="text-center position-relative">3</td>
+              <td className="text-center position-relative">4</td>
+              </tr> */}
+                {/* <tr>
                   <th scope="col" className={adjustCell && `p-3`}>
                     {" "}
                     {adjustCell ? (
@@ -264,10 +270,11 @@ const AssessmentTable = ({
                       )}
                     </td>
                   ))}
-                </tr>
+                </tr> */}
               </thead>
 
               <tbody>
+              
                 {questions.map((question, idx) => (
                   <tr key={idx}>
                     <th scope="col" className={adjustCell && `py-3 px-3`}>
@@ -281,16 +288,32 @@ const AssessmentTable = ({
                     {[1, 2, 3, 4].map((answerId) => (
                       <td
                         key={answerId}
-                        onClick={() => handleAnswerClick(question.id, answerId)}
+                        // onClick={() => handleAnswerClick(question.id, answerId)}
                         className={
                           selectedAnswers[question.id] === answerId
-                            ? "selected text-center cursor-pointer"
+                            ? "selected text-center cursor-pointer "
                             : "cursor-pointer"
                         }
                       >
-                        {selectedAnswers[question.id] === answerId && (
+                        {selectedAnswers[question.id] === answerId ? (
                           <div>
                             <FaCheck />
+                          </div>
+                        ) : (
+                          <div className="radio">
+                            <input
+                              className=""
+                              type="radio"
+                              width="100%"
+                              checked={
+                                selectedAnswers[question.id] === answerId
+                                  ? true
+                                  : false
+                              }
+                              onChange={() =>
+                                handleAnswerClick(question.id, answerId)
+                              }
+                            />
                           </div>
                         )}
                       </td>
@@ -313,33 +336,32 @@ const AssessmentTable = ({
         {t("submit")}
       </button>
       <div
-    className="done modal fade"
-    id="exampleModalToggle4"
-    aria-hidden="true"
-    aria-labelledby="exampleModalToggleLabel4"
-    tabIndex="-1"
-    >
-    <div className="modal-dialog modal-dialog-centered">
-        {/* Modal Content */}
-        <div className="modal-content w-75 p-5">
-        <div className="modal-header text-center p-0">
-            <button
-            type="button"
-            className="btn-close close-login d-none"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-            ></button>
+        className="done modal fade"
+        id="exampleModalToggle4"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel4"
+        tabIndex="-1"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          {/* Modal Content */}
+          <div className="modal-content w-75 p-5">
+            <div className="modal-header text-center p-0">
+              <button
+                type="button"
+                className="btn-close close-login d-none"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
 
-            <h1 className="modal-title mb-0" id="exampleModalToggleLabel4">
-            Evaluation completed successfully
+              <h1 className="modal-title mb-0" id="exampleModalToggleLabel4">
+                Evaluation completed successfully
+              </h1>
 
-            </h1>
-
-            <img className="right-img mt-4" src={rightLogo} alt="" />
+              <img className="right-img mt-4" src={rightLogo} alt="" />
+            </div>
+          </div>
         </div>
-        </div>
-    </div>
-    </div>
+      </div>
       {/* {nav ?? (
       )} */}
       {/* {showError && (

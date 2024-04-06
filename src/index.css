@@ -455,6 +455,10 @@ form button:hover {
   border: 1px solid #DEBD63 !important;
   background-color: var(--white-color) !important;
 }
+input[type='radio']
+{
+width: 100% !important;
+}
 
 .checkbox {
   width: 1.3rem !important;

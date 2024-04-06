@@ -13,17 +13,13 @@ const Assessment4 = () => {
   let isRTL = lang == "en" ? "ltr" : "rtl";
   return (
     <div>
-      <figure className="main-ass2-img main-img d-flex align-items-center ">
+      {/* <figure className="main-ass2-img main-img d-flex align-items-center ">
         <figcaption>
           <h1 className="m-0">
             {t("UsingTeacherCompetency")}
-            {/* <br />
-            {t("AssessmenttoDrive")}
-            <br />
-            {t("TeacherExcellence")} */}
           </h1>
         </figcaption>
-      </figure>
+      </figure> */}
       <section className="ass4 p-3 p-md-5 ">
         <div className="row gy-4 mt-5 ">
           <div className="col-lg-3 px-3">

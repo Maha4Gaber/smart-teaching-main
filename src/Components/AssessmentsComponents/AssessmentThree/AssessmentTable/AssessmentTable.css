@@ -1,15 +1,23 @@
 .ass-table .selected{
     background-color: var(--darkgreen-color);
+    
 }
 .ass-table tbody td{
     color: var(--white-color);
+    
 }
 
 .ass-table th{
     position: relative;
     padding: 1.5em;
+    
 }
 
+.radio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .ass-table .W-5{
     width: 5% !important;
 }

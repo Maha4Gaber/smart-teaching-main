@@ -160,12 +160,12 @@ const Home = () => {
               <ImageComp src={aboutImg} />
             </div>
             <div
-              className="col-lg-6 col-md-5 offset-lg-1 py-5"
+              className="col-lg-6 col-md-5 offset-lg-1 "
               data-aos="fade-left"
             >
-              <div className="ps-0 ps-lg-0 ps-md-4">
-                <h5 className="green-color mb-3">{t("aboutUs")}</h5>
-                <h2 className="blue-color head-title mb-4">
+              <div className="">
+                <h5 className="green-color mb-1">{t("aboutUs")}</h5>
+                <h2 className="blue-color head-title mb-1">
                   {t("smartTeachingSystem")}
                   <small>®</small>
                 </h2>
@@ -197,13 +197,13 @@ const Home = () => {
 
           <div className="row  py-5">
             <div
-              className="col-lg-3 col-sm-12  custom-padding "
+              className="col-lg-4 col-sm-12  custom-padding "
               data-aos="fade-left"
             >
               <img src={evidenceOne} className="left" />
             </div>
             <div
-              className="col-lg-9 col-sm-12 d-flex align-items-center"
+              className="col-lg-8 col-sm-12 d-flex align-items-center"
               data-aos="fade-right"
             >
               <EvidenceDesc
@@ -216,14 +216,14 @@ const Home = () => {
 
           <div className="row  py-5 ">
             <div
-              className="col-lg-3 col-sm-12   custom-padding"
+              className="col-lg-4 col-sm-12   custom-padding"
               data-aos="fade-right"
             >
               <img src={evidenceTwo} className="left" />
             </div>
 
             <div
-              className="col-lg-9 col-sm-12 d-flex align-items-center "
+              className="col-lg-8 col-sm-12 d-flex align-items-center "
               data-aos="fade-left"
             >
               <EvidenceDesc
@@ -236,12 +236,12 @@ const Home = () => {
 
           <div className="row  py-4">
             <div
-              className="col-lg-3 col-sm-12   custom-padding"
+              className="col-lg-4 col-sm-12   custom-padding"
               data-aos="fade-left"
             >
               <img src={evidenceThree} />
             </div>
-            <div className="col-lg-9 col-sm-12" data-aos="fade-right">
+            <div className="col-lg-8 col-sm-12" data-aos="fade-right">
               <EvidenceDesc
                 title={t(evidence[2].title)}
                 desc={t(evidence[2].desc)}

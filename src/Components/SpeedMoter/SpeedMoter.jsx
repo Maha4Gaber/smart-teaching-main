@@ -18,10 +18,10 @@ function SpeedMoter() {
   const lang = i18n.language;
   let isEn = lang == "en" ? true : false;
   const [rate, setRate] = useState([]);
-  const [value, setValue] = useState(.41);
-  const [rank, setRank] = useState(7);
+  const [value, setValue] = useState(0.41);
+  const [rank, setRank] = useState(0);
   const [soi, setSoi] = useState("6%");
-  const [inful, setInful] = useState("ADHD");
+  const [inful, setInful] = useState();
 
   function handleStudent(inful) {
     let item = rate.filter((item) => item.influence == inful);
@@ -61,7 +61,7 @@ function SpeedMoter() {
     <section className={classes.influncers}>
       <h6>{t("learnImpactOfFactors")}</h6>
       <div className={classes.inf__images}>
-         <Influeance img={CirInf} title="Curricula" /> *
+        <Influeance img={CirInf} title="Curricula" /> *
         <Influeance img={HomeInf} title="HOME" />
         <Influeance img={SchoolInf} title="school" />
         <Influeance img={StudentInf} title="student" />
@@ -74,7 +74,7 @@ function SpeedMoter() {
         </div>
       </div>
       <div className={classes.inf__selcets}>
-        <ResultInf title={t('rank')} value={rank} />
+        <ResultInf title={t("rank")} value={rank} />
         <select
           value={inful}
           className={classes.select}
@@ -83,13 +83,14 @@ function SpeedMoter() {
             handleStudent(inful);
           }}
         >
+          <option>- Select Influence -</option>
           {rate.map((item, id) => (
             <option key={id} value={item.influence}>
               {isEn ? item.influence_en : item.influence_ar}
             </option>
           ))}
         </select>
-        <ResultInf title={t('Effect Size')}  value={value} />
+        <ResultInf title={t("Effect Size")} value={value} />
       </div>
       <div className={classes.speed__moter}>
         <ReactSpeedometer
@@ -97,9 +98,9 @@ function SpeedMoter() {
           maxValue={1.5}
           maxSegmentLabels={5}
           segments={4}
-          minValue={-.5}
+          minValue={-0.5}
           segmentColors={["firebrick", "tomato", "gold", "limegreen"]}
-          customSegmentStops={[-.5, 0,.2, .41, 1.5, ]}
+          customSegmentStops={[-0.5, 0, 0.2, 0.41, 1.5]}
           textColor="#000"
         />
       </div>
