@@ -19,6 +19,7 @@ function Pdf() {
     maxWidth:'100% !important',
   };
   const data = JSON.parse(localStorage.getItem("data"));
+  // var currentTime = new Date();
   // console.log(data);
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
@@ -57,19 +58,22 @@ function Pdf() {
             <strong>{t('name')} : </strong>{JSON.parse(localStorage.getItem("user_data")).full_name}
           </div>
           <div className="col-6 fs-3">
-            <strong>{t('date')} : </strong> {new Date().toISOString().slice(0,10)}
+            <strong>{t('date')} : </strong> 
+            {/* {`${currentTime.getDate()} / ${currentTime.getMonth()}  / ${currentTime.getFullYear()} `
+              } */}
+            {new Date().toISOString().slice(0,10)}
           </div>
           <div className="col-9  chart">
             <Chart
               chartType="BarChart"
               width="100%"
-              height="400px"
+              height="300px"
               data={data}
               className=""
               options={options}
             />
           </div>
-          <div className="col-12">
+          <div className="col-12 mt-1">
                   <h4>{t('Teacherevaluationreport')}</h4>
             <div className="table-responsive">
               <table className=" table-hover align-middle"

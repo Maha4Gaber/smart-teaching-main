@@ -97,7 +97,6 @@
         { path: "/assessment", element: <Assessment /> },
         { path: "/expert-teacher3", element: <ExpertTeacherCer /> },
         { path: "/smart-teaching", element: <SmartTeaching /> },
-        { path: "/pdf", element: <Pdf /> },
         {
             path: "/login",
             element: (
@@ -221,7 +220,10 @@
 
         { path: "*", element: <NotFound /> },
         ],
+        
     },
+    { path: "/pdf", element: <Pdf /> },
+
     ]);
     return (
     <div>
