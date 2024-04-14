@@ -20,18 +20,15 @@
   line-height: normal;
 }
 .newsletter button {
-  border-radius: 4px;
-  background: var(--Green, #214a4a);
+  border-radius: 50px;
+  /* background: var(--Green, #214a4a); */
   border: none;
-  height: 40px;
-  padding: 2px 25px;
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  flex-direction: column;
-  color: var(--white, var(--white, #fff));
+  height: 55px;
+  width: 180px;
+  color: var(--white, var(--white, #000));
   text-align: center;
-
+  background: #DEBD63;
+  padding:17px, 30px, 17px, 42px;
   /* 16 Regular */
   font-family: Arial;
   font-size: 16px;
@@ -68,6 +65,7 @@
   background: var(--Green, #306c62);
   position: sticky;
   bottom: 0;
+  text-align: left !important;
 }
 .two {
   display: grid;

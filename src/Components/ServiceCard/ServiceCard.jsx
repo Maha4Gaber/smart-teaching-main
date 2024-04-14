@@ -12,7 +12,7 @@ const ServiceCard = ({icon, id, title, desc}) => {
   return (
       <div
           data-aos="fade-up"
-          className="service-card py-4 px-4 h-100 d-flex flex-column justify-content-between"
+          className="service-card py-4 px-4 h-100 d-flex flex-column "
       >
           <div className="service-box d-flex justify-content-between align-items-center mb-4">
               <div className="serviceIcon-box rounded-circle p-3">{icon}</div>

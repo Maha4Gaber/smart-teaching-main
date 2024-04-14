@@ -8,7 +8,7 @@
 }
 
 .evidence-desc{
-    border-left: 1px solid var(--green-color);
+    /* border-left: 1px solid var(--green-color); */
     font-size: 18px
 }
 

@@ -105,10 +105,10 @@ const Home = () => {
     };
 
     return (
-      <main className="container position-relative">
-        <figure className="main-home-img d-flex align-items-center m-0">
+      <main className="  position-relative">
+        <figure className=" main-home-img d-flex  ">
           <figcaption data-aos="fade-right">
-            <h1 className="text-center " style={{ fontSize: "3rem" }}>
+            <h1 className=" " style={{ fontSize: "3rem" }}>
               {t("newSystematic")} {t("approachToMax")} {t("yourStudents")}
             </h1>
 
@@ -196,14 +196,9 @@ const Home = () => {
           </h1>
 
           <div className="row  py-5">
+            
             <div
-              className="col-lg-4 col-sm-12  custom-padding "
-              data-aos="fade-left"
-            >
-              <img src={evidenceOne} className="left" />
-            </div>
-            <div
-              className="col-lg-8 col-sm-12 d-flex align-items-center"
+              className="col-lg-7 col-sm-12 d-flex align-items-center"
               data-aos="fade-right"
             >
               <EvidenceDesc
@@ -212,18 +207,24 @@ const Home = () => {
                 className="hide"
               />
             </div>
+            <div
+              className="col-lg-5 col-sm-12  custom-padding "
+              data-aos="fade-left"
+            >
+              <img src={evidenceOne} className="left" />
+            </div>
           </div>
 
           <div className="row  py-5 ">
             <div
-              className="col-lg-4 col-sm-12   custom-padding"
+              className="col-lg-5 col-sm-12   custom-padding"
               data-aos="fade-right"
             >
               <img src={evidenceTwo} className="left" />
             </div>
 
             <div
-              className="col-lg-8 col-sm-12 d-flex align-items-center "
+              className="col-lg-7 col-sm-12 d-flex align-items-center "
               data-aos="fade-left"
             >
               <EvidenceDesc
@@ -235,17 +236,17 @@ const Home = () => {
           </div>
 
           <div className="row  py-4">
-            <div
-              className="col-lg-4 col-sm-12   custom-padding"
-              data-aos="fade-left"
-            >
-              <img src={evidenceThree} />
-            </div>
-            <div className="col-lg-8 col-sm-12" data-aos="fade-right">
+            <div className="col-lg-7 col-sm-12" data-aos="fade-right">
               <EvidenceDesc
                 title={t(evidence[2].title)}
                 desc={t(evidence[2].desc)}
               />
+            </div>
+            <div
+              className="col-lg-5 col-sm-12   custom-padding"
+              data-aos="fade-left"
+            >
+              <img src={evidenceThree} />
             </div>
           </div>
         </section>

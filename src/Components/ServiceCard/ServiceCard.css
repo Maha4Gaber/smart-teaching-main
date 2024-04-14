@@ -8,8 +8,8 @@
     width: 3.75rem;
     height: 3.75rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: flex-start; */
+    /* justify-content: center; */
     background-color: var(--green-color);
 }
 .service-icon{
@@ -23,8 +23,9 @@
     line-height: 4.8rem;
     color: var(--gray-color);
     transition: all .3s;
+    
 }
-
+/* background-color: brown; */
 .service-card h2{
     font-size: 1.5rem;
     font-style: normal;
@@ -32,6 +33,7 @@
     line-height: normal;
     color: var(--black-color);
     transition: all .3s;
+    /* background-color:aquamarine; */
 }
 
 .service-card p{
@@ -42,6 +44,7 @@
     margin-bottom: 1.7rem !important;
     color: var(--darkGray-color);
     transition: all .3s;
+    /* background-color: aqua; */
 }
 
 .service-card a{

@@ -10,7 +10,7 @@
 }
 .foot__link h2 {
   color: var(--white, #fff);
-  text-align: center;
+  text-align: left !important;
   font-family: 'Tajawal', sans-serif;
   font-size: 22px;
   font-style: normal;
@@ -41,4 +41,7 @@
   text-decoration-line: underline;
   cursor: pointer;
   text-align: center;
+  text-align: left;
+  margin: 10px 0;
+  text-decoration: none;
 }

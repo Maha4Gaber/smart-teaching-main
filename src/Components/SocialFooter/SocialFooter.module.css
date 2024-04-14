@@ -12,13 +12,14 @@
 }
 .social h3 {
   color: var(--white, var(--white, #fff));
-  text-align: center;
+  text-align: left;
   /* 18 Regular */
   font-family: Arial;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   width: 307px;
+  padding: 0 40px 0 10px;
 }
 .socailLayout {
   display: flex;
