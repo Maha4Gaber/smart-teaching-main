@@ -94,9 +94,10 @@ html[dir='rtl'] .main-home-img  h1 {
 @media screen and (max-width: 568px) {
   .main-home-img h1 {
     font-size: 1rem;
+    padding: 3rem 10px  ;
   }
   html[dir='rtl'] .main-home-img  h1 {
-    padding: 3rem 10px 0 ;
+    padding: 3rem 10px  ;
     font-size: 68px !important; 
   }
 }
@@ -113,6 +114,7 @@ html[dir='rtl'] .main-home-img  h1 {
 
   .main-home-img h1 {
     font-size: 2.5rem !important;
+    padding: 3rem 10px  ;
   }
 }
 
