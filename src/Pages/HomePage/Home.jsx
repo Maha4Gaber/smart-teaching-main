@@ -186,7 +186,7 @@ const Home = () => {
 
         <div className="row  py-5">
           <div
-            className="col-lg-8 col-sm-12 d-flex align-items-center"
+            className="col-lg-7 col-sm-12 d-flex align-items-center"
             data-aos="fade-right"
           >
             <EvidenceDesc
@@ -196,7 +196,7 @@ const Home = () => {
             />
           </div>
           <div
-            className="col-lg-4 col-sm-12  custom-padding "
+            className="col-lg-5 col-sm-12  custom-padding "
             data-aos="fade-left"
           >
             <img src={evidenceOne} className="left" />
@@ -205,14 +205,14 @@ const Home = () => {
 
         <div className="row  py-5 ">
           <div
-            className="col-lg-4 col-sm-12   custom-padding"
+            className="col-lg-5 col-sm-12   custom-padding"
             data-aos="fade-right"
           >
             <img src={evidenceTwo} className="left" />
           </div>
 
           <div
-            className="col-lg-8 col-sm-12 d-flex align-items-center "
+            className="col-lg-7 col-sm-12 d-flex align-items-center "
             data-aos="fade-left"
           >
             <EvidenceDesc
@@ -224,14 +224,14 @@ const Home = () => {
         </div>
 
         <div className="row  py-4">
-          <div className="col-lg-8 col-sm-12" data-aos="fade-right">
+          <div className="col-lg-7 col-sm-12" data-aos="fade-right">
             <EvidenceDesc
               title={t(evidence[2].title)}
               desc={t(evidence[2].desc)}
             />
           </div>
           <div
-            className="col-lg-4 col-sm-12   custom-padding"
+            className="col-lg-5 col-sm-12   custom-padding"
             data-aos="fade-left"
           >
             <img src={evidenceThree} />

@@ -69,7 +69,7 @@ main {
   font-weight: 400;
   line-height: normal;
   color: var(--white-color);
-  padding: 12rem 600px 5rem 80px;
+  padding: 10% 600px 5% 80px;
   font-size: 48px;
   margin-bottom: 1.25rem;
   line-height: 3rem;
@@ -134,7 +134,7 @@ main button {
   transition: all 0.5s;
   display: block;
   width: fit-content;
-  margin: 10rem 80px 0;
+  margin: 4% 80px 0;
 }
 
 main button:hover {
@@ -144,7 +144,7 @@ main button:hover {
 .contact-icon-box {
   position: fixed;
   right: 120px;
-  bottom: 120px;
+  bottom: 50px;
   width: 3.75rem;
   height: 3.75rem;
   color: #1d6d5d;
