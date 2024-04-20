@@ -1,6 +1,6 @@
 .expert-teacher-card{
     display: flex;
-    width: 14.8125rem;
+    width: 10.8125rem;
     padding: 1rem ;
     flex-direction: column;
     justify-content: center;
@@ -17,7 +17,7 @@
     font-size: 20px !important;
 }
 .expert-teacher-card .card-img-box{
-    width: 80%;
+    width: 30%;
     margin: auto;
     height: auto;
 }
@@ -36,3 +36,6 @@
     background-color: var(--darkgreen-color);
 }
 
+.expert-teacher-card .hhhh2{
+    font-size: 15px !important;
+}

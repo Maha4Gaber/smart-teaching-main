@@ -4,7 +4,8 @@
     background-image: url(../../assests/Assessments/Assessment4/main.jpeg);  
 }
 .ass4{
-    padding: 2.5rem 3.75rem;
+    /* padding: 2.5rem 3.75rem; */
+    margin: 0 120px !important ;
     background: var(--gray-color);
 }
 

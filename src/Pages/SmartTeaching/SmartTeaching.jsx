@@ -18,9 +18,13 @@ function SmartTeaching() {
         subheading={t("ASFTE")}
         className="main-img"
       />
-      <section className="container ass4 p-3 p-md-5">
+      <section className="container-fluid  cont  py-md-5">
         <div className="row ">
-          <div className="col-lg-12 px-3">
+          <div className="col-lg-3 ">
+            <SidebarLinks links={expertTeacherLinks} />
+          </div>
+          
+          <div className="col-lg-9 ">
             <MiddleSmartTeaching />
           </div>
         </div>

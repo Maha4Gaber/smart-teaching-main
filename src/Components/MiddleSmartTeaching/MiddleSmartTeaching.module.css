@@ -9,7 +9,7 @@
 .middleSmart h3 {
   color: var(--Black, #0f0f0f);
   /* 24 Medium */
-  text-align: center;
+  /* text-align: center; */
   font-family: Arial;
   font-size: 3rem;
   font-style: normal;

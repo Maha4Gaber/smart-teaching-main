@@ -49,7 +49,7 @@
     };
 
     return (
-    <article className="expert-teacher-details">
+    <article className="expert-teacher-details ">
         <h2>{t("certifiedExpertTeacher")}</h2>
 
         <h3>{t("expertTeacherTitleInfo")}</h3>
@@ -66,9 +66,9 @@
         ))}
         </ul>
 
-        <h2>{t("TPDP")}</h2>
+        <h2 className="hhh2">{t("TPDP")}</h2>
 
-        <h3 className=" text-justify">{t("TPDPInfo")}</h3>
+        <h3 className=" text-desc">{t("TPDPInfo")}</h3>
 
         <div className="row justify-content-center expert-cards gy-4 mb-4">
         {expertTeacherCards.map((card, idx) => (
