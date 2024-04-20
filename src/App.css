@@ -81,7 +81,7 @@ ul {
 
 .main-img{
   width: calc(100% - 100px);
-  margin: 12vh 0 !important; 
+  margin: 67px 0 !important; 
   height: 88vh;
   background-position: center left;
   background-repeat: no-repeat;
@@ -137,4 +137,7 @@ body[dir='ltr'] small{
   transform: translate(-5px,-5px);
   display: inline-block ;
   font-size: 12px !important;
+}
+.mar_120{
+  margin: 0 120px ;
 }

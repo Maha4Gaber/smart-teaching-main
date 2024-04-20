@@ -346,7 +346,7 @@ const Navbar = () => {
                 className="p-2 cursor-pointer"
                 onClick={() => changeLanguage(lang === "en" ? "ar" : "en")}
               >
-                {lang === "en" ? "Ar" : "En"} <FaAngleDown />
+                {lang === "en" ? "Ar" : "En"} 
               </span>
             </div>
           </div>

@@ -16,8 +16,9 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   /* width: calc(100% - 100px); */
-  margin: 12vh 0 !important;
-  height: 88vh;
+  /* margin: 12vh 0 !important; */
+  margin: 106px 0 !important; 
+  height: calc(100vh - 106px);
   background-position: center left;
   background-repeat: no-repeat;
   background-size: cover;
@@ -68,9 +69,10 @@ main {
   font-weight: 400;
   line-height: normal;
   color: var(--white-color);
-  padding: 6rem 600px 5rem 80px;
+  padding: 12rem 600px 5rem 80px;
   font-size: 48px;
   margin-bottom: 1.25rem;
+  line-height: 3rem;
   width: 100%;
   /* padding: 0px 150px 0 0; */
 }
@@ -132,7 +134,7 @@ main button {
   transition: all 0.5s;
   display: block;
   width: fit-content;
-  margin: 0 80px;
+  margin: 10rem 80px 0;
 }
 
 main button:hover {
@@ -141,8 +143,8 @@ main button:hover {
 
 .contact-icon-box {
   position: fixed;
-  right: 0;
-  top: 70%;
+  right: 120px;
+  bottom: 120px;
   width: 3.75rem;
   height: 3.75rem;
   color: #1d6d5d;
@@ -165,6 +167,7 @@ main button:hover {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin-bottom: 75px;
 }
 
 .partner-home .row {
@@ -187,7 +190,7 @@ main button:hover {
 .partner-home .row {
   border-radius: 0.375rem;
   background: var(--white-color);
-  box-shadow: 0px 0px 20px 10px rgba(95, 45, 237, 0.05);
+  /* box-shadow: 0px 0px 20px 10px rgba(95, 45, 237, 0.05); */
 }
 
 .partner-home h1 {
@@ -208,7 +211,11 @@ main button:hover {
 
 /* Evidence Home */
 .evidence-home h1 {
-  font-size: 3rem !important;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 75px;
 }
 
 .custom-padding {

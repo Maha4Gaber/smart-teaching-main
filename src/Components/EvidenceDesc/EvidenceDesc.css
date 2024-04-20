@@ -4,12 +4,16 @@
 .evidence-comp h2{
     font-weight: bold;
     font-size: 2.25rem;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
+
+
 }
 
 .evidence-desc{
     /* border-left: 1px solid var(--green-color); */
-    font-size: 18px
+    font-size: 18px;
+    margin: 0;
+    padding: 0 !important;
 }
 
 

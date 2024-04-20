@@ -2,6 +2,7 @@
     background-color: var(--white-color);
     box-shadow: 0px 0px 50px 10px rgba(95, 45, 237, 0.10);
     transition: all .3s;
+    position: relative;
     border-radius: 0.625rem;
 }
 .serviceIcon-box{
@@ -33,7 +34,6 @@
     line-height: normal;
     color: var(--black-color);
     transition: all .3s;
-    /* background-color:aquamarine; */
 }
 
 .service-card p{
@@ -44,6 +44,7 @@
     margin-bottom: 1.7rem !important;
     color: var(--darkGray-color);
     transition: all .3s;
+    padding-bottom: 20px;
     /* background-color: aqua; */
 }
 
@@ -55,6 +56,10 @@
     text-decoration: none;
     color: var(--black-color);
     transition: all .3s;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .service-card:hover{

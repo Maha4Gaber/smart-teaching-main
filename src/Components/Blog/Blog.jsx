@@ -29,13 +29,11 @@ function Blog() {
           <h3>
           {t("blogDetailsCard")}
           </h3>
-          <div>
               <button className={classes.blog__btb_edit}>
-                  <Link className="p-6 text-dark" to="/blogdetails/1">
+                  <Link className="text-dark" to="/blogdetails/1">
                       {t("readMore")} &nbsp; <ArrowRight />
                   </Link>
               </button>
-          </div>
       </div>
   );
 }

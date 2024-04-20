@@ -42,9 +42,11 @@
   background: rgba(0, 0, 0, 0.16);
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 .container__tag button {
   padding: 5px 4px;
+  margin: 0 !important;
   border-radius: 3px;
   background: var(--Yellow, #debd63);
   color: var(--white, #fff);

@@ -1,9 +1,9 @@
 .blog {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   max-width: 450px;
-  margin: 20px 60px;
+  /* margin: 20px 60px; */
 }
 .img__container {
   width: 100%;
@@ -29,6 +29,7 @@
   display: flex;
   gap: 30px;
   align-items: center;
+  justify-content: center;
   margin: 10px 0;
 }
 .blog__detail {
@@ -63,7 +64,9 @@
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+  width: 200px;
   transition: all 0.2s ease-in-out;
+  margin: 0 !important;
 }
 .blog__btb_edit:hover {
   background: #ffd054;
