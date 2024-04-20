@@ -85,7 +85,8 @@ return (
         className={`bg-white form-padding login-form ${isRTL}`}
     >
         <div className="login-img text-center">
-        <ImageComp src={logo} />
+        <img src={logo} />
+        {/* <ImageComp src={logo} /> */}
         </div>
 
         {errMsg ? <div className="alert alert-danger">{errMsg}</div> : null}
@@ -112,6 +113,7 @@ return (
 
         <span className={formik.values.email_or_phone && "icon-active"}>
             <MdEmail />
+            <i className="fa-regular fa-envelope-open"></i>
         </span>
         {formik.errors.email_or_phone && formik.touched.email_or_phone ? (
             <div className="alert alert-danger error my-0 py-2">
@@ -159,7 +161,7 @@ return (
         <div className=" d-flex justify-content-between align-items-center mb-4">
         <div className="d-flex align-items-center">
             <input
-            className="checkbox"
+            className="checkbox radio"
             type="checkbox"
             name="remember"
             value="value"
