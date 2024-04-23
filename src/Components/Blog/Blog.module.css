@@ -29,13 +29,14 @@
   display: flex;
   gap: 30px;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   margin: 10px 0;
 }
 .blog__detail {
   display: flex;
   gap: 10px;
   align-items: center;
+  justify-content: start;
 }
 .blog__detail span {
   color: #656567;

@@ -11,12 +11,12 @@
   /* 24 Medium */
   /* text-align: center; */
   font-family: Arial;
-  font-size: 3rem;
+  font-size:30px;
   font-style: normal;
   font-weight: bold;
   line-height: normal;
-  margin-bottom: 20px;
-  margin-top: 10px;
+  margin: 10px 30px 20px;
+  /* margin-top: 10px; */
 }
 .middleSmart h3 small{
   font-size: 18px !important;
@@ -41,10 +41,11 @@
 .z__content h4 {
   color: var(--Black, #0f0f0f);
   font-family: Inter;
-  font-size: 1.75rem;
+  font-size: 24px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: normal;
+  margin-left: 30px;
 }
 .z__content {
   display: flex;

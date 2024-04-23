@@ -108,7 +108,7 @@ const Home = () => {
       <figure className=" main-home-img d-flex  ">
         <figcaption data-aos="fade-right">
           <h1 className=" " style={{ fontSize: "3rem" }}>
-            {t("newSystematic")} {t("approachToMax")} {t("yourStudents")}
+            {t("newSystematic")} <br></br>{t("approachToMax")}<br></br> {t("yourStudents")}
           </h1>
 
           <button className="">
@@ -125,7 +125,7 @@ const Home = () => {
         
       {/* Partners Section */}
       <section
-        className="partner-home py-5 section-padding partner-home"
+        className="partner-home  ptner-home"
         data-aos="zoom-in"
       >
         <h1 className="text-center ">{t("stsPartner")}</h1>
@@ -150,7 +150,7 @@ const Home = () => {
       </section>
       {/* About Section */}
       <section className="about-home py-5 ">
-        <div className="row py-5">
+        <div className="row g-5">
           <div className="col-lg-4 col-md-7" data-aos="fade-right">
             <ImageComp src={aboutImg} />
           </div>
@@ -261,7 +261,7 @@ const Home = () => {
       </section>
       <Courses />
       {/* Teachers Section */}
-      <section className="p-5 mb-4 teachers-home">
+      <section className="py-5 mb-4 teachers-home">
         <h5 className="green-color text-center" data-aos="zoom-in">
           {t("ExpertTeacher")}
         </h5>
@@ -273,7 +273,7 @@ const Home = () => {
         <TeamCards cards={homeTeam} />
       </section>
       {/* <Bg.Img src={logo} /> */}
-      <section className="p-5 ">
+      <section className="py-5">
         <FeatureCards cards={homeFeatures} />
       </section>
       <Blogs />

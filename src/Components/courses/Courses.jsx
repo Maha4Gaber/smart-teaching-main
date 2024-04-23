@@ -30,7 +30,7 @@ return (
     </ul> */}
     </div>
 
-    <div className="row p-5">
+    <div className="row py-5">
         {courses.map((cours, id) => (
         <div key={id} className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <Course id={cours.id} />

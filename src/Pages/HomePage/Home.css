@@ -26,9 +26,10 @@ main {
 }
 
 .main-home-img figcaption {
+  padding: 0 120px ;
   /* padding: 0 5rem; */
   /* padding-right: 3.75rem; */
-  /* display: flex; */
+  display: flex;
   /* justify-content: center; */
   /* align-items: center;
   flex-direction: column; */
@@ -36,7 +37,7 @@ main {
   height: 100%;
   /* display: flex; */
   /* align-items: center; */
-  /* justify-content: flex-start; */
+  justify-content: center;
   flex-direction: column;
   /* padding: 20px 10%; */
   background: linear-gradient(
@@ -64,12 +65,13 @@ main {
 }
 
 .main-home-img h1 {
+  
   font-family: Arial;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   color: var(--white-color);
-  padding: 10% 600px 5% 80px;
+  /* padding: 10% 600px 5% 80px; */
   font-size: 48px;
   margin-bottom: 1.25rem;
   line-height: 3rem;
@@ -134,7 +136,7 @@ main button {
   transition: all 0.5s;
   display: block;
   width: fit-content;
-  margin: 4% 80px 0;
+  margin: 4% 0 0;
 }
 
 main button:hover {
@@ -150,7 +152,8 @@ main button:hover {
   color: #1d6d5d;
   background-color: var(--white-color);
   border-radius: 50%;
-  filter: drop-shadow(0px 4px 4px rgba(240, 180, 153, 0.6));
+  filter: drop-shadow(0px 4px 4px  #1D6D5D
+  );
   z-index: 99999999999999 !important;
 }
 
@@ -210,10 +213,10 @@ main button:hover {
 }
 
 /* Evidence Home */
-.evidence-home h1 {
-  font-size: 2.25rem;
+.evidence-home .head-title h1 {
+  font-size: 36px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   line-height: normal;
   margin-bottom: 75px;
 }
@@ -268,6 +271,8 @@ main button:hover {
 
 /* Teachers Home */
 .teachers-home h1 {
+  font-size: 36px ;
+  
   margin-bottom: 5.5rem;
 }
 
