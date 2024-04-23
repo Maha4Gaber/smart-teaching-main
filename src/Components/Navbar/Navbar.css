@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: space-evenly;
   gap: 10px;
-  padding: 0 120px  0 3.75rem !important;
+  padding: 0 120px  0  !important;
   z-index: 1000000;
   height: 106px;
 /* padding-right: 140px; */
