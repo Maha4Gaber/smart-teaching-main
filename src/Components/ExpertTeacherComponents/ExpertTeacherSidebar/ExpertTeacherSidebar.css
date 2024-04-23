@@ -5,12 +5,16 @@
 .expert-teacher-sidebar h2{
     /* text-align: start !important; */
     margin-bottom: 1.5rem !important;
-    font-size: 1.75rem !important;
+    font-size: 24px !important;
     font-weight: bold !important;
+    text-align: left;
+    
 }
 
 .expert-teacher-sidebar ul li .desc{
-    font-size: 20px !important;
+    font-size: 18px !important;
+    color: #656567;
+
 }
 .expert-teacher-sidebar ul li:not(:last-child) {
     margin-bottom: 1.5rem;

@@ -5,6 +5,7 @@
 .expert-teacher-details h2{
 font-size: 30px;
 text-align: left;
+margin:0 0 0 30px;
 }
 .expert-teacher-details .hhh2{
     font-size: 24px;
@@ -20,7 +21,7 @@ text-align: left;
     line-height: normal;
     font-family: Arial; */
     font-size: 24px;
-    margin-bottom: 2rem;
+    margin:0 0 2rem 30px;
 font-weight: 400;
 line-height: 27.6px;
 text-align: left;
@@ -52,12 +53,20 @@ text-align: left !important;
     /* margin-bottom: 3.75rem; */
     /* font-size: 20px; */
     font-family: Arial;
-font-size: 18px;
+font-size: 18px !important;
 font-weight: 400;
-line-height: 28px;
+/* line-height: 28px; */
 text-align: left;
-color: #656567;
+color: #656567 !important;
 
+}
+.expert-teacher-details  p.desc{
+    color: #656567 !important;
+margin-left: 30px;
+}
+.expert-teacher-details  h1{
+    font-size: 24px;
+margin-left: 30px;
 }
 
 .expert-teacher-details .phases-row{
@@ -107,6 +116,8 @@ color: #656567;
 }
 
 .expert-teacher-btn{
+    padding: 15px 5px;
+    background: #e7bd0118;
     display: flex;
     align-items: center;
     justify-content: space-between;

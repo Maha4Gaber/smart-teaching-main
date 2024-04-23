@@ -1,22 +1,21 @@
 .phase-details span{
-    font-family: Inter;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
-    color: var(--darkgreen-color);
+    font-family: Arial;
+font-size: 18px;
+font-weight: 700;
+line-height: 28px;
+text-align: left;
+color: black;
+
 }
 
 .phase-details{
-    color: #0F0F0F;
     font-family: Arial;
-    font-size: 1rem;
-    font-style: normal;
+    font-size: 18px;
     font-weight: 400;
-    line-height: normal;
-    padding-left: .75rem;
-    margin-bottom: 1.25rem;
-    border-left: 2px solid var(--darkgreen-color);
+    line-height: 28px;
+    text-align: left;
+color:  #656567;
+
 }
 
 [dir = "rtl"] {

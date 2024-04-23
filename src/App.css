@@ -96,7 +96,8 @@ ul {
   /* align-items: center; */
   /* justify-content: flex-start; */
   flex-direction: column;
-  padding: 20px 10%;
+  padding: 0 120px;
+  /* padding: 20px 10%; */
 background: linear-gradient(268.38deg, rgba(255, 255, 255, 0) 1.23%, rgba(1, 77, 75, 0.76) 98.89%);
 
   /* background-color: #0000004e; */
@@ -120,7 +121,7 @@ background: linear-gradient(268.38deg, rgba(255, 255, 255, 0) 1.23%, rgba(1, 77,
     text-align: left !important;
   }
 .member-link:hover{
-  scale: 1.1;
+  /* scale: 1.1; */
 color: wheat !important;
 background-color: var(--darkgreen-color);
 }
