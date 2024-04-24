@@ -23,8 +23,8 @@ const MiddleSmartTeaching = () => {
         <SmartText>{parse(t("whatIsSTS3"))}</SmartText>
       </div>
       <h3>{parse(t("becomeSmartSchool"))}</h3>
-      <br />
-      <br />
+      {/* <br /> */}
+      {/* <br /> */}
       <div className={` row ${classes.middleSmart__z}`}>
         
         <div className={`col-sm-12 col-lg-8 ${classes.z__content}`}>
