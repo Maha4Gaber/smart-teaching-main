@@ -25,7 +25,7 @@ function ResocuresCard({ onShow }) {
         physique.
         <br /> The oil is also putting stigma that’s related to medical
         marijuana to a conclusion by supplying a clinical experience without
-        side consequences. <br />
+        side consequences. 
         As CBD oil and other CBD …
       </div>
       <Link

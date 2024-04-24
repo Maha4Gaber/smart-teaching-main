@@ -17,7 +17,7 @@ function Resources() {
         title='Resources'
         bold
       />
-      <div className='resource__layout container bg-transparent'>
+      <div className='resource__layout  bg-transparent'>
         <ResocuresCard onShow={handleShow} />
         <ResocuresCard onShow={handleShow} />
         <ResocuresCard onShow={handleShow} />

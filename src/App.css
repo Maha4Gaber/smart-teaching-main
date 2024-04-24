@@ -41,8 +41,9 @@ ul {
   }
 }
 .resource__layout {
+  width: 100%;
   background: var(--Gray-BG, #f2f2f2);
-  padding: 10px 30px;
+  padding: 10px 120px;
   display: flex;
   flex-direction: column;
   gap: 20px;

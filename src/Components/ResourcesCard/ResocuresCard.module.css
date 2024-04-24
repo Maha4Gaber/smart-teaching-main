@@ -7,7 +7,7 @@
   border-radius: 10px;
   background: #fff;
   padding: 30px 250px 30px 100px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   box-shadow: 0px 0px 50px 10px rgba(95, 45, 237, 0.1);
 }
 .resource__card h4 {
@@ -109,3 +109,7 @@
 /* .resource__card *:hover {
   color: #fff;
 } */
+.resource__card a{
+border-top: 1px solid #F0F0F0;
+padding-top: 20px;
+}
