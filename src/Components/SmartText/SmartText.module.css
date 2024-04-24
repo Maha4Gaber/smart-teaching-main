@@ -1,6 +1,6 @@
 .smartText {
   display: flex;
-  gap: 15px;
+  /* gap: 2px; */
   margin-bottom: 0px;
 }
 .smartText svg {

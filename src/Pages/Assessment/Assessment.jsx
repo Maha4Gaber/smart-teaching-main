@@ -21,16 +21,12 @@ function Assessment() {
         heading={t("TEAST")}
         subheading={t("TEAST-text")}
       />
-      <section className="ass4 p-3 p-md-5">
+      <section className="ass4 ">
         <div className="row gy-4 main-row">
           <div className="col-lg-3 px-3">
             <SidebarLinks links={expertTeacherLinks} />
-          </div>
-          <div className="col-lg-6 px-3">
-            <MiddleAssessment />
-          </div>
-          <div className="col-lg-3 px-3">
-            <AsideSmart width="100%">
+            
+            <AsideSmart width="100% ">
               <div className="assessment__left">
                 <h3>{t("TEAST")}</h3>
                 <h5>{t("TCA")}</h5>
@@ -62,6 +58,10 @@ function Assessment() {
               </div>
             </AsideSmart>
           </div>
+          <div className="col-lg-9 px-3">
+            <MiddleAssessment />
+          </div>
+
         </div>
       </section>
     </div>

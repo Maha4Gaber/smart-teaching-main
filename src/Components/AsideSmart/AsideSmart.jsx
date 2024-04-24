@@ -9,7 +9,7 @@ function AsideSmart({ children, height, width }) {
   return (
     <aside
       style={style}
-      className={classes.asideSmart}
+      className={`mt-4 ${classes.asideSmart}`}
     >
       {children}
     </aside>
