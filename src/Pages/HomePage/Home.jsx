@@ -108,7 +108,13 @@ const Home = () => {
       <figure className=" main-home-img d-flex  ">
         <figcaption data-aos="fade-right">
           <h1 className=" " style={{ fontSize: "3rem" }}>
-            {t("newSystematic")} <br></br>{t("approachToMax")}<br></br> {t("yourStudents")}
+            {t("newSystematic")} 
+          </h1>
+          <h1 className=" " style={{ fontSize: "3rem" }}>
+            {t("approachToMax")}
+          </h1>
+          <h1 className=" " style={{ fontSize: "3rem" }}>
+             {t("yourStudents")}
           </h1>
 
           <button className="">
