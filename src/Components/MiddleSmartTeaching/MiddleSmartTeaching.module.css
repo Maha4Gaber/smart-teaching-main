@@ -15,7 +15,7 @@
   font-style: normal;
   font-weight: bold;
   line-height: normal;
-  margin: 10px 30px 20px;
+  margin: 10px 20px 20px;
   /* margin-top: 10px; */
 }
 .middleSmart h3 small{
@@ -35,8 +35,8 @@
   margin: 10px 0;
 }
 .middleSmart__z img {
-  width: 100% !important;
-  height: auto !important;
+  width: 100% ;
+  height: auto ;
 }
 .z__content h4 {
   color: var(--Black, #0f0f0f);
@@ -46,6 +46,7 @@
   font-weight: 400;
   line-height: normal;
   margin-left: 30px;
+  margin: 10px 20px 20px;
 }
 .z__content {
   display: flex;
