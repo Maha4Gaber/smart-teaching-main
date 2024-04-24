@@ -11,7 +11,7 @@ import parse from 'html-react-parser';
 const MiddleSmartTeaching = () => {
   const {t} = useTranslation()
   return (
-    <section className={` position-relative px-4 ${classes.middleSmart}`}>
+    <section className={` position-relative  ${classes.middleSmart}`}>
       <h3>
         {parse(t("smartTeachingSystem"))} <small>®</small>{" "}
       </h3>
