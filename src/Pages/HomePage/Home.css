@@ -281,6 +281,7 @@ main button:hover {
 /* About Home */
 .about-home .row{
   align-items: center;
+  gap: 50px;
 }
 .about-home p {
   text-align: justify;

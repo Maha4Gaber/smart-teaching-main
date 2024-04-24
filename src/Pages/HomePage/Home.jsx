@@ -156,7 +156,7 @@ const Home = () => {
       </section>
       {/* About Section */}
       <section className="about-home py-4 ">
-        <div className="row g-4">
+        <div className="row ">
           <div className="col-lg-4 col-md-7" data-aos="fade-right">
             <ImageComp src={aboutImg} />
           </div>
