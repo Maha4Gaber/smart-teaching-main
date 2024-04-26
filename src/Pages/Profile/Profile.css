@@ -1,10 +1,17 @@
 .profile {
-  padding: 40px;
+  /* padding: 40px; */
+  margin: 108px 0 0 !important;
   background: #fbfbfb;
 }
 .profile_layout {
-  display: grid;
-  grid-template-columns: 427px 475px 339px;
-  gap: 10px;
-  margin: 20px 0px;
+  /* display: grid; */
+  /* grid-template-columns:  475px 339px; */
+  /* display: flex;
+  justify-content: space-between;
+  gap: 10px; */
+  margin: 20px  110px !important;
+}
+
+.profile_layout.container-fluid{
+  width: auto !important;
 }

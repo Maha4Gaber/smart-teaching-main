@@ -93,7 +93,31 @@ html[dir='rtl'] .links a{
 html[dir='rtl'] .links a.active{
   font-size: 22px;
 }
-
+.nav-item img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.notifcation{
+  position: relative;
+}
+.notifcation img{
+  width: 24px;
+}
+.notifcation span{
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  top: 10px;
+  right: -5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #debd63;
+}
 .auth {
   display: flex;
   align-items: center;

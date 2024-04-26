@@ -1,14 +1,19 @@
 .ass3-details{
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 50px;
 }
 
-.ass3-details h3{
-    text-align: center;
+.ass3-details h2{
+    text-align: left !important;
+    margin-bottom: 1.50rem !important;
+}
+    .ass3-details h3{
     font-family: Arial;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-bottom: 2rem;
+    margin: 0;
+    padding: 0 !important;
+    margin-bottom: 1.50rem !important;
     color: var(--darkgreen-color);
 }

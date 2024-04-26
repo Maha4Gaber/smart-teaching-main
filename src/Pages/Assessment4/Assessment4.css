@@ -26,15 +26,14 @@
 
 .ass4 .special-p{
     color: #0F0F0F;
-    /* font-size: 1rem; */
+    font-size: 1rem;
     font-weight: 400;
     font-family: Arial;
     font-style: normal;
     line-height: normal;
-    padding-left: .75rem;
+    /* padding-left: .75rem; */
     margin-bottom: 1.25rem;
-    border-left: 2px solid var(--darkgreen-color);
-    font-size: 20px !important;
+    /* border-left: 2px solid var(--darkgreen-color); */
 }
 
 .ass4 .special-p span{

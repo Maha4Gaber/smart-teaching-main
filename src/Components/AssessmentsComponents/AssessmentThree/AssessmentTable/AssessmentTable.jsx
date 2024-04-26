@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaCheck } from "react-icons/fa6";
 import axios from "axios";
 
@@ -27,6 +27,12 @@ const AssessmentTable = ({
   // const [showError, setShowError] = useState(false);
   const navigate = useNavigate();
   const [selectedAnswers, setSelectedAnswers] = useState({});
+  const [teachers, setteachers] = useState([]);
+  const [teacherid, setteacherid] = useState('');
+
+  const handleSelectChange = (event) => {
+    setteacherid(event.target.value);    
+  };
   const check = () => columnHead;
   const recievddata = [
     ["Element", "evaluation", { role: "style" }, { role: "annotation" }],
@@ -153,6 +159,19 @@ const AssessmentTable = ({
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
   });
+  useEffect(() => {
+    const getdata = async () => {
+      try {
+        await axios.get("api/v2/users/?role=instructor").then((res) => {
+          setteachers(res.data);
+        });
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    getdata();
+  }, []);
 
   return (
     <div>
@@ -239,11 +258,26 @@ const AssessmentTable = ({
               </tr>
             </thead>
           )}
-
+          <thead className="">
+            <tr>
+              <th colSpan={1} className="fs-6 ">
+                <div className="">Teacher Name </div>
+              </th>
+              <th colSpan={4} className="select_th ">
+                <select className="" value={teacherid} onChange={handleSelectChange}>
+                  {teachers.map((teacher, idx) => (
+                      <option  key={idx} value={teacher.id} className="">
+                        {teacher.full_name }
+                      </option>
+                  ))}
+                </select>
+              </th>
+            </tr>
+          </thead>
           {Questions.map(({ category, answers, questions }, idx) => (
             <React.Fragment key={idx}>
               <thead>
-              {/* <tr ><td className="text-center position-relative">Index</td>
+                {/* <tr ><td className="text-center position-relative">Index</td>
               <td className="text-center position-relative">1</td>
               <td className="text-center position-relative">2</td>
               <td className="text-center position-relative">3</td>
@@ -274,7 +308,6 @@ const AssessmentTable = ({
               </thead>
 
               <tbody>
-              
                 {questions.map((question, idx) => (
                   <tr key={idx}>
                     <th scope="col" className={adjustCell && `py-3 px-3`}>
@@ -302,7 +335,7 @@ const AssessmentTable = ({
                         ) : (
                           <div className="radio">
                             <input
-                              className=""
+                              className="bg-light "
                               type="radio"
                               width="100%"
                               checked={
@@ -310,9 +343,9 @@ const AssessmentTable = ({
                                   ? true
                                   : false
                               }
-                              onChange={() =>
-                                handleAnswerClick(question.id, answerId)
-                              }
+                              onChange={() => {
+                                handleAnswerClick(question.id, answerId);
+                              }}
                             />
                           </div>
                         )}

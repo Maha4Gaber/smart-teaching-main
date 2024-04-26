@@ -41,7 +41,7 @@ const Assessment3Details = () => {
             {t('ass3p5')}
         </p>
 
-        <ul className='ps-4 mb-4'>
+        <ul className=' mb-4'>
         
                 <li className='d-flex mb-4'>
                     <span className='simple-icon'><FaCheck/></span>
@@ -55,7 +55,7 @@ const Assessment3Details = () => {
         {t('ass3p6')}
         </p>
 
-        <ul className='ps-4 med-mb'>
+        <ul className=' med-mb'>
 
             {classRoomInstruments.map(({desc}, idx) => 
             
@@ -77,7 +77,7 @@ const Assessment3Details = () => {
             {t('ass3p7')}
         </p>
 
-        <ul className='ps-4 med-mb'>
+        <ul className=' med-mb'>
 
             {ass3Directions.map(({desc}, idx) => 
             

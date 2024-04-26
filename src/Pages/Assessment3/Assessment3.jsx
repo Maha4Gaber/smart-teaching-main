@@ -15,6 +15,7 @@ return (
     <div>
     <figure className='main-ass3-img main-img d-flex align-items-center '>
         <figcaption>
+        
             <h1 className='med-mb'>{t('ass3h2')}</h1>
             <h4>{t('ass3tool')}</h4>
         </figcaption>
@@ -24,23 +25,23 @@ return (
 
         <div className="row gy-4 ">
 
-            <div className="col-lg-3 px-3">
+            <div className="col-lg-3 px-3 g-3">
 
                 <SidebarLinks links={expertTeacherLinks}/>
+                <Assessment3Sidebar />
 
             </div>
 
-            <div className="col-lg-6 px-3">
+            <div className="col-lg-9 px-3">
 
                 <Assessment3Details/>
 
             </div>
 
-            <div className="col-lg-3 px-3">
+            {/* <div className="col-lg-3 px-3">
                 
-                <Assessment3Sidebar/>
                 
-            </div>
+            </div> */}
 
         </div>
 

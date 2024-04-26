@@ -27,17 +27,17 @@ const Assessment2 = () => {
       <section className="ass2 p-3 p-md-5">
         <div className="row gy-4 ">
           
-          <div className="col-lg-3 px-3">
+          <div className="col-lg-3 px-3 g-3">
             <SidebarLinks links={expertTeacherLinks} />
-          </div>
-
-          <div className="col-lg-6 px-3">
-            <Assessment2Details />
-          </div>
-
-          <div className="col-lg-3 px-3">
             <Assessment2Sidebar />
           </div>
+
+          <div className="col-lg-9 px-3">
+            <Assessment2Details />
+          </div>
+{/* 
+          <div className="col-lg-3 px-3">
+          </div> */}
         </div>
       </section>
     </div>

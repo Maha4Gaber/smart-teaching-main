@@ -1,4 +1,6 @@
 import "./Navbar.css";
+import profileimg from '../../assests/Login/profile.png'
+import notifacationimg from '../../assests/Login/notifications.svg'
 import Logo from "../../assests/Logo.png";
 import { Link, NavLink } from "react-router-dom";
 import MainBtn from "../MainBtn/MainBtn";
@@ -87,7 +89,7 @@ const Navbar = () => {
               <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  href="/smart-teaching"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -125,10 +127,11 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
+              
               <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  href="/expertteacher"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -183,7 +186,7 @@ const Navbar = () => {
               <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  href="/assessment"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -260,7 +263,7 @@ const Navbar = () => {
               <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  to="/resources"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -335,12 +338,64 @@ const Navbar = () => {
                   {t("membership")}
                 </NavLink>
               </li>
-            </ul>
+              <li className="notifcation">
+              <span className="notify">2</span>
+               <img className="" src={notifacationimg} />
+              </li>
+              {userData&&(
+                <li className="nav-item dropdown">
+                <Link
+                  className="nav-link dropdown-toggle"
+                  href="/profile"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img className="" src={profileimg} />
+                </Link>
+                <ul
+                  className="dropdown-menu p-0"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <li className="m-0">
+                    <NavLink
+                      onClick={close}
+                      to="/profile"
+                      className={({ isActive }) =>
+                        isActive ? "active dropdown-item" : "dropdown-item"
+                      }
+                      end
+                    >
+                      {t("profile")}
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      onClick={close}
+                      to="/expert-teacher3"
+                      className={({ isActive }) =>
+                        isActive ? "active dropdown-item" : "dropdown-item"
+                      }
+                      end
+                    >
+                      {t("FactorsAffeting")}
+                    </NavLink>
+                  </li>
+                </ul>
+              </li>
+            )}
 
+            </ul>
+            
             <div className="auth ">
-              <Link to={userData ? "/logout" : "/login"}>
-                <MainBtn shadow>{userData ? t("logout") : t("login")}</MainBtn>
+            {!userData&&(
+              <Link to={"/login"}>
+                <MainBtn shadow> {t("login")}</MainBtn>
               </Link>
+            )}
+            
+              
 
               <span
                 className="p-2 cursor-pointer"

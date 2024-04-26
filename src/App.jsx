@@ -22,6 +22,7 @@
     import { checkFixLang, editTitle } from "./helpers/lang";
     import { useTranslation } from "react-i18next";
     import Pdf from "./Pages/pdf/pdf";
+    import Profile from "./Pages/Profile/Profile";
 
     const LazyAbout = React.lazy(() => import("./Pages/About/About"));
     const LazyLogin = React.lazy(() => import("./Pages/Login/Login"));
@@ -96,6 +97,7 @@
         { path: "/books", element: <BookPage /> },
         { path: "/assessment", element: <Assessment /> },
         { path: "/expert-teacher3", element: <ExpertTeacherCer /> },
+        { path: "/profile", element: <Profile /> },
         { path: "/smart-teaching", element: <SmartTeaching /> },
         {
             path: "/login",

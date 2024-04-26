@@ -7,10 +7,17 @@ function Profile() {
   return (
     <div className='profile'>
       <ProfileHeader />
-      <div className='profile_layout'>
-        <RightProfile />
-        <div></div>
+      <div className='profile_layout container-fluid '>
+        <div className="row">
+          <div className="col-4">
+          <RightProfile />
+        {/* <div></div> */}
+          </div>
+          <div className="col-8">
         <LeftProfile />
+
+          </div>
+        </div>
       </div>
     </div>
   );
