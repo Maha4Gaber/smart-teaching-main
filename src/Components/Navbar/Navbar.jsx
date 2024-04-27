@@ -370,18 +370,6 @@ const Navbar = () => {
                       {t("profile")}
                     </NavLink>
                   </li>
-                  <li>
-                    <NavLink
-                      onClick={close}
-                      to="/expert-teacher3"
-                      className={({ isActive }) =>
-                        isActive ? "active dropdown-item" : "dropdown-item"
-                      }
-                      end
-                    >
-                      {t("FactorsAffeting")}
-                    </NavLink>
-                  </li>
                 </ul>
               </li>
             )}
