@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./stepper.css";
+import "./Stepper.css";
 import Pdf from '../../Pages/pdf/pdf'
 import Instructions from '../Instructions/Instructions'
 import {
