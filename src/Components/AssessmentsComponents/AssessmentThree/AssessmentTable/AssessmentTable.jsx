@@ -61,7 +61,6 @@ const AssessmentTable = ({
     url = "api/v1/SRT/";
     cat = "ABCDEF";
     g=true
-    let s=0
     nav = false;
   }
   async function handleSendData(values) {
