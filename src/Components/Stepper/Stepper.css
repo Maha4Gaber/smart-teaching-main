@@ -1,0 +1,105 @@
+.content{
+  /* width: 900px; */
+}
+.step-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+}
+
+.step-item:not(:first-child)::before {
+  content: '';
+  background-color: #ffffff;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  right: 50%;
+  top: 33%;
+  transform: translateY(-130%);
+  height: 14px;
+  border: 2px solid #fff;
+  box-shadow: 0px 4px 28px 0px #D9D9D9;
+
+
+}
+
+.step {
+  width: 33px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: white;
+  border: 2px solid #fff;
+  box-shadow: 0px 4px 28px 0px #D9D9D9;
+
+}
+
+.active .step {
+  /* background-color: #4299e1; */
+  background: linear-gradient(152.96deg, #E7BC01 16.9%, #135C51 138.29%);
+  border: 2px solid #fff;
+  box-shadow: 0px 4px 28px 0px #D9D9D9;
+
+
+}
+
+.complete .step {
+  /* background-color: #48bb78; */
+  background: linear-gradient(152.96deg, #E7BC01 16.9%, #135C51 138.29%);
+  border: 2px solid #fff;
+  box-shadow: 0px 4px 28px 0px #D9D9D9;
+
+}
+
+ p {
+  /* color: white; */
+  margin: 5px 0 !important;
+}
+
+.complete:not(:first-child)::before,
+.active:not(:first-child)::before {
+  /* background-color: #48bb78; */
+  background: linear-gradient(152.96deg, #E7BC01 16.9%, #135C51 138.29%);
+  border: 2px solid #fff;
+  box-shadow: 0px 4px 28px 0px #D9D9D9;
+
+}
+.information{
+  margin: 0 !important;
+  color:  #ACACAC;
+  
+}
+.mybtns{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 40px;
+}
+.mybtns button{
+  font-weight: 400;
+    font-family: Arial;
+    font-style: normal;
+    /* line-height: normal; */
+    font-size: 1.125rem;
+    border-radius: 4.0625rem;
+    color: var(--black-color);
+    background: var(--Yellow, #debd63);
+    border: 2px solid var(--Yellow, #debd63);
+    padding:8px 2rem 8px 2rem;
+    transition: all 0.5s;
+    display: block;
+    width: fit-content;
+    margin: 4% 0 0;
+}
+.mybtns button:hover {
+  background-color: #ffd054;
+}

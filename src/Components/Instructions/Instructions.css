@@ -1,0 +1,15 @@
+.mytable{
+  background: #000;
+  margin: 20px;
+}
+.mytable tr th{
+    text-align: center;
+  padding: 10px;
+}
+.mytable tr th,
+  .mytable tr td{
+  padding: 10px;
+}
+.bg tr {
+  border: 20px solid transparent !important;
+}

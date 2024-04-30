@@ -37,7 +37,8 @@ const SingleStepForm = () => {
 
   async function handleRegister(values) {
     values.country_code=values.mobile.slice(0,4)
-    values.role='instructor'
+    values.role=values.job_title
+    console.log(values.role);
     delete values.state
     delete values['Your City']
     delete values['Your Country']
@@ -45,7 +46,14 @@ const SingleStepForm = () => {
     
 
     setLoading(true)
-    let {data} = await axios.post(`https://sts.pythonanywhere.com/api/v2/register/`, values).catch(err => {
+    let {data} = await axios.post(`https://sts.pythonanywhere.com/api/v2/register/`, values).then(()=>{
+      setLoading(false)
+      setTimeout(() => {
+        let close = document.querySelector('.btn-close')
+          close.click()
+          navigate('/login');
+      }, 5000);
+    }).catch(err => {
     console.log (err)
     setLoading(false)
     setُrrMsg(`${err.response.data.errors.param}: ${err.response.data.errors.msg}`) 
@@ -56,9 +64,9 @@ const SingleStepForm = () => {
         
     
     setLoading(true);
-    console.log(values);
-    console.log(values.full_name);
-    console.log(values.country);
+    // console.log(values);
+    // console.log(values.full_name);
+    // console.log(values.role);
     setLoading(false);
   }
 
@@ -357,9 +365,10 @@ const SingleStepForm = () => {
                 <option value="" disabled>
                   {t("job")}
                 </option>
-                <option value="teacher">Teacher</option>
-                <option value="doctor">University Doctor</option>
-                <option value="another">Another</option>
+                <option value="instructor">Instructor</option>
+                <option value="user">User</option>
+                <option value="Principal">Principal</option>
+                <option value="supervisor">Supervisor</option>
               </select>
 
               {formik.errors.job_title && formik.touched.job_title ? (
@@ -450,8 +459,8 @@ const SingleStepForm = () => {
                   className="modal-btn"
                   type="submit"
                   disabled={!(formik.isValid && formik.dirty)}
-                  data-bs-target="#exampleModalToggle"
-                  data-bs-toggle="modal"
+                  // data-bs-target="#exampleModalToggle"
+                  // data-bs-toggle="modal"
                 >
                 {t("signUp")}
                 </button>
@@ -483,7 +492,7 @@ const SingleStepForm = () => {
               <img className="right-img my-4" src={rightLogo} alt="" />
             </div>
 
-            <div class="modal-footer p-0 text-center d-block">
+            <div className="modal-footer p-0 text-center d-block">
               <form className="m-0" onSubmit={(e) => e.preventDefault()}>
                 <button
                   type="submit"
@@ -552,7 +561,7 @@ const SingleStepForm = () => {
                 </div>
               )}
 
-              <div class="modal-footer p-0">
+              <div className="modal-footer p-0">
                 <button
                   type="submit"
                   className="btn m-0"

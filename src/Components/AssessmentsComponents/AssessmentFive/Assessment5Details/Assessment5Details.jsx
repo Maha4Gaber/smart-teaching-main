@@ -7,6 +7,7 @@ import {  ass5EvaluationTable, ass5QuestionsPartOne, ass5QuestionsPartOneTitles,
 import EvaluationTable from '../../EvaluationTable/EvaluationTable';
 import AssessmentTable from './../../AssessmentThree/AssessmentTable/AssessmentTable';
 import { useTranslation } from "react-i18next";
+import Stepper from '../../../Stepper/Stepper';
 const Assessment5Details = () => {
     const {t,i18n} = useTranslation()
     const lang = i18n.language;
@@ -16,7 +17,7 @@ return (
 
         <h2 className='mb-4'>{t('ass5h2')}</h2>
 
-        <h3 className='high-mb'>{t('ass5h3')}</h3>
+        <h3 className='high-mb '>{t('ass5h3')}</h3>
 
         <p className='special-p'>
         {t('ass5p1')}
@@ -60,12 +61,14 @@ return (
         {t('ass5p7')}
         </p>
 
-        <EvaluationTable table={ass5EvaluationTable}/>
-
+        {/* <EvaluationTable table={ass5EvaluationTable}/> */}
+        <div className=" m-5">
+</div>
         <h3 className='high-mb'>{t('ass5h33')}</h3>
+        <div className=" m-5">
 
         <AssessmentTable  Questions={ass5QuestionsPartOne} columnHead={ass5QuestionsPartOneTitles} btnName= 'Calculate'/>
-        
+        </div>
         <p className='special-p mt-4 med-mb overflow-x-hidden'>
         {t('ass5p8')}<br/> <a className=' text-dark text-decoration-underline' href=''> http://www.metproject.org/downloads/Preliminary_FindingsResearch_Paper.pdf</a>
         </p>
@@ -73,12 +76,15 @@ return (
         <p className='special-p'>
         {t('ass5p9')}
         </p>
+        <div className=" m-5">
+        <Stepper Questions={ass5QuestionsPartTwo} tableName={ass5QuestionsPartTwoTitles} />
+        </div>
 
-        <EvaluationTable table={ass5EvaluationTable}/>
+        {/* <EvaluationTable table={ass5EvaluationTable}/> */}
 
-        <div className='mb-4'></div>
+        {/* <div className='mb-4'></div> */}
 
-        <AssessmentTable Questions={ass5QuestionsPartTwo} tableName={ass5QuestionsPartTwoTitles} adjustCell={true} btnName= 'Submit'/>
+        {/* <AssessmentTable Questions={ass5QuestionsPartTwo} tableName={ass5QuestionsPartTwoTitles} adjustCell={true} btnName= 'Submit'/> */}
 
 
 

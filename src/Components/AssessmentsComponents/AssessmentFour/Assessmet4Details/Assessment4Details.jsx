@@ -7,6 +7,7 @@ import EvaluationTable from '../../EvaluationTable/EvaluationTable';
 import './Assessment4Details.css'
 import AssessmentTable from '../../AssessmentThree/AssessmentTable/AssessmentTable';
 import { useTranslation } from 'react-i18next';
+import Stepper from '../../../Stepper/Stepper';
 const Assessment4Details = () => {
     const {t,i18n} = useTranslation()
     const lang = i18n.language;
@@ -16,9 +17,9 @@ const Assessment4Details = () => {
 
         <h2 className='med-mb'>{t('ass4h2')}</h2>
 
-        <p className='special-p'>
+        {/* <p className='special-p'>
             {t('ass4p1')}
-        </p>
+        </p> */}
 
         <ul className='ps-4 med-mb'>
 
@@ -37,15 +38,17 @@ const Assessment4Details = () => {
             {ass4RatingIndicators.map(({name, desc}, idx) =>
 
                 <li className='mb-3' key={idx}>
-                    <p className='special-p'> <span>{t(name)}</span><br></br> {t(desc)}</p>
+                    <p className='special'> <span className="b">{idx+1}.</span>  <span>{t(name)}</span> {t(desc).slice(2,)}</p>
                 </li>
             )}
 
         </ul>
+        <Stepper Questions={ass4Questions} />
 
-        <EvaluationTable table={ass4EvaluationTable}/>
 
-        <AssessmentTable Questions={ass4Questions} adjustCell={true} btnName= 'Calculate'/>
+        {/* <EvaluationTable table={ass4EvaluationTable}/> */}
+
+        {/* <AssessmentTable Questions={ass4Questions} adjustCell={true} btnName= 'Calculate'/> */}
 
 
     </div>

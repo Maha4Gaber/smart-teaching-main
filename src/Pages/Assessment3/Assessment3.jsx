@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import SidebarLinks from '../../Components/SidebarLinks/SidebarLinks'
 import { expertTeacherLinks } from '../../data'
 import Assessment3Details from '../../Components/AssessmentsComponents/AssessmentThree/Assessment3Details/Assessment3Details'
@@ -6,10 +6,16 @@ import Assessment3Sidebar from './../../Components/AssessmentsComponents/Assessm
 
 import './Assessment3.css'
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 const Assessment3 = () => {
     const {t,i18n} = useTranslation()
     const lang = i18n.language;
     let isRTL = lang =='en'?'ltr':'rtl'
+    let navigate =useNavigate()
+    useEffect(() => {
+        if (!localStorage.user_data) navigate('login')
+        
+    }, []);
 return (
     
     <div>

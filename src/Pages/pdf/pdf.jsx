@@ -7,17 +7,14 @@ import { Chart } from "react-google-charts";
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import { useTranslation } from 'react-i18next';
+import AssessmentData from "../../Components/AssessmentData/AssessmentData";
 
 function Pdf() {
   const {t,i18n} = useTranslation()
   const lang = i18n.language;
   let isRTL = lang =='en'?'ltr':'rtl'
 
-  const tableStyles = {
-    borderCollapse: 'collapse',
-    direction: isRTL  ,
-    maxWidth:'100% !important',
-  };
+  
   const data = JSON.parse(localStorage.getItem("data"));
   // var currentTime = new Date();
   // console.log(data);
@@ -49,9 +46,10 @@ function Pdf() {
   }
   return (
     <div>
-      <div className="container bg" style={{direction: isRTL  ,}} id="divToPrint" ref={componentRef}>
+      <div className=" bg" style={{direction: isRTL  ,}} id="divToPrint" ref={componentRef}>
+        <AssessmentData result={true} />
         <div className="row text-center ">
-          <div className="col-12 p-3 text-center ">
+          {/* <div className="col-12 p-3 text-center ">
             <h1>{t('Teacherevaluationresults')}</h1>
           </div>
           <div className="col-6 fs-3 ">
@@ -59,11 +57,10 @@ function Pdf() {
           </div>
           <div className="col-6 fs-3">
             <strong>{t('date')} : </strong> 
-            {/* {`${currentTime.getDate()} / ${currentTime.getMonth()}  / ${currentTime.getFullYear()} `
-              } */}
+            
             {new Date().toISOString().slice(0,10)}
-          </div>
-          <div className="col-9  chart">
+          </div> */}
+          <div className="col-11  chart">
             <Chart
               chartType="BarChart"
               width="100%"
@@ -73,7 +70,7 @@ function Pdf() {
               options={options}
             />
           </div>
-          <div className="col-12 mt-1">
+          {/* <div className="col-12 mt-1">
                   <h4>{t('Teacherevaluationreport')}</h4>
             <div className="table-responsive">
               <table className=" table-hover align-middle"
@@ -112,7 +109,7 @@ function Pdf() {
                 <tfoot></tfoot>
               </table>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
         <div className="row align-items-center justify-content-center ">

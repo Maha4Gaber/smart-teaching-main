@@ -30,7 +30,7 @@ return (
             
                 <li className='d-flex mb-4' key={idx}>
                     <span className='simple-icon'><FaCheck/></span>
-                    <span className='mx-2'></span>
+                    <span className='mx-1'></span>
                     <span className = 'desc'> {t(desc)} </span>
                 </li>
             )}    

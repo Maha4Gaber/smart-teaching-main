@@ -12,3 +12,7 @@
     width: 16.625rem;
     height: 16.6875rem;
 }
+li .desc{
+    font-size: 16px !important;
+    color: #656567 !important;
+}

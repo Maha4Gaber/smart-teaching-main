@@ -338,11 +338,13 @@ const Navbar = () => {
                   {t("membership")}
                 </NavLink>
               </li>
-              <li className="notifcation">
+              
+              {userData&&(
+                <>
+                <li className="notifcation">
               <span className="notify">2</span>
                <img className="" src={notifacationimg} />
               </li>
-              {userData&&(
                 <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
@@ -372,6 +374,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
+                </>
             )}
 
             </ul>

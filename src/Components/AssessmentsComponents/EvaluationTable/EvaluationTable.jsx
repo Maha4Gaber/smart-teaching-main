@@ -6,7 +6,7 @@ const EvaluationTable = ({table}) => {
 
 return (
     
-    <table className="table table-bordered simple-table">
+    <table className=" simple">
 
         <thead>
             <tr>

@@ -52,18 +52,25 @@ const AssessmentTable = ({
   let url = "api/v1/TCA/";
   let cat = "ABCDEFGH";
   let nav = true;
-
+  let g=false
   if (Questions[0].category === "ass3cat1") {
     url = "api/v1/COI/";
     cat = "ABCD";
     nav = false;
-  } else if (Questions[0].category === "ass5p1cat1") {
+  } else if (Questions[0].category === "ass5p2cat1") {
     url = "api/v1/SRT/";
-    cat = "ABCDEFG";
+    cat = "ABCDEF";
+    g=true
     nav = false;
   }
   async function handleSendData(values) {
     try {
+      console.log(values);
+      if(g){
+        values.G_score=3.5
+      }
+      values.instructor=localStorage.teacherid
+      // console.log(values);
       let { data } = await axios.post(url, values);
 
       if (data) {
@@ -71,14 +78,14 @@ const AssessmentTable = ({
         let newdata = data.data.percentage_level_score;
         cat = cat.split("");
         cat.forEach((el, index) => {
-          let color = "blue";
-
+          let color = "rgb(233, 50, 107)";
+          
           if (newdata[el][0] > 25 && newdata[el][0] < 37.5) {
-            color = "red";
+            color = "rgb(92, 175, 34)";
           } else if (newdata[el][0] > 37.5 && newdata[el][0] < 62.5) {
-            color = "yellow";
+            color = "rgb(255, 152, 5)";
           } else if (newdata[el][0] < 87.5 && newdata[el][0] > 62.5) {
-            color = "green";
+            color = "rgb(48, 191, 206)";
           }
           recievddata.push([
             t(Questions[index]["category"]),
@@ -92,7 +99,7 @@ const AssessmentTable = ({
         setTimeout(() => {
           let close = document.querySelector(".close-login");
           close.click();
-          navigate("/pdf");
+          // navigate("/pdf");
         }, 2000);
         // console.log(recievddata);
       }
@@ -189,13 +196,7 @@ const AssessmentTable = ({
                 {" "}
                 {columnHead.title}{" "}
               </th>
-              {columnHead.answers.map(({ answer }, idx) => (
-                <td key={idx} className="text-center position-relative W-5 W-3">
-                  <div className="position-absolute top-50 start-50 translate-middle">
-                    {answer}
-                  </div>
-                </td>
-              ))}
+              
             </tr>
           </thead>
 
@@ -217,36 +218,21 @@ const AssessmentTable = ({
                       <div style={tableStyles}>{t(question.text)}</div>
                     </th>
 
-                    {[1, 2, 3, 4].map((answerId) => (
-                      <td
-                        key={answerId}
-                        onClick={() => handleAnswerClick(question.id, answerId)}
-                        className={
-                          selectedAnswers[question.id] === answerId
-                            ? "selected text-center cursor-pointer W-5 W-3"
-                            : "cursor-pointer W-5 W-3"
-                        }
-                      >
-                        {selectedAnswers[question.id] === answerId && (
-                          <div>
-                            <FaCheck />
-                          </div>
-                        )}
-                      </td>
-                    ))}
+                    
                   </tr>
                 ))}
               </React.Fragment>
             ))}
           </tbody>
+          
         </table>
       ) : (
-        <table className="table table-bordered ass-table" style={tableStyles}>
-          {tableName && (
+        <table className="table tab ass-table" style={tableStyles}>
             <thead>
+          {tableName && (
               <tr>
                 <th
-                  colSpan={Questions[0].answers.length + 1}
+                  colSpan={1}
                   className={adjustCell && `p-3 py-4`}
                 >
                   {adjustCell ? (
@@ -255,25 +241,22 @@ const AssessmentTable = ({
                     <div className="L-3">{tableName.head}</div>
                   )}{" "}
                 </th>
-              </tr>
-            </thead>
-          )}
-          <thead className="">
-            <tr>
-              <th colSpan={1} className="fs-6 ">
-                <div className="">Teacher Name </div>
-              </th>
-              <th colSpan={4} className="select_th ">
-                <select className="" value={teacherid} onChange={handleSelectChange}>
-                  {teachers.map((teacher, idx) => (
-                      <option  key={idx} value={teacher.id} className="">
-                        {teacher.full_name }
-                      </option>
+                {[1,2,3,4].map(( answer , idx) => (
+                    <th key={idx} className="text-center position-relative">
+                      {/* {adjustCell ? (
+                        <div className="position-absolute top-50 start-50 translate-middle">
+                          {answer}
+                        </div>
+                      ) : ( */}
+                        <span>{answer}</span> 
+                      {/* )} */}
+                    </th>
                   ))}
-                </select>
-              </th>
-            </tr>
-          </thead>
+              </tr>
+              
+          )}
+            </thead>
+          
           {Questions.map(({ category, answers, questions }, idx) => (
             <React.Fragment key={idx}>
               <thead>
@@ -321,7 +304,7 @@ const AssessmentTable = ({
                     {[1, 2, 3, 4].map((answerId) => (
                       <td
                         key={answerId}
-                        // onClick={() => handleAnswerClick(question.id, answerId)}
+                        onClick={() => handleAnswerClick(question.id, answerId)}
                         className={
                           selectedAnswers[question.id] === answerId
                             ? "selected text-center cursor-pointer "
@@ -359,7 +342,7 @@ const AssessmentTable = ({
         </table>
       )}
 
-      <button
+      {columnHead ? (''):(<button
         className="submit-ass"
         onClick={printSelectedAnswers}
         disabled={isCalculateButtonDisabled()}
@@ -367,7 +350,7 @@ const AssessmentTable = ({
         data-bs-toggle="modal"
       >
         {t("submit")}
-      </button>
+      </button>)}
       <div
         className="done modal fade"
         id="exampleModalToggle4"

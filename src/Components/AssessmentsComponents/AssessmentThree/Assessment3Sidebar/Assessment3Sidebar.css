@@ -8,10 +8,15 @@
 }
 
 .ass3-sidebar p{
-    color: #000;
+    color:#656567    ;
     font-weight: 400;
     font-family: Arial;
     font-style: normal;
     line-height: normal;
     font-size: 1.125rem;
+}
+@media  (max-width: 990px) {
+    .ass3-sidebar{
+        display: none;
+    }
 }

@@ -1,9 +1,14 @@
 .ass5-details{
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 40px 0px;
 }
-
+.ass5-details h2,
+.ass5-details p
+{
+    text-align: left !important;
+    padding-left: 53px;
+}
 .ass5-details h3{
-    text-align: center;
+    /* text-align: center; */
     font-family: Arial;
     font-size: 1.125rem;
     font-style: normal;
@@ -11,4 +16,5 @@
     line-height: normal;
     margin-bottom: 2rem;
     color: var(--darkgreen-color);
+    padding-left: 50px;
 }

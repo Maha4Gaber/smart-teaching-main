@@ -6,6 +6,7 @@ import { ass3Directions, ass3EvaluationTable, ass3Questions, classRoomInstrument
 import AssessmentTable from '../AssessmentTable/AssessmentTable';
 import EvaluationTable from '../../EvaluationTable/EvaluationTable';
 import { useTranslation } from 'react-i18next';
+import Stepper from '../../../Stepper/Stepper';
 
 const Assessment3Details = () => {
     const {t,i18n} = useTranslation()
@@ -89,11 +90,12 @@ const Assessment3Details = () => {
                 
             )}    
         </ul>
+        <Stepper Questions={ass3Questions} />
 
         {/* <Evaluation3 Table/> */}
-        <EvaluationTable table={ass3EvaluationTable} />
+        {/* <EvaluationTable table={ass3EvaluationTable} /> */}
 
-        <AssessmentTable Questions={ass3Questions} adjustCell={true} btnName = 'Submit'/>
+        {/* <AssessmentTable Questions={ass3Questions} adjustCell={true} btnName = 'Submit'/> */}
 
         
     </div>

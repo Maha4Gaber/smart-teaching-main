@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import SidebarLinks from "./../../Components/SidebarLinks/SidebarLinks";
 import { expertTeacherLinks } from "../../data";
@@ -7,10 +7,17 @@ import Assessment4Sidebar from "../../Components/AssessmentsComponents/Assessmen
 import '../Assessment2/Assessment2.css'
 import "./Assessment4.css";
 import { useTranslation } from "react-i18next";
+import Stepper from "../../Components/Stepper/Stepper";
+import { useNavigate } from "react-router-dom";
 const Assessment4 = () => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
   let isRTL = lang == "en" ? "ltr" : "rtl";
+  let navigate =useNavigate()
+    useEffect(() => {
+      if (!localStorage.user_data) {navigate('/login')}
+        
+    }, []);
   return (
     <div>
       {/* <figure className="main-ass2-img main-img d-flex align-items-center ">
@@ -24,13 +31,12 @@ const Assessment4 = () => {
         <div className="row gy-4 mt-5 ">
           <div className="col-lg-3 px-3">
             <SidebarLinks links={expertTeacherLinks} />
-          </div>
-          <div className="col-lg-6 px-3">
-            <Assessment4Details />
-          </div>
-          <div className="col-lg-3 px-3">
             <Assessment4Sidebar />
           </div>
+          <div className="col-lg-9 px-3">
+            <Assessment4Details />
+          </div>
+          
         </div>
       </section>
     </div>

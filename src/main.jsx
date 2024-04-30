@@ -15,6 +15,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 import "./index.css";
 import "./axios";
+
 import { QueryClient, QueryClientProvider } from "react-query";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
