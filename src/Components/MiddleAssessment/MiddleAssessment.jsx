@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 const MiddleAssessment = () => {
     const {t} = useTranslation()
   const items = [t("self"), t("principal"), t("peers"), t("supervisors")];
+  const selfshitems = [ t("principal"), t("peers"), t("supervisors")];
   const Sitems = [t("students")];
   return (
       <section className={classes.middle_assessment}>
@@ -55,7 +56,7 @@ const MiddleAssessment = () => {
               </div>
               <div className="col-lg-4 col-sm-6 ">
                   <AssessmentCard
-                      items={items}
+                      items={selfshitems}
                       logo={LogoTwo}
                       title={t("CO")}
                   />

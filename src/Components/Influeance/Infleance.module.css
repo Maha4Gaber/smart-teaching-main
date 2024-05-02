@@ -6,7 +6,7 @@
   gap: 0px;
 }
 .influeance img {
-  max-width: 132px;
+  width:80%;
   max-height: 127px;
   border-radius: 4px;
 }
@@ -22,7 +22,7 @@
 }
 @media (max-width: 400px) {
   .influeance img {
-    width: 55px;
+    /* width: 55px; */
     max-height: 100px;
   }
   .influeance h5 {

@@ -9,7 +9,7 @@ import parse from "html-react-parser";
 function ExpertTeacherCer() {
   const { t } = useTranslation();
   return (
-    <div className=" container">
+    <div className=" ">
       {/* <figure className=" mainimg  main-img d-flex align-items-center ">
         <figcaption>
           <h1 className="m-0 text-center w-100">

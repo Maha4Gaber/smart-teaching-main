@@ -1,13 +1,15 @@
 .ass2-details{
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 50px 0;
 }
 .ass2-details h2{
-    font-size: 2.5rem;
+    font-size: 30px;
+    text-align: left !important;
+    margin: 20px 55px !important;
 }
 .ass2-details h3{
-    text-align: center;
+    text-align: left;
     font-family: Arial;
-    font-size: 2rem;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -16,15 +18,23 @@
 }
 
 .ass2-details p{
-    font-size: 22px !important;
+    font-size: 18px !important;
+    margin: 0 55px !important;
 }
 .ass2-details li .desc{
     font-size: 16px !important;
     color: #656567 !important;
 
 }
+.ass2-details .first-img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .ass2-details .first-img img{
-    width: auto;
+    width: 400px;
+    margin: auto;
 }
 
 .ass2-details .domain-img{

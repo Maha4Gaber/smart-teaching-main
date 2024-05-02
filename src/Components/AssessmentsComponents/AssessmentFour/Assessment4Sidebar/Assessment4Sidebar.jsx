@@ -15,7 +15,7 @@ const Assessment4Sidebar = () => {
     const lang = i18n.language;
     let isRTL = lang == "en" ? "ltr" : "rtl";
 return (
-    <aside className='ass4-sidebar p-4'>
+    <aside className='ass4-sidebar p-4 mt-5'>
 
         <div className='d-flex justify-content-center mb-4'>
             <div className='side-img'>
@@ -31,7 +31,7 @@ return (
             
                 <li className='d-flex mb-4' key={idx}>
                     <span className='simple-icon'><FaCheck/></span>
-                    <span className='mx-2'></span>
+                    <span className='mx-1'></span>
                     <span className = 'desc'> {t(desc)} </span>
                 </li>
             )}    

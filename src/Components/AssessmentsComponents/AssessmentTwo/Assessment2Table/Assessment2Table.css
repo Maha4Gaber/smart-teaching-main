@@ -1,5 +1,6 @@
 .ass2-table{
-    margin-bottom: 2rem;
+    margin: 2rem 55px !important;
+    max-width: 100%;
     border: 1px solid #ACACAC ;
 }
 .ass2-table th{

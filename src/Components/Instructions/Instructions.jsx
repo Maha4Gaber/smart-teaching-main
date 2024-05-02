@@ -17,7 +17,7 @@ const Instructions = () => {
   return (
     <>
       <div className="col-12 mt-5">
-                  <h4>{t('Teacherevaluationreport')}</h4>
+                  {/* <h4>{t('Teacherevaluationreport')}</h4> */}
             <div className="mt-5">
               <table className=" mytable"
                 style={tableStyles}>
@@ -29,24 +29,23 @@ const Instructions = () => {
                   </tr>
                 </thead>
                 <tbody className="">
-                  <tr className="px-2 " style={{ backgroundColor: "rgb(233, 50, 107) " }}>
+                  <tr className="px-2 " style={{ backgroundColor: "#9BE5FF " }}>
                     <td scope="row">87.51 - 100</td>
                     <td>{t("expert")}</td>
                     <td>{t("level1desc")}</td>
                   </tr>
-                  <tr className="px-2 " style={{ backgroundColor: "rgb(48, 191, 206) " }}>
+                  <tr className="px-2 " style={{ backgroundColor: "#BDFFBD" }}>
                     <td scope="row">62.51 - 87.50</td>
                     <td>{t("experiencd")}</td>
                     <td>{t("level2desc")}</td>
                   </tr>
-                  <tr className="px-2 " style={{ backgroundColor: "rgb(255, 152, 5)",
-                    padding:'10px'
-                   }} >
+                  <tr className="px-2 " style={{ backgroundColor: "#FFFF81",
+                    padding:'10px'                   }} >
                     <td scope="row" >37.51 - 62.50</td>
                     <td>{t("devolop")}</td>
                     <td>{t("level3desc")}</td>
                   </tr>
-                  <tr className="px-2 " style={{ backgroundColor: "rgb(92, 175, 34)" }}>
+                  <tr className="px-2 " style={{ backgroundColor: " #FFB9B9" }}>
                     <td scope="row ">25.00 - 37.51</td>
                     <td>{t("junior")}</td>
                     <td>{t("level4desc")}</td>

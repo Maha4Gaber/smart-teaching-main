@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import classes from "./SpeedMoter.module.css";
 import ReactSpeedometer from "react-d3-speedometer";
 import Influeance from "../Influeance/Influeance";
-import TeachingInf from "../../assests/Teaching.png";
-import CirInf from "../../assests/Curricula.png";
-import HomeInf from "../../assests/Home.png";
-import SchoolInf from "../../assests/School.png";
-import StudentInf from "../../assests/Student.png";
-import TeacherInf from "../../assests/Theacher.png";
+import TeachingInf from "../../assests/Login/Teaching.jpg";
+import classroom from "../../assests/Login/Classroom.jpg";
+import CirInf from "../../assests/Login/Curricula.jpg";
+import HomeInf from "../../assests/Login/Home.jpg";
+import SchoolInf from "../../assests/Login/School.jpg";
+import StudentInf from "../../assests/Login/Student.jpg";
+import TeacherInf from "../../assests/Login/Teacher.jpg";
 import ResultInf from "../ResultInf/ResultInf";
 import ArrowImg from "../../assests/Arrow.png";
 import { useTranslation } from "react-i18next";
@@ -30,17 +31,19 @@ function SpeedMoter() {
     let s = Number(singleItem.size);
     setValue(s);
     if (singleItem.category_en.toLowerCase() === "student") {
-      isEn ? setSoi("56%") : setSoi("39%");
+      isEn ? setSoi("33%") : setSoi("62%");
     } else if (singleItem.category_en.toLowerCase() === "home") {
-      isEn ? setSoi("23%") : setSoi("72%");
+      isEn ? setSoi("62%") : setSoi("33%");
     } else if (singleItem.category_en.toLowerCase() === "teaching") {
-      isEn ? setSoi("90%") : setSoi("6%");
+      isEn ? setSoi("4%") : setSoi("90%");
     } else if (singleItem.category_en.toLowerCase() === "teacher") {
-      isEn ? setSoi("69%") : setSoi("23%");
+      isEn ? setSoi("19%") : setSoi("76%");
     } else if (singleItem.category_en.toLowerCase() === "school") {
-      isEn ? setSoi("39%") : setSoi("56%");
-    } else if (singleItem.category_en.toLowerCase() === "ؤurricula") {
-      isEn ? setSoi("6%") : setSoi(" 90%");
+      isEn ? setSoi("47.5%") : setSoi("47.5%");
+    } else if (singleItem.category_en.toLowerCase() === "curricula") {
+      isEn ? setSoi(" 76%") : setSoi("19%");
+    } else if (singleItem.category_en.toLowerCase() === "classroom") {
+      isEn ? setSoi(" 90%") : setSoi("4%");
     }
   }
 
@@ -61,12 +64,13 @@ function SpeedMoter() {
     <section className={classes.influncers}>
       <h6>{t("learnImpactOfFactors")}</h6>
       <div className={classes.inf__images}>
-        <Influeance img={CirInf} title="Curricula" /> *
-        <Influeance img={HomeInf} title="HOME" />
-        <Influeance img={SchoolInf} title="school" />
-        <Influeance img={StudentInf} title="student" />
-        <Influeance img={TeacherInf} title="teacher" />
         <Influeance img={TeachingInf} title="teaching" />
+        <Influeance img={TeacherInf} title="teacher" />
+        <Influeance img={StudentInf} title="student" />
+        <Influeance img={SchoolInf} title="school" />
+        <Influeance img={HomeInf} title="HOME" />
+        <Influeance img={CirInf} title="Curricula" />
+        <Influeance img={classroom} title="Classroom" />
       </div>
       <div className={classes.green_bar}>
         <div className={classes.baro_needle} style={{ left: soi }}>
@@ -74,13 +78,12 @@ function SpeedMoter() {
         </div>
       </div>
       <div className={classes.inf__selcets}>
-        <ResultInf title={t("rank")} value={rank} />
         <select
           value={inful}
           className={classes.select}
           onChange={(e) => {
             setInful(e.target.value);
-            handleStudent(inful);
+            handleStudent(e.target.value);
           }}
         >
           <option>- Select Influence -</option>
@@ -90,6 +93,7 @@ function SpeedMoter() {
             </option>
           ))}
         </select>
+        <ResultInf title={t("rank")} value={rank} />
         <ResultInf title={t("Effect Size")} value={value} />
       </div>
       <div className={classes.speed__moter}>

@@ -29,6 +29,7 @@ const ExpertTeacher = () => {
 
           <div className="col-lg-9   col-md-7  py-3">
             <ExpertTeacherDetails />
+            zzzzzzzzzzzzzzzzzzzzzzzzzzz
           </div>
         </div>
       </section>

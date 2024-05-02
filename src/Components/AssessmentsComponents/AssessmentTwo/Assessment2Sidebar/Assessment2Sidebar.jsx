@@ -15,7 +15,7 @@ import './Assessment2Sidebar.css'
 const Assessment2Sidebar = () => {
 
     return (
-    <aside className='ass2-sidebar p-3'>
+    <aside className='ass2-sidebar mt-5 p-3'>
         
         <div className='d-flex justify-content-center mb-4'>
             <div className='side-img'>

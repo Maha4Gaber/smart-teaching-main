@@ -96,7 +96,7 @@ const Stepper = ({Questions,
             }}
             // disabled={complete}
           >
-            {currentStep === steps.length ? "prev" : "prev"}
+            {currentStep == 1 ? '' : "Pervious"}
           </button>
           {/* {!complete && ( */}
           <button
@@ -108,7 +108,7 @@ const Stepper = ({Questions,
             }}
             disabled={complete}
           >
-            {currentStep === steps.length ? "Finish" : "Next"}
+            {currentStep === steps.length ? '' : "Next"}
           </button>
           {/* )} */}
         </div>

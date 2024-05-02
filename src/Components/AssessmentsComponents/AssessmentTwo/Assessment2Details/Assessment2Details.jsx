@@ -25,11 +25,11 @@ const Assessment2Details = () => {
     <div className="ass2-details">
       <h2 className="mb-4">{t("ass4h2")}</h2>
       <h3 className="px-0 px-lg-5 mb-4">{t("ass2h3")}</h3>
-      <div className="text-center mb-4 first-img">
+      <div className="text-center m-4 first-img">
         <ImageComp src={img1} alt="Teacher Assessment" />
       </div>
-      <p className="special-p">{t("ass2p1")}</p>
-      <p className="special-p mb-4">{t("ass2p2")}</p>
+      <p className="special">{t("ass2p1")}</p>
+      <p className="special mb-4">{t("ass2p2")}</p>
       <ul className="ps-4">
         <li className="d-flex mb-4">
           <span className="simple-icon">
@@ -55,14 +55,14 @@ const Assessment2Details = () => {
           <span className="desc">{t("ass2li3")}</span>
         </li>
       </ul>
-      <p className="special-p mb-4">{t("ass2p3")}</p>
-      <p className="special-p large-mb">{t("ass2p4")}</p>
+      <p className="special mb-4">{t("ass2p3")}</p>
+      <p className="special large-mb">{t("ass2p4")}</p>
       <h2 className="med-mb">
         {t("ass2h21")} <br /> (TCA)
       </h2>
-      <p className="special-p large-mb">{t("ass2p5")}</p>
+      <p className="special large-mb">{t("ass2p5")}</p>
       <h2 className="med-mb">{t("ass2h22")}</h2>
-      <p className="special-p med-mb">{t("ass2p6")}</p>
+      <p className="special med-mb">{t("ass2p6")}</p>
       <div className="row">
         <div className="col-md-6">
           <ul className="m-0 ps-4">
@@ -82,17 +82,17 @@ const Assessment2Details = () => {
           <div className="domain-img w-100"></div>
         </div>
       </div>
-      <p className="special-p large-mb">{t("ass2p7")}</p>
+      <p className="special large-mb">{t("ass2p7")}</p>
       <h2 className="med-mb">{t("ass2h23")} </h2>
-      <p className="special-p large-mb">{t("ass2p8")}</p>
+      <p className="special large-mb">{t("ass2p8")}</p>
       <h2 className="med-mb"> {t("ass2h24")}</h2>
-      <p className="special-p large-mb">{t("ass2p9")}</p>
+      <p className="special large-mb">{t("ass2p9")}</p>
       <h2 className="med-mb"> {t("ass2h22")}</h2>
-      <p className="special-p med-mb">{t("ass2p10")}</p>
+      <p className="special med-mb">{t("ass2p10")}</p>
       <Assessment2Table />
-      <p className="special-p large-mb">{t("ass2p11")}</p>
+      <p className="special large-mb">{t("ass2p11")}</p>
       <h2 className="med-mb">{t("ass2h26")}</h2>
-      <p className="special-p">{t("ass2p12")}</p>
+      <p className="special">{t("ass2p12")}</p>
       <ul className="ps-4 med-mb">
         {teacherCompetencies.map(({ desc }, idx) => (
           <li className="d-flex mb-4" key={idx}>
@@ -104,7 +104,7 @@ const Assessment2Details = () => {
           </li>
         ))}
       </ul>
-      <p className="special-p">{t("ass2p13")}</p>
+      <p className="special">{t("ass2p13")}</p>
       <ul className="ps-4 large-mb">
         {teacherCompetencies2.map(({ desc }, idx) => (
           <li className="d-flex mb-4" key={idx}>
@@ -119,10 +119,10 @@ const Assessment2Details = () => {
       <h2 className="med-mb">
         {t("ass2h27")} (IPDP)
       </h2>
-      <p className="special-p med-mb">{t("ass2p14")}</p>
+      <p className="special med-mb">{t("ass2p14")}</p>
       <div className="row mb-4">
         <div className="col-md-8 d-flex align-items-center">
-          <p className="special-p m-0">{t("ass2p15")}</p>
+          <p className="special m-0">{t("ass2p15")}</p>
         </div>
         <Link className="col-md-4 btn-img text-center">
           <ImageComp src={btn1} alt="Click Now" />
@@ -130,7 +130,7 @@ const Assessment2Details = () => {
       </div>
       <div className="row">
         <div className="col-md-8 d-flex align-items-center">
-          <p className="special-p m-0">{t("ass2p16")}</p>
+          <p className="special m-0">{t("ass2p16")}</p>
         </div>
         <Link className="col-md-4 btn-img text-center">
           <ImageComp src={btn2} alt="Click Now" />

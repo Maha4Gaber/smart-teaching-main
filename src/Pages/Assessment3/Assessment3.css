@@ -24,7 +24,7 @@
 }
 
 .ass3{
-    padding: 2.5rem 3.75rem;
+    padding: 2.5rem 120px !important;
     background: var(--gray-color);
 }
 
