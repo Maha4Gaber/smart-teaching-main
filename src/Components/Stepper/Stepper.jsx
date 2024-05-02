@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Stepper.css";
-import Pdf from '../../Pages/pdf/pdf'
-import Instructions from '../Instructions/Instructions'
+import Pdf from "../../Pages/pdf/pdf";
+import Instructions from "../Instructions/Instructions";
 import {
   ass4EvaluationTable,
   ass4Questions,
@@ -13,9 +13,7 @@ import EvaluationTable from "../AssessmentsComponents/EvaluationTable/Evaluation
 import AssessmentTable from "../AssessmentsComponents/AssessmentThree/AssessmentTable/AssessmentTable";
 import AssessmentData from "../AssessmentData/AssessmentData";
 // import { TiTick } from "react-icons/ti";
-const Stepper = ({Questions,
-  tableName
-}) => {
+const Stepper = ({ Questions, tableName }) => {
   const steps = [
     {
       step: "Step 1",
@@ -60,11 +58,20 @@ const Stepper = ({Questions,
           ))}
         </div>
         <div className="body mt-5">
-          {currentStep == 1 && <AssessmentData />}
+          {currentStep == 1 && (
+            <AssessmentData
+              type={
+                Questions[0].category == "ass4cat1"
+                  ? 1
+                  : Questions[0].category == "ass3cat1"
+                  ? 2
+                  : 3
+              }
+            />
+          )}
           {currentStep == 2 && (
             <>
               <EvaluationTable table={ass4EvaluationTable} />
-
               <AssessmentTable
                 Questions={Questions}
                 tableName={tableName}
@@ -75,13 +82,13 @@ const Stepper = ({Questions,
           )}
           {currentStep == 3 && (
             <>
-            {/* <AssessmentData result={true} /> */}
-              <Pdf/>
+              {/* <AssessmentData result={true} /> */}
+              <Pdf />
             </>
           )}
           {currentStep == 4 && (
             <>
-              <Instructions/>
+              <Instructions />
             </>
           )}
         </div>
@@ -96,7 +103,7 @@ const Stepper = ({Questions,
             }}
             // disabled={complete}
           >
-            {currentStep == 1 ? '' : "Pervious"}
+            {currentStep == 1 ? "" : "Pervious"}
           </button>
           {/* {!complete && ( */}
           <button
@@ -108,7 +115,7 @@ const Stepper = ({Questions,
             }}
             disabled={complete}
           >
-            {currentStep === steps.length ? '' : "Next"}
+            {currentStep === steps.length ? "" : "Next"}
           </button>
           {/* )} */}
         </div>
@@ -118,12 +125,6 @@ const Stepper = ({Questions,
 };
 
 export default Stepper;
-
-
-
-
-
-
 
 // <div className="col-12 mt-1">
 //                   <h4>{t('Teacherevaluationreport')}</h4>

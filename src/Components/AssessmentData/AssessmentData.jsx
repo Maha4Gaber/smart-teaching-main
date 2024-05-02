@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 // import { TiTick } from "react-icons/ti";
-const AssessmentData = ({ result }) => {
+const AssessmentData = ({ result,type }) => {
   let navigate = useNavigate();
   const [teachers, setteachers] = useState([]);
   const [teacherid, setteacherid] = useState(1);
@@ -33,6 +33,7 @@ const AssessmentData = ({ result }) => {
     else {
       getdata();
     }
+    console.log(type);
   }, []);
   return (
     <>
@@ -75,8 +76,7 @@ const AssessmentData = ({ result }) => {
             <div className="box">
               <div className="title">Subject</div>
               <div className="infodata">
-                {JSON.parse(localStorage.getItem("user_data")) &&
-                  JSON.parse(localStorage.getItem("user_data")).role}
+              <input className="" placeholder="Enter Subject" />
               </div>
             </div>
           </div>

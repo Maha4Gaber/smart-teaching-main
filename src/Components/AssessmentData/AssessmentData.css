@@ -23,7 +23,8 @@
     justify-content: center; */
   width: 100%;
 }
-.infodata select {
+.infodata select ,
+  .infodata input {
   display: flex;
   max-width: 100%;
   padding: 12px;
