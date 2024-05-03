@@ -232,7 +232,7 @@ const AssessmentTable = ({
           {tableName && (
               <tr>
                 <th
-                  colSpan={1}
+                  colSpan={5}
                   className={adjustCell && `p-3 py-4`}
                 >
                   {adjustCell ? (
@@ -241,20 +241,16 @@ const AssessmentTable = ({
                     <div className="L-3">{tableName.head}</div>
                   )}{" "}
                 </th>
-                {[1,2,3,4].map(( answer , idx) => (
-                    <th key={idx} className="text-center position-relative">
-                      {/* {adjustCell ? (
-                        <div className="position-absolute top-50 start-50 translate-middle">
-                          {answer}
-                        </div>
-                      ) : ( */}
-                        <span>{answer}</span> 
-                      {/* )} */}
-                    </th>
-                  ))}
+                
               </tr>
               
           )}
+          <tr ><td  className="text-center position-relative  w-75">Index</td>
+              <td  className="text-center position-relative">1</td>
+              <td  className="text-center position-relative">2</td>
+              <td  className="text-center position-relative">3</td>
+              <td  className="text-center position-relative">4</td>
+              </tr>
             </thead>
           
           {Questions.map(({ category, answers, questions }, idx) => (
