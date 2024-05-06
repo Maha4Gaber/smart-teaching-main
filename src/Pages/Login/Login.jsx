@@ -36,7 +36,10 @@ try {
     localStorage.token = data.tokens.access;
     localStorage.user_data = JSON.stringify(data);
     setTimeout(() => {
-        navigate("/");
+        if(data.role=='user'){
+            navigate('/StudentsRatingtheirTeachers')
+        }
+        else        navigate("/");
     }, 1900);
     }
 } catch (err) {
@@ -54,10 +57,15 @@ email_or_phone: Yup.string()
     .email("Invalid email address *exemple@yyy.zzz"),
 password: Yup.string()
     .required("Password is required")
-    .matches(
-    /^[A-Z][a-z0-9]{5,10}$/,
-    "Password must start with Capital Letter includes at least 5 and less than 10 chars"
-    ),
+    // .matches(
+    // /^[A-Z]$/,
+    // "Password must start with Capital Letter includes at least 5 and less than 10 chars"
+    // )
+    .matches(/^[A-Z][A-Za-z\d@#$%^&*]{4,9}$/
+    ,
+    `
+    "Password must start with Capital Letter includes at least 5 and less than 10 chars`
+    )
 });
 
 let formik = useFormik({

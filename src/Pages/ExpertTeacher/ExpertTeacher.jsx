@@ -20,14 +20,14 @@ const ExpertTeacher = () => {
 
       <section className="expert-teacher cont">
         <div className="row gy-4 ">
-          <div className="col-lg-3 col-md-3  py-3">
+          <div className="col-lg-3 col-md-4  py-3">
             <SidebarLinks links={expertTeacherLinks} />
             <div className=" py-3 ">
               <ExpertTeacherSidebar />
             </div>
           </div>
 
-          <div className="col-lg-9   col-md-7  py-3">
+          <div className="col-lg-9   col-md-8  py-3">
             <ExpertTeacherDetails />
           </div>
         </div>

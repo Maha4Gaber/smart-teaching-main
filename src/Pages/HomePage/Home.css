@@ -86,7 +86,9 @@ html[dir='rtl'] .main-home-img  h1 {
 @media screen and (max-width: 992px) {
   .main-home-img h1 {
     font-size: 2rem;
-  padding: 6rem 80px 5rem 600px;
+  width: 100%;
+
+  /* padding: 6rem 80px 5rem 600px; */
   }
   html[dir='rtl'] .main-home-img  h1 {
     padding: 6rem 80px ;
@@ -97,8 +99,9 @@ html[dir='rtl'] .main-home-img  h1 {
 
 @media screen and (max-width: 568px) {
   .main-home-img h1 {
-    font-size: 1rem;
-    padding: 3rem 10px  ;
+    font-size: 2rem;
+  width: 100%;
+  /* padding: 3rem 10px  ; */
   }
   html[dir='rtl'] .main-home-img  h1 {
     padding: 3rem 10px  ;

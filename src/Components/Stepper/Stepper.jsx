@@ -13,7 +13,7 @@ import EvaluationTable from "../AssessmentsComponents/EvaluationTable/Evaluation
 import AssessmentTable from "../AssessmentsComponents/AssessmentThree/AssessmentTable/AssessmentTable";
 import AssessmentData from "../AssessmentData/AssessmentData";
 // import { TiTick } from "react-icons/ti";
-const Stepper = ({ Questions, tableName }) => {
+const Stepper = ({ Questions, tableName,student }) => {
   const steps = [
     {
       step: "Step 1",
@@ -67,6 +67,7 @@ const Stepper = ({ Questions, tableName }) => {
                   ? 2
                   : 3
               }
+              student={student}
             />
           )}
           {currentStep == 2 && (

@@ -69,7 +69,8 @@ const AssessmentTable = ({
       if(g){
         values.G_score=3.5
       }
-      values.instructor=localStorage.teacherid
+      values.instructor=parseFloat(localStorage.teacherid)
+      values.subject=localStorage.subject
       // console.log(values);
       let { data } = await axios.post(url, values);
 
