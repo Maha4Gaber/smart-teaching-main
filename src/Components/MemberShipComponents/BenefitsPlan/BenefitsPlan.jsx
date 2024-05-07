@@ -11,7 +11,7 @@ return (
     <table className="table table-bordered text-center">
         
         <thead className='main-head'>
-            <tr>
+            <tr className='member'>
                 <th scope="col" className='text-white'></th>
                 <th scope="col" className=' text-white'>Public</th>
                 <th className=' text-white' colSpan='3' scope="col">Registered</th>
@@ -19,7 +19,7 @@ return (
             </tr>
         </thead>
         <thead>
-            <tr>
+            <tr className='member'>
                 <th scope="col"></th>
                 <th scope="col"></th>
                 <th scope="col">Free</th>

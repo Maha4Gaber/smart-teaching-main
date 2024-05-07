@@ -44,7 +44,9 @@
     padding: 0 !important;
     margin-bottom: 1.19rem !important;
 }
-
+.benefit-card:hover li .desc{
+color: aliceblue;
+}
 .benefitList-icon {
     padding: .3rem;
     height: fit-content;
@@ -53,7 +55,7 @@
 }
 
 .benefit-card:hover{
-    color: var(--white-color);
+    color: var(--white-color) !important;
     background-color: var(--green-color);
 }
 

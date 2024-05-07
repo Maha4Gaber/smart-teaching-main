@@ -1,5 +1,7 @@
 .join-community h2{
     margin-bottom: 2.81rem !important;
+    text-align: left !important;
+    padding-left: 28px;
 }
 
 .join-community h4{
@@ -8,14 +10,14 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    border-left: 2px solid var(--darkgreen-color);
-    padding-left: .75rem;
+    /* border-left: 2px solid var(--darkgreen-color); */
+    padding-left: 28px;
     padding-right: .75rem;
 }
 
 .join-community li{
-    padding-left: 2.88rem ;
-    padding-right: 2.88rem ;
+    /* padding-left: 2.88rem ; */
+    /* padding-right: 2.88rem ; */
 }
 
 .join-community li:not(:last-child){

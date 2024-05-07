@@ -12,7 +12,10 @@
     margin-top: 1.25rem;
     margin-bottom: 2.63rem;
 }
-
+.blog-content img{
+    width: 100%;
+    height: 250px;
+}
 .blog-content .icon{
     width: 1.5rem;
     height: 1.5rem;
@@ -45,8 +48,11 @@
     align-items: center;
     justify-content: center;
     border-radius: 0.1875rem;
-    background-color: var(--darkgreen-color);
+    background-color: #337676 !important;
     padding: 0.3125rem 0.4375rem 0.375rem 0.43625rem;
+}
+.blog-content .blog-details button.liked{
+    background-color: var(--darkgreen-color) !important;
 }
 
 .blog-content .blog-details button .like{
