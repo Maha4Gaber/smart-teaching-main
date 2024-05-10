@@ -19,3 +19,9 @@ font-weight: 400;
 line-height: 28px;
 text-align: left;
 }
+
+html[dir = "rtl"] .smartText p
+{
+    text-align: right !important;
+    margin-right: 10px;
+}

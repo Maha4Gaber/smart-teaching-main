@@ -12,7 +12,7 @@ import {
 import ExpertTeacherCard from "./../ExpertTeacherCard/ExpertTeacherCard";
 import ImageComp from "../../ImageComp/ImageComp";
 
-import table from "../../../assests/ExpertTeacher/table.png";
+// import table from "../../../assests/ExpertTeacher/table.png";
 // import tableA from '../../../assests/ExpertTeacher/table-phaseA.png'
 import graph from "../../../assests/ExpertTeacher/graph.png";
 import arrow from "../../../assests/ExpertTeacher/arrow.png";
@@ -21,14 +21,16 @@ import { Link } from "react-router-dom";
 
 import "./ExpertTeacherDetails.css";
 import { useTranslation } from "react-i18next";
+// import { textAlign } from "html2canvas/dist/types/css/property-descriptors/text-align";
 const ExpertTeacherDetails = () => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
-  let isRTL = lang == "en" ? "ltr" : "rtl";
+  // let isRTL = lang == "en" ? "rtl" : "ltr";
   const tableStyles = {
     borderCollapse: "collapse",
-    direction: isRTL,
+    // direction: isRTL,
     maxWidth: "100% !important",
+    textAlign:'center'
   };
 
   const headerCellStyle = {
@@ -43,8 +45,8 @@ const ExpertTeacherDetails = () => {
 
   const cellStyle = {
     border: "1px solid black",
-    borderLeft: "1px solid black",
-    borderRight: "1px solid black",
+    // borderLeft: "1px solid black",
+    // borderRight: "1px solid black",
     margin: "5px 10px",
   };
 
@@ -168,56 +170,36 @@ const ExpertTeacherDetails = () => {
 
         <div className="custom-margin"></div>
 
-        <table className="" border={2} style={tableStyles}>
+        <table className="" style={tableStyles}>
           <colgroup>
-            <col style={{ width: "50%" }} />
             <col style={{ width: "10%" }} />
             <col style={{ width: "30%" }} />
             <col style={{ width: "10%" }} />
+            <col style={{ width: "50%" }} />
           </colgroup>
           <thead>
             <tr>
-              <th style={headerCellStyle}>{t("tablehead1")}</th>
-              <th style={headerCellStyle}></th>
-              <th style={headerCellStyle}>{t("tablehead2")} </th>
-              <th style={headerCellStyle}> </th>
+              <th  colSpan={4} style={headerCellStyle}>{t("tablehead1")}</th>
+              
             </tr>
           </thead>
           <tbody>
             <tr style={{ backgroundColor: "#f2f2f2" }}>
-              <td style={cellStyle}>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr1td1")}</td>
-                </tr>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr1td2")}</td>
-                </tr>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr1td3")}</td>
-                </tr>
-                <tr>
-                  <td>{t("tabletr1td4")}</td>
-                </tr>
+            <td
+                style={{
+                  border: "1px solid black",
+                  borderLeft: "1px solid black",
+                  borderRight: "1px solid black",
+                  textAlign: "center",
+                  fontWeight:'bold'
+                }}
+              >
+                1
               </td>
-              <td style={cellStyle}>
+              
+
+              <td  className="category" style={cellStyle}>{t("tablet2tr2")} </td>
+              <td className="num" style={cellStyle}>
                 <tr>
                   <td
                     style={{
@@ -253,54 +235,54 @@ const ExpertTeacherDetails = () => {
                   <td style={{ textAlign: "center" }}>1.4</td>
                 </tr>
               </td>
+              <td className="num" style={cellStyle}>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr1td1")}</td>
+                </tr>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr1td2")}</td>
+                </tr>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr1td3")}</td>
+                </tr>
+                <tr>
+                  <td>{t("tabletr1td4")}</td>
+                </tr>
+              </td>
+            </tr>
 
-              <td style={cellStyle}>{t("tablet2tr2")} </td>
-              <td
+            <tr style={{ backgroundColor: "#ddddff" }}>
+            <td
                 style={{
                   border: "1px solid black",
                   borderLeft: "1px solid black",
                   borderRight: "1px solid black",
                   textAlign: "center",
+                  fontWeight:'bold'
                 }}
               >
-                1
+                2
               </td>
-            </tr>
-
-            <tr style={{ backgroundColor: "#ddddff" }}>
-              <td style={cellStyle}>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr2td1")}</td>
-                </tr>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr2td2")}</td>
-                </tr>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr2td3")}</td>
-                </tr>
-                <tr>
-                  <td>{t("tabletr2td4")}</td>
-                </tr>
-              </td>
-              <td style={cellStyle}>
+              <td className="category" style={cellStyle}>{t("tablet2tr1")} </td>
+              <td className="num" style={cellStyle}>
                 <tr>
                   <td
                     style={{
@@ -336,54 +318,57 @@ const ExpertTeacherDetails = () => {
                   <td style={{ textAlign: "center" }}>2.4</td>
                 </tr>
               </td>
+              <td className="num" style={cellStyle}>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr2td1")}</td>
+                </tr>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr2td2")}</td>
+                </tr>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr2td3")}</td>
+                </tr>
+                <tr>
+                  <td>{t("tabletr2td4")}</td>
+                </tr>
+              </td>
+              
 
-              <td style={cellStyle}>{t("tablet2tr1")} </td>
-              <td
+              
+            </tr>
+
+            <tr style={{ backgroundColor: "#ccffccff" }}>
+            <td
                 style={{
                   border: "1px solid black",
                   borderLeft: "1px solid black",
                   borderRight: "1px solid black",
                   textAlign: "center",
+                  fontWeight:'bold'
                 }}
               >
-                2
+                3
               </td>
-            </tr>
-
-            <tr style={{ backgroundColor: "#ccffccff" }}>
-              <td style={cellStyle}>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr3td1")}</td>
-                </tr>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr3td2")}</td>
-                </tr>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr3td3")}</td>
-                </tr>
-                <tr>
-                  <td>{t("tabletr3td4")}</td>
-                </tr>
-              </td>
-              <td style={cellStyle}>
+              <td className="category" style={cellStyle}>{t("tablet2tr3")} </td>
+              <td className="num" style={cellStyle}>
                 <tr>
                   <td
                     style={{
@@ -419,54 +404,57 @@ const ExpertTeacherDetails = () => {
                   <td style={{ textAlign: "center" }}>3.4</td>
                 </tr>
               </td>
+              <td className="num" style={cellStyle}>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr3td1")}</td>
+                </tr>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr3td2")}</td>
+                </tr>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr3td3")}</td>
+                </tr>
+                <tr>
+                  <td>{t("tabletr3td4")}</td>
+                </tr>
+              </td>
+              
 
-              <td style={cellStyle}>{t("tablet2tr3")} </td>
-              <td
+              
+            </tr>
+
+            <tr style={{ backgroundColor: "#ffcccc" }}>
+            <td
                 style={{
                   border: "1px solid black",
                   borderLeft: "1px solid black",
                   borderRight: "1px solid black",
                   textAlign: "center",
+                  fontWeight:'bold'
                 }}
               >
-                3
+                4
               </td>
-            </tr>
-
-            <tr style={{ backgroundColor: "#ffcccc" }}>
-              <td style={cellStyle}>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr4td1")}</td>
-                </tr>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr4td2")}</td>
-                </tr>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr4td3")}</td>
-                </tr>
-                <tr>
-                  <td>{t("tabletr4td4")}</td>
-                </tr>
-              </td>
-              <td style={cellStyle}>
+              <td className="category" style={cellStyle}>{t("tablet2tr4")} </td>
+              <td className="num" style={cellStyle}>
                 <tr>
                   <td
                     style={{
@@ -502,56 +490,57 @@ const ExpertTeacherDetails = () => {
                   <td style={{ textAlign: "center" }}>4.4</td>
                 </tr>
               </td>
+              <td className="num" style={cellStyle}>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr4td1")}</td>
+                </tr>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr4td2")}</td>
+                </tr>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr4td3")}</td>
+                </tr>
+                <tr>
+                  <td>{t("tabletr4td4")}</td>
+                </tr>
+              </td>
+              
 
-              <td style={cellStyle}>{t("tablet2tr4")} </td>
-              <td
+              
+            </tr>
+
+            <tr style={{ backgroundColor: "#ffffccff" }}>
+            <td
                 style={{
                   border: "1px solid black",
                   borderLeft: "1px solid black",
                   borderRight: "1px solid black",
                   textAlign: "center",
+                  fontWeight:'bold'
                 }}
               >
-                4
+                5
               </td>
-            </tr>
-
-            <tr style={{ backgroundColor: "#ffffccff" }}>
-              <td style={cellStyle}>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr5td1")}</td>
-                </tr>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr5td2")}</td>
-                </tr>
-                <tr
-                  style={{
-                    borderBottom: "1px solid black",
-                    width: "100%",
-                    display: "block",
-                  }}
-                >
-                  <td>{t("tabletr5td3")}</td>
-                </tr>
-                <tr>
-                  <td style={{ borderBottolm: "1px solid black" }}>
-                    {t("tabletr5td4")}
-                  </td>
-                </tr>
-              </td>
-              <td style={cellStyle}>
+              <td className="category" style={cellStyle}>{t("tablet2tr5")} </td>
+              <td className="num" style={cellStyle}>
                 <tr>
                   <td
                     style={{
@@ -594,18 +583,43 @@ const ExpertTeacherDetails = () => {
                   </td>
                 </tr>
               </td>
-
-              <td style={cellStyle}>{t("tablet2tr5")} </td>
-              <td
-                style={{
-                  border: "1px solid black",
-                  borderLeft: "1px solid black",
-                  borderRight: "1px solid black",
-                  textAlign: "center",
-                }}
-              >
-                5
+              <td className="num" style={cellStyle}>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr5td1")}</td>
+                </tr>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr5td2")}</td>
+                </tr>
+                <tr
+                  style={{
+                    borderBottom: "1px solid black",
+                    width: "100%",
+                    display: "block",
+                  }}
+                >
+                  <td>{t("tabletr5td3")}</td>
+                </tr>
+                <tr>
+                  <td style={{ borderBottolm: "1px solid black" }}>
+                    {t("tabletr5td4")}
+                  </td>
+                </tr>
               </td>
+              
+
+              
             </tr>
           </tbody>
         </table>

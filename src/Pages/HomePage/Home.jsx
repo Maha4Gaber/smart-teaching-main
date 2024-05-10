@@ -31,7 +31,7 @@ import {
 
 // Icons
 import { SiGooglemessages } from "react-icons/si";
-import { BiRightArrowAlt } from "react-icons/bi";
+import { BiLeftArrow, BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import ServiceCard from "../../Components/ServiceCard/ServiceCard";
 import TeamCards from "../../Components/TeamCards/TeamCards";
 import FeatureCards from "../../Components/FeatureCards/FeatureCards";
@@ -39,6 +39,9 @@ import { useTranslation } from "react-i18next";
 import { fetchinfluences } from "../../Slices/home/influences";
 
 const Home = () => {
+  const {  i18n } = useTranslation();
+  const lang = i18n.language;
+  let isRTL = lang == "en" ? "ltr" : "rtl";
   const blogs = useSelector((state) => state.influences);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -105,23 +108,27 @@ const Home = () => {
 
   return (
     <main className="  position-relative">
-      <figure className=" main-home-img d-flex  ">
+      <figure className=" main-img main-home-img d-flex  ">
         <figcaption data-aos="fade-right">
           <h1 className=" " style={{  }}>
-            {t("newSystematic")} 
-          </h1>
-          <h1 className=" " style={{  }}>
-            {t("approachToMax")}
-          </h1>
-          <h1 className=" " style={{  }}>
-             {t("yourStudents")}
-          </h1>
-
+            {t("newSystematic")}     {t("approachToMax")}           {t("yourStudents")}
+          {/* </h1> */}
+          {/* <h1 className=" " style={{  }}> */}
+            {/* {t("approachToMax")}  */}
+          {/* </h1> */}
+          {/* <h1 className=" " style={{  }}> */}
           <button className="">
             <Link to="/login" className="p-0     text-dark">
-              {t("getStarted")} <BiRightArrowAlt className="ms-3 fs-4" />{" "}
+              {t("getStarted")} 
+              {
+                isRTL=='ltr'?(<BiRightArrowAlt className="ms-3 fs-4" />):(<BiLeftArrowAlt className="ms-3 fs-4" />)
+              }
+            
+              {" "}
             </Link>
           </button>
+          </h1>
+
         </figcaption>
       </figure>
       <Link to="/contactus" className="contact-link d-flex align-items-center">
@@ -162,8 +169,8 @@ const Home = () => {
           </div>
           <div className="col-lg-7 col-md-5  " data-aos="fade-left">
             <div className="">
-              <h5 className="green-color mb-1">{t("aboutUs")}</h5>
-              <h2 className="blue-color head-title mb-5">
+              {/* <h5 className="green-color mb-1">{t("aboutUs")}</h5> */}
+              <h2 className="blue-color head-title mb-3">
                 {t("smartTeachingSystem")}
                 <small>®</small>
               </h2>
@@ -177,7 +184,9 @@ const Home = () => {
                   {" "}
                   {t(
                     "getStarted"
-                  )} <BiRightArrowAlt className="ms-3 fs-4" />{" "}
+                  )} {
+                isRTL=='ltr'?(<BiRightArrowAlt className="ms-3 fs-4" />):(<BiLeftArrowAlt className="ms-3 fs-4" />)
+              }{" "}
                 </Link>
               </button>
             </div>
@@ -185,7 +194,7 @@ const Home = () => {
         </div>
       </section>
       {/* Evidence Section */}
-      <section className="evidence-home py-5 section-padding">
+      <section className="evidence-home py-5 section-pacdding">
         <h1 className="text-center head-title mb-5" data-aos="zoom-in">
           {t("evidenceAndSystematic")} <br />
         </h1>
@@ -245,7 +254,7 @@ const Home = () => {
         </div>
       </section>
       {/* Services Section */}
-      <section className="p-5 service-home">
+      <section className="py-5 service-home">
         <h5 className="green-color text-center" data-aos="zoom-in">
           {t("services")}
         </h5>

@@ -7,8 +7,12 @@ import Calender from '../../assests/Calender';
 import Person from '../../assests/Person';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { BiArrowToLeft, BiLeftArrowAlt } from 'react-icons/bi';
 function Blog() {
-    const {t} = useTranslation()
+    const {t,i18n} = useTranslation()
+    const lang = i18n.language;
+  let isRTL = lang == "en" ? "ltr" : "rtl";
+    
   return (
       <div data-aos="flip-left" className={classes.blog}>
           <div className={classes.img__container}>
@@ -31,7 +35,11 @@ function Blog() {
           </h3>
               <button className={classes.blog__btb_edit}>
                   <Link className="text-dark" to="/blogdetails/1">
-                      {t("readMore")} &nbsp; <ArrowRight />
+                      {t("readMore")} &nbsp; 
+                      {
+                isRTL=='ltr'?(<ArrowRight className="ms-3 fs-4" />):(<BiLeftArrowAlt className="ms-3 fs-4" />)
+              }
+                      {/* <ArrowRight /> */}
                   </Link>
               </button>
       </div>

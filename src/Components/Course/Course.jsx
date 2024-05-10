@@ -8,20 +8,12 @@ import { motion } from "framer-motion";
 import ArrowRight from "../../assests/ArrowRight";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
-function Course({ price ,id }) {
+function Course({ price ,id ,cours}) {
 const { t ,i18n} = useTranslation();
 const lang = i18n.language;
 let isEn = lang == "en" ?true: false;
 // console.log(course);
-const [course, setCourse] = useState({});
-async function getdata() {
-    // console.log(id);
-    await axios.get("api/v1/courses/" + id).then((res) => {
-        // console.log(res.data);
-        setCourse(res.data);
-    });
-    }
-    getdata()
+const [course, setCourse] = useState(cours);
 return (
 <motion.div className={classes.course} data-aos="flip-right">
     <div className={classes.course__container}>
@@ -37,7 +29,7 @@ return (
     <hr />
     <div className={classes.course__tag}>
     <span>{course.type=='free'? t("free") :course.price}</span>
-    <Link to="/course-details" className={classes.btnRead}>
+    <Link to={"/course-details/"+ id} className={classes.btnRead}>
         {t("readMore")} &nbsp; <ArrowRight />
     </Link>
     </div>

@@ -17,7 +17,7 @@ return (
         </figcaption>
     </figure>
 
-    <div className="expert-academy container">
+    <div className="expert-academy ">
 
         <div className="row gy-4">
 

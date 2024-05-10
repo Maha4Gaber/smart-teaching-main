@@ -34,6 +34,8 @@
     line-height: normal;
     color: var(--black-color);
     transition: all .3s;
+
+    height: 90px;
 }
 
 .service-card p{

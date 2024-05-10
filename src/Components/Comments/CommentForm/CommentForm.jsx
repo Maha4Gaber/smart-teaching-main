@@ -3,32 +3,55 @@ import * as Yup from "yup";
 import { useFormik } from 'formik';
 import { GrStatusGood } from "react-icons/gr";
 import './commentForm.css'
+import axios from 'axios';
 
-const CommentForm = () => {
+const CommentForm = ({id}) => {
     const lang = "en"
     const [loading, setLoading] = useState(false)
     const [submissionStatus, setSubmissionStatus] = useState(false);
 
 
-    function addComment(values) {
+    async function addComment(values) {
+        values.blog=id
+        // values.preventDefault();
         setLoading(true)
-        console.log(values)
+
+        try {
+            let { data } = await axios.post("api/v3/comments/", values);
+        
+            if (data) {
+            console.log(data);
+            // localStorage.token = data.tokens.access;
+            // localStorage.user_data = JSON.stringify(data);
+            // setTimeout(() => {
+            //     if(data.role=='user'){
+            //         navigate('/StudentsRatingtheirTeachers')
+            //     }
+            //     else        navigate("/");
+            // }, 1900);
+            }
+        } catch (err) {
+            // seterrMsg(err.response.data[0]);
+            console.log(err);
+        }
+        // console.log(values)
+        
         setLoading(false)
     }
 
 
     let validationSchema = Yup.object({
-        name: Yup.string().required("Name is Required").min(3, "Name minlength is 3 chars").max(20, "Name maxlength is 20 chars"),
-        email: Yup.string().required("Email is Required").email("Invalid email address *exemple@yyy.zzz"),
-        phone: Yup.string().required("Phone is required"),
+        // name: Yup.string().required("Name is Required").min(3, "Name minlength is 3 chars").max(20, "Name maxlength is 20 chars"),
+        // email: Yup.string().required("Email is Required").email("Invalid email address *exemple@yyy.zzz"),
+        // phone: Yup.string().required("Phone is required"),
         comment: Yup.string().required('Please Enter Your Comment')
     });
 
     let formik = useFormik({
         initialValues: {
-            name: '',
-            email: '',
-            phone: '',
+            // name: '',
+            // email: '',
+            // phone: '',
             comment: '',
         },
         validationSchema,
@@ -39,11 +62,11 @@ return (
     <div className='comment-form'>
         <h3>Write your comment </h3>
 
-        <form onSubmit={addComment} className="row p-0" >
+        <form onSubmit={formik.handleSubmit} className="row p-0" >
                 {/* Name Input */}
-                <div className="form-floating mb-4 col-md-6 px-md-1 px-0">
+                {/* <div className="form-floating mb-4 col-md-6 px-md-1 px-0"> */}
 
-                    <input
+                    {/* <input
                     type="text"
                     className={`form-control ${formik.values.name&& 'input-border-color'}`}
                     id="floatingName"
@@ -53,26 +76,26 @@ return (
                     value={formik.values.name}
                     onChange={formik.handleChange}
                     required
-                    />
+                    /> */}
 
                     {/* Label */}
-                    <label
+                    {/* <label
                     className={`mx-2 ${lang === "ar" ? " end-0" : "start-0"}`}
                     htmlFor="floatingName"
                     >
                         {1}
-                    </label>
+                    </label> */}
 
-                    {formik.errors.name && formik.touched.name ? (
+                    {/* {formik.errors.name && formik.touched.name ? (
                         <div className="alert alert-danger error my-0 py-2">
                             {formik.errors.name}
                         </div>
-                    ) : null}
+                    ) : null} */}
 
-                </div>
+                {/* </div> */}
 
                 {/* Email Imput */}
-                <div className="form-floating mb-4 col-md-6 px-md-1 px-0">
+                {/* <div className="form-floating mb-4 col-md-6 px-md-1 px-0">
 
                     <input
                     type="Email"
@@ -84,10 +107,10 @@ return (
                     value={formik.values.email}
                     onChange={formik.handleChange}
                     required
-                    />
+                    /> */}
                     
                     {/* Label */}
-                    <label
+                    {/* <label
                     className={`mx-2 ${lang === "ar" ? " end-0" : "start-0"}`}
                     htmlFor="floatingEmail"
                     >
@@ -100,10 +123,10 @@ return (
                         </div>
                     ) : null}
 
-                </div>
+                </div> */}
 
                 {/* Phone Input  */}
-                <div className="form-floating mb-4 col-md-6 px-md-1 px-0">
+                {/* <div className="form-floating mb-4 col-md-6 px-md-1 px-0">
 
                     <input
                     type="tel"
@@ -115,10 +138,10 @@ return (
                     value={formik.values.phone}
                     onChange={formik.handleChange}
                     required
-                    />
+                    /> */}
                     
                     {/* Label */}
-                    <label
+                    {/* <label
                     className={`mx-2 ${lang === "ar" ? " end-0" : "start-0"}`}
                     htmlFor="floatingPhone"
                     >
@@ -131,7 +154,7 @@ return (
                         </div>
                     ) : null}
 
-                </div>
+                </div> */}
 
                 {/* Comment Input */}
                 <div className="form-floating mb-4 col-12 px-0 px-md-1">
@@ -150,7 +173,7 @@ return (
                     className={`mx-2 ${lang === "ar" ? " end-0" : "start-0"}`}
                     htmlFor="floatingTextarea"
                     >
-                        {4}
+                        Leave your commment here
                     </label>
 
                     {formik.errors.comment && formik.touched.comment ? (
@@ -162,10 +185,10 @@ return (
 
 
                 {/* Save My Data (check Box) */}
-                <div className="col-12 mt-3 mb-4 d-flex align-items-center justify-content-center">
+                {/* <div className="col-12 mt-3 mb-4 d-flex align-items-center justify-content-center">
                     <input className='checkbox' type="checkbox" name='remember' value= 'value' id='remember' />
                     <label className='mx-1 checkLabel' htmlFor="remember"> Save my name, email, and website in this browser for the next time I comment.</label>
-                </div>
+                </div> */}
 
 
                 {/* Post Comment Button */}
@@ -174,8 +197,11 @@ return (
                     type="submit"
                     className="custom-btn z-1" 
                     disabled={!(formik.isValid && formik.dirty)}
+                    onClick={() => {
+            // formik.handleSubmit();
+            }}
                     >
-                        {5}
+                        Send
                     </button>
                 </div>
 

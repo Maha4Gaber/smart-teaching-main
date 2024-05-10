@@ -15,7 +15,7 @@ return (
 
     <>
     {/* Member Ship Img */}
-    <figure className='main-membership-img d-flex align-items-center m-0'>
+    <figure className='main-membership-img main-img d-flex align-items-center m-0'>
         <figcaption>
             <h1 className='m-0'>Become A Member</h1>
         </figcaption>
@@ -26,7 +26,7 @@ return (
 
         <div className="row gy-4">
 
-            <div className="col-xl-4 px-3 d-flex flex-column justify-content-between">
+            <div className="col-xl-4 px-3 d-flex flex-column ">
 
                 <MemeberShipTypes/>
 

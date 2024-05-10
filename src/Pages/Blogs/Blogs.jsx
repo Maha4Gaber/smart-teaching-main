@@ -19,7 +19,7 @@ const Blogs = () => {
     const getdata = async () => {
       try {
         await axios.get("api/v3/blogs/").then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           setblogs(res.data)
         });
       } catch (error) {
@@ -50,7 +50,7 @@ const Blogs = () => {
             <div className="row gy-4">
               {blogs.map((blog, idx) => (
                 <div className="col-md-6" key={idx}>
-                  <BlogContent {...blog}  blogId={blog.id} />
+                  <BlogContent {...blog} slice2={true}  blogId={blog.id} />
                 </div>
               ))}
             </div>

@@ -8,8 +8,10 @@ function SmartHeading({ Img, heading, subheading }) {
       style={{ backgroundImage: `url(${Img})` }}
     >
       <figcaption>
-        <h2>{heading}</h2>
+        <h2>{heading}
         <h3>{subheading}</h3>
+        </h2>
+        
       </figcaption>
     </header>
   );

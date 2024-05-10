@@ -95,13 +95,13 @@ export const serviceCards = [
         id: '02',
         icon: <FaHandsHoldingChild className='service-icon'/>,
         title: 'card02Title',
-        desc: 'card02Details'
+        desc: 'card03Details'
     },
     {
         id: '03',
         icon: <HiOutlineLightBulb className='service-icon'/>,
         title: 'card03Title',
-        desc: 'card03Details'
+        desc: 'card02Details'
     },
     {
         id: '04',

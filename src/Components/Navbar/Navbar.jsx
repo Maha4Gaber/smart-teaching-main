@@ -8,6 +8,7 @@ import { FaAngleDown } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { switchLang } from "../../helpers/lang";
+import axios from "axios";
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [lang, setLang] = useState(i18n.language);
@@ -20,21 +21,56 @@ const Navbar = () => {
     switchLang(lng);
     window.location.reload();
   };
+  const [userData, setuserData] = useState(null);
 
   useEffect(() => {
     setLang(i18n.language);
   }, [i18n.language]);
-  const [userData, setuserData] = useState(null);
 
   function saveUserData() {
     let Token = localStorage.token;
-    setuserData(Token);
+    if (localStorage.getItem("token") !== null && userData === null) {
+      setuserData(Token);
+    }
+    else if(localStorage.getItem("token") === null)
+      {
+        setuserData(null);
+        
+      }
     
   }
+  let logout= async()=>{
+    try {
+      let refresh_token=JSON.parse(localStorage.getItem('user_data')).tokens.refresh
+      console.log(refresh_token);
+      let { data } = await axios.post("api/v2/logout/",{
+        refresh_token:refresh_token
+      });
+  
+      if (data) {
+      console.log(data);
+      localStorage.token = null;
+      localStorage.user_data =null;
+      saveUserData();
+      // setTimeout(() => {
+      //     if(data.role=='user'){
+      //         navigate('/StudentsRatingtheirTeachers')
+      //     }
+      //     else        navigate("/");
+      // }, 1900);
+      }
+  } catch (err) {
+      // seterrMsg(err.response.data[0]);
+      console.log(err);
+  }
+  }
+
+
+
+
   useEffect(() => {
-    if (localStorage.getItem("token") !== null && userData === null) {
-        saveUserData();
-    }
+    
+      saveUserData();
     }, []);
   return (
     <div>
@@ -339,7 +375,8 @@ const Navbar = () => {
                 </NavLink>
               </li>
               
-              {userData&&(
+              {localStorage.getItem('token') !=='null' ?
+              (
                 <>
                 <li className="notifcation">
               <span className="notify">2</span>
@@ -372,19 +409,32 @@ const Navbar = () => {
                       {t("profile")}
                     </NavLink>
                   </li>
+                  <li className="m-0">
+                      <NavLink onClick={()=>{
+                        logout()
+                      }}>
+                          {t("logout")}
+                      </NavLink>
+                      </li>
+                  
                 </ul>
               </li>
                 </>
-            )}
-
-            </ul>
-            
-            <div className="auth ">
-            {!userData&&(
+            ):
+            (
+              <>
+              <div className="auth ">
               <Link to={"/login"}>
                 <MainBtn shadow> {t("login")}</MainBtn>
               </Link>
-            )}
+              </div>
+              </>
+            )
+            }
+
+            </ul>
+            
+            
             
               
 
@@ -395,7 +445,6 @@ const Navbar = () => {
                 {lang === "en" ? "Ar" : "En"} 
               </span>
             </div>
-          </div>
         </div>
       </nav>
     </div>

@@ -3,6 +3,7 @@ import parse from 'html-react-parser';
 import { FaCheck } from "react-icons/fa6";
 import { FaCircleCheck } from "react-icons/fa6"; // with circle
 import './MemberShipPlan.css'
+import MainBtn from '../../MainBtn/MainBtn';
 
 const MemberShipPlan = ({head, img, cost, title, lists, id}) => {
 return (
@@ -34,8 +35,8 @@ return (
 
         </div>
 
-        
-        <button>Get Started</button>
+        <MainBtn shadow> Get Started</MainBtn>
+        {/* <button>Get Started</button> */}
 
     </div>
 )

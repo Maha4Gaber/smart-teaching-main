@@ -6,7 +6,7 @@ import './JoinCommunity.css'
 const JoinCommunity = () => {
 
     return (
-    <div className='join-community py-3 px-4'>
+    <div className='join-community py-5 px-4'>
         <h2>Join Smart Teaching Community</h2>
         <h4 className='mb-4'>Organizations that join the STS can benefit in the following ways:</h4>
 

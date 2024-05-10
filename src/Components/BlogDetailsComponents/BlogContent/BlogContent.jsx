@@ -27,7 +27,7 @@ const BlogContent = ({
   description_en,
   created_at,
   month,
-  slice = false,
+  slice2 = false,
   blogId,
   id,
 }) => {
@@ -39,8 +39,9 @@ const BlogContent = ({
   const handelllike = async (id) => {
     try {
         // console.log(id);
+        console.log(liked);
       await axios.get("api/v3/blogs/"+id+"/press_like/").then((res) => {
-        // console.log(res.data);
+        console.log(res);
         if(res.data=='like added success..'){
             setlike(true)
             setliked(liked+1)
@@ -49,7 +50,7 @@ const BlogContent = ({
         else
         {
             setlike(false)
-            setliked(liked-1)
+            setliked(liked-1 )
         }
       });
     } catch (error) {
@@ -59,7 +60,7 @@ const BlogContent = ({
 
 
   return (
-    <div className={`blog-content position-relative ${slice && "pb-4"}`}>
+    <div className={`blog-content position-relative ${slice2 && "pb-4"}`}>
       {/* <ImageComp src={pic} alt= {title}/> */}
       <img className="" src={pic} alt={title} />
       <div className="blog-desc px-3 bg-white">
@@ -72,14 +73,19 @@ const BlogContent = ({
             <span>
               <AiOutlineComment className="icon" /> {comments} Comments{" "}
             </span>
-            <span>
+            {
+              liked&&(
+                <span>
               <SlLike className="icon" /> {liked} Likes{" "}
             </span>
+              )
+            }
           </div>
-          <div>
+          {/* {liked>=0&&( */}
+            <div>
             <button onClick=
             {() => {
-            handelllike(blogId)
+            handelllike(id)
             }}
             className={like?'liked':''}
             >
@@ -88,15 +94,16 @@ const BlogContent = ({
               <IoIosHeart className="like" />{" "}
             </button>
           </div>
+          {/* )} */}
         </div>
 
-        {slice ? (
-          <p>{desc.slice(0, 200)}...</p>
+        {slice2 ? (
+          <p>{isRTL ? description_en.slice(0, 200) : description_ar.slice(0, 200)}...</p>
         ) : (
           <p>{isRTL ? description_en : description_ar}</p>
         )}
 
-        {slice && (
+        {slice2 && (
           <Link
             className="d-flex align-items-center justify-content-end darkgreen-color fw-bold"
             to={`/blogdetails/${blogId}`}
@@ -106,11 +113,13 @@ const BlogContent = ({
         )}
         {/* <Link className=' text-decoration-none ' to={`/blogdetails/${blog?.id}`}> */}
       </div>
-
-      <div className="blog-content-date">
+      {slice2 && (
+        <div className="blog-content-date">
         <span>{created_at.slice(8, 10)}</span>{" "}
         <span>{created_at.slice(5, 7)}</span>
       </div>
+        )}
+      
     </div>
   );
 };

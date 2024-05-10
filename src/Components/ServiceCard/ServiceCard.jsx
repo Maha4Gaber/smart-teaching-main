@@ -19,7 +19,7 @@ const ServiceCard = ({icon, id, title, desc}) => {
               <div className="serviceNo-box mx-4">{id}</div>
           </div>
 
-          <h2 className="mb-4">{parse(t(title))}</h2>
+          <h2 className="">{parse(t(title))}</h2>
           <p>{parse(t(desc))}</p>
 
           <Link to="/services">

@@ -32,9 +32,9 @@ export const ClassRoom = () => {
               <ClassContent />
               <SearchClass />
               <Tags />
-              <CoursesClass />
-              <Comments />
-              <CommentForm />
+              {/* <CoursesClass /> */}
+              {/* <Comments id={1} commentfor='courses'/> */}
+              {/* <CommentForm id={1} commentfor='courses'/> */}
           </div>
           <div>
               <BuyNow />

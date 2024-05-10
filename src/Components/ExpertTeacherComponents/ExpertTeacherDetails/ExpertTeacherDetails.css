@@ -28,6 +28,10 @@ text-align: left;
 
     /* color: var(--darkgreen-color); */
 }
+html[dir = "rtl"] h2,
+html[dir = "rtl"] h3{
+    text-align: right !important;
+}
 
 .expert-teacher-details .custom-h3{
     text-align: start;
@@ -63,6 +67,10 @@ color: #656567 !important;
 .expert-teacher-details  p.desc{
     color: #656567 !important;
 margin-left: 30px;
+}
+html[dir = "rtl"] ul li .desc
+{
+text-align: right !important;
 }
 .expert-teacher-details  h1{
     font-size: 24px;
@@ -132,6 +140,17 @@ margin-left: 30px;
 
 
 table{
+    border-color:  #DDD !important;
+}
+table .category{
+    font-weight: bold;
+    padding: 5px 10px;
+}
+table .num{
+    margin: 5px ;
+}
+
+/* table{
     text-align: center;
 }
 table th{
@@ -158,4 +177,4 @@ table .trt
 table .trt td{
     padding: 5px  !important; 
 
-}
+} */

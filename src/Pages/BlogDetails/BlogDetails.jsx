@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import BlogContent from '../../Components/BlogDetailsComponents/BlogContent/BlogContent';
@@ -15,10 +15,29 @@ import BlogContact from '../../Components/BlogDetailsComponents/BlogContact/Blog
 import { blogsContent } from '../../data';
 
 import './BlogDetails.css'
+import axios from 'axios';
 
 const BlogDetails = () => {
 
     const { id } = useParams();
+    const [blog, setblog] = useState([]);
+
+    useEffect(() => {
+        const getdata = async () => {
+            try {
+                await axios.get("api/v3/blogs/"+id).then((res) => {
+                // console.log(res.data);
+                setblog(res.data)
+                });
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            } 
+        };
+        // if (!localStorage.user_data) navigate("login");
+        // else {
+          getdata();
+        // }
+      }, []);
 
 return (
     <section className='blog-details'>
@@ -36,10 +55,10 @@ return (
             <div className="row justify-content-between">
                 <div className="col-lg-8">
                     {/* <BlogContent {...blogsContent[id]}/> */}
-                    <BlogContent id={blogsContent[id-1].id} {...blogsContent[id-1]} />
+                    <BlogContent id={id} {...blog} />
                     <Tags/>
-                    <Comments/>
-                    <CommentForm/>
+                    <Comments id={id} commentfor='blog'/>
+                    <CommentForm id={id} commentfor='blog'/>
                 </div>
                 <div className="col-lg-4 col-xl-3">
 

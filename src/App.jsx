@@ -117,7 +117,7 @@
             </React.Suspense>
             ),
         },
-        { path: "/course-details", element: <CourseDetails /> },
+        { path: "/course-details/:id", element: <CourseDetails /> },
         { path: "/quiz", element: <QuizPage /> },
         { path: "/certification", element: <Certification /> },
         {
