@@ -21,8 +21,10 @@ return (
     <div>
     <figure className='main-ass5-img main-img d-flex align-items-center '>
         <figcaption>
-            <h1 className=''>{t('ass5h1')}</h1>
+            <h1 className=''>{t('ass5h1')}
             <h4>{t('ass5h4')}</h4>
+            </h1>
+            
         </figcaption>
     </figure>
 

@@ -22,8 +22,9 @@ return (
     <figure className='main-ass3-img main-img d-flex align-items-center '>
         <figcaption>
         
-            <h1 className='med-mb'>{t('ass3h2')}</h1>
-            <h4>{t('ass3tool')}</h4>
+            <h1 className='med-mb'>{t('ass3h2')}
+            <h4>{t('ass3tool')}</h4></h1>
+            
         </figcaption>
     </figure>
 
