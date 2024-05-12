@@ -12,12 +12,13 @@ import {
 import ExpertTeacherCard from "./../ExpertTeacherCard/ExpertTeacherCard";
 import ImageComp from "../../ImageComp/ImageComp";
 
-// import table from "../../../assests/ExpertTeacher/table.png";
-// import tableA from '../../../assests/ExpertTeacher/table-phaseA.png'
+import arimg from "../../../assests/ExpertTeacher/b1.png";
+import enimg from '../../../assests/ExpertTeacher/b2.jpg'
 import graph from "../../../assests/ExpertTeacher/graph.png";
 import arrow from "../../../assests/ExpertTeacher/arrow.png";
 import PhaseDetails from "../PhaseDetails/PhaseDetails";
 import { Link } from "react-router-dom";
+import parse from "html-react-parser";
 
 import "./ExpertTeacherDetails.css";
 import { useTranslation } from "react-i18next";
@@ -25,7 +26,7 @@ import { useTranslation } from "react-i18next";
 const ExpertTeacherDetails = () => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
-  // let isRTL = lang == "en" ? "rtl" : "ltr";
+  let isRTL = lang == "en" ? true : false;
   const tableStyles = {
     borderCollapse: "collapse",
     // direction: isRTL,
@@ -101,7 +102,15 @@ const ExpertTeacherDetails = () => {
         </div>
 
         <div className="col-md-12 d-flex justify-content-center align-items-center">
-          <img src={graph} className="graph" alt="Phases Graph" />
+        {
+          isRTL?(
+          <img src={enimg} className="graph" alt="Phases Graph" />
+          ):
+          (
+          <img src={arimg} className="graph" alt="Phases Graph" />
+            
+          )
+        }
         </div>
       </div>
 
@@ -115,40 +124,40 @@ const ExpertTeacherDetails = () => {
 
       <div className="margin-top-bottom w-100">
         <table
-          className="table  text-center table-bordered border-primary"
+          className="table  text-center table-bordered "
           style={tableStyles}
         >
           <colgroup>
             <col></col>
           </colgroup>
           <thead className="">
-            <tr className="tht">
-              <th>{t("phase")}</th>
-              <th>{t("from")}</th>
-              <th>{t("to")} </th>
-              <th>{t("focus")} </th>
-              <th style={{ width: "100%" }}>{t("common")} </th>
+            <tr className="">
+              <th style={{ width: "10%" }}>{t("phase")}</th>
+              <th style={{ width: "15%" }}>{t("from")}</th>
+              <th style={{ width: "15%" }}>{t("to")} </th>
+              <th style={{ width: "15%" }}>{t("focus")} </th>
+              <th style={{ width: "50%" }}>{t("common")} </th>
             </tr>
           </thead>
           <tbody>
             <tr className="trt" style={{ fontSize: "12px !important" }}>
               <td> {t("phaseA1")} </td>
-              <td> {t("phaseA2")} </td>
-              <td> {t("phaseA3")} </td>
+              <td> {parse(t("phaseA2"))} </td>
+              <td> {parse(t("phaseA3"))} </td>
               <td> {t("phaseA4")} </td>
               <td> {t("phaseA5")} </td>
             </tr>
             <tr className="trt" style={{ fontSize: "12px !important;" }}>
               <td> {t("phaseB1")} </td>
-              <td> {t("phaseB2")} </td>
-              <td> {t("phaseB3")} </td>
+              <td> {parse(t("phaseB2"))} </td>
+              <td> {parse(t("phaseB3"))} </td>
               <td> {t("phaseB4")} </td>
               <td> {t("phaseB5")} </td>
             </tr>
             <tr className="trt" style={{ fontSize: "12px !important;" }}>
               <td> {t("phaseC1")} </td>
-              <td> {t("phaseC2")} </td>
-              <td> {t("phaseC3")} </td>
+              <td> {parse(t("phaseC2"))} </td>
+              <td> {parse(t("phaseC3"))} </td>
               <td> {t("phaseC4")} </td>
               <td> {t("phaseC5")} </td>
             </tr>

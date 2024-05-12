@@ -13,7 +13,7 @@ const ExpertTeacher = () => {
       <figure className="main-expert-teacher-img  main-img d-flex align-items-center ">
         <figcaption>
           <h1 className="m-0 text-center w-100">
-            {parse(t("expertTeacherTitle"))}{" "}
+            {parse(t("expertTeacherTitle"))}
           </h1>
         </figcaption>
       </figure>

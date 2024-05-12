@@ -7,6 +7,13 @@ import { FaCheck } from "react-icons/fa6";
 import { FaUsers } from "react-icons/fa";
 
 
+
+
+
+
+
+
+
 // Import Home Team Imgs
 import team1 from '../src/assests/team-1.png'
 import team2 from '../src/assests/team-2.png'
