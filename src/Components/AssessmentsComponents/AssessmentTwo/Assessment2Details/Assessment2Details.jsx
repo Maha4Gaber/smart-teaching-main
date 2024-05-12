@@ -22,7 +22,7 @@ const Assessment2Details = () => {
   const lang = i18n.language;
   let isRTL = lang == "en" ? "ltr" : "rtl";
   return (
-    <div className="ass2-details">
+    <div className="ass2-details mar-120">
       <h2 className="mb-4">{t("ass4h2")}</h2>
       <h3 className="px-0 px-lg-5 mb-4">{t("ass2h3")}</h3>
       <div className="text-center m-4 first-img">
@@ -30,8 +30,8 @@ const Assessment2Details = () => {
       </div>
       <p className="special">{t("ass2p1")}</p>
       <p className="special mb-4">{t("ass2p2")}</p>
-      <ul className="ps-4">
-        <li className="d-flex mb-4">
+      <ul className="px-4  mt-3">
+        <li className="d-flex mb-3">
           <span className="simple-icon">
             <FaCheck />
           </span>
@@ -39,7 +39,7 @@ const Assessment2Details = () => {
           <span className="desc">{t("ass2li1")}</span>
         </li>
 
-        <li className="d-flex mb-4">
+        <li className="d-flex mb-3">
           <span className="simple-icon">
             <FaCheck />
           </span>
@@ -47,7 +47,7 @@ const Assessment2Details = () => {
           <span className="desc">{t("ass2li2")}</span>
         </li>
 
-        <li className="d-flex mb-4">
+        <li className="d-flex mb-3">
           <span className="simple-icon">
             <FaCheck />
           </span>
@@ -65,9 +65,9 @@ const Assessment2Details = () => {
       <p className="special med-mb">{t("ass2p6")}</p>
       <div className="row">
         <div className="col-md-6">
-          <ul className="m-0 ps-4">
+          <ul className="mt-3 px-4">
             {assTwoTeacherDomain.map(({ desc }, idx) => (
-              <li key={idx} className="d-flex mb-4">
+              <li key={idx} className="d-flex mb-3">
                 <span className="simple-icon">
                   <FaCheck />
                 </span>
@@ -93,9 +93,9 @@ const Assessment2Details = () => {
       <p className="special large-mb">{t("ass2p11")}</p>
       <h2 className="med-mb">{t("ass2h26")}</h2>
       <p className="special">{t("ass2p12")}</p>
-      <ul className="ps-4 med-mb">
+      <ul className="px-4 med-mb">
         {teacherCompetencies.map(({ desc }, idx) => (
-          <li className="d-flex mb-4" key={idx}>
+          <li className="d-flex mb-3" key={idx}>
             <span className="simple-icon">
               <FaCheck />
             </span>
@@ -105,9 +105,9 @@ const Assessment2Details = () => {
         ))}
       </ul>
       <p className="special">{t("ass2p13")}</p>
-      <ul className="ps-4 large-mb">
+      <ul className="px-4 large-mb">
         {teacherCompetencies2.map(({ desc }, idx) => (
-          <li className="d-flex mb-4" key={idx}>
+          <li className="d-flex mb-3" key={idx}>
             <span className="simple-icon">
               <FaCheck />
             </span>

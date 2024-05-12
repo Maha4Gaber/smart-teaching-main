@@ -26,6 +26,11 @@
     color: #656567 !important;
 
 }
+html[dir='rtl'] .ass2-details li .desc{
+    font-size: 20px !important;
+    color: #656567 !important;
+
+}
 .ass2-details .first-img{
     width: 100%;
     display: flex;
