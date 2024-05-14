@@ -35,18 +35,8 @@ const BlogContent = ({
   const lang = i18n.language;
   let isRTL = lang == "en" ? true : false;
   const [like, setlike] = useState(false);
-  const [liked, setliked] = useState(()=>{
-    setTimeout(() => {
-      return this.likes
-      
-    }, 100);
-  }
-    
-  );
-  // setTimeout(() => {
-  //   setliked(likes)
-    
-  // }, 100);
+  const [liked, setliked] = useState( likes  );
+
   const handelllike = async (id) => {
     try {
         // console.log(id);

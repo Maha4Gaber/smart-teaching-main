@@ -7,7 +7,6 @@ import Assessment4Sidebar from "../../Components/AssessmentsComponents/Assessmen
 import '../Assessment2/Assessment2.css'
 import "./Assessment4.css";
 import { useTranslation } from "react-i18next";
-import Stepper from "../../Components/Stepper/Stepper";
 import { useNavigate } from "react-router-dom";
 const Assessment4 = () => {
   const { t, i18n } = useTranslation();
