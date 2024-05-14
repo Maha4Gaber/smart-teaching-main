@@ -10,7 +10,7 @@
 }
 .middle_assessment .h3 {
   color: var(--Black, #0f0f0f);
-  text-align: left;
+  /* text-align: left; */
   /* 24 Medium */
   font-family: Arial;
   font-size: 30px;
