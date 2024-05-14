@@ -52,6 +52,7 @@
     import("./Pages/Assessment5/Assessment5")
     );
 
+    
     function App() {
     const { i18n } = useTranslation();
     const lang = i18n.language;

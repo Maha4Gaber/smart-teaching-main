@@ -5,35 +5,31 @@ import { GrStatusGood } from "react-icons/gr";
 import './commentForm.css'
 import axios from 'axios';
 
-const CommentForm = ({id}) => {
+const CommentForm = ({id,onDataChange,data}) => {
     const lang = "en"
     const [loading, setLoading] = useState(false)
     const [submissionStatus, setSubmissionStatus] = useState(false);
 
-
+    const newData=data;
+    const handleButtonClick = () => {
+        onDataChange(newData+1); // Call the callback function with the new data
+      };
     async function addComment(values) {
         values.blog=id
         // values.preventDefault();
         setLoading(true)
 
-        try {
-            let { data } = await axios.post("api/v3/comments/", values);
+    //     try {
+    //         let { data } = await axios.post("api/v3/comments/", values);
         
-            if (data) {
-            console.log(data);
-            // localStorage.token = data.tokens.access;
-            // localStorage.user_data = JSON.stringify(data);
-            // setTimeout(() => {
-            //     if(data.role=='user'){
-            //         navigate('/StudentsRatingtheirTeachers')
-            //     }
-            //     else        navigate("/");
-            // }, 1900);
-            }
-        } catch (err) {
-            // seterrMsg(err.response.data[0]);
-            console.log(err);
-        }
+    //         if (data) {
+    //         console.log(data);
+    //     }
+    // } catch (err) {
+    //     // seterrMsg(err.response.data[0]);
+    //     console.log(err);
+    // }
+    handleButtonClick()
         // console.log(values)
         
         setLoading(false)

@@ -9,10 +9,10 @@ const Assessment2Table = () => {
   let isRTL = lang == "en" ? "ltr" : "rtl";
 
 return (
-  <table class="  ass2-table">
+  <table className=" table   table-bordered   ass2-table">
     <thead>
       <tr>
-        <th scope="col">{t("ass2Tableth1")}</th>
+        <th scope="col"  >{t("ass2Tableth1")}</th>
         <th scope="col">
           {" "}
           <div className="heading">{t("description")}</div>

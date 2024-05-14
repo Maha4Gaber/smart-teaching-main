@@ -4,7 +4,8 @@ import ImageComp from "../../../ImageComp/ImageComp";
 import img1 from "../../../../assests/Assessments/Assessment2/details1.png";
 import btn1 from "../../../../assests/Assessments/Assessment2/btn-1.png";
 import btn2 from "../../../../assests/Assessments/Assessment2/btn-2.png";
-
+import imgen from '../../../../assests/Assessments/Assessment2/details2.png'
+import imgar from '../../../../assests/Assessments/Assessment2/details2ar .jpg'
 import { FaCheck } from "react-icons/fa6";
 
 import "./Assessment2Details.css";
@@ -79,7 +80,11 @@ const Assessment2Details = () => {
         </div>
 
         <div className="col-md-6 d-flex justify-content-center align-items-center">
-          <div className="domain-img w-100"></div>
+          {/* <div className="domain-img w-100"></div> */}
+          {
+            isRTL =='ltr'?(<img className=" w-50 m-auto  h-auto " src={imgen} />)
+            : (<img className=" w-50 m-auto  h-auto " src={imgar} />)
+          }
         </div>
       </div>
       <p className="special large-mb">{t("ass2p7")}</p>

@@ -42,12 +42,12 @@ const Home = () => {
   const {  i18n } = useTranslation();
   const lang = i18n.language;
   let isRTL = lang == "en" ? "ltr" : "rtl";
-  const blogs = useSelector((state) => state.influences);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  useEffect(() => {
-    dispatch(fetchinfluences());
-  }, [5]);
+  // const blogs = useSelector((state) => state.influences);
+  // const dispatch = useDispatch();
+  // const navigate = useNavigate();
+  // useEffect(() => {
+  //   dispatch(fetchinfluences());
+  // }, [5]);
 
   const { t } = useTranslation();
   const settings2 = {

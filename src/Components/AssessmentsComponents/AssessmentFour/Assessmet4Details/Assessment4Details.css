@@ -13,3 +13,9 @@
     color: var(--darkgreen-color);
 }
 
+html[dir='rtl'] .ass4-details{
+    padding: 50px 50px 0 0;
+}
+html[dir='rtl'] .ass4-details .special{
+    text-align: right !important;
+}

@@ -29,7 +29,7 @@ return (
         </figcaption>
     </figure>
 
-    <div className="ass3 p-3 p-md-5">
+    <div className="ass3 p-md-5">
 
         <div className="row gy-4 ">
 

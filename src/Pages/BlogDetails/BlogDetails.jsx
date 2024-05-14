@@ -16,12 +16,20 @@ import { blogsContent } from '../../data';
 
 import './BlogDetails.css'
 import axios from 'axios';
+import { fetchComments } from '../../Slices/blog/comments';
+import { useDispatch } from 'react-redux';
 
 const BlogDetails = () => {
 
     const { id } = useParams();
     const [blog, setblog] = useState([]);
+    const [data, setData] = useState(0);
 
+    const handleDataChange = (newData) => {
+        setData(newData);
+        console.log(newData);
+    };
+    let dispatch=useDispatch()
     useEffect(() => {
         const getdata = async () => {
             try {
@@ -37,7 +45,14 @@ const BlogDetails = () => {
         // else {
           getdata();
         // }
+        // useEffect(() => {
+            dispatch(fetchComments({commentfor:'bolg',blog_id:1}));
+            // comments=comment
+            // console.log(comments);
+        //   }, []);
       }, []);
+
+      
 
 return (
     <section className='blog-details'>
@@ -57,8 +72,8 @@ return (
                     {/* <BlogContent {...blogsContent[id]}/> */}
                     {blog&&(<BlogContent id={id} {...blog} />)}
                     {/* <Tags/> */}
-                    <Comments id={id} commentfor='blog'/>
-                    <CommentForm id={id} commentfor='blog'/>
+                    <Comments   data={data} blog_id={id} commentfor='blog'/>
+                    <CommentForm onDataChange={handleDataChange} data={data} id={id} commentfor='blog'/>
                 </div>
                 <div className="col-lg-4 col-xl-3">
 

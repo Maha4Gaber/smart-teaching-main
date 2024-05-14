@@ -35,7 +35,7 @@ const Assessment5Details = () => {
 
       <h3 className="high-mb ">{t("ass5h3")}</h3>
 
-      <p className="special-p">{t("ass5p1")}</p>
+      <p className="special">{t("ass5p1")}</p>
 
       <p className="special-p high-mb">{t("ass5p2")}</p>
 

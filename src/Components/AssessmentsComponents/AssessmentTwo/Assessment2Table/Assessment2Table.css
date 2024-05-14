@@ -1,16 +1,16 @@
 .ass2-table{
     margin: 2rem 55px !important;
-    max-width: 100%;
-    border: 1px solid #ACACAC ;
+    width: 90%;
+    border: 1px solid rgb(33, 74, 74);
+    font-size: 12px;
 }
 .ass2-table th{
     text-align: center;
     position: relative;
     font-weight: 600;
-    font-size: 1.5em;
+    font-size:15px;
     font-style: normal;
     line-height: normal;
-    color: var(--darkgreen-color);
 }
 
 .ass2-table td{
@@ -23,7 +23,9 @@
 }
 
 .ass2-table thead th{
-    padding: 1.5em 1em;
+    color: #ffffff;
+    padding:1rem;
+    background-color: rgb(33, 74, 74);
 }
 
 .ass2-table th div{
@@ -33,11 +35,11 @@
 }
 
 .ass2-table tbody th{
-    width: 25% !important;
+    width: 20% !important;
 }
 
 .ass2-table tbody td{
-    padding: 1rem;
+    padding: 10px;
 }
 
 .ass2-table th .t-heading{
@@ -48,7 +50,7 @@
 }
 
 .ass2-table tr{
-    padding: .87rem .67rem;
+    /* padding: .87rem .67rem; */
 }
 
 @media screen and (max-width: 500px) {

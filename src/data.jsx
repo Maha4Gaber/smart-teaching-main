@@ -908,27 +908,27 @@ export const expertTeacherLinks = [
     },
     {
         link: 'smartTeachingSystem',
-        path: '/login'
+        path: '/smart-teaching'
     },
     {
         link: 'FactorsAffeting',
-        path: '/register'
+        path: '/expert-teacher3'
     },
     {
         link: 'ExpertTeacher',
-        Path: '/expertteacher'
+        path: '/expertteacher'
     },
     {
         link: 'academy',
         path: '/expertteachingacademy'
     },
-    {
-        link: 'IPDP',
-        path: '/'
-    },
+    // {
+    //     link: 'IPDP',
+    //     path: '/'
+    // },
     {
         link: 'Assessments',
-        path: '/'
+        path: '/assessment'
     },
     {
         link: 'COI',
@@ -946,22 +946,22 @@ export const expertTeacherLinks = [
         link: 'TCA',
         path: '/TeacherCompetencyAssessment'
     },
+    // {
+    //     link: 'resources',
+    //     path: '/'
+    // },
     {
-        link: 'resources',
-        path: '/'
-    },
-    {
-        link: 'articles',
-        path: '/'
+        link: 'blogs',
+        path: '/blogs'
     },
     {
         link: 'library',
-        path: '/'
+        path: '/books'
     },
-    {
-        link: 'ITSA',
-        path: '/'
-    },
+    // {
+    //     link: 'ITSA',
+    //     path: '/'
+    // },
     {
         link: 'membership',
         path: '/membership'

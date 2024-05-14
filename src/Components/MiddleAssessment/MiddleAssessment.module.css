@@ -29,5 +29,9 @@
   width: 100%;
 }
 
+.th  {
+  background-color: rgb(33, 74, 74) !important; 
+  color: #fff !important;
+}
 
 

@@ -18,7 +18,7 @@ function ExpertTeacherCer() {
         </figcaption>
       </figure>
       s;dkfep */}
-      <section className="ass4 pading-top mt-5 p-3 p-md-5">
+      <section className="ass4 pading-top mt-5 ">
         <div className="row ">
           <div className="col-lg-3 px-3">
             <SidebarLinks links={expertTeacherLinks} />

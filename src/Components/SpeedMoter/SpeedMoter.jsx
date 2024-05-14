@@ -86,7 +86,7 @@ function SpeedMoter() {
             handleStudent(e.target.value);
           }}
         >
-          <option>- Select Influence -</option>
+          <option>{t('Select')}</option>
           {rate.map((item, id) => (
             <option key={id} value={item.influence}>
               {isEn ? item.influence_en : item.influence_ar}
@@ -94,7 +94,7 @@ function SpeedMoter() {
           ))}
         </select>
         <ResultInf title={t("rank")} value={rank} />
-        <ResultInf title={t("Effect Size")} value={value} />
+        <ResultInf title={t("size")} value={value} />
       </div>
       <div className={classes.speed__moter}>
         <ReactSpeedometer

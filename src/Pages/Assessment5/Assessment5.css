@@ -33,7 +33,7 @@
 
 .ass5{
     padding: 50px  120px;
-    background: var(--gray-color);
+    background: var(--gray-color) !important;
 }
 
 .ass5 .ass5-sidebar , .ass5 .ass5-details{

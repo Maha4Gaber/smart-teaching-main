@@ -1,11 +1,20 @@
 .ass5-details{
     padding: 40px 0px;
 }
+html[dir='rtl'] .ass5-details{
+    padding: 40px 40px 40px 0;
+}
 .ass5-details h2,
 .ass5-details p
 {
     text-align: left !important;
     padding-left: 53px;
+}
+html[dir='rtl'] .ass5-details h2,
+html[dir='rtl'] .ass5-details p{
+
+    text-align: right !important;
+    padding-left: 20px;
 }
 .ass5-details h3{
     /* text-align: center; */

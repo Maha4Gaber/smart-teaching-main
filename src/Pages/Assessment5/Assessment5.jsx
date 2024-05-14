@@ -29,7 +29,7 @@ return (
         </figcaption>
     </figure>
 
-    <section className="mar_120 py-3 py-md-4">
+    <section className=" ass5 py-3 py-md-4 ">
 
         <div className="row gy-4 ">
 
