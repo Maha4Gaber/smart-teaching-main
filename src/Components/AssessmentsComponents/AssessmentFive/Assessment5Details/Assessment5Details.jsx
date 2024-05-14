@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaCheck } from "react-icons/fa6";
 
 import "./Assessment5Details.css";
@@ -14,12 +14,23 @@ import EvaluationTable from "../../EvaluationTable/EvaluationTable";
 import AssessmentTable from "./../../AssessmentThree/AssessmentTable/AssessmentTable";
 import { useTranslation } from "react-i18next";
 import Stepper from "../../../Stepper/Stepper";
+import { useNavigate } from "react-router-dom";
 const Assessment5Details = () => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
   let isRTL = lang == "en" ? "ltr" : "rtl";
+  let navigate = useNavigate();
+  useEffect(()=>{
+    if(localStorage.getItem("user_data")==null){
+      navigate('/login')
+    }
+  }
+  ,[])
   return (
-    <div className="ass5-details">
+    <>
+      {
+        localStorage.getItem("user_data")&&(
+          <div className="ass5-details">
       <h2 className="mb-4">{t("ass5h2")}</h2>
 
       <h3 className="high-mb ">{t("ass5h3")}</h3>
@@ -86,6 +97,9 @@ const Assessment5Details = () => {
 
       {/* <AssessmentTable Questions={ass5QuestionsPartTwo} tableName={ass5QuestionsPartTwoTitles} adjustCell={true} btnName= 'Submit'/> */}
     </div>
+        )
+      }
+    </>
   );
 };
 

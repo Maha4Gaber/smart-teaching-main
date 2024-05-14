@@ -14,8 +14,9 @@ const Assessment4 = () => {
   const lang = i18n.language;
   let isRTL = lang == "en" ? "ltr" : "rtl";
   let navigate =useNavigate()
-    useEffect(() => {
-      if (!localStorage.user_data) {navigate('/login')}
+        // if (!localStorage.user_data) {navigate('/login')}
+        useEffect(() => {
+        if (localStorage.user_data =='null') {navigate('/login')}
         
     }, []);
   return (

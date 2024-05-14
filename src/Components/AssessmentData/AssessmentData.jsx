@@ -144,16 +144,15 @@ const AssessmentData = ({ result,type,student }) => {
             </div>
           </div>
           {
-            JSON.parse(localStorage.getItem("user_data")).group[0]&&(
               <div className="col-md-6 col-12">
                 <div className="box">
                   <div className="title">Class</div>
                   <div className="infodata">
-                    {JSON.parse(localStorage.getItem("user_data")).group[0]&&JSON.parse(localStorage.getItem("user_data")).group[0].title}
+                    {
+                      localStorage.getItem("user_data")!='null'&&JSON.parse(localStorage.getItem("user_data")).group[0]&&JSON.parse(localStorage.getItem("user_data")).group[0].title}
                   </div>
                 </div>
               </div>
-            )
           }
           <div className="col-md-6 col-12">
             <div className="box">
