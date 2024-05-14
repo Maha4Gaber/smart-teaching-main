@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { useFormik } from 'formik';
 import './BlogContact.css'
 import { useTranslation } from 'react-i18next';
+import axios from 'axios';
 
 const BlogContact = () => {
     const {t, i18n} = useTranslation()
@@ -11,9 +12,22 @@ const BlogContact = () => {
     const [loading, setLoading] = useState(false)
     const [submissionStatus, setSubmissionStatus] = useState(false);
 
-    function handleContact(values) {
+    async function handleContact(values) {
         setLoading(true)
+        // console.log(values)
+        values.mail=values.email
+        delete(values.email)
         console.log(values)
+        try {
+            let { data } = await axios.post("api/v3/get-in-touch", values);
+        
+            if (data) {
+            console.log(data);
+            }
+        } catch (err) {
+            // seterrMsg(err.response.data[0]);
+            console.log(err.response.data.message);
+        }
         setLoading(false)
     }
 
@@ -38,7 +52,7 @@ return (
 
         <h3>Get in Touch</h3>
 
-        <form onSubmit={handleContact}>
+        <form onSubmit={formik.handleSubmit}>
             
             {/* Name Input */}
             <div className="form-floating mb-4 ">
@@ -135,7 +149,10 @@ return (
                     <button 
                     type="submit"
                     className="modal-btn" 
-                    onClick={handleContact}
+                    // onClick={()=>handleContact}
+                    onClick={() => {
+            // formik.handleContact();
+            }}
                     disabled={!(formik.isValid && formik.dirty)}
                     >
                         send

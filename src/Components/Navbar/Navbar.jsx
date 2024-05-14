@@ -2,7 +2,7 @@ import "./Navbar.css";
 import profileimg from '../../assests/Login/profile.png'
 import notifacationimg from '../../assests/Login/notifications.svg'
 import Logo from "../../assests/Logo.png";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import MainBtn from "../MainBtn/MainBtn";
 import { FaAngleDown } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
@@ -12,6 +12,7 @@ import axios from "axios";
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [lang, setLang] = useState(i18n.language);
+  const navigate= useNavigate()
 
   const close = () => {
     document.querySelector(".navbar-collapse").classList.remove("show");
@@ -47,17 +48,18 @@ const Navbar = () => {
         refresh_token:refresh_token
       });
   
-      if (data) {
+      if (data.detail) {
       console.log(data);
       localStorage.token = null;
       localStorage.user_data =null;
-      saveUserData();
-      // setTimeout(() => {
-      //     if(data.role=='user'){
-      //         navigate('/StudentsRatingtheirTeachers')
-      //     }
-      //     else        navigate("/");
-      // }, 1900);
+      saveUserData();      
+      setTimeout(() => {
+          // if(data.role=='user'){
+          //     navigate('/StudentsRatingtheirTeachers')
+          // }
+          // else   
+               navigate("login");
+      }, 500);
       }
   } catch (err) {
       // seterrMsg(err.response.data[0]);

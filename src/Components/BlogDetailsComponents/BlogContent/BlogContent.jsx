@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import blogImg from "../../../assests/BlogDetails/Blog-Img.png";
 import ImageComp from "./../../ImageComp/ImageComp";
 
@@ -35,7 +35,18 @@ const BlogContent = ({
   const lang = i18n.language;
   let isRTL = lang == "en" ? true : false;
   const [like, setlike] = useState(false);
-  const [liked, setliked] = useState(likes);
+  const [liked, setliked] = useState(()=>{
+    setTimeout(() => {
+      return this.likes
+      
+    }, 100);
+  }
+    
+  );
+  // setTimeout(() => {
+  //   setliked(likes)
+    
+  // }, 100);
   const handelllike = async (id) => {
     try {
         // console.log(id);
@@ -52,11 +63,18 @@ const BlogContent = ({
             setlike(false)
             setliked(liked-1 )
         }
+        // console.log(likes);
+        // console.log(liked);
       });
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
+  useEffect(()=>{
+    // setliked(likes)
+    // console.log(likes);
+    
+  }, [])
 
 
   return (
@@ -68,7 +86,7 @@ const BlogContent = ({
         <div className="blog-details bg-white">
           <div>
             <span>
-              <PiUser className="icon" /> {comments}{" "}
+              {/* <PiUser className="icon" /> {comments}{" "} */}
             </span>
             <span>
               <AiOutlineComment className="icon" /> {comments} Comments{" "}

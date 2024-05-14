@@ -26,7 +26,7 @@ const BlogDetails = () => {
         const getdata = async () => {
             try {
                 await axios.get("api/v3/blogs/"+id).then((res) => {
-                // console.log(res.data);
+                console.log(res.data);
                 setblog(res.data)
                 });
             } catch (error) {
@@ -55,8 +55,8 @@ return (
             <div className="row justify-content-between">
                 <div className="col-lg-8">
                     {/* <BlogContent {...blogsContent[id]}/> */}
-                    <BlogContent id={id} {...blog} />
-                    <Tags/>
+                    {blog&&(<BlogContent id={id} {...blog} />)}
+                    {/* <Tags/> */}
                     <Comments id={id} commentfor='blog'/>
                     <CommentForm id={id} commentfor='blog'/>
                 </div>

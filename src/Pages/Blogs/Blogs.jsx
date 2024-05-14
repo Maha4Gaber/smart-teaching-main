@@ -63,7 +63,7 @@ const Blogs = () => {
 
             <BlogSearch />
 
-            <BlogCategories />
+            {/* <BlogCategories /> */}
 
             <BlogContact />
           </div>
