@@ -58,7 +58,7 @@ const Navbar = () => {
           //     navigate('/StudentsRatingtheirTeachers')
           // }
           // else   
-               navigate("login");
+          navigate("login");
       }, 500);
       }
   } catch (err) {
@@ -377,7 +377,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
               
-              {localStorage.getItem('token') !=='null' ?
+              {localStorage.user_data & localStorage.user_data =='null' ?
               (
                 <>
                 <li className="notifcation">
