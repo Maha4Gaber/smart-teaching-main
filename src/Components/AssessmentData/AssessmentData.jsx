@@ -24,6 +24,12 @@ const AssessmentData = ({ result,type,student }) => {
     // console.log(teachers.filter((item) => item.id == event.target.value)[0].full_name);
     localStorage.teachername=  teachers.filter((item) => item.id == event.target.value)[0].full_name
   };
+  // let navigate =useNavigate()
+        // if (!localStorage.user_data) {navigate('/login')}
+      //   useEffect(() => {
+      //     if (localStorage.token & localStorage.token =='null') {navigate('login')}
+          
+      // }, []);
   useEffect(() => {
     const getdata = async () => {
       try {
@@ -37,10 +43,11 @@ const AssessmentData = ({ result,type,student }) => {
       }
     };
     localStorage.getItem("teachername");
-    if (!localStorage.user_data) navigate("login");
-    else {
+    // if (!localStorage.user_data || localStorage.user_data =='null') {navigate('login')}
+    // if (!localStorage.user_data) navigate("login");
+    // else {
       getdata();
-    }
+    // }
     localStorage.assesrol='student'
     console.log(type);
   }, []);
