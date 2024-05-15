@@ -149,7 +149,7 @@ const AssessmentData = ({ result,type,student }) => {
                   <div className="title">Class</div>
                   <div className="infodata">
                     {
-                      localStorage.getItem("user_data")!='null'&&JSON.parse(localStorage.getItem("user_data")).group[0]&&JSON.parse(localStorage.getItem("user_data")).group[0].title}
+                      localStorage.getItem("user_data") & localStorage.getItem("user_data")!='null'  &&JSON.parse(localStorage.getItem("user_data")).group[0]&&JSON.parse(localStorage.getItem("user_data")).group[0].title}
                   </div>
                 </div>
               </div>
