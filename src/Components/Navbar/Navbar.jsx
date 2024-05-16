@@ -1,6 +1,6 @@
 import "./Navbar.css";
-import profileimg from '../../assests/Login/profile.png'
-import notifacationimg from '../../assests/Login/notifications.svg'
+import profileimg from "../../assests/Login/profile.png";
+import notifacationimg from "../../assests/Login/notifications.svg";
 import Logo from "../../assests/Logo.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import MainBtn from "../MainBtn/MainBtn";
@@ -12,7 +12,7 @@ import axios from "axios";
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [lang, setLang] = useState(i18n.language);
-  const navigate= useNavigate()
+  const navigate = useNavigate();
 
   const close = () => {
     document.querySelector(".navbar-collapse").classList.remove("show");
@@ -23,6 +23,7 @@ const Navbar = () => {
     window.location.reload();
   };
   const [userData, setuserData] = useState(null);
+  const [mesagess, setmesagess] = useState(null);
 
   useEffect(() => {
     setLang(i18n.language);
@@ -32,51 +33,58 @@ const Navbar = () => {
     let Token = localStorage.token;
     if (localStorage.getItem("token") !== null && userData === null) {
       setuserData(Token);
+    } else if (localStorage.getItem("token") === null) {
+      setuserData(null);
     }
-    else if(localStorage.getItem("token") === null)
-      {
-        setuserData(null);
-        
-      }
-    
   }
-  let logout= async()=>{
+  let logout = async () => {
     try {
-      let refresh_token=JSON.parse(localStorage.getItem('user_data')).tokens.refresh
+      let refresh_token = JSON.parse(localStorage.getItem("user_data")).tokens
+        .refresh;
       console.log(refresh_token);
-      let { data } = await axios.post("api/v2/logout/",{
-        refresh_token:refresh_token
+      let { data } = await axios.post("api/v2/logout/", {
+        refresh_token: refresh_token,
       });
-  
+
       if (data.detail) {
-      console.log(data);
-      localStorage.token = null;
-      localStorage.user_data =null;
-      saveUserData();      
-      setTimeout(() => {
+        console.log(data);
+        localStorage.token = null;
+        localStorage.user_data = null;
+        saveUserData();
+        setTimeout(() => {
           // if(data.role=='user'){
           //     navigate('/StudentsRatingtheirTeachers')
           // }
-          // else   
+          // else
           navigate("login");
-      }, 500);
+        }, 500);
       }
-  } catch (err) {
+    } catch (err) {
       // seterrMsg(err.response.data[0]);
       console.log(err);
-  }
-  }
-
-
-
+    }
+  };
 
   useEffect(() => {
-    
-      saveUserData();
-    }, []);
+    saveUserData();
+    const getdata = async () => {
+      try {
+          await axios.get("api/v3/messages").then((res) => {
+          console.log(res.data);
+          // setmesagess(res.data)
+          });
+      } catch (error) {
+          console.error("Error fetching data:", error);
+      } 
+  };
+  // if (!localStorage.user_data) navigate("login");
+  // else {
+    getdata();
+  // }
+  }, []);
   return (
     <div>
-      <nav className="active navbar navbar-expand-lg py-lg-0 py-3">
+      <nav className="active navbar navbar-expand-lg ">
         <div className="container-fluid">
           <Link className="navbar-brand d-lg-none" href="/">
             <img
@@ -165,7 +173,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              
+
               <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
@@ -349,7 +357,7 @@ const Navbar = () => {
                       {t("eBooks")}
                     </NavLink>
                   </li>
-                  <li>
+                  {/* <li>
                     <NavLink
                       onClick={close}
                       to="/resources"
@@ -360,7 +368,7 @@ const Navbar = () => {
                     >
                       {t("resources")}
                     </NavLink>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
 
@@ -376,77 +384,116 @@ const Navbar = () => {
                   {t("membership")}
                 </NavLink>
               </li>
-              
-              {localStorage.user_data & localStorage.user_data =='null' ?
-              (
+
+              {localStorage.user_data && localStorage.user_data !== "null" ? (
                 <>
-                <li className="notifcation">
-              <span className="notify">2</span>
-               <img className="" src={notifacationimg} />
-              </li>
-                <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  href="/profile"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <img className="" src={profileimg} />
-                </Link>
-                <ul
-                  className="dropdown-menu p-0"
-                  aria-labelledby="navbarDropdown"
-                >
-                  <li className="m-0">
-                    <NavLink
-                      onClick={close}
-                      to="/profile"
-                      className={({ isActive }) =>
-                        isActive ? "active dropdown-item" : "dropdown-item"
-                      }
-                      end
+                  <li className="notifcation">
+                    <Link
+                      className="nav-link dropdown-toggle"
+                      href="/profile"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
                     >
-                      {t("profile")}
-                    </NavLink>
-                  </li>
-                  <li className="m-0">
-                      <NavLink onClick={()=>{
-                        logout()
-                      }}>
-                          {t("logout")}
-                      </NavLink>
+                      <span className="notify">2</span>
+                      <img className="" src={notifacationimg} />
+                    </Link>
+                    <ul
+                      className="dropdown-menu p-0"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <li className="m-0">
+                        <NavLink
+                          onClick={close}
+                          to="/profile"
+                          // className={({ isActive }) =>
+                          //   isActive ? "active dropdown-item" : "dropdown-item"
+                          // }
+                          className=" dropdown-item"
+                        >
+                        mesagess
+                          {/* {t("profile")} */}
+                        </NavLink>
                       </li>
-                  
-                </ul>
-              </li>
+                      <li className="m-0">
+                        <NavLink
+                          className={({ isActive }) =>
+                            isActive ? " dropdown-item" : "dropdown-item"
+                          }
+                          // className=" dropdown-item"
+                          // end
+                          // onClick={() => {
+                          //   logout();
+                          // }}
+                        >
+                        mesagess
+                          {/* {t("logout")} */}
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <Link
+                      className="nav-link dropdown-toggle"
+                      href="/profile"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img className="" src={profileimg} />
+                    </Link>
+                    <ul
+                      className="dropdown-menu p-0"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <li className="m-0">
+                        <NavLink
+                          onClick={close}
+                          to="/profile"
+                          className={({ isActive }) =>
+                            isActive ? "active dropdown-item" : "dropdown-item"
+                          }
+                        >
+                          {t("profile")}
+                        </NavLink>
+                      </li>
+                      <li className="m-0">
+                        <NavLink
+                          className={({ isActive }) =>
+                            isActive ? "active dropdown-item" : "dropdown-item"
+                          }
+                          end
+                          onClick={() => {
+                            logout();
+                          }}
+                        >
+                          {t("logout")}
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </li>
                 </>
-            ):
-            (
-              <>
-              <div className="auth ">
-              <Link to={"/login"}>
-                <MainBtn shadow> {t("login")}</MainBtn>
-              </Link>
-              </div>
-              </>
-            )
-            }
-
-            </ul>
-            
-            
-            
-              
-
+              ) : (
+                <>
+                  <div className="auth ">
+                    <Link to={"/login"}>
+                      <MainBtn shadow> {t("login")}</MainBtn>
+                    </Link>
+                  </div>
+                </>
+              )}
+              <li className="">
               <span
-                className="p-2 cursor-pointer"
-                onClick={() => changeLanguage(lang === "en" ? "ar" : "en")}
-              >
-                {lang === "en" ? "Ar" : "En"} 
-              </span>
-            </div>
+              className="p-2 cursor-pointer"
+              onClick={() => changeLanguage(lang === "en" ? "ar" : "en")}
+            >
+              {lang === "en" ? "Ar" : "En"}
+            </span>
+              </li>
+            </ul>            
+          </div>
         </div>
       </nav>
     </div>

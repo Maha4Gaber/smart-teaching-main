@@ -48,7 +48,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .ass5 .special-p{
@@ -120,8 +120,14 @@
     }
 }
 
-@media screen and (max-width: 723px)  {
+@media screen and (max-width: 767px)  {
     .section-p-sm{
         padding: 1rem !important;
+    }
+    .ass5{
+        padding: 50px  20px;
+    }
+    .ass5 .ass5-sidebar{
+        display: none;
     }
 }

@@ -10,7 +10,7 @@ const ExpertTeacherCard = ({img, id, title, desc= null, className= null}) => {
   return (
     
     <div className={`expert-teacher-card ${className}`}>
-    {desc && <p className='text-center'>{t(desc)}</p>}
+    {desc && <p className=''>{t(desc)}</p>}
     <div className="d-flex justify-content-around align-items-center justify-content-lg-between  w-100">
         <div className= {`rounded-circle card-img-box`}>
         <img src={img} alt={title}/>

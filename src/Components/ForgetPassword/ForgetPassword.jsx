@@ -290,7 +290,7 @@ return (
                 
                 {/* {errReset && <div className="alert alert-danger error my-2 py-2">{errReset}</div>} */}
 
-                <div class="modal-footer p-0">
+                <div className="modal-footer p-0">
                     <button 
                         type='submit'
                         className="btn m-0"

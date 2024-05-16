@@ -1,7 +1,7 @@
 .middle__expert {
   max-width: 100%;
   flex-shrink: 0;
-  padding: 10px;
+  /* padding: 10px; */
 
   border-radius: 12px;
   background: var(--white, #fff);

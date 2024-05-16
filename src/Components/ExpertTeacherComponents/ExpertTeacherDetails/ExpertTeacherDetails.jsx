@@ -28,10 +28,10 @@ const ExpertTeacherDetails = () => {
   const lang = i18n.language;
   let isRTL = lang == "en" ? true : false;
   const tableStyles = {
-    borderCollapse: "collapse",
+    // borderCollapse: "collapse",
     // direction: isRTL,
-    maxWidth: "100% !important",
-    textAlign:'center'
+    Width: "100% !important",
+    // textAlign:'center'
   };
 
   const headerCellStyle = {
@@ -76,7 +76,7 @@ const ExpertTeacherDetails = () => {
       <div className="row justify-content-center expert-cards gy-4 mb-4">
         {expertTeacherCards.map((card, idx) => (
           <div
-            className={`col-md-4  justify-content-center  d-flex card${
+            className={`col-md-4 col-sm-4  justify-content-center  d-flex card${
               idx + 1
             }`}
             key={idx}
@@ -124,19 +124,23 @@ const ExpertTeacherDetails = () => {
 
       <div className="margin-top-bottom w-100">
         <table
-          className="table  text-center table-bordered "
+          className=" w-100 text-center table-bordered "
           style={tableStyles}
         >
           <colgroup>
-            <col></col>
+            <col style={{ width: "8%" }} />
+            <col style={{ width: "13%" }} />
+            <col style={{ width: "13%" }} />
+            <col style={{ width: "13%" }} />
+            <col style={{ width: "53%" }} />
           </colgroup>
           <thead className="">
             <tr className="">
-              <th style={{ width: "10%" }}>{t("phase")}</th>
-              <th style={{ width: "15%" }}>{t("from")}</th>
-              <th style={{ width: "15%" }}>{t("to")} </th>
-              <th style={{ width: "15%" }}>{t("focus")} </th>
-              <th style={{ width: "50%" }}>{t("common")} </th>
+              <th >{t("phase")}</th>
+              <th >{t("from")}</th>
+              <th >{t("to")} </th>
+              <th >{t("focus")} </th>
+              <th >{t("common")} </th>
             </tr>
           </thead>
           <tbody>
@@ -179,7 +183,7 @@ const ExpertTeacherDetails = () => {
 
         <div className="custom-margin"></div>
 
-        <table className="" style={tableStyles}>
+        <table className="w-100" style={tableStyles}>
           <colgroup>
             <col style={{ width: "10%" }} />
             <col style={{ width: "30%" }} />

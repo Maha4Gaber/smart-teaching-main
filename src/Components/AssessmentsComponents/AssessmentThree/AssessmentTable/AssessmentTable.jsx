@@ -348,6 +348,9 @@ const AssessmentTable = ({
       >
         {t("submit")}
       </button>)}
+      <span className=" text-danger px-3">
+      {isCalculateButtonDisabled()&& 'you must to answer all quistions '}
+      </span>
       <div
         className="done modal fade"
         id="exampleModalToggle4"

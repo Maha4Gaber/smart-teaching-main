@@ -107,3 +107,13 @@
         flex-direction: column-reverse !important;
     }
 }
+
+@media screen  and (max-width: 767px){
+    .ass4{
+        /* padding: 2.5rem 3.75rem; */
+        padding:  100px 20px !important ;
+    }
+    .ass4 .ass4-sidebar{
+        display: none;
+    }
+}

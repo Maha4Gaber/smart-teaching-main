@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './MiddleExpert.module.css';
 import TextAssessment from '../TextAssessment/TextAssessment';
-import EffectLogo from '../../assests/expertTeacher.png';
+import EffectLogo from '../../assests/Assessments/Picture7.png';
 import SpeedMoter from '../SpeedMoter/SpeedMoter';
 import SmartText from '../SmartText/SmartText';
 import { useTranslation } from 'react-i18next';

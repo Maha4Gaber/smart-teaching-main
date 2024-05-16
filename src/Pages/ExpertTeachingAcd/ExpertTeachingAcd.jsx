@@ -40,7 +40,7 @@ return (
                     <div className="row mt-4 gy-4">
 
                         {teachingAcademyCards.map((card, idx) =>
-                        <div className="col-lg-4 col-md-6" key={idx}>
+                        <div className="col-lg-4 col-sm-6" key={idx}>
                             <ExpertTeacherCard className= 'expert-academy-card' {...card}/>
                         </div>
                         )}

@@ -13,7 +13,7 @@
 
 .main-expert-acd-img h1{
     color: #DEBD63;
-  text-align: center !important;
+  /* text-align: center !important; */
 
 }
 
@@ -44,12 +44,12 @@
     font-style: normal;
     font-weight: bold;
     line-height: normal;
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 2rem;
 }
 
 .expert-academy h3{
-    text-align: center;
+    /* text-align: center; */
     font-family: Arial;
     font-size: 1.75rem;
     font-style: normal;

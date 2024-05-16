@@ -9,6 +9,7 @@
   gap: 1rem;
   text-align: left !important;
 }
+
 .assessment__left h3 {
   color: var(--Black, #0f0f0f);
   text-align: center;
@@ -40,4 +41,12 @@
 }
 .assessment__left img {
   margin-top: -10px;
+}
+@media screen  and (max-width:767px){
+  .ass4{
+    padding:  50px 20px !important ;
+  }
+  .assessment__left{
+    display: none;
+  }
 }

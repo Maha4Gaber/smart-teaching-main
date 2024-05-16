@@ -92,4 +92,9 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
 
+.ass3{
+    padding: 2.5rem 20px !important;
+}
+}

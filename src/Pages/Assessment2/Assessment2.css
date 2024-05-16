@@ -82,6 +82,9 @@
     .ass2 .main-row{
         flex-direction: column-reverse !important;
     }
+    .ass2 .ass2-sidebar{
+        display: none;
+    }
 }
 
 

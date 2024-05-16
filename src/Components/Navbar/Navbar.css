@@ -7,9 +7,9 @@
   background-color: transparent !important;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content:  center;
   gap: 10px;
-  padding: 0 120px  0  !important;
+  padding:  0 120px  0  !important;
   z-index: 1000000;
   min-height: 106px;
 /* padding-right: 140px; */
@@ -19,7 +19,6 @@
   /* height: 50px; */
   width: 97px;
 height: 59px;
-
 
 }
 .navbar.active{
@@ -43,7 +42,7 @@ height: 59px;
 
 .links>ul {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
   justify-content: space-between;
 }
@@ -108,8 +107,8 @@ html[dir='rtl'] .links a.active{
   position: absolute;
   width: 17px;
   height: 17px;
-  top: 10px;
-  right: -5px;
+  top: 15px;
+  right: 5px;
   border-radius: 50%;
   display: flex;
   align-items: center;

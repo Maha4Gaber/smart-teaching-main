@@ -47,7 +47,7 @@ const Stepper = ({ Questions, tableName,student }) => {
             >
               <div className="step">
                 {i + 1 < currentStep || complete ? (
-                  <i className="fa ga-check">V</i>
+                  <i className="fa ga-check">{i + 1}</i>
                 ) : (
                   i + 1
                 )}
