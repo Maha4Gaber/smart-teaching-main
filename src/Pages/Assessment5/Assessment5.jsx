@@ -15,7 +15,12 @@ const Assessment5 = () => {
     let navigate =useNavigate()
         // if (!localStorage.user_data) {navigate('/login')}
         useEffect(() => {
-        if (!localStorage.token || localStorage.token =='null') {navigate('/login')}
+        if ((!localStorage.token || localStorage.token =='null') || !JSON.parse(localStorage.getItem("user_data")).group[0]) {
+            // if(){
+
+            // }
+            navigate('/login')
+        }
         
     }, []);
 return (
