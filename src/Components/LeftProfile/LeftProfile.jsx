@@ -1,20 +1,37 @@
 import React from 'react';
-import classes from './LeftProfile.module.css';
-const LeftProfile = () => {
+import  './LeftProfile.css';
+const LeftProfile = ({user}) => {
   return (
-    <aside className={classes.left_profile}>
-      <header> Courses</header>
+    <>
+      <div className="row left_profile">
+        <div className="col-lg-6 col-md-12 mt-3">
+          <div className="row">
+            <div className="col-6 userlable"> Name</div>
+            <div className="col-6 userdata">{user.full_name}</div>
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-12 mt-3">
+          <div className="row">
+            <div className="col-6 userlable"> Phone</div>
+            <div className="col-6 userdata">{user.mobile}</div>
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-12 mt-3">
+          <div className="row">
+            <div className="col-6 userlable"> Email</div>
+            <div className="col-6 userdata">{user.email}</div>
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-12 mt-3">
+          <div className="row">
+            <div className="col-6 userlable"> Role</div>
+            <div className="col-6 userdata">{user.role}</div>
+          </div>
+        </div>
+        
+      </div>
+    </>
 
-      <header>description</header>
-      <p className={classes.left_lead}>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-      <h5>MEMBER SINCE: NOVEMBER 9, 2018</h5>
-    </aside>
   );
 };
 

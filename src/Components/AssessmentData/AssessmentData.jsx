@@ -10,6 +10,7 @@ const AssessmentData = ({ result,type,student }) => {
   const [teacherid, setteacherid] = useState(1);
   const [role, setrole] = useState('student');
   const [subject, setsubject] = useState('');
+  const [userdata, setuserdata] = useState(JSON.parse(localStorage.getItem("user_data")));
 
   const handleSelectChange2 = (event) => {
     setrole(event.target.value)
@@ -31,6 +32,7 @@ const AssessmentData = ({ result,type,student }) => {
           
       // }, []);
   useEffect(() => {
+
     const getdata = async () => {
       try {
         await axios.get("api/v2/users/?role=instructor").then((res) => {
@@ -42,20 +44,151 @@ const AssessmentData = ({ result,type,student }) => {
         console.error("Error fetching data:", error);
       }
     };
+
     localStorage.getItem("teachername");
     // if (!localStorage.user_data || localStorage.user_data =='null') {navigate('login')}
     // if (!localStorage.user_data) navigate("login");
     // else {
       getdata();
     // }
+    // setuserdata()
     localStorage.assesrol='student'
-    console.log(type);
+    console.log(userdata.group[0]);
   }, []);
   return (
     <>
-      <div className=" data   m-5">
+      <div className=" data   mt-5">
         <div className="row">
-          <div className="col-md-6 col-12">
+
+        <div className="col-lg-6 col-md-12 mt-3">
+          <div className="row">
+            <div className="col-6 userlable"> Name of Teacher : </div>
+            <div className="col-6 userdata">{result ? (
+                  <div className="infodata">
+                    {localStorage.getItem("teachername")}
+                  </div>
+                ) : (
+                  <select
+                    className=""
+                    value={teacherid}
+                    onChange={handleSelectChange}
+                  >
+                    {teachers.map((teacher, idx) => (
+                      <option key={idx} value={teacher.id} className="">
+                        {teacher.full_name}
+                      </option>
+                    ))}
+                  </select>
+                )}</div>
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-12 mt-3">
+          <div className="row">
+            <div className="col-6 userlable"> Name Assessor : </div>
+            <div className="col-6 userdata">
+              <div className="static">
+              {JSON.parse(localStorage.getItem("user_data")) &&
+                  JSON.parse(localStorage.getItem("user_data")).full_name}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-12 mt-3">
+          <div className="row">
+            <div className="col-6 userlable"> Subject</div>
+            <div className="col-6 userdata">
+            {result?(
+                <div className="static">
+                  {localStorage.subject}
+                </div>
+              ):(
+              <input className=""  defaultValue={subject} onChange={(e)=> localStorage.subject=e.target.value} placeholder="Enter Subject" />
+
+              )}
+              </div>
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-12 mt-3">
+          <div className="row">
+            <div className="col-6 userlable"> Role Of Assessor</div>
+            <div className="col-6 userdata">
+            {result?(
+                  <div className="static">{localStorage.assesrol}</div>
+                ):(
+                  <>
+                  {student?(
+                  <select
+                  className=""
+                  value={role}
+                  onChange={handleSelectChange2}
+                >
+                  <option value="student" className="">
+                    Student
+                  </option>
+                </select>
+                ):(<select
+                  className=""
+                  value={role}
+                  onChange={handleSelectChange2}
+                >
+                  {
+                    type==1&&
+                    (
+                      <option value="Self" className="">
+                      Self
+                    </option>
+                    )
+                  }
+                  <option value="Principal" className="">
+                    Principal
+                  </option>
+                  <option value="Peers" className="">
+                    Peers
+                  </option>
+                  <option value="Supervisors" className="">
+                    Supervisors
+                  </option>
+                  <option value="Students" className="">
+                    Students
+                  </option>
+                </select>)}
+                  </>
+                )}
+            </div>
+          </div>
+        </div>
+        {
+          userdata!='null' &userdata.group.length!=0
+          ?(
+        <div className="col-lg-6 col-md-12 mt-3">
+          <div className="row">
+            <div className="col-6 userlable"> Class</div>
+            <div className="col-6 userdata">
+            {
+                      userdata.group[0].title
+                      }
+
+            </div>
+          </div>
+        </div>
+          ):''
+        }
+
+        <div className="col-lg-6 col-md-12 mt-3">
+          <div className="row">
+            <div className="col-6 userlable"> Date</div>
+            <div className="col-6 userdata">
+            <div className="static">
+            {new Date().toISOString().slice(0, 10)}
+            </div>
+            </div>
+          </div>
+        </div>
+        
+
+
+
+          {/* <div className="col-md-6 col-12">
             <div className="box">
               <div className="title">Name of Teacher</div>
               <div className="infodata">
@@ -105,7 +238,7 @@ const AssessmentData = ({ result,type,student }) => {
             <div className="box">
               <div className="title">Role Of Assessor</div>
               <div className="infodata">
-                {result?(
+              {result?(
                   localStorage.assesrol
                 ):(
                   <>
@@ -157,6 +290,7 @@ const AssessmentData = ({ result,type,student }) => {
                   <div className="infodata">
                     {
                       localStorage.getItem("user_data") & localStorage.getItem("user_data")!='null'  &&JSON.parse(localStorage.getItem("user_data")).group[0]&&JSON.parse(localStorage.getItem("user_data")).group[0].title}
+
                   </div>
                 </div>
               </div>
@@ -168,7 +302,7 @@ const AssessmentData = ({ result,type,student }) => {
                 {new Date().toISOString().slice(0, 10)}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

@@ -68,14 +68,14 @@ const Navbar = () => {
   useEffect(() => {
     saveUserData();
     const getdata = async () => {
-      try {
-          await axios.get("api/v3/messages").then((res) => {
-          console.log(res.data);
-          // setmesagess(res.data)
-          });
-      } catch (error) {
-          console.error("Error fetching data:", error);
-      } 
+      // try {
+      //     await axios.get("api/v3/messages").then((res) => {
+      //     console.log(res.data);
+      //     // setmesagess(res.data)
+      //     });
+      // } catch (error) {
+      //     console.error("Error fetching data:", error);
+      // } 
   };
   // if (!localStorage.user_data) navigate("login");
   // else {
