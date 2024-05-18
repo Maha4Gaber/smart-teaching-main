@@ -173,11 +173,11 @@ body[dir="ltr"] small {
   font-size: 12px !important;
 }
 .mar_120 {
-  margin: 0 120px;
+  margin: 0 120px !important;
 }
 @media screen and (max-width: 767px) {
   .mar_120 {
-    margin: 0 20px;
+    margin: 0 20px !important;
   }
 }
 .cont {
