@@ -35,14 +35,13 @@ const BlogContent = ({
   const lang = i18n.language;
   let isRTL = lang == "en" ? true : false;
   const [like, setlike] = useState(false);
-  const [liked, setliked] = useState( likes  );
+  const [liked, setliked] = useState();
 
   const handelllike = async (id) => {
     try {
         // console.log(id);
-        console.log(liked);
       await axios.get("api/v3/blogs/"+id+"/press_like/").then((res) => {
-        console.log(res);
+        // console.log(res);
         if(res.data=='like added success..'){
             setlike(true)
             setliked(liked+1)
@@ -56,12 +55,35 @@ const BlogContent = ({
         // console.log(likes);
         // console.log(liked);
       });
+      // console.log(liked);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
   useEffect(()=>{
-    // setliked(likes)
+      const getdata = async () => {
+          try {
+              await axios.get("api/v3/blogs/"+id).then((res) => {
+              // console.log(res.data);
+              setliked(res.data.likes)
+              // setblog(res.data)
+              });
+          } catch (error) {
+              console.error("Error fetching data:", error);
+          } 
+      };
+      // if (!localStorage.user_data) navigate("login");
+      // else {
+        getdata();
+      // }
+      // useEffect(() => {
+          // dispatch(fetchComments({commentfor:'bolg',blog_id:1}));
+          // comments=comment
+          // console.log(comments);
+      //   }, []);
+
+      // console.log(likes);
+      // setliked(likes!== undefined ?likes:0)
     // console.log(likes);
     
   }, [])

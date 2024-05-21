@@ -205,9 +205,9 @@ return (
         )}
 
         <div className="mt-3 text-center">
-        Do you have an account?{" "}
+        {t("Don't have an account?")} {" "}
         <Link to="/register" className="sign-color">
-            Sign Up
+            {t('signUp')}
         </Link>{" "}
         </div>
     </form>

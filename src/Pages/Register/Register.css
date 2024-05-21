@@ -1,7 +1,7 @@
 .register {
-    background-image: url(../../assests/Login/login-bg.png);
+    /* background-image: url(../../assests/Login/login-bg.png); */
     background-repeat: no-repeat;
-    /* background: #F3F3F3; */
+    background: #F3F3F3;
     padding: 6.5rem 0;
     /* overflow-x: hidden; */
     /* padding-top: 23vh; */

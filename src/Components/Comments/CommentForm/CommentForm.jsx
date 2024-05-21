@@ -12,23 +12,23 @@ const CommentForm = ({id,onDataChange,data}) => {
 
     const newData=data;
     const handleButtonClick = () => {
-        onDataChange(newData+1); // Call the callback function with the new data
-      };
+        onDataChange('update'); // Call the callback function with the new data
+        };
     async function addComment(values) {
         values.blog=id
         // values.preventDefault();
         setLoading(true)
 
-    //     try {
-    //         let { data } = await axios.post("api/v3/comments/", values);
+        try {
+            let { data } = await axios.post("api/v3/comments/", values);
         
-    //         if (data) {
-    //         console.log(data);
-    //     }
-    // } catch (err) {
-    //     // seterrMsg(err.response.data[0]);
-    //     console.log(err);
-    // }
+            if (data) {
+            // console.log(data);
+        }
+    } catch (err) {
+        // seterrMsg(err.response.data[0]);
+        console.log(err);
+    }
     handleButtonClick()
         // console.log(values)
         

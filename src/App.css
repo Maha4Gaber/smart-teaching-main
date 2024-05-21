@@ -145,7 +145,7 @@ html[dir = "rtl"] .main-img figcaption h2
   text-align: left !important;
 }
 .main-img figcaption h3 {
-  text-align: left !important;
+  /* text-align: left !important; */
   margin: 0 !important;
   font-weight: 400;
 }
@@ -179,10 +179,16 @@ body[dir="ltr"] small {
   .mar_120 {
     margin: 0 20px !important;
   }
+  .cont {
+    /* padding: 2.5rem 3.75rem; */
+    padding: 0 20px 0 20px !important ;
+    /* background: var(--gray-color); */
+    background: #f2f2f2;
+  }
 }
 .cont {
   /* padding: 2.5rem 3.75rem; */
-  /* padding: 0 120px 0 120px !important ; */
+  padding: 0 120px 0 120px !important ;
   /* background: var(--gray-color); */
   background: #f2f2f2;
 }

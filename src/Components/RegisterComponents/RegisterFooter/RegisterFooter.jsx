@@ -14,7 +14,7 @@ const RegisterFooter = () => {
     <div>
         <p className='or text-center col-8 mx-auto px-4 position-relative'>OR</p>
         
-        <div className='form-icons col-8 px-4 mx-auto mb-4'>
+        {/* <div className='form-icons col-8 px-4 mx-auto mb-4'>
             
             <Link>
                 <img src= {google} alt='Google' />
@@ -28,11 +28,11 @@ const RegisterFooter = () => {
                 <img src= {facebook} alt='Facebook' />
             </Link>
 
-        </div>
+        </div> */}
 
 
         <div className="col-8 mx-auto">
-            <div className='mt-3 text-center mb-4'>  {t("haveAccount")} ? <Link to= '/login' className='sign-color'>{t("login")}</Link> </div>
+            <div className='mt-3 text-center mb-4'>  {t("haveAccount")}  {' '} <Link to= '/login' className='sign-color'>{t("login")}</Link> </div>
 
         </div>
     </div>

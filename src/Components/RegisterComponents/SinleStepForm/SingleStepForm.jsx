@@ -78,7 +78,7 @@ const SingleStepForm = () => {
     email: Yup.string()
       .required("Email is Required")
       .email("Invalid email address *exemple@yyy.zzz"),
-    password: Yup.string().required("Password is required").matches(/^[A-Z][a-z0-9]{5,10}$/,
+    password: Yup.string().required("Password is required").matches(/^[A-Z][A-Za-z\d@#$%^&*]{4,9}$/,
         "Password must start with Capital Letter includes at least 5 and less than 10 chars"
       ),
     password2: Yup.string()

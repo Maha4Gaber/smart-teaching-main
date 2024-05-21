@@ -1,6 +1,5 @@
 import "./Navbar.css";
 import profileimg from "../../assests/Login/profile.png";
-import notifacationimg from "../../assests/Login/notifications.svg";
 import Logo from "../../assests/Logo.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import MainBtn from "../MainBtn/MainBtn";
@@ -9,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { switchLang } from "../../helpers/lang";
 import axios from "axios";
+import Messages from "./Messages";
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [lang, setLang] = useState(i18n.language);
@@ -23,7 +23,6 @@ const Navbar = () => {
     window.location.reload();
   };
   const [userData, setuserData] = useState(null);
-  const [mesagess, setmesagess] = useState(null);
 
   useEffect(() => {
     setLang(i18n.language);
@@ -65,23 +64,7 @@ const Navbar = () => {
     }
   };
 
-  useEffect(() => {
-    saveUserData();
-    const getdata = async () => {
-      // try {
-      //     await axios.get("api/v3/messages").then((res) => {
-      //     console.log(res.data);
-      //     // setmesagess(res.data)
-      //     });
-      // } catch (error) {
-      //     console.error("Error fetching data:", error);
-      // } 
-  };
-  // if (!localStorage.user_data) navigate("login");
-  // else {
-    getdata();
-  // }
-  }, []);
+  
   return (
     <div>
       <nav className="active navbar navbar-expand-lg ">
@@ -387,52 +370,7 @@ const Navbar = () => {
 
               {localStorage.user_data && localStorage.user_data !== "null" ? (
                 <>
-                  <li className="notifcation">
-                    <Link
-                      className="nav-link dropdown-toggle"
-                      href="/profile"
-                      id="navbarDropdown"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <span className="notify">2</span>
-                      <img className="" src={notifacationimg} />
-                    </Link>
-                    <ul
-                      className="dropdown-menu p-0"
-                      aria-labelledby="navbarDropdown"
-                    >
-                      <li className="m-0">
-                        <NavLink
-                          onClick={close}
-                          to="/profile"
-                          // className={({ isActive }) =>
-                          //   isActive ? "active dropdown-item" : "dropdown-item"
-                          // }
-                          className=" dropdown-item"
-                        >
-                        mesagess
-                          {/* {t("profile")} */}
-                        </NavLink>
-                      </li>
-                      <li className="m-0">
-                        <NavLink
-                          className={({ isActive }) =>
-                            isActive ? " dropdown-item" : "dropdown-item"
-                          }
-                          // className=" dropdown-item"
-                          // end
-                          // onClick={() => {
-                          //   logout();
-                          // }}
-                        >
-                        mesagess
-                          {/* {t("logout")} */}
-                        </NavLink>
-                      </li>
-                    </ul>
-                  </li>
+                  <Messages />
                   <li className="nav-item dropdown">
                     <Link
                       className="nav-link dropdown-toggle"
@@ -462,9 +400,8 @@ const Navbar = () => {
                       <li className="m-0">
                         <NavLink
                           className={({ isActive }) =>
-                            isActive ? "active dropdown-item" : "dropdown-item"
+                            isActive ? " dropdown-item" : "dropdown-item"
                           }
-                          end
                           onClick={() => {
                             logout();
                           }}

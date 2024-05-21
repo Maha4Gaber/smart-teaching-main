@@ -13,6 +13,7 @@ import ResultInf from "../ResultInf/ResultInf";
 import ArrowImg from "../../assests/Arrow.png";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
+import arrowimg from '../../assests/Login/arrow.jpg'
 
 function SpeedMoter() {
   const { t, i18n } = useTranslation();
@@ -62,6 +63,7 @@ function SpeedMoter() {
   }, []);
   return (
     <section className={classes.influncers}>
+    <div className="pt-5"></div>
       <h6>{t("learnImpactOfFactors")}</h6>
       <div className={classes.inf__images}>
         <Influeance img={TeachingInf} title="teaching" />
@@ -75,6 +77,12 @@ function SpeedMoter() {
       <div className={classes.green_bar}>
         <div className={classes.baro_needle} style={{ left: soi }}>
           <img src={ArrowImg} />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-2"></div>
+        <div className="col-2">
+        <img className="" src={arrowimg} />
         </div>
       </div>
       <div className={classes.inf__selcets}>

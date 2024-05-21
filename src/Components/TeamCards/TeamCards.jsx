@@ -5,7 +5,7 @@ import ImageComp from '../ImageComp/ImageComp';
 
 
 const TeamCards = ({cards}) => {
-    console.log(cards)
+    // console.log(cards)
     const settings = {
         infinite: true,
         autoplay: true,

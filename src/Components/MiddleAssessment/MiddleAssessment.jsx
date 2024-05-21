@@ -43,18 +43,18 @@ const MiddleAssessment = () => {
         <tbody>
           <tr>
             <th scope="row">{t('SAG')}</th>
-            <td> 50%</td>
             <td> 33%</td>
+            <td> 50%</td>
           </tr>
           <tr>
             <th scope="row">{t('CO')}</th>
-            <td> 25%</td>
             <td> 33%</td>
+            <td> 25%</td>
           </tr>
           <tr>
             <th scope="row">{t('SPS')}</th>
-            <td> 25%</td>
             <td> 33%</td>
+            <td> 25%</td>
           </tr>
         </tbody>
       </table>

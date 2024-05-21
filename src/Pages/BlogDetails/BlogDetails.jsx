@@ -24,33 +24,53 @@ const BlogDetails = () => {
     const { id } = useParams();
     const [blog, setblog] = useState([]);
     const [data, setData] = useState(0);
+    const [comments, setcomments] = useState([]);
 
     const handleDataChange = (newData) => {
-        setData(newData);
-        console.log(newData);
+        if(newData=='update')
+            {
+                getdata2()
+            }
+        // console.log(newData);
     };
     let dispatch=useDispatch()
+    const getdata2 = async () => {
+        try {
+            await axios.get("api/v3/comments/?blog=" + id).then((res) => {
+            // console.log(res.data);
+            setcomments(res.data)
+            });
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+    };
     useEffect(() => {
         const getdata = async () => {
             try {
                 await axios.get("api/v3/blogs/"+id).then((res) => {
-                console.log(res.data);
+                // console.log(res.data);
                 setblog(res.data)
                 });
             } catch (error) {
                 console.error("Error fetching data:", error);
             } 
         };
+
+
         // if (!localStorage.user_data) navigate("login");
         // else {
           getdata();
-        // }
+
+          
+          getdata2();
+          // }
         // useEffect(() => {
-            dispatch(fetchComments({commentfor:'bolg',blog_id:1}));
+            // dispatch(fetchComments({commentfor:'bolg',blog_id:1}));
             // comments=comment
             // console.log(comments);
         //   }, []);
-      }, []);
+      }, []
+    );
 
       
 
@@ -72,7 +92,7 @@ return (
                     {/* <BlogContent {...blogsContent[id]}/> */}
                     {blog&&(<BlogContent id={id} {...blog} />)}
                     {/* <Tags/> */}
-                    <Comments   data={data} blog_id={id} commentfor='blog'/>
+                    <Comments   commentsdata={comments} blog_id={id} commentfor='blog'/>
                     <CommentForm onDataChange={handleDataChange} data={data} id={id} commentfor='blog'/>
                 </div>
                 <div className="col-lg-4 col-xl-3">

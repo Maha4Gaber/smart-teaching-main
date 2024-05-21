@@ -1,0 +1,47 @@
+.btnbox{
+  /* margin: 0 20px; */
+  width: 100%;
+  height: 65px;
+  padding: 10px 30px 5px 10px;
+  position: relative;
+}
+
+.btnbox .boxtext{
+  width: 100%;
+  height: 100%;
+  background-color: #debd63;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  color: black;
+  font-size: 14px;
+}
+
+html[dir='rtl']  .btnbox .boxtext{
+  font-size:18px;
+  margin-right: 10px;
+  text-align: center !important;
+}
+.btnbox .img{
+  position: absolute;
+  right: -10px;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  background-color: #debd63;
+  border-radius: 50%;
+  border: 2px solid #EEE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btnbox .img img{
+  margin-top: 0;
+  width: 650px;
+  height:  65px;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+}
