@@ -182,7 +182,7 @@ return (
             </label>
         </div>
 
-        <ForgetPassword />
+        {/* <ForgetPassword /> */}
         </div>
 
         {loading ? (

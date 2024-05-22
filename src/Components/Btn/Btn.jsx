@@ -7,7 +7,7 @@ const Btn = ({text ,img}) => {
   return (
     <div className='btnbox'>
       <div className="img">
-        <img className="" src={img} />
+        {img?<img className="" src={img} /> :''}
       </div>
       <div className="boxtext">
         {t(text)}

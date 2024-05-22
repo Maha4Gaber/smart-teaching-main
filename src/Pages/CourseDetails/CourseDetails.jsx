@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 // import ServicesHeader from "../../Components/ServicesHeader/ServicesHeader";
 // import CourseHeader from "../../Components/CourseHeader/CourseHeader";
 // import { ClassRoom } from "../../Components/CalassRoom/ClassRoom";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import DocViewer, { DocViewerRenderers } from "@cyntler/react-doc-viewer";
 import "./CourseDetails.css";
+import { useTranslation } from "react-i18next";
 function CourseDetails() {
+  const { t, i18n } = useTranslation();
+const lang = i18n.language;
   let navigate = useNavigate();
   const params = useParams();
   const [course, setCourse] = useState([]);
@@ -14,8 +17,14 @@ function CourseDetails() {
     const getdata = async () => {
       try {
         await axios.get("api/v1/courses/" + params.id).then((res) => {
-          // console.log(res.data);
+          console.log(res.data);
           setCourse(res.data);
+          if (res.data.status != "open") {
+            let model = document.querySelector("#open-modal");
+            model.click();
+
+            // navigate('/courses')
+          }
         });
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -33,8 +42,6 @@ function CourseDetails() {
       fileName: "future.ppt",
     },
   ];
-  // let url='https://calibre-ebook.com/downloads/demos/demo.docx  '
-  // let url='https://sample-videos.com/xls/Sample-Spreadsheet-10-rows.xls  '
   let url = "https://sample-videos.com/ppt/Sample-PPT-File-500kb.ppt  ";
 
   // return ;
@@ -49,8 +56,8 @@ function CourseDetails() {
             <div className="col-8">
               <div className="profile_data  ">
                 <h6>{course.category}</h6>
-                <h2>{course.title}</h2>
-                <p className=""> {course.description}</p>
+                <h2>{lang=='en'?course.title_en:course.title_ar}</h2>
+                <p className="">{lang=='en'?course.description_en:course.description_ar}</p>
               </div>
             </div>
           </div>
@@ -98,6 +105,57 @@ function CourseDetails() {
               frameBorder="0"
               // className="mt-5"
             ></iframe>
+          </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        className=" d-none btn btn-primary"
+        id="open-modal"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        Launch static backdrop modal
+      </button>
+
+      <div
+        className="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="staticBackdropLabel">
+                Modal title
+              </h5>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body text-danger">
+              The Course doesn't start yet
+            </div>
+            <div className="modal-footer">
+              <Link
+                type="button"
+                data-bs-dismiss="modal"
+                // to="/courses"
+                className="btn btn-secondary"
+                onClick={()=>{
+                  navigate('/courses')
+                }}
+              >
+                Close
+              </Link>
+              {/* <Link type="button"  className="btn btn-primary">Understood</Link> */}
+            </div>
           </div>
         </div>
       </div>

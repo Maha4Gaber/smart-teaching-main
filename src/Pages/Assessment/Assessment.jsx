@@ -46,7 +46,7 @@ function Assessment() {
                   to="/SimplifiedTeachersCompetencyAssessment"
                 >
                   {/* <img src={LeftThree} alt="left-three" /> */}
-                  <Btn  img={Logoone} text='TEAST' />
+                  <Btn  img={0} text='TEAST' />
                 </Link>
                 <h5>{t("CO")}</h5>
                 <p>{t("CO-text")}</p>
