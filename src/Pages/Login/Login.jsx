@@ -35,6 +35,8 @@ try {
     console.log(data);
     localStorage.token = data.tokens.access;
     localStorage.user_data = JSON.stringify(data);
+    let model = document.querySelector("#model2");
+    model.click();
     setTimeout(() => {
         if(data.role=='user'){
             navigate('/StudentsRatingtheirTeachers')
@@ -197,8 +199,8 @@ return (
             formik.handleSubmit();
             handleVerificationSubmit();
             }}
-            data-bs-target="#exampleModalToggle4"
-            data-bs-toggle="modal"
+            // data-bs-target="#exampleModalToggle4"
+            // data-bs-toggle="modal"
         >
             {t("login")}
         </button>
@@ -212,7 +214,13 @@ return (
         </div>
     </form>
     </section>
-
+<button className="d-none "
+        id="model2"
+        data-bs-target="#exampleModalToggle4"
+            // data-bs-target="#exampleModalToggle4"
+            // data-bs-toggle="modal"
+            data-bs-toggle="modal"
+            ></button>
     <div
     className="done modal fade"
     id="exampleModalToggle4"

@@ -46,7 +46,7 @@ const SingleStepForm = () => {
     
 
     setLoading(true)
-    let {data} = await axios.post(`https://sts.pythonanywhere.com/api/v2/register/`, values).then(()=>{
+    let {data} = await axios.post(`api/v2/register/`, values).then(()=>{
       setLoading(false)
       setTimeout(() => {
         let close = document.querySelector('.btn-close')
@@ -56,7 +56,8 @@ const SingleStepForm = () => {
     }).catch(err => {
     console.log (err)
     setLoading(false)
-    setُrrMsg(`${err.response.data.errors.param}: ${err.response.data.errors.msg}`) 
+    console.log(err.response.data.email[0]) 
+    setُrrMsg(err.response.data.email[0]) 
   })
     if (data.message === 'success') {
         setLoading(false)
@@ -188,6 +189,7 @@ const SingleStepForm = () => {
         
           <div className= {`col-lg-8 col-md-10 mx-auto px-md-0 px-4 step step-1 ${isRTL}`}>
             {/* Name Input */}
+            {errMsg ? <div className="alert alert-danger">{errMsg}</div> : null}
             <div className="form-floating name-input mt-5 mb-4">
               <input
               style={sectionStyles}

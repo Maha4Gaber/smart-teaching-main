@@ -52,7 +52,7 @@ const AssessmentData = ({ result,type,student }) => {
       getdata();
     // }
     // setuserdata()
-    localStorage.assesrol='student'
+    localStorage.assesrol =!result? 'student':localStorage.assesrol
     console.log(userdata.group[0]);
   }, []);
   return (
@@ -158,7 +158,7 @@ const AssessmentData = ({ result,type,student }) => {
           </div>
         </div>
         {
-          userdata!='null' &userdata.group.length!=0
+          userdata!='null' & userdata.group[0] != undefined
           ?(
         <div className="col-lg-6 col-md-12 mt-3">
           <div className="row">
