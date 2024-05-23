@@ -152,14 +152,14 @@ margin-left: 30px;
 }
 
 
-table{
+.expert-teacher-details table{
     border-color:  #DDD !important;
 }
-table .category{
+.expert-teacher-details table .category{
     font-weight: bold;
     padding: 5px 10px;
 }
-table .num{
+.expert-teacher-details table .num{
     margin: 5px ;
 }
 
@@ -193,17 +193,17 @@ table .trt td{
 } */
 
 
-.table {
+.expert-teacher-details .table {
     border-color: #ddd !important;
     /* RGB = 33,74,74 */
 
 }
-.table-bordered thead tr th{
+.expert-teacher-details .table-bordered thead tr th{
     background-color: rgb(33, 74, 75) !important;
     color: #DDD;
     text-align: center;
 }
-thead tr th{
+.expert-teacher-details  thead tr th{
     background-color: rgb(33, 74, 75) !important;
     color: #DDD;
     text-align: center;

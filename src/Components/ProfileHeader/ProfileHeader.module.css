@@ -20,12 +20,15 @@
 .profile_data {
   margin: auto;
   width: 100%;
-  text-align: center;
+  text-align: center ;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.profile_data h6 {
+html[dir='rlt'] .profile_data div {
+  text-align: center !important;
+}
+  .profile_data h6 {
   color: var(--white, var(--white, #fff));
   /* 18 Regular */
   font-family: Arial;
@@ -35,7 +38,7 @@
   line-height: normal;
   text-align: center;
 }
-.profile_data h2 {
+.profile_data div {
   color: var(--white, var(--white, #fff));
   text-align: center;
 

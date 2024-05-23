@@ -3,8 +3,11 @@ import "./AssessmentData.css";
 import { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 // import { TiTick } from "react-icons/ti";
 const AssessmentData = ({ result,type,student }) => {
+
+  const { t } = useTranslation();
   let navigate = useNavigate();
   const [teachers, setteachers] = useState([]);
   const [teacherid, setteacherid] = useState(1);
@@ -62,7 +65,7 @@ const AssessmentData = ({ result,type,student }) => {
 
         <div className="col-lg-6 col-md-12 mt-3">
           <div className="row">
-            <div className="col-6 userlable"> Name of Teacher : </div>
+            <div className="col-6 userlable"> {t('mame of teacher')} </div>
             <div className="col-6 userdata">{result ? (
                   <div className="infodata">
                     {localStorage.getItem("teachername")}
@@ -84,7 +87,7 @@ const AssessmentData = ({ result,type,student }) => {
         </div>
         <div className="col-lg-6 col-md-12 mt-3">
           <div className="row">
-            <div className="col-6 userlable"> Name Assessor : </div>
+            <div className="col-6 userlable"> {t('name Of Assessor')} </div>
             <div className="col-6 userdata">
               <div className="static">
               {JSON.parse(localStorage.getItem("user_data")) &&
@@ -95,7 +98,7 @@ const AssessmentData = ({ result,type,student }) => {
         </div>
         <div className="col-lg-6 col-md-12 mt-3">
           <div className="row">
-            <div className="col-6 userlable"> Subject</div>
+            <div className="col-6 userlable"> {t('subject')}</div>
             <div className="col-6 userdata">
             {result?(
                 <div className="static">
@@ -110,7 +113,7 @@ const AssessmentData = ({ result,type,student }) => {
         </div>
         <div className="col-lg-6 col-md-12 mt-3">
           <div className="row">
-            <div className="col-6 userlable"> Role Of Assessor</div>
+            <div className="col-6 userlable"> {t('Role Of Assessor')}</div>
             <div className="col-6 userdata">
             {result?(
                   <div className="static">{localStorage.assesrol}</div>
@@ -158,14 +161,14 @@ const AssessmentData = ({ result,type,student }) => {
           </div>
         </div>
         {
-          userdata!='null' & userdata.group[0] != undefined
+          userdata &&     userdata!='null' && userdata.group[0]
           ?(
         <div className="col-lg-6 col-md-12 mt-3">
           <div className="row">
-            <div className="col-6 userlable"> Class</div>
+            <div className="col-6 userlable"> {t('Class')}</div>
             <div className="col-6 userdata">
             {
-                      userdata.group[0].title
+              userdata.group[0] && userdata.group[0].title
                       }
 
             </div>
@@ -176,7 +179,7 @@ const AssessmentData = ({ result,type,student }) => {
 
         <div className="col-lg-6 col-md-12 mt-3">
           <div className="row">
-            <div className="col-6 userlable"> Date</div>
+            <div className="col-6 userlable"> {t('date')}</div>
             <div className="col-6 userdata">
             <div className="static">
             {new Date().toISOString().slice(0, 10)}

@@ -25,7 +25,9 @@
 
 
 }
-
+html[dir='rtl'] .step-item:not(:first-child)::before {
+  right: -50%;
+}
 .step {
   width: 33px;
   height: 33px;

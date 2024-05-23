@@ -3,12 +3,15 @@ import React from 'react'
 import { FaCheck } from "react-icons/fa6";
 import ImageComp from '../../../ImageComp/ImageComp'
 import img1 from '../../../../assests/Assessments/Assessment4/classroom_observ 1.png'
-import img2 from '../../../../assests/Assessments/Assessment4/btn_1.png'
+// import img2 from '../../../../assests/Assessments/Assessment4/btn_1.png'
 
 import { ass4Sidebar } from '../../../../data'
 import { Link } from 'react-router-dom';
 import './Assessment4Sidebar.css'
 import { useTranslation } from 'react-i18next';
+import Btn from '../../../Btn/Btn';
+import img2 from '../../../../assests/Assessments/Assessment2/sidebar-1.png'
+// img2
 
 const Assessment4Sidebar = () => {
     const { t, i18n } = useTranslation();
@@ -38,7 +41,8 @@ return (
         </ul>
 
         <Link className='d-flex justify-content-center' to= '/TeacherCompetencyAssessment'>
-            <ImageComp src={img2}/>
+            <Btn img={img2} text={'TCA'} />
+            {/* <ImageComp src={img2}/> */}
         </Link>
 
     </aside>

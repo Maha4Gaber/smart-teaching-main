@@ -12,24 +12,27 @@ import EvaluationTable from "../AssessmentsComponents/EvaluationTable/Evaluation
 
 import AssessmentTable from "../AssessmentsComponents/AssessmentThree/AssessmentTable/AssessmentTable";
 import AssessmentData from "../AssessmentData/AssessmentData";
+import { useTranslation } from "react-i18next";
 // import { TiTick } from "react-icons/ti";
 const Stepper = ({ Questions, tableName,student }) => {
+  const { t, i18n } = useTranslation();
+const lang = i18n.language;
   const steps = [
     {
-      step: "Step 1",
-      data: "Information",
+      step: lang=='en'?"Step 1":'المرحلة 1',
+      data: lang=='en'?"Information" :'المعلومات',
     },
     {
-      step: "Step 2",
-      data: "Assessment",
+      step: lang=='en'?"Step 2":'المرحلة 2',
+      data: lang=='en'?"Assessment" :'التقيم',
     },
     {
-      step: "Step 3",
-      data: "Results",
+      step: lang=='en'?"Step 3":'المرحلة 3',
+      data: lang=='en'?"Results" :'النتائج',
     },
     {
-      step: "Step 4",
-      data: "Interpretation",
+      step: lang=='en'?"Step 4":'المرحلة 4',
+      data: lang=='en'?"Interpretation" :'التفسير',
     },
   ];
   const [currentStep, setCurrentStep] = useState(1);

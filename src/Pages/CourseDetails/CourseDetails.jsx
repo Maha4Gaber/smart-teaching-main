@@ -67,31 +67,31 @@ const lang = i18n.language;
             <div className="row left_profile">
               <div className="col-12 mt-3">
                 <div className="row">
-                  <div className="col-6 userlable"> Instructor</div>
+                  <div className="col-6 userlable"> {t('Instructor')}</div>
                   <div className="col-6 userdata">{course.instructor}</div>
                 </div>
               </div>
               <div className="col-12 mt-3">
                 <div className="row">
-                  <div className="col-6 userlable"> Skill Level</div>
+                  <div className="col-6 userlable"> {t('SLevel')}</div>
                   <div className="col-6 userdata">{course.skill_level}</div>
                 </div>
               </div>
               <div className="col-12 mt-3">
                 <div className="row">
-                  <div className="col-6 userlable"> Status </div>
+                  <div className="col-6 userlable"> {t('status')} </div>
                   <div className="col-6 userdata">{course.status}</div>
                 </div>
               </div>
               <div className="col-12 mt-3">
                 <div className="row">
-                  <div className="col-6 userlable"> Type</div>
+                  <div className="col-6 userlable"> {t('type')}</div>
                   <div className="col-6 userdata">{course.type}</div>
                 </div>
               </div>
               <div className="col-12 mt-3">
                 <div className="row">
-                  <div className="col-6 userlable"> Price</div>
+                  <div className="col-6 userlable"> {t('price')}</div>
                   <div className="col-6 userdata">{course.price}</div>
                 </div>
               </div>

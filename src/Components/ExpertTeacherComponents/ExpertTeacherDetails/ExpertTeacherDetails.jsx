@@ -124,8 +124,8 @@ const ExpertTeacherDetails = () => {
 
       <div className="margin-top-bottom w-100">
         <table
-          className=" w-100 text-center table-bordered "
-          style={tableStyles}
+          className=" w-100 text-center  "
+          // style={tableStyles}
         >
           <colgroup>
             <col style={{ width: "8%" }} />

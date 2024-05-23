@@ -6,7 +6,7 @@ import img1 from '../../../../assests/Assessments/Assessment2/sidebar-1.png'
 import img2 from '../../../../assests/Assessments/Assessment2/sidebar-2.png'
 import img3 from '../../../../assests/Assessments/Assessment2/sidebar-3.png'
 
-
+import Btn from '../../../Btn/Btn'
 import { assTwoSidebar1, assTwoSidebar2 } from '../../../../data';
 import { Link } from 'react-router-dom';
 
@@ -53,7 +53,8 @@ const Assessment2Sidebar = () => {
 
             <Link className='ass2-side-img2'>
 
-                <ImageComp src={img2} />
+                <Btn  img={img1} text={'TCA'}/>
+                {/* <ImageComp src={img2} /> */}
 
             </Link>
 
@@ -69,7 +70,8 @@ const Assessment2Sidebar = () => {
 
             <Link className='ass2-side-img2'>
 
-                <ImageComp src={img3} />
+                <Btn  img={img1} text={'TCA'}/>
+                {/* <ImageComp src={img3} /> */}
 
             </Link>
 

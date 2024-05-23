@@ -11,9 +11,11 @@ import LogoutProfileIcon from "../../assests/LogoutProfileIcon";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import SettingProfileIcon from "../../assests/SettingProfileIcon";
+import { useTranslation } from "react-i18next";
 function Profile() {
   let navigate = useNavigate();
-
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
   const [user, setuser] = useState([]);
   const [component, setcomponent] = useState(0);
   let logout = async () => {
@@ -64,7 +66,7 @@ function Profile() {
                 }} 
                 className={classes.profile_link}>
                   <ProfilePersonIcon />
-                  <span>Personal Data</span>
+                  <span>{t('pd')}</span>
                 </li>
                 {/* <li className={classes.profile_link}>
                   <KeyProfileIcon />
@@ -79,7 +81,7 @@ function Profile() {
                 }} 
                 className={classes.profile_link}>
                 <SettingProfileIcon />
-                  <span>Dashboard </span>
+                  <span>{t('Dashboard')} </span>
                 </li>
                 {/* <li className={classes.profile_link}>
           <PaymentProfileIcon />
@@ -90,7 +92,7 @@ function Profile() {
           <span>Blogs </span>
         </li> */}
               </ul>
-              <header>user</header>
+              <header>{t('user')}</header>
               <ul className={classes.profile_links}>
                 {/* <li className={classes.profile_link}>
           <SettingProfileIcon />
@@ -101,7 +103,7 @@ function Profile() {
                 }} 
                 className={classes.profile_link}>
                   <LogoutProfileIcon />
-                  <span>Logout</span>
+                  <span>{t('logout')}</span>
                 </li>
               </ul>
             </aside>

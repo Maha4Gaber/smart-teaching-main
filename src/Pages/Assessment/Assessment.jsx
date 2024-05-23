@@ -16,6 +16,7 @@ import Btn from "../../Components/Btn/Btn";
 import Logoone from "../../assests/cardlogo.png";
 import LogoTwo from "../../assests/cardlogo2.png";
 import LogoThree from "../../assests/cardlogo3.png";
+import img1 from '../../assests/Assessments/Assessment4/classroom_observ 1.png'
 function Assessment() {
   const { t } = useTranslation();
   return (
@@ -46,7 +47,7 @@ function Assessment() {
                   to="/SimplifiedTeachersCompetencyAssessment"
                 >
                   {/* <img src={LeftThree} alt="left-three" /> */}
-                  <Btn  img={0} text='TEAST' />
+                  <Btn  img={img1} text='TEAST' />
                 </Link>
                 <h5>{t("CO")}</h5>
                 <p>{t("CO-text")}</p>
