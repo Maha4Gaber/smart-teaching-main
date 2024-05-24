@@ -15,6 +15,7 @@ const AssessmentTable = ({
   tableName,
   adjustCell,
   btnName,
+  addFun
 }) => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
@@ -96,7 +97,8 @@ const AssessmentTable = ({
           ]);
         });
 
-        localStorage.data = JSON.stringify(recievddata);
+        // localStorage.data = JSON.stringify(recievddata);
+        addFun(recievddata)
         setTimeout(() => {
           let close = document.querySelector(".close-login");
           close.click();

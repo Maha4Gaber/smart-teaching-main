@@ -9,13 +9,13 @@ import jsPDF from 'jspdf';
 import { useTranslation } from 'react-i18next';
 import AssessmentData from "../../Components/AssessmentData/AssessmentData";
 
-function Pdf() {
+function Pdf({data}) {
   const {t,i18n} = useTranslation()
   const lang = i18n.language;
   let isRTL = lang =='en'?'ltr':'rtl'
 
   
-  const data = JSON.parse(localStorage.getItem("data"));
+  // const data = JSON.parse(localStorage.getItem("data"));
   // var currentTime = new Date();
   // console.log(data);
   const componentRef = useRef();
@@ -26,7 +26,7 @@ function Pdf() {
     // ttitle: "Density of Precious Metals, in g/cm^3",
     // width: 600,
     // height: 400,
-    bar: { groupWidth: "70%" },
+    bar: { groupWidth: "50%" },
     legend: { position: "none" },
   };
 
@@ -46,7 +46,7 @@ function Pdf() {
   }
   return (
     <div>
-      <div className=" bg" style={{direction: isRTL  ,}} id="divToPrint" ref={componentRef}>
+      <div className=" bg m-5" style={{direction: isRTL  ,}} id="divToPrint" ref={componentRef}>
         <AssessmentData result={true} />
         <div className="row text-center ">
           {/* <div className="col-12 p-3 text-center ">
@@ -60,7 +60,7 @@ function Pdf() {
             
             {new Date().toISOString().slice(0,10)}
           </div> */}
-          <div className="col-11  chart">
+          <div className="col-12  chart">
             <Chart
               chartType="BarChart"
               width="100%"

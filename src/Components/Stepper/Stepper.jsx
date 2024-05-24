@@ -17,6 +17,12 @@ import { useTranslation } from "react-i18next";
 const Stepper = ({ Questions, tableName,student }) => {
   const { t, i18n } = useTranslation();
 const lang = i18n.language;
+  const [data, setdata] = useState([]);
+  const addFun=(data)=>{
+  console.log(data);
+  setdata(data)
+
+}
   const steps = [
     {
       step: lang=='en'?"Step 1":'المرحلة 1',
@@ -81,13 +87,14 @@ const lang = i18n.language;
                 tableName={tableName}
                 adjustCell={true}
                 btnName="Submit"
+                addFun={addFun}
               />
             </>
           )}
           {currentStep == 3 && (
             <>
               {/* <AssessmentData result={true} /> */}
-              <Pdf />
+              <Pdf data={data} />
             </>
           )}
           {currentStep == 4 && (
