@@ -13,12 +13,16 @@ const lang = i18n.language;
   let navigate = useNavigate();
   const params = useParams();
   const [course, setCourse] = useState([]);
+  const [htmlContent, setHtmlContent] = useState('');
+
   useEffect(() => {
     const getdata = async () => {
       try {
         await axios.get("api/v1/courses/" + params.id).then((res) => {
           console.log(res.data);
           setCourse(res.data);
+          setHtmlContent(res.data.description_en);
+
           if (res.data.status != "open") {
             let model = document.querySelector("#open-modal");
             model.click();
@@ -57,12 +61,14 @@ const lang = i18n.language;
               <div className="profile_data  ">
                 <h6>{course.category}</h6>
                 <h2>{lang=='en'?course.title_en:course.title_ar}</h2>
-                <p className="">{lang=='en'?course.description_en:course.description_ar}</p>
               </div>
             </div>
           </div>
         </div>
         <div className="row mar_120  ">
+          <div className=" bg-light col-12 mt-5">
+            <p className="" dangerouslySetInnerHTML={{ __html: htmlContent }}></p>
+          </div>
           <div className="col-lg-5 bg-light col-md-12 mt-5">
             <div className="row left_profile">
               <div className="col-12 mt-3">

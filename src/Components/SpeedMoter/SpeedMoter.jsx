@@ -51,8 +51,9 @@ function SpeedMoter() {
   useEffect(() => {
     const getdata = async () => {
       try {
-        await axios.get("api/v3/influences/").then((res) => {
+        await axios.get("api/v3/influences").then((res) => {
           setRate(res.data);
+          console.log(res);
         });
       } catch (error) {
         console.error("Error fetching data:", error);

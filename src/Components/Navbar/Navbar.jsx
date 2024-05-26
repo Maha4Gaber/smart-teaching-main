@@ -340,7 +340,7 @@ const Navbar = () => {
                       {t("eBooks")}
                     </NavLink>
                   </li>
-                  {/* <li>
+                  <li>
                     <NavLink
                       onClick={close}
                       to="/resources"
@@ -351,7 +351,7 @@ const Navbar = () => {
                     >
                       {t("resources")}
                     </NavLink>
-                  </li> */}
+                  </li>
                 </ul>
               </li>
 

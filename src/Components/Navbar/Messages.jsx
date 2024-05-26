@@ -4,13 +4,13 @@ import notifacationimg from "../../assests/Login/notifications.svg";
 import axios from "axios";
 
 const Messages = () => {
-  const [mesagess, setmesagess] = useState(null);
+  const [mesagess, setmesagess] = useState([]);
   useEffect(() => {
     const getdata = async () => {
       try {
           await axios.get("api/v3/messages").then((res) => {
           console.log(res.data);
-          // setmesagess(res.data)
+          setmesagess(res.data)
           });
       } catch (error) {
           console.error("Error fetching data:", error);
@@ -32,7 +32,7 @@ const Messages = () => {
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          <span className="notify">2</span>
+          <span className="notify">{mesagess.length}</span>
           <img className="" src={notifacationimg} />
           {/* <img className="" src={} /> */}
         </Link>

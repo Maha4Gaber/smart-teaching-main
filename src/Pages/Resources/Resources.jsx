@@ -24,7 +24,7 @@ function Resources() {
         <ResocuresCard onShow={handleShow} />
         <ResocuresCard onShow={handleShow} />
 
-        <Pagination />
+        {/* <Pagination /> */}
       </div>
       <Modal
         show={show}

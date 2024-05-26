@@ -10,32 +10,25 @@ const AssessmentData = ({ result,type,student }) => {
   const { t } = useTranslation();
   let navigate = useNavigate();
   const [teachers, setteachers] = useState([]);
-  const [teacherid, setteacherid] = useState(1);
-  const [role, setrole] = useState('student');
-  const [subject, setsubject] = useState('');
+  const [teacherid, setteacherid] = useState(null);
+  const [role, setrole] = useState(null);
+  const [subject, setsubject] = useState(null);
   const [userdata, setuserdata] = useState(JSON.parse(localStorage.getItem("user_data")));
+  const [valid, setvalid] = useState(false);
+  const [dataobj, setdataobj] = useState({});
+
 
   const handleSelectChange2 = (event) => {
     setrole(event.target.value)
     localStorage.assesrol = event.target.value;
-    // console.log(teachers.filter((item) => item.id == event.target.value)[0].full_name);
-    // localStorage.teachername=  teachers.filter((item) => item.id == event.target.value)[0].full_name
   }
     const handleSelectChange = (event) => {
+      console.log(event.target.value);
     setteacherid(event.target.value);
-    // console.log(event.target.value);
     localStorage.teacherid = event.target.value;
-    // console.log(teachers.filter((item) => item.id == event.target.value)[0].full_name);
     localStorage.teachername=  teachers.filter((item) => item.id == event.target.value)[0].full_name
   };
-  // let navigate =useNavigate()
-        // if (!localStorage.user_data) {navigate('/login')}
-      //   useEffect(() => {
-      //     if (localStorage.token & localStorage.token =='null') {navigate('login')}
-          
-      // }, []);
   useEffect(() => {
-
     const getdata = async () => {
       try {
         await axios.get("api/v2/users/?role=instructor").then((res) => {
@@ -48,16 +41,25 @@ const AssessmentData = ({ result,type,student }) => {
       }
     };
 
+    setvalid(teacherid !=null  & role!=null & subject!=null?true:false)
     localStorage.getItem("teachername");
-    // if (!localStorage.user_data || localStorage.user_data =='null') {navigate('login')}
-    // if (!localStorage.user_data) navigate("login");
-    // else {
       getdata();
-    // }
-    // setuserdata()
-    localStorage.assesrol =!result? 'student':localStorage.assesrol
-    console.log(userdata.group[0]);
-  }, []);
+      console.log(valid);
+      console.log(teacherid);
+      console.log(role);
+      console.log(subject);
+  }, [teacherid,role,subject]);
+  const submeitdata = () => {
+    let obj={
+      teachername:teachers.filter((item) => item.id == teacherid)[0].full_name,
+      role:role,
+      subject:subject,
+      assessor:JSON.parse(localStorage.getItem("user_data")) &&
+      JSON.parse(localStorage.getItem("user_data")).full_name,
+      class:userdata.group[0] && userdata.group[0].title,
+    }
+      setdataobj(obj)
+    };
   return (
     <>
       <div className=" data   mt-5">
@@ -75,7 +77,9 @@ const AssessmentData = ({ result,type,student }) => {
                     className=""
                     value={teacherid}
                     onChange={handleSelectChange}
+                    required
                   >
+                  <option className="" selected  disabled>                      </option>
                     {teachers.map((teacher, idx) => (
                       <option key={idx} value={teacher.id} className="">
                         {teacher.full_name}
@@ -105,7 +109,12 @@ const AssessmentData = ({ result,type,student }) => {
                   {localStorage.subject}
                 </div>
               ):(
-              <input className=""  defaultValue={subject} onChange={(e)=> localStorage.subject=e.target.value} placeholder="Enter Subject" />
+              <input className="" 
+                    required
+                onChange={(e)=> {
+                  localStorage.subject=e.target.value
+                setsubject(e.target.value)}
+                } placeholder="Enter Subject" />
 
               )}
               </div>
@@ -125,6 +134,7 @@ const AssessmentData = ({ result,type,student }) => {
                   value={role}
                   onChange={handleSelectChange2}
                 >
+                  <option className="" disabled  selected>                      </option>
                   <option value="student" className="">
                     Student
                   </option>
@@ -142,6 +152,7 @@ const AssessmentData = ({ result,type,student }) => {
                     </option>
                     )
                   }
+                  <option className="" disabled selected >                      </option>
                   <option value="Principal" className="">
                     Principal
                   </option>
@@ -188,7 +199,17 @@ const AssessmentData = ({ result,type,student }) => {
           </div>
         </div>
         
-
+<div className="col-12 mt-3  mybtns">
+  <button className="btn "
+  disabled={!valid}
+  onClick={()=>{
+    submeitdata
+  }}> Submit
+  </button>
+  <span className=" text-danger ">
+      {!valid&& 'you must to answer all quistions '}
+      </span>
+</div>
 
 
           {/* <div className="col-md-6 col-12">

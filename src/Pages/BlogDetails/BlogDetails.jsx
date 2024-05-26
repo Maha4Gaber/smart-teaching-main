@@ -99,9 +99,9 @@ return (
 
                     <BlogAdmin/>
                     <FollowBlog/>
-                    <BlogSearch/>
-                    <RecentBlogs/>
-                    <BlogContact/>
+                    {/* <BlogSearch/> */}
+                    {/* <RecentBlogs/> */}
+                    {/* <BlogContact/> */}
                 </div>
             </div>
         </div>

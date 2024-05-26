@@ -59,13 +59,13 @@ const Blogs = () => {
           </div>
 
           <div className="col-xl-3">
-            <FollowBlog />
+            {/* <FollowBlog /> */}
 
-            <BlogSearch />
+            {/* <BlogSearch /> */}
 
             {/* <BlogCategories /> */}
 
-            <BlogContact />
+            {/* <BlogContact /> */}
           </div>
         </div>
       </div>

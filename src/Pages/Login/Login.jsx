@@ -37,6 +37,7 @@ try {
     localStorage.user_data = JSON.stringify(data);
     let model = document.querySelector("#model2");
     model.click();
+    handleVerificationSubmit();
     setTimeout(() => {
         if(data.role=='user'){
             navigate('/StudentsRatingtheirTeachers')
