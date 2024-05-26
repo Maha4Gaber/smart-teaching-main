@@ -66,7 +66,7 @@ const lang = i18n.language;
           </div>
         </div>
         <div className="row mar_120  ">
-          <div className=" bg-light col-12 mt-5">
+          <div className=" p-3 bg-white  col-12 mt-5">
             <p className="" dangerouslySetInnerHTML={{ __html: htmlContent }}></p>
           </div>
           <div className="col-lg-5 bg-light col-md-12 mt-5">
