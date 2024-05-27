@@ -946,10 +946,10 @@ export const expertTeacherLinks = [
         link: 'TCA',
         path: '/TeacherCompetencyAssessment'
     },
-    // {
-    //     link: 'resources',
-    //     path: '/'
-    // },
+    {
+        link: 'resources',
+        path: '/'
+    },
     {
         link: 'blogs',
         path: '/blogs'

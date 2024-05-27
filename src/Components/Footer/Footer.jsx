@@ -9,11 +9,14 @@ import { useTranslation } from "react-i18next";
 const Footer = ({ contactDetails }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
+
+
+
   return (
     <>
       {" "}
       <div>
-        <div className="container-fluid newsletter">
+        {/* <div className="container-fluid newsletter">
           <h4>{t("subscribeNewsletter")}</h4>
 
           <div className="input_icon">
@@ -56,8 +59,8 @@ const Footer = ({ contactDetails }) => {
               />
             </svg>
           </div>
-          <button>{t("signUp")}</button>
-        </div>
+          <button>{t("Subscribe")}</button>
+        </div> */}
       </div>
       <footer className="footer">
         <div className="container-fluid">

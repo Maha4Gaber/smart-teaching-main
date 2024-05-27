@@ -28,12 +28,12 @@ function ResocuresCard({ onShow }) {
         side consequences. 
         As CBD oil and other CBD …
       </div>
-      <Link
+      {/* <Link
         to='/course-details'
         className={classes.btnRead}
       >
         Read More &nbsp; <ArrowRight />
-      </Link>
+      </Link> */}
     </motion.div>
   );
 }

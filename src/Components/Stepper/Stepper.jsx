@@ -114,7 +114,7 @@ const lang = i18n.language;
             }}
             // disabled={complete}
           >
-            {currentStep == 1 ? "" : "Pervious"}
+            {currentStep == 1 ? "" : t("Pervious")}
           </button>
           {/* {!complete && ( */}
           <button
@@ -126,7 +126,7 @@ const lang = i18n.language;
             }}
             disabled={complete}
           >
-            {currentStep === steps.length ? "" : "Next"}
+            {currentStep === steps.length ? "" : t("Next")}
           </button>
           {/* )} */}
         </div>

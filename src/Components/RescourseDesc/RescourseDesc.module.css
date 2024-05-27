@@ -8,6 +8,7 @@
   border-radius: 15px;
   padding: 10px;
   position: relative;
+  z-index: 100000000000;
 }
 .description button {
   position: absolute;
