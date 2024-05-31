@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { BiArrowToLeft, BiLeftArrowAlt } from 'react-icons/bi';
 import axios from 'axios';
-function Blog({id}) {
+function Blog({slug}) {
     const [blogcontent, setblogcontent] = useState(null);
     const {t,i18n} = useTranslation()
     const lang = i18n.language;
@@ -19,7 +19,7 @@ function Blog({id}) {
     // setblogcontent(blog)
     const getdata = async () => {
         try {
-            await axios.get("api/v3/blogs/" + id).then((res) => {
+            await axios.get("api/v3/blogs/" + slug).then((res) => {
             // console.log(res.data);
             setblogcontent(res.data)
             });

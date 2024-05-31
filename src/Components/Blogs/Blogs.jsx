@@ -38,9 +38,16 @@ const Blogs = () => {
         {/* { */}
           {/* blogs.map((blog,id)=>{ */}
             {/* <>00 */}
-            <Blog  id={1} />
-            <Blog  id={2} />
-            <Blog  id={3} />
+            {blogs&&
+            <>
+            {blogs[0]&&(<Blog  slug={blogs[0]&&blogs[0].slug} />)}
+            {blogs[1]&&(<Blog  slug={blogs[1]&&blogs[1].slug} />)}
+            {blogs[3]&&(<Blog  slug={blogs[3]&&blogs[3].slug} />)}
+            {/* <Blog  slug={blogs[1]&&blogs[1].slug} /> */}
+            {/* <Blog  slug={blogs[2]&&blogs[2].slug} /> */}
+            </>
+
+            }
             {/* </> */}
           {/* }) */}
         {/* } */}

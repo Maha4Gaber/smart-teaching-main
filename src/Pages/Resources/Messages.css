@@ -1,0 +1,55 @@
+/* .mbox{
+  background-color: aquamarine;
+  border-radius: 5px;
+  background-color: rgb(33, 74, 74);
+  color: antiquewhite;
+} */
+.resource__layout {
+  width: 100%;
+  background: var(--Gray-BG, #f2f2f2);
+  padding: 10px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(33, 74, 74);
+}
+
+.resource__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* width: 90%; */
+  width: 100%;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 250px 30px 10px;
+  /* margin-bottom: 20px; */
+  box-shadow: 0px 0px 50px 10px rgba(95, 45, 237, 0.1);
+}
+.resource__card:hover {
+  background: #214a4a;
+  color: #fff !important;
+}
+.resource__card:hover > div {
+  color: #fff;
+}
+.resource__card:hover > span {
+  color: #fff;
+}
+.mbox h6 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.mbox h6 span {
+  font-size: 16px;
+  
+  /* font-weight: bold; */
+}
+.mbox .sub{
+  font-size: 30px;
+}
+.mbody{
+  font-size: 18px;
+}

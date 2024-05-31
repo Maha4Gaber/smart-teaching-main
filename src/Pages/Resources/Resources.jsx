@@ -16,7 +16,7 @@ function Resources() {
   useEffect(() => {
     const getdata = async () => {
       try {
-        await axios.get("api/v1/courses/").then((res) => {
+        await axios.get("api/v3/articles/").then((res) => {
           console.log(res.data);
           setarticls(res.data);
         });
@@ -25,7 +25,7 @@ function Resources() {
       }
     };
 
-    // getdata();
+    getdata();
     // }
   }, []);
   return (

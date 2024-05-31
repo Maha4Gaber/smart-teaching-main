@@ -123,20 +123,20 @@ const Comments = ({blog_id,data,commentsdata}) => {
         // }, 100);
         // console.log(data);
         // setD1(data)
-        // const getdata = async () => {
-        //     try {
-        //         await axios.get("api/v3/comments/?blog=" + blog_id).then((res) => {
-        //         console.log(res.data);
-        //         setcomments(res.data)
-        //         });
-        //     } catch (error) {
-        //         console.error("Error fetching data:", error);
-        //     }
-        // };
-        // // if (!localStorage.user_data) navigate("login");
-        // // else {
-        //   getdata();
-        // // }
+        const getdata = async () => {
+            try {
+                await axios.get("api/v3/comments/?blog=" + blog_id).then((res) => {
+                console.log(res.data);
+                setcomments(res.data)
+                });
+            } catch (error) {
+                console.error("Error fetching data:1", error);
+            }
+        };
+        // if (!localStorage.user_data) navigate("login");
+        // else {
+          getdata();
+        // }
       }, []);
 return (
     <div className='comments-sec'>

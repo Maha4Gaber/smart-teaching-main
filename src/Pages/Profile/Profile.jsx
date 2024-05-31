@@ -38,6 +38,7 @@ function Profile() {
     }
   };
   useEffect(() => {
+    console.log(axios.defaults.baseURL );
     const getdata = async () => {
       // try {
       //   await axios.get("api/v1/user/").then((res) => {
@@ -78,10 +79,13 @@ function Profile() {
               </li> */}
                 <li onClick={()=>{
                   setcomponent(0)
-                }} 
+                }} >
+                <a
+                href={axios.defaults.baseURL +"admin"}
                 className={classes.profile_link}>
                 <SettingProfileIcon />
                   <span>{t('Dashboard')} </span>
+                </a>
                 </li>
                 {/* <li className={classes.profile_link}>
           <PaymentProfileIcon />

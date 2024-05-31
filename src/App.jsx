@@ -23,6 +23,7 @@
     import { useTranslation } from "react-i18next";
     import Pdf from "./Pages/pdf/pdf";
     import Profile from "./Pages/Profile/Profile";
+import Messages from "./Pages/Resources/Messages";
 
     const LazyAbout = React.lazy(() => import("./Pages/About/About"));
     const LazyLogin = React.lazy(() => import("./Pages/Login/Login"));
@@ -94,6 +95,7 @@
         { path: "/reels", element: <Reels /> },
         { path: "/services", element: <Services /> },
         { path: "/resources", element: <Resources /> },
+        { path: "/messages", element: <Messages /> },
         { path: "/courses", element: <CoursesPage /> },
         { path: "/books", element: <BookPage /> },
         { path: "/assessment", element: <Assessment /> },
@@ -149,7 +151,7 @@
             ),
         },
         {
-            path: "blogdetails/:id",
+            path: "blogdetails/:slug",
             element: (
             <React.Suspense fallback={<Loading />}>
                 {" "}

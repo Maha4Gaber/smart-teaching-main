@@ -29,6 +29,8 @@ const BlogContent = ({
   month,
   slice2 = false,
   blogId,
+  blogslug,
+  slug,
   id,
 }) => {
   const { t, i18n } = useTranslation();
@@ -37,7 +39,7 @@ const BlogContent = ({
   const [like, setlike] = useState(false);
   const [liked, setliked] = useState();
 
-  const handelllike = async (id) => {
+  const handelllike = async () => {
     try {
         // console.log(id);
       await axios.get("api/v3/blogs/"+id+"/press_like/").then((res) => {
@@ -57,24 +59,24 @@ const BlogContent = ({
       });
       // console.log(liked);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error("Error fetching data:11111", error);
     }
   };
   useEffect(()=>{
-      const getdata = async () => {
-          try {
-              await axios.get("api/v3/blogs/"+id).then((res) => {
-              // console.log(res.data);
-              setliked(res.data.likes)
-              // setblog(res.data)
-              });
-          } catch (error) {
-              console.error("Error fetching data:", error);
-          } 
-      };
+      // const getdata = async () => {
+      //     try {
+      //         await axios.get("api/v3/blogs/"+slug).then((res) => {
+      //         console.log(res.data);
+      //         setliked(res.data.likes)
+      //         // setblog(res.data)
+      //         });
+      //     } catch (error) {
+      //         console.error("Error fetching data1111:", error);
+      //     } 
+      // };
       // if (!localStorage.user_data) navigate("login");
-      // else {
-        getdata();
+    
+        // getdata();
       // }
       // useEffect(() => {
           // dispatch(fetchComments({commentfor:'bolg',blog_id:1}));
@@ -115,7 +117,7 @@ const BlogContent = ({
             <div>
             <button onClick=
             {() => {
-            handelllike(id)
+            handelllike()
             }}
             className={like?'liked':''}
             >
@@ -128,7 +130,7 @@ const BlogContent = ({
         </div>
 
         {slice2 ? (
-          <p>{isRTL ? description_en.slice(0, 200) : description_ar.slice(0, 200)}...</p>
+          <p>{isRTL ? description_en : description_ar}...</p>
         ) : (
           <p>{isRTL ? description_en : description_ar}</p>
         )}
@@ -136,7 +138,7 @@ const BlogContent = ({
         {slice2 && (
           <Link
             className="d-flex align-items-center justify-content-end darkgreen-color fw-bold"
-            to={`/blogdetails/${blogId}`}
+            to={`/blogdetails/${slug}`}
           >
             Read More <IoArrowForward className="ms-3" />
           </Link>

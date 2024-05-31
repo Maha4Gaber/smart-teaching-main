@@ -19,7 +19,7 @@ const lang = i18n.language;
     const getdata = async () => {
       try {
         await axios.get("api/v1/courses/" + params.id).then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           setCourse(res.data);
           setHtmlContent(res.data.description_en);
 
@@ -105,7 +105,7 @@ const lang = i18n.language;
           </div>
           <div className="col-lg-7 bg-light col-md-12 mt-5">
             <iframe
-              src={`https://view.officeapps.live.com/op/embed.aspx?src=${url}`}
+              src={`https://view.officeapps.live.com/op/embed.aspx?src=${course.file}`}
               width="100%"
               height="600px"
               frameBorder="0"

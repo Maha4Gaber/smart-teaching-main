@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { switchLang } from "../../helpers/lang";
 import axios from "axios";
-import Messages from "./Messages";
+import notifacationimg from "../../assests/Login/notifications.svg";
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [lang, setLang] = useState(i18n.language);
@@ -64,7 +64,25 @@ const Navbar = () => {
     }
   };
 
-  
+
+  const [mesagess, setmesagess] = useState([]);
+  useEffect(() => {
+    const getdata = async () => {
+      try {
+          await axios.get("api/v3/messages").then((res) => {
+          console.log(res.data);
+          setmesagess(res.data)
+          });
+      } catch (error) {
+          console.error("Error fetching data:", error);
+      } 
+  };
+  // if (!localStorage.user_data) navigate("login");
+  // else {
+    getdata();
+  // }
+  }, []);
+
   return (
     <div>
       <nav className="active navbar navbar-expand-lg ">
@@ -370,7 +388,35 @@ const Navbar = () => {
 
               {localStorage.user_data && localStorage.user_data !== "null" ? (
                 <>
-                  <Messages />
+                  {/* <Messages /> */}
+                  <li className="notifcation">
+                    <Link
+                      className="nav-link dropdown-toggle"
+                      // to="/messages"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span className="notify">{mesagess.length}</span>
+                      <img className="" src={notifacationimg} />
+                      {/* <img className="" src={} /> */}
+                    </Link>
+                    <ul
+                      className="dropdown-menu p-0"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <NavLink
+                        onClick={close}
+                        to="/messages"
+                        className={({ isActive }) =>
+                          isActive ? "active dropdown-item" : "dropdown-item"
+                        }
+                      >
+                        Messages
+                      </NavLink>
+                    </ul>
+                  </li>
                   <li className="nav-item dropdown">
                     <Link
                       className="nav-link dropdown-toggle"
@@ -422,14 +468,14 @@ const Navbar = () => {
                 </>
               )}
               <li className="">
-              <span
-              className="p-2 cursor-pointer"
-              onClick={() => changeLanguage(lang === "en" ? "ar" : "en")}
-            >
-              {lang === "en" ? "Ar" : "En"}
-            </span>
+                <span
+                  className="p-2 cursor-pointer"
+                  onClick={() => changeLanguage(lang === "en" ? "ar" : "en")}
+                >
+                  {lang === "en" ? "Ar" : "En"}
+                </span>
               </li>
-            </ul>            
+            </ul>
           </div>
         </div>
       </nav>
