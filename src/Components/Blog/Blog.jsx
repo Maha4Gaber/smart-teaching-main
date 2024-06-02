@@ -14,6 +14,7 @@ function Blog({slug}) {
     const {t,i18n} = useTranslation()
     const lang = i18n.language;
   let isRTL = lang == "en" ? "ltr" : "rtl";
+//   const [htmlContent, setHtmlContent] = useState('');
   useEffect(() => {
     // console.log(blog);
     // setblogcontent(blog)
@@ -22,6 +23,8 @@ function Blog({slug}) {
             await axios.get("api/v3/blogs/" + slug).then((res) => {
             // console.log(res.data);
             setblogcontent(res.data)
+            // setHtmlContent(res.data.description);
+
             });
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -48,11 +51,12 @@ function Blog({slug}) {
               </div>
           </div>
           <h2>{blogcontent!==null&&blogcontent.title}</h2>
-          <h3>
+          {/* <h3>
           {blogcontent!==null&&blogcontent.description}
-          </h3>
+          </h3> */}
+          {/* <div className="" dangerouslySetInnerHTML={{ __html: htmlContent }} ></div> */}
               <button className={classes.blog__btb_edit}>
-                  <Link className="text-dark" to="/blogdetails/1">
+                  <Link className="text-dark" to={"/blogdetails/" + slug }>
                       {t("readMore")} &nbsp; 
                       {
                 isRTL=='ltr'?(<ArrowRight className="ms-3 fs-4" />):(<BiLeftArrowAlt className="ms-3 fs-4" />)

@@ -24,7 +24,7 @@ const BlogDetails = () => {
   const [blog, setblog] = useState([]);
   const [data, setData] = useState(0);
   const [comments, setcomments] = useState([]);
-console.log(slug);
+// console.log(slug);
   const handleDataChange = (newData) => {
     if (newData == "update") {
       getdata2();
@@ -33,10 +33,10 @@ console.log(slug);
   };
   // let dispatch=useDispatch()
   const getdata2 = async () => {
-    console.log(blog);
+    // console.log(blog);
     try {
       await axios.get("api/v3/comments/?blog=" + blog.id).then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setcomments(res.data);
       });
     } catch (error) {
@@ -46,7 +46,7 @@ console.log(slug);
   const getdata = async () => {
     try {
       await axios.get("api/v3/blogs/"+slug).then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setblog(res.data);
       });
     } catch (error) {

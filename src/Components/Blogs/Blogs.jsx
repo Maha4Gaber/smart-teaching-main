@@ -9,7 +9,7 @@ const Blogs = () => {
         const getdata = async () => {
             try {
                 await axios.get("api/v3/blogs/").then((res) => {
-                // console.log(res.data.slice(0,3));
+                console.log(res.data.slice(0,1));
                 setblogs(res.data.slice(0,3))
                 });
             } catch (error) {

@@ -37,7 +37,7 @@ const BlogContent = ({
   const lang = i18n.language;
   let isRTL = lang == "en" ? true : false;
   const [like, setlike] = useState(false);
-  const [liked, setliked] = useState();
+  const [liked, setliked] = useState(like);
 
   const handelllike = async () => {
     try {
@@ -62,7 +62,10 @@ const BlogContent = ({
       console.error("Error fetching data:11111", error);
     }
   };
+  const [htmlContent, setHtmlContent] = useState(description);
   useEffect(()=>{
+            setHtmlContent(description);
+
       // const getdata = async () => {
       //     try {
       //         await axios.get("api/v3/blogs/"+slug).then((res) => {
@@ -129,11 +132,8 @@ const BlogContent = ({
           {/* )} */}
         </div>
 
-        {slice2 ? (
-          <p>{isRTL ? description_en : description_ar}...</p>
-        ) : (
-          <p>{isRTL ? description_en : description_ar}</p>
-        )}
+          <p className="" dangerouslySetInnerHTML={{ __html: description }} ></p>
+        
 
         {slice2 && (
           <Link
