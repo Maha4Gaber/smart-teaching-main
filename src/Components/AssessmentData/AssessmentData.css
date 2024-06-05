@@ -50,6 +50,7 @@
   padding: 10px 20px;
   justify-content: center;
   align-items: center;
+  color: #000 !important;
   /* gap: 312px; */
   border-radius: 5px;
   border: 1px solid var(--Gray-Text, #656567);

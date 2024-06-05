@@ -44,7 +44,7 @@ const AssessmentData = ({ result, type, student }) => {
     };
 
     setvalid(
-      (teacherid != null) & (role != null) & (subject != null) ? true : false
+      (teacherid != null || teacherid =='') & (role != null || role=='') & (subject != null || subject=='') ? true : false
     );
     localStorage.getItem("teachername");
     getdata();
@@ -155,14 +155,14 @@ const AssessmentData = ({ result, type, student }) => {
                         value={role}
                         onChange={handleSelectChange2}
                       >
+                        <option className="" disabled selected>
+                          {" "}
+                        </option>
                         {type == 1 && (
                           <option value="Self" className="">
                             Self
                           </option>
                         )}
-                        <option className="" disabled selected>
-                          {" "}
-                        </option>
                         <option value="Principal" className="">
                           Principal
                         </option>
@@ -172,9 +172,9 @@ const AssessmentData = ({ result, type, student }) => {
                         <option value="Supervisors" className="">
                           Supervisors
                         </option>
-                        <option value="Students" className="">
+                        {/* <option value="Students" className="">
                           Students
-                        </option>
+                        </option> */}
                       </select>
                     )}
                   </>
@@ -215,7 +215,7 @@ const AssessmentData = ({ result, type, student }) => {
               }}
             >
               {" "}
-              Submit
+              {t('send')}
             </button>
           <span className=" text-danger  d-block col-6">
             {!valid && t("you must to answer all quistions")}

@@ -162,6 +162,7 @@ const AssessmentTable = ({
       )
     );
   };
+  
   // console.log(Questions);
 
   // console.log(data);
@@ -351,6 +352,7 @@ const AssessmentTable = ({
         {t("submit")}
       </button>)}
       <span className=" text-danger px-3">
+      
       {isCalculateButtonDisabled()&& t('you must to answer all quistions')}
       </span>
       <div

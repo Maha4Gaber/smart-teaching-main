@@ -241,7 +241,7 @@ return (
             ></button>
 
             <h1 className="modal-title mb-0" id="exampleModalToggleLabel4">
-            Evaluation completed successfully
+            {t('welcomback')}
 
             </h1>
 
