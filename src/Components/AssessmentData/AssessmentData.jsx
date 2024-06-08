@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 // import { TiTick } from "react-icons/ti";
 const AssessmentData = ({ result, type, student }) => {
   const { t } = useTranslation();
@@ -12,9 +13,10 @@ const AssessmentData = ({ result, type, student }) => {
   const [teacherid, setteacherid] = useState(null);
   const [role, setrole] = useState(null);
   const [subject, setsubject] = useState(null);
-  const [userdata, setuserdata] = useState(
-    JSON.parse(localStorage.getItem("user_data"))
-  );
+  // const [userdata, setuserdata] = useState(
+  //   userdata
+  // );
+  const userdata = useSelector((state) => state.userData.user_data);
   const [valid, setvalid] = useState(false);
   const [dataobj, setdataobj] = useState({});
 
@@ -44,7 +46,7 @@ const AssessmentData = ({ result, type, student }) => {
     };
 
     setvalid(
-      (teacherid != null || teacherid =='') & (role != null || role=='') & (subject != null || subject=='') ? true : false
+      (teacherid != null || teacherid !=='') & (role != null || role!=='') & (subject != null || subject!=='') ? true : false
     );
     localStorage.getItem("teachername");
     getdata();
@@ -59,8 +61,8 @@ const AssessmentData = ({ result, type, student }) => {
       role: role,
       subject: subject,
       assessor:
-        JSON.parse(localStorage.getItem("user_data")) &&
-        JSON.parse(localStorage.getItem("user_data")).full_name,
+      userdata &&
+      userdata.full_name,
       class: userdata.group[0] && userdata.group[0].title,
     };
     setdataobj(obj);
@@ -102,8 +104,8 @@ const AssessmentData = ({ result, type, student }) => {
               <div className="col-6 userlable"> {t("name Of Assessor")} </div>
               <div className="col-6 userdata">
                 <div className="static">
-                  {JSON.parse(localStorage.getItem("user_data")) &&
-                    JSON.parse(localStorage.getItem("user_data")).full_name}
+                  {userdata &&
+                    userdata.full_name}
                 </div>
               </div>
             </div>
@@ -250,8 +252,8 @@ const AssessmentData = ({ result, type, student }) => {
             <div className="box">
               <div className="title">Name Assessor</div>
               <div className="infodata">
-                {JSON.parse(localStorage.getItem("user_data")) &&
-                  JSON.parse(localStorage.getItem("user_data")).full_name}
+                {userdata &&
+                  userdata.full_name}
               </div>
             </div>
           </div>
@@ -323,7 +325,7 @@ const AssessmentData = ({ result, type, student }) => {
                   <div className="title">Class</div>
                   <div className="infodata">
                     {
-                      localStorage.getItem("user_data") & localStorage.getItem("user_data")!='null'  &&JSON.parse(localStorage.getItem("user_data")).group[0]&&JSON.parse(localStorage.getItem("user_data")).group[0].title}
+                      localStorage.getItem("user_data") & localStorage.getItem("user_data")!='null'  &&userdata.group[0]&&userdata.group[0].title}
 
                   </div>
                 </div>

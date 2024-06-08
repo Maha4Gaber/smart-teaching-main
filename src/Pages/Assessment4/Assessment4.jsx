@@ -8,14 +8,16 @@ import '../Assessment2/Assessment2.css'
 import "./Assessment4.css";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 const Assessment4 = () => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
   let isRTL = lang == "en" ? "ltr" : "rtl";
+  const userData = useSelector((state) => state.userData);
   let navigate =useNavigate()
         // if (!localStorage.user_data) {navigate('/login')}
         useEffect(() => {
-    if (!localStorage.user_data || localStorage.user_data =='null') {navigate('/login')}
+    if (! userData.user_data) {navigate('/login')}
     // if (localStorage.token & localStorage.token =='null') {navigate('login')}
         
     }, []);

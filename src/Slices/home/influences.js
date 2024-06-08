@@ -2,8 +2,8 @@ import {  createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchinfluences = createAsyncThunk('influences/fetchinfluences',async () => {
-  let res = await axios.get('influences');
-  let data = res.data.data;
+  let res = await axios.get('api/v3/influences');
+  let data = res.data;
   // let menu_rests=data.filter(item => item.menu_id === 6)
   return data;
 })
@@ -11,7 +11,7 @@ export const fetchinfluences = createAsyncThunk('influences/fetchinfluences',asy
 
 
 export const influencesSlice = createSlice({
-  name: 'Rest',
+  name: 'influences',
   initialState:[],
   reducers: {
 

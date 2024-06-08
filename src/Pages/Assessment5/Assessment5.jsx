@@ -7,15 +7,17 @@ import Assessment5Details from '../../Components/AssessmentsComponents/Assessmen
 import Assessment5Sidebar from '../../Components/AssessmentsComponents/AssessmentFive/Assessment5Sidebar/Assessment5Sidebar'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Assessment5 = () => {
     const { t, i18n } = useTranslation();
     const lang = i18n.language;
-    let isRTL = lang == "en" ? "ltr" : "rtl";
+  const userData = useSelector((state) => state.userData);
+  let isRTL = lang == "en" ? "ltr" : "rtl";
     let navigate =useNavigate()
         // if (!localStorage.user_data) {navigate('/login')}
         useEffect(() => {
-        if ((!localStorage.token || localStorage.token =='null') || !JSON.parse(localStorage.getItem("user_data")).group[0]) {
+        if (!userData.user_data.group[0]) {
             // if(){
 
             // }

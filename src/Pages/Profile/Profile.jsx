@@ -12,15 +12,19 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import SettingProfileIcon from "../../assests/SettingProfileIcon";
 import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { user_logout } from "../../Slices/User/User";
 function Profile() {
   let navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
-  const [user, setuser] = useState([]);
+  // const [user, setuser] = useState([]);
   const [component, setcomponent] = useState(0);
+  const user = useSelector((state) => state.userData.user_data);
+  const dispatch=useDispatch()
   let logout = async () => {
     try {
-      let refresh_token = JSON.parse(localStorage.getItem("user_data")).tokens
+      let refresh_token = user.tokens
         .refresh;
       // console.log(refresh_token);
       let { data } = await axios.post("api/v2/logout/", {
@@ -28,10 +32,19 @@ function Profile() {
       });
 
       if (data.detail) {
-        console.log(data);
-        localStorage.token = null;
-        localStorage.user_data = null;
-        navigate("/login");
+        // if (data.detail) {
+          dispatch(user_logout())
+          // console.log(data);
+          // localStorage.token = null;
+          // localStorage.user_data = null;
+          // saveUserData();
+          setTimeout(() => {
+            // if(data.role=='user'){
+            //     navigate('/StudentsRatingtheirTeachers')
+            // }
+            // else
+            navigate("login");
+          }, 500);
       }
     } catch (err) {
       console.log(err);
@@ -39,6 +52,7 @@ function Profile() {
   };
   useEffect(() => {
     console.log(axios.defaults.baseURL );
+    console.log(user);
     const getdata = async () => {
       // try {
       //   await axios.get("api/v1/user/").then((res) => {
@@ -48,19 +62,19 @@ function Profile() {
       // } catch (error) {
       //   console.error("Error fetching data:", error);
       // }
-      setuser(JSON.parse(localStorage.user_data));
-      console.log(JSON.parse(localStorage.user_data));
+      // setuser(JSON.parse(localStorage.user_data));
+      // console.log(JSON.parse(localStorage.user_data));
     };
     getdata();
-  }, []);
+  }, [user]);
   return (
     <div className="profile">
-      <ProfileHeader name={user.full_name} />
+      <ProfileHeader name={user&&user.full_name} />
       <div className="profile_layout container-fluid ">
         <div className="row">
           <div className="col-4">
             <aside className={classes.right_profile}>
-              <header>{user.full_name}</header>
+              <header>{user&&user.full_name}</header>
               <ul className={classes.profile_links}>
                 <li onClick={()=>{
                   setcomponent(0)
@@ -115,7 +129,8 @@ function Profile() {
           </div>
           <div className="col-8">
             {
-              component==0&&(<LeftProfile user={user} />)
+              
+              (<LeftProfile user={user&&user} />)
             }
           </div>
         </div>

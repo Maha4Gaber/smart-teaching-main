@@ -37,17 +37,29 @@ import TeamCards from "../../Components/TeamCards/TeamCards";
 import FeatureCards from "../../Components/FeatureCards/FeatureCards";
 import { useTranslation } from "react-i18next";
 import { fetchinfluences } from "../../Slices/home/influences";
+import { addToken } from "../../Slices/User/User";
 
 const Home = () => {
   const {  i18n } = useTranslation();
   const lang = i18n.language;
   let isRTL = lang == "en" ? "ltr" : "rtl";
-  // const blogs = useSelector((state) => state.influences);
-  // const dispatch = useDispatch();
-  // const navigate = useNavigate();
-  // useEffect(() => {
-  //   dispatch(fetchinfluences());
-  // }, [5]);
+  const token = useSelector((state)=>state.userData.token)
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(addToken())
+  },[])
+  //  const blogs = useSelector((state) => state.influences);
+  //  const dispatch = useDispatch();
+  //  const navigate = useNavigate();
+  //  useEffect(() => {
+  //    dispatch(fetchinfluences());
+  //   setTimeout(() => {
+  //    console.log(blogs);
+  //   }, 10);
+  //  }, [5]);
+
+
+
 
   const { t } = useTranslation();
   const settings2 = {

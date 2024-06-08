@@ -9,10 +9,16 @@ import { useEffect, useState } from "react";
 import { switchLang } from "../../helpers/lang";
 import axios from "axios";
 import notifacationimg from "../../assests/Login/notifications.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { addToken, user_logout } from "../../Slices/User/User";
 const Navbar = () => {
+
   const { t, i18n } = useTranslation();
   const [lang, setLang] = useState(i18n.language);
   const navigate = useNavigate();
+
+  const userData = useSelector((state) => state.userData);
+  const dispatch = useDispatch();
 
   const close = () => {
     document.querySelector(".navbar-collapse").classList.remove("show");
@@ -22,34 +28,37 @@ const Navbar = () => {
     switchLang(lng);
     window.location.reload();
   };
-  const [userData, setuserData] = useState(null);
+  // const [userData, setuserData] = useState(null);
 
   useEffect(() => {
     setLang(i18n.language);
-  }, [i18n.language]);
+    dispatch(addToken())
+    console.log(userData);
+  }, [i18n.language,userData]);
 
   function saveUserData() {
-    let Token = localStorage.token;
-    if (localStorage.getItem("token") !== null && userData === null) {
-      setuserData(Token);
-    } else if (localStorage.getItem("token") === null) {
-      setuserData(null);
-    }
+    // let Token = localStorage.token;
+    // if (localStorage.getItem("token") !== null && userData === null) {
+    //   setuserData(Token);
+    // } else if (localStorage.getItem("token") === null) {
+    //   setuserData(null);
+    // }
   }
   let logout = async () => {
     try {
-      let refresh_token = JSON.parse(localStorage.getItem("user_data")).tokens
-        .refresh;
-      console.log(refresh_token);
+      let refresh_token = userData.user_data.tokens.refresh;
+      // console.log(userData);
+      // console.log(refresh_token);
       let { data } = await axios.post("api/v2/logout/", {
         refresh_token: refresh_token,
       });
-
+// console.log(data);
       if (data.detail) {
-        console.log(data);
-        localStorage.token = null;
-        localStorage.user_data = null;
-        saveUserData();
+        dispatch(user_logout())
+        // console.log(data);
+        // localStorage.token = null;
+        // localStorage.user_data = null;
+        // saveUserData();
         setTimeout(() => {
           // if(data.role=='user'){
           //     navigate('/StudentsRatingtheirTeachers')
@@ -386,7 +395,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
 
-              {localStorage.user_data && localStorage.user_data !== "null" ? (
+              {userData.user_data!==null ? (
                 <>
                   {/* <Messages /> */}
                   <li className="notifcation">
