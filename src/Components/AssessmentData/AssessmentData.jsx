@@ -5,6 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import rightLogo from "../../assests/Register/right.png";
 // import { TiTick } from "react-icons/ti";
 const AssessmentData = ({ result, type, student }) => {
   const { t } = useTranslation();
@@ -36,9 +37,10 @@ const AssessmentData = ({ result, type, student }) => {
     const getdata = async () => {
       try {
         await axios.get("api/v2/users/?role=instructor").then((res) => {
+          // console.log(res.data);
           setteachers(res.data);
-          result ? "" : (localStorage.teacherid = res.data[1].id);
-          result ? "" : (localStorage.teachername = res.data[1].full_name);
+          result ? "" : (localStorage.teacherid = res.data[0].id);
+          result ? "" : (localStorage.teachername = res.data[0].full_name);
         });
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -46,14 +48,14 @@ const AssessmentData = ({ result, type, student }) => {
     };
 
     setvalid(
-      (teacherid != null || teacherid !=='') & (role != null || role!=='') & (subject != null || subject!=='') ? true : false
+      (teacherid != null  ) & (role != null  ) & (subject != null  ) ? true : false
     );
     localStorage.getItem("teachername");
     getdata();
-    console.log(valid);
-    console.log(teacherid);
-    console.log(role);
-    console.log(subject);
+    // console.log(valid);
+    // console.log(teacherid);
+    // console.log(role);
+    // console.log(subject);
   }, [teacherid, role, subject]);
   const submeitdata = () => {
     let obj = {
@@ -65,7 +67,19 @@ const AssessmentData = ({ result, type, student }) => {
       userdata.full_name,
       class: userdata.group[0] && userdata.group[0].title,
     };
+    
     setdataobj(obj);
+
+  let model = document.getElementById("model2");
+  model.click();
+  setTimeout(() => {
+    let model2 = document.getElementById("close2");
+    console.log(model2);
+    model2.click();
+    // let close = document.getElementById("close");
+    // close.click();
+    // navigate('/');
+  }, 1800);
   };
   return (
     <>
@@ -148,7 +162,7 @@ const AssessmentData = ({ result, type, student }) => {
                           {" "}
                         </option>
                         <option value="student" className="">
-                          Student
+                          {t('student')}
                         </option>
                       </select>
                     ) : (
@@ -162,17 +176,18 @@ const AssessmentData = ({ result, type, student }) => {
                         </option>
                         {type == 1 && (
                           <option value="Self" className="">
-                            Self
+                          {t('self')}
                           </option>
                         )}
                         <option value="Principal" className="">
-                          Principal
+                          {t('principal')}
                         </option>
                         <option value="Peers" className="">
-                          Peers
+                          
+                          {t('peers')}
                         </option>
                         <option value="Supervisors" className="">
-                          Supervisors
+                          {t('supervisors')}
                         </option>
                         {/* <option value="Students" className="">
                           Students
@@ -213,7 +228,7 @@ const AssessmentData = ({ result, type, student }) => {
               className="btn col-6 "
               disabled={!valid}
               onClick={() => {
-                submeitdata;
+                submeitdata();
               }}
             >
               {" "}
@@ -339,6 +354,42 @@ const AssessmentData = ({ result, type, student }) => {
               </div>
             </div>
           </div> */}
+        </div>
+      </div>
+      <button
+        className="d-none "
+        id="model2"
+        data-bs-target="#exampleModalToggle4"
+        // data-bs-target="#exampleModalToggle4"
+        // data-bs-toggle="modal"
+        data-bs-toggle="modal"
+      ></button>
+      <div
+        className="done modal fade"
+        id="exampleModalToggle4"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel4"
+        tabIndex="-1"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          {/* Modal Content */}
+          <div className="modal-content w-75 p-5">
+            <div className="modal-header text-center p-0">
+              <button
+                type="button"
+                className="btn-close close-login d-none"
+                data-bs-dismiss="modal"
+                id="close2"
+                aria-label="Close"
+              ></button>
+
+              <h1 className="modal-title mb-0" id="exampleModalToggleLabel4">
+                {t("sucsedt")}
+              </h1>
+
+              <img className="right-img mt-4" src={rightLogo} alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </>
