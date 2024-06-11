@@ -110,9 +110,11 @@ import { BsReplyAll } from "react-icons/bs";
 import ImageComp from './../ImageComp/ImageComp';
 import './Comments.css'
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const Comments = ({blog_id,data,commentsdata}) => {
-    const [comments, setcomments] = useState(commentsdata);
+  const { t, i18n } = useTranslation();
+  const [comments, setcomments] = useState(commentsdata);
     const [D1,setD1]=useState(data)
     useEffect(() => {
         setcomments(commentsdata&&commentsdata)
@@ -141,7 +143,7 @@ const Comments = ({blog_id,data,commentsdata}) => {
 return (
     <div className='comments-sec'>
 
-        <h2>(04) Comment</h2>
+        <h2>({commentsdata.length}) {t('Comments')}</h2>
 
         {commentsdata.map((comment) =>
 

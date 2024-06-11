@@ -42,7 +42,7 @@ const Blogs = () => {
             <>
             {blogs[0]&&(<Blog  slug={blogs[0]&&blogs[0].slug} />)}
             {blogs[1]&&(<Blog  slug={blogs[1]&&blogs[1].slug} />)}
-            {blogs[3]&&(<Blog  slug={blogs[3]&&blogs[3].slug} />)}
+            {blogs[2]&&(<Blog  slug={blogs[2]&&blogs[2].slug} />)}
             {/* <Blog  slug={blogs[1]&&blogs[1].slug} /> */}
             {/* <Blog  slug={blogs[2]&&blogs[2].slug} /> */}
             </>

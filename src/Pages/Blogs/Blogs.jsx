@@ -11,7 +11,9 @@ import PaginationComp from "./../../Components/PaginationComp/PaginationComp";
 
 import "./Blogs.css";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 const Blogs = () => {
+  const { t, i18n } = useTranslation();
   let navigate = useNavigate();
   const [blogs, setblogs] = useState([]);
 
@@ -36,10 +38,10 @@ const Blogs = () => {
     <section className="blog-page">
       <div className="section-bg">
         <div>
-          <h1>Blog Page</h1>
+          <h1>{t('Blog-Page')}</h1>
           <div className="d-flex justify-content-around">
-            <Link to="/">Home</Link>
-            <span> Blog Page </span>
+            <Link to="/">{t('home')}</Link>
+            {/* <span> Blog Page </span> */}
           </div>
         </div>
       </div>

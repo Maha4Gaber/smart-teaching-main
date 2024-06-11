@@ -11,3 +11,4 @@ function SmartText({ children }) {
 }
 
 export default SmartText;
+// margin: 10px;

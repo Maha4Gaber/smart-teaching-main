@@ -18,8 +18,10 @@ import "./BlogDetails.css";
 import axios from "axios";
 import { fetchComments } from "../../Slices/blog/comments";
 import { useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 const BlogDetails = () => {
+  const { t, i18n } = useTranslation();
   const { slug } = useParams();
   const [blog, setblog] = useState([]);
   const [data, setData] = useState(0);
@@ -65,10 +67,11 @@ const BlogDetails = () => {
     <section className="blog-details">
       <div className="section-bg">
         <div>
-          <h1>Blog Details</h1>
+          <h1>{t('Blog-Details')}</h1>
           <div className="d-flex justify-content-around">
-            <Link to="/">Home</Link>
-            <span> Blog Details </span>
+          <Link to="/">{t('home')}</Link>
+          <Link to="/blogs">{t('Blog-Page')}</Link>
+          {/* <span> {t('')} </span> */}
           </div>
         </div>
       </div>
@@ -77,7 +80,7 @@ const BlogDetails = () => {
         <div className="row justify-content-between">
           <div className="col-lg-8">
             {/* <BlogContent {...blogsContent[id]}/> */}
-            {blog && <BlogContent id={blog.id} {...blog} />}
+            {blog && <BlogContent detail={true} id={blog.id} {...blog} />}
             {/* <Tags/> */}
             <Comments
               commentsdata={comments}
@@ -92,8 +95,8 @@ const BlogDetails = () => {
             />
           </div>
           <div className="col-lg-4 col-xl-3">
-            <BlogAdmin />
-            <FollowBlog />
+            {/* <BlogAdmin />
+            <FollowBlog /> */}
             {/* <BlogSearch/> */}
             {/* <RecentBlogs/> */}
             {/* <BlogContact/> */}

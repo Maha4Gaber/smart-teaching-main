@@ -4,9 +4,11 @@
   margin-bottom: 0px;
 }
 .smartText .promImg {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   width: 50px !important;
+  
   height: 16px !important;
+  margin: 10px !important;
   /* font-size: 20px !important; */
 }
 .smartText p {
@@ -23,5 +25,6 @@ text-align: left;
 html[dir = "rtl"] .smartText p
 {
     text-align: right !important;
-    margin-right: 10px;
+    /* margin-right: 10px; */
+    margin: 0 20px 10px;
 }

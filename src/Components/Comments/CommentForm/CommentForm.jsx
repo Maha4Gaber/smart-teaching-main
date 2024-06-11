@@ -4,8 +4,10 @@ import { useFormik } from 'formik';
 import { GrStatusGood } from "react-icons/gr";
 import './commentForm.css'
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const CommentForm = ({id,onDataChange,data}) => {
+  const { t, i18n } = useTranslation();
     const lang = "en"
     const [loading, setLoading] = useState(false)
     const [submissionStatus, setSubmissionStatus] = useState(false);
@@ -56,7 +58,7 @@ const CommentForm = ({id,onDataChange,data}) => {
 
 return (
     <div className='comment-form'>
-        <h3>Write your comment </h3>
+        <h3>{t('commentr')} </h3>
 
         <form onSubmit={formik.handleSubmit} className="row p-0" >
                 {/* Name Input */}
@@ -169,7 +171,7 @@ return (
                     className={`mx-2 ${lang === "ar" ? " end-0" : "start-0"}`}
                     htmlFor="floatingTextarea"
                     >
-                        Leave your commment here
+                        {t('commentr')}
                     </label>
 
                     {formik.errors.comment && formik.touched.comment ? (
@@ -197,7 +199,7 @@ return (
             // formik.handleSubmit();
             }}
                     >
-                        Send
+                        {t('send')}
                     </button>
                 </div>
 

@@ -32,6 +32,7 @@ const BlogContent = ({
   blogslug,
   slug,
   id,
+  detail
 }) => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
@@ -89,7 +90,7 @@ const BlogContent = ({
 
       // console.log(likes);
       // setliked(likes!== undefined ?likes:0)
-    // console.log(likes);
+    // console.log(created_at);
     
   }, [])
 
@@ -106,19 +107,23 @@ const BlogContent = ({
               {/* <PiUser className="icon" /> {comments}{" "} */}
             </span>
             <span>
-              <AiOutlineComment className="icon" /> {comments} Comments{" "}
+              <AiOutlineComment className="icon" /> {comments} {t('Comments')}{" "}
             </span>
-            {
+            {/* {
               liked&&(
                 <span>
               <SlLike className="icon" /> {liked} Likes{" "}
             </span>
               )
-            }
+            } */}
+            {slice2 && (
+              <span>{created_at.slice(0, 10)}</span>
+              
+              )}
           </div>
           {/* {liked>=0&&( */}
             <div>
-            <button onClick=
+            {/* <button onClick=
             {() => {
             handelllike()
             }}
@@ -127,12 +132,12 @@ const BlogContent = ({
               {" "}
 
               <IoIosHeart className="like" />{" "}
-            </button>
+            </button> */}
           </div>
           {/* )} */}
         </div>
 
-          <p className="" dangerouslySetInnerHTML={{ __html: description }} ></p>
+          { detail&& <p className="" dangerouslySetInnerHTML={{ __html: description }} ></p> }
         
 
         {slice2 && (
@@ -140,17 +145,12 @@ const BlogContent = ({
             className="d-flex align-items-center justify-content-end darkgreen-color fw-bold"
             to={`/blogdetails/${slug}`}
           >
-            Read More <IoArrowForward className="ms-3" />
+            {t('readMore')} <IoArrowForward className="ms-3" />
           </Link>
         )}
         {/* <Link className=' text-decoration-none ' to={`/blogdetails/${blog?.id}`}> */}
       </div>
-      {slice2 && (
-        <div className="blog-content-date">
-        <span>{created_at.slice(8, 10)}</span>{" "}
-        <span>{created_at.slice(5, 7)}</span>
-      </div>
-        )}
+      
       
     </div>
   );
