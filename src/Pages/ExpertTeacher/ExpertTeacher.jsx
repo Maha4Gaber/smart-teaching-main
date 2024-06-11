@@ -18,16 +18,14 @@ const ExpertTeacher = () => {
         </figcaption>
       </figure>
 
-      <section className="expert-teacher cont">
+      <section className="expert-teacher mar_120 ">
         <div className="row gy-4 ">
           <div className="col-lg-3 col-md-4  py-3">
             <SidebarLinks links={expertTeacherLinks} />
-            <div className=" py-3 ">
-              <ExpertTeacherSidebar />
-            </div>
+            <ExpertTeacherSidebar />
           </div>
 
-          <div className="col-lg-9   col-md-8  py-3">
+          <div className="col-lg-9     py-3">
             <ExpertTeacherDetails />
           </div>
         </div>

@@ -24,7 +24,7 @@ function SmartTeaching() {
             <SidebarLinks links={expertTeacherLinks} />
           </div>
           
-          <div className="col-lg-9  col-md-9">
+          <div className="col-lg-9  ">
             <MiddleSmartTeaching />
           </div>
         </div>
