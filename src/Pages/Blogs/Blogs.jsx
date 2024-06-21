@@ -48,10 +48,10 @@ const Blogs = () => {
 
       <div className="blog-page-container">
         <div className="row">
-          <div className="col-xl-9">
+          <div className="">
             <div className="row gy-4">
               {blogs.map((blog, idx) => (
-                <div className="col-md-6" key={idx}>
+                <div className="col-6 col-md-4 col-lg-3" key={idx}>
                   <BlogContent {...blog} slice2={true}  blogId={blog.id} />
                 </div>
               ))}

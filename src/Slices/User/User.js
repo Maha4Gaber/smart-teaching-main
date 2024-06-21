@@ -39,6 +39,7 @@ export const UserSlice = createSlice({
       localStorage.removeItem("token");
       localStorage.removeItem("refresh");
       localStorage.removeItem("user_data");
+      window.location.reload();
     },
   },
   extraReducers: (builder) => {
@@ -49,6 +50,7 @@ export const UserSlice = createSlice({
       localStorage.setItem("token", action.payload.tokens.access);
       localStorage.setItem("refresh",action.payload.tokens.refresh );
       localStorage.setItem("user_data",JSON.stringify(action.payload) );
+      window.location.reload();
     });
   },
 });

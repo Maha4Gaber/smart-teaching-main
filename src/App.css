@@ -59,22 +59,22 @@ ul {
 .info__layout {
   display: grid;
   padding: 20px 70px;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* gap: 15px; */
 }
 @media (max-width: 900px) {
   .info__layout {
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
   }
 }
 @media (max-width: 700px) {
   .info__layout {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
   }
 }
 @media (max-width: 590px) {
   .info__layout {
-    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-columns: repeat(1, 1fr); */
   }
 }
 /* .modal.custom .modal-dialog {

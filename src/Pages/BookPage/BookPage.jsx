@@ -15,7 +15,7 @@ function BookPage() {
     const getdata = async () => {
       try {
         await axios.get("api/v3/books").then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           setbooks(res.data);
         });
       } catch (error) {
@@ -29,11 +29,14 @@ function BookPage() {
   }, []);
   return (
     <>
-      <ServicesHeader title="E-Book" bold />
+      <ServicesHeader title="eBooks" bold />
 
-      <div className="info__layout">
+      <div className="info__layout row">
         {books.map((book, idx) => (
-          <Book key={idx} book={book} />
+          <div className="col-lg-2 col-md-3 col-4 mt-3" key={idx}>
+          <Book  book={book} />
+
+          </div>
         ))}
       </div>
       {/* <Pagination /> */}

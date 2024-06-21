@@ -33,7 +33,7 @@ const Navbar = () => {
   useEffect(() => {
     setLang(i18n.language);
     dispatch(addToken())
-    console.log(userData);
+    // console.log(userData);
   }, [i18n.language,userData]);
 
   function saveUserData() {
@@ -325,7 +325,7 @@ const Navbar = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  {t("resources")}
+                  {t("articls")}
                 </Link>
                 <ul
                   className="dropdown-menu p-0"

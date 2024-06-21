@@ -5,8 +5,10 @@ import BtnRead from '../BtnRead/BtnRead';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ArrowRight from '../../assests/ArrowRight';
+import { useTranslation } from 'react-i18next';
 
 function Book({book}) {
+  const {t}=useTranslation()
   return (
     <motion.div className={classes.book}>
       <div className={classes.book__container}>
@@ -24,7 +26,7 @@ function Book({book}) {
           href={book.file}
           className={classes.btnRead}
         >
-          Download &nbsp; <ArrowRight />
+          {t('Download')} &nbsp; <ArrowRight />
         </a>
       </div>
     </motion.div>

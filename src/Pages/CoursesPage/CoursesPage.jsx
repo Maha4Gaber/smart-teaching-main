@@ -27,10 +27,10 @@ useEffect(() => {
   return (
     <>
       <ServicesHeader
-        title='Genral Courses'
+        title='generalCourse'
         bold
       />
-      <CoursesInfo title='Genral Courses'>
+      <CoursesInfo title='generalCourse'>
         <div className='row'>
           {courses.map((cours, id) => (
           <div key={id} className="col-xl-3 col-lg-4 col-md-6 col-sm-12">

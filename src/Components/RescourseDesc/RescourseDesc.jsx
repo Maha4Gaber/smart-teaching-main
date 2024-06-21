@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SmartText from '../SmartText/SmartText';
 import classes from './RescourseDesc.module.css';
-const RescourseDesc = ({ onHiden }) => {
+import Modal from "react-bootstrap/Modal";
+const RescourseDesc = ({desc,show, onHiden }) => {
+  const [htmlContent, setHtmlContent] = useState(desc);
+  useEffect(()=>{
+    setHtmlContent(desc);
+
+
+
+}, [])
   return (
-    <div className={classes.description}>
-      <button onClick={onHiden}>
+    <Modal
+        show={show}
+        onHide={onHiden}
+        animation={true}
+        fullscreen="xl-down"
+        size="xl"
+        className="w-100 "
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+      <div className={classes.description}>
+      <button >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='24'
@@ -29,66 +47,12 @@ const RescourseDesc = ({ onHiden }) => {
           </defs>
         </svg>
       </button>
-      <h2>The Battle Over Best Christmas Cbd Oil Coupons and How to Win It</h2>
-      <SmartText>
-        Our 600 Oil provides more than 20 milligrams of day-to-day cannabidiol
-        to your physique. The oil is also putting stigma that’s related to
-        medical marijuana to a conclusion by supplying a clinical experience
-        without side consequences. As CBD oil and other CBD products aren’t
-        governed by the FDA, third-party lab testing is something that you
-        shouldn’t overlook.
-      </SmartText>
-      <SmartText>
-        CBD oil comes in many diverse strengths and is employed in several ways.
-        In other words, it might be good for your acne problem. CBD oil is well
-        tolerated in the majority of people, but there are a few possible side
-        effects. The essential thing is to effectively gauge just how much CBD
-        oil it requires to begin managing your pain.
-      </SmartText>
-      <SmartText>
-        Hemp oil may be used sublingually using a dropper, or it may be added to
-        your food and beverages which is the reason the majority of customers
-        have made it their go-to CBD product. It does have a number of uses and
-        is often marketed as a cooking oil or a product that is good for
-        moisturizing the skin. You are able to also utilize hemp oil in beauty
-        solutions.
-      </SmartText>
-      <SmartText>
-        CBD oil, on the flip side, shows promise once it comes to reducing
-        cancer symptoms. It is not psychoactive, and will not cause the
-        sensation of getting high. It may also reduce the inflammation that can
-        make neurodegenerative symptoms worse. Before you purchase CBD oil, be
-        certain to take a look at our CBD oil for sale section on the website.
-      </SmartText>
-      <SmartText>
-        A few important factors can result in acne. It’s not psychoactive, which
-        means it doesn’t create any effects like a high. Rather, it’s been
-        demonstrated to have effects on a broad range of ailments, and with not
-        one of the often-damaging side effects accompanying pharmaceuticals. The
-        impacts of CBD on receptors in the immune system can help reduce overall
-        inflammation within the body. The outcomes are modest, but a lot of
-        people reported a decrease in symptoms. Some kinds of CBD oil may also
-        be applied directly to the epidermis, in the kind of goods like creams
-        and salves.
-      </SmartText>
-      <h2>Best Christmas Cbd Oil Coupons – Overview</h2>
-      <p className={classes.description__content}>
-        In different states where production isn’t regulated, there is not any
-        way to know for certain what CBD products contain. If you are a newcomer
-        to CBD products, CBD oil is an amazing method to begin. up in arms about
-        blue dream strain click through the up coming document With such a wide
-        variety of CBD products out there to pick from, it can be tough to
-        obtain the ones which are perfect for you and your family members. There
-        are various types and brands of CBD oil to choose from, and your final
-        choice is going to be determined by your own personal needs and the way
-        you intend to utilize CBD. It can be smart to begin with a cheaper
-        product before getting something a bit stronger. A complete spectrum
-        product utilizes the comprehensive variety of plant-based compounds. The
-        extensive spectrum CBD formula delivers all the advantages of full
-        spectrum CBD without the trace quantities of THC or the psychoactive
-        effects it may cause.
-      </p>
+      <dev className="" dangerouslySetInnerHTML={{ __html: desc }} >
+        
+      </dev>
     </div>
+        {/* <RescourseDesc desc={articl.description} onHiden={handleClose} /> */}
+      </Modal>
   );
 };
 

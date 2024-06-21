@@ -138,7 +138,7 @@ const AssessmentData = ({ result, type, student }) => {
                       localStorage.subject = e.target.value;
                       setsubject(e.target.value);
                     }}
-                    placeholder="Enter Subject"
+                    placeholder={t("subject")}
                   />
                 )}
               </div>

@@ -23,7 +23,7 @@ const lang = i18n.language;
           setCourse(res.data);
           setHtmlContent(res.data.description_en);
 
-          if (res.data.status != "open") {
+          if (!res.data.allow) {
             let model = document.querySelector("#open-modal");
             model.click();
 
@@ -135,18 +135,19 @@ const lang = i18n.language;
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id="staticBackdropLabel">
-                Modal title
-              </h5>
+              
               <button
                 type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
+                onClick={()=>{
+                  navigate('/courses')
+                }}
               ></button>
             </div>
             <div className="modal-body text-danger">
-              The Course doesn't start yet
+              {t('dosentstart')}
             </div>
             <div className="modal-footer">
               <Link
@@ -158,7 +159,7 @@ const lang = i18n.language;
                   navigate('/courses')
                 }}
               >
-                Close
+                {t('Close')}
               </Link>
               {/* <Link type="button"  className="btn btn-primary">Understood</Link> */}
             </div>

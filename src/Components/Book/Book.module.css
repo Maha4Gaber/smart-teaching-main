@@ -1,5 +1,5 @@
 .book {
-  width: 320px;
+  /* width: 320px; */
   border-radius: 16px;
   background: var(--white, #fff);
   box-shadow: 0px 0px 20px 10px rgba(95, 45, 237, 0.1);
@@ -7,8 +7,9 @@
   flex-direction: column;
   gap: 10px;
   padding: 15px;
-  margin: 10px 15px;
+  /* margin: 10px 15px; */
   transition: 0.1s all ease-out;
+  height: 405px;
 }
 
 .book .book__container {

@@ -224,10 +224,10 @@ import Messages from "./Pages/Resources/Messages";
         },
 
         { path: "*", element: <NotFound /> },
+        // { path: "/pdf/:id", element: <Pdf /> },
         ],
         
     },
-    { path: "/pdf", element: <Pdf /> },
 
     ]);
     return (
