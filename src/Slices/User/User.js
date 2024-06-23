@@ -50,7 +50,12 @@ export const UserSlice = createSlice({
       localStorage.setItem("token", action.payload.tokens.access);
       localStorage.setItem("refresh",action.payload.tokens.refresh );
       localStorage.setItem("user_data",JSON.stringify(action.payload) );
-      window.location.reload();
+      setTimeout(() => {
+        if (action.payload.role == "user") {
+          window.location="/StudentsRatingtheirTeachers";
+        } else window.location="/";
+      }, 1900);
+      window.location='/';
     });
   },
 });
