@@ -43,6 +43,8 @@ const Home = () => {
   const {  i18n } = useTranslation();
   const lang = i18n.language;
   let isRTL = lang == "en" ? "ltr" : "rtl";
+  // const userData = useSelector((state)=>state.userData)
+  // console.log(userData);
   const token = useSelector((state)=>state.userData.token)
   const dispatch = useDispatch()
   useEffect(()=>{

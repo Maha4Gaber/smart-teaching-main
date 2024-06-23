@@ -30,35 +30,39 @@ const Login = ({}) => {
   const dispatch = useDispatch();
 
 async function handleLogin(values) {
-    setLoading(true);
-    try {
+    // setLoading(true);
+    // try {
       dispatch(Newuser(values));
       setTimeout(() => {
-        console.log(user_data);
+        // console.log(user_data);
 
-        if (user_data) {
-        //   // console.log(user_data);
+        if (user_data.error !==null) {
+          seterrMsg(user_data.error['non_field_errors'][0]);
+          // console.log(err);
+    // setLoading(false);
+          // console.log(user_data);
         //   // localStorage.token = user_data.tokens.access;
         //   // localStorage.user_data = JSON.stringify(user_data);
-          let model = document.getElementById("model2");
-          model.click();
-          handleVerificationSubmit();
-          setTimeout(() => {
-            if (user_data.role == "user") {
-              navigate("/StudentsRatingtheirTeachers");
-            } else navigate("/");
-          }, 1900);
+          
         }
+        else{
+          // let model = document.getElementById("model2");
+          // model.click();
+          // handleVerificationSubmit();
+          // setTimeout(() => {
+          //   if (user_data.role == "user") {
+          //     navigate("/StudentsRatingtheirTeachers");
+          //   } else navigate("/");
+          // }, 1900);
+    }
       }, 1000);
       // let { data } = await axios.post("api/v2/login/", values);
-    } catch (err) {
-      seterrMsg(err.response.data[0]);
-      console.log(err);
-    } finally {
-      setLoading(false);
-    }
-    setLoading(false);
-  }
+    // } catch (err) {
+}
+
+    
+    // setLoading(false);
+  
 
   let validationSchema = Yup.object({
     email_or_phone: Yup.string()
@@ -89,7 +93,7 @@ async function handleLogin(values) {
   const handleVerificationSubmit = () => {
     setTimeout(() => {
       let model = document.getElementById("close2");
-      console.log(model);
+      // console.log(model);
       model.click();
       // let close = document.getElementById("close");
       // close.click();

@@ -2,25 +2,36 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const Newuser = createAsyncThunk("user/Newuser", async (data) => {
-  let result;
+  // try {
+  let result='';
+  let error='';
   await axios
     .post("api/v2/login/", data)
     .then((res) => {
       result = res.data;
     })
-    .catch((err) => console.log(err.response.data));
+    .catch((err) => {
+      error = err.response.data;
+      // return err.response.data;
+    });
+    return {result,error};
+
   // let result = res.data;
   // console.log(result);
-  return result;
+  // } catch (err) {
+  //   return console.error('err');
+  // }
 });
 
-const data=JSON.parse(localStorage.getItem("user_data"))&&JSON.parse(localStorage.getItem("user_data"))
+const data =
+  JSON.parse(localStorage.getItem("user_data")) &&
+  JSON.parse(localStorage.getItem("user_data"));
 const initialState = {
   token: "",
   user_data: null,
   loading: false,
-  refresh:'',
-  error: "",
+  refresh: "",
+  error: null,
 };
 
 export const UserSlice = createSlice({
@@ -45,21 +56,27 @@ export const UserSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(Newuser.fulfilled, (state, action) => {
       state.loading = false;
-      state.token = action.payload.tokens.access;
-      state.user_data = action.payload;
-      localStorage.setItem("token", action.payload.tokens.access);
-      localStorage.setItem("refresh",action.payload.tokens.refresh );
-      localStorage.setItem("user_data",JSON.stringify(action.payload) );
+      if(action.payload['result'] !==''){
+      state.token = action.payload['result'].tokens.access;
+      state.user_data =  action.payload['result'];
+      localStorage.setItem("token", action.payload['result'].tokens.access);
+      localStorage.setItem("refresh", action.payload['result'].tokens.refresh);
+      localStorage.setItem("user_data", JSON.stringify(action.payload['result']));
       setTimeout(() => {
-        if (action.payload.role == "user") {
-          window.location="/StudentsRatingtheirTeachers";
-        } else window.location="/";
+        if (action.payload['result'].role == "user") {
+          window.location = "/StudentsRatingtheirTeachers";
+        } else window.location = "/";
       }, 1900);
-      window.location='/';
+      }else{
+      state.error = action.payload['error']
+      console.log(action.payload);
+      }
+      
+      // window.location = "/";
     });
   },
 });
-export const {addToken,user_logout}  = UserSlice.actions
+export const { addToken, user_logout } = UserSlice.actions;
 // export const {  } = UserSlice.actions;
 
 export default UserSlice.reducer;

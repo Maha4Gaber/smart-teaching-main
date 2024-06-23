@@ -125,14 +125,15 @@ const ExpertTeacherDetails = () => {
       <div className="margin-top-bottom w-100">
         <table
           className=" w-100 text-center  "
+          border={1}
           // style={tableStyles}
         >
           <colgroup>
-            <col style={{ width: "8% !important"  }} />
-            <col style={{ width: "13% !important" }} />
-            <col style={{ width: "13% !important" }} />
-            <col style={{ width: "13% !important" }} />
-            <col style={{ width: "53% !important" }} />
+            <col style={{ width: "10% "  }} />
+            <col style={{ width: "13% " }} />
+            <col style={{ width: "13% " }} />
+            <col style={{ width: "11% " }} />
+            <col style={{ width: "45% " }} />
           </colgroup>
           <thead className="">
             <tr className="">

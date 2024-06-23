@@ -101,10 +101,10 @@ margin-left: 30px;
         width: 100% !important;
         height: 18rem !important;
     }
-    .expert-teacher-details .table-bordered th {
+    .expert-teacher-details  th {
         font-size: 10;
     }
-    .expert-teacher-details .table-bordered{
+    .expert-teacher-details table{
         font-size:9px;
     }
     .expert-teacher-details table{
@@ -193,6 +193,18 @@ table .trt td{
 } */
 
 
+.margin-top-bottom table tr th{
+
+    font-size: 12px ;
+    border: 1px solid #585858a9;
+}
+.margin-top-bottom table tr td
+{
+    font-size: 12px ;
+    padding: 5px ;
+    text-align: center;
+    border: 1px solid #585858a9;
+}
 .expert-teacher-details .table {
     border-color: #ddd !important;
     /* RGB = 33,74,74 */

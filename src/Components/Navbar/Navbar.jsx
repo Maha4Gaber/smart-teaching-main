@@ -79,7 +79,7 @@ const Navbar = () => {
     const getdata = async () => {
       try {
           await axios.get("api/v3/messages").then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           setmesagess(res.data)
           });
       } catch (error) {
