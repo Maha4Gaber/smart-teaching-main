@@ -22,10 +22,10 @@ const ServiceCard = ({icon, id, title, desc}) => {
           <h2 className="">{parse(t(title))}</h2>
           <p>{parse(t(desc))}</p>
 
-          <Link to="/services">
+          {/* <Link to="/services">
               {" "}
               {t("readMore")} <BiRightArrowAlt className="mx-2" />
-          </Link>
+          </Link> */}
       </div>
   );
 }

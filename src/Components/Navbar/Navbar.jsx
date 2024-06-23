@@ -33,7 +33,7 @@ const Navbar = () => {
   useEffect(() => {
     setLang(i18n.language);
     dispatch(addToken())
-    // console.log(userData);
+    // console.log(userData.user_data.pic);
   }, [i18n.language,userData]);
 
   function saveUserData() {
@@ -435,7 +435,7 @@ const Navbar = () => {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      <img className="" src={profileimg} />
+                      <img className="" src={userData.user_data.pic} />
                     </Link>
                     <ul
                       className="dropdown-menu p-0"

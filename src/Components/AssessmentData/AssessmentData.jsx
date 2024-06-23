@@ -26,12 +26,15 @@ const AssessmentData = ({ result, type, student }) => {
     localStorage.assesrol = event.target.value;
   };
   const handleSelectChange = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setteacherid(event.target.value);
     localStorage.teacherid = event.target.value;
     localStorage.teachername = teachers.filter(
       (item) => item.id == event.target.value
     )[0].full_name;
+    // console.log(teachers.filter(
+    //   (item) => item.id == event.target.value
+    // )[0].full_name);
   };
   useEffect(() => {
     const getdata = async () => {
@@ -40,7 +43,7 @@ const AssessmentData = ({ result, type, student }) => {
           // console.log(res.data);
           setteachers(res.data);
           result ? "" : (localStorage.teacherid = res.data[0].id);
-          result ? "" : (localStorage.teachername = res.data[0].full_name);
+          // result ? "" : (localStorage.teachername = res.data[0].full_name);
         });
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -50,7 +53,7 @@ const AssessmentData = ({ result, type, student }) => {
     setvalid(
       (teacherid != null  ) & (role != null  ) & (subject != null  ) ? true : false
     );
-    localStorage.getItem("teachername");
+    // localStorage.getItem("teachername");
     getdata();
     // console.log(valid);
     // console.log(teacherid);
@@ -91,7 +94,7 @@ const AssessmentData = ({ result, type, student }) => {
               <div className="col-6 userdata">
                 {result ? (
                   <div className="infodata">
-                    {localStorage.getItem("teachername")}
+                    {localStorage.teachername }
                   </div>
                 ) : (
                   <select
@@ -223,7 +226,8 @@ const AssessmentData = ({ result, type, student }) => {
             </div>
           </div>
 
-          <div className="col-12 mt-3  mybtns">
+          {!result &&
+          (<div className="col-12 mt-3  mybtns">
             <button
               className="btn col-6 "
               disabled={!valid}
@@ -237,7 +241,8 @@ const AssessmentData = ({ result, type, student }) => {
           <span className=" text-danger  d-block col-6">
             {!valid && t("you must to answer all quistions")}
           </span>
-          </div>
+          </div>)
+          }
 
           {/* <div className="col-md-6 col-12">
             <div className="box">

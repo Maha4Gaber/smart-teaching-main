@@ -128,11 +128,11 @@ const ExpertTeacherDetails = () => {
           // style={tableStyles}
         >
           <colgroup>
-            <col style={{ width: "8%" }} />
-            <col style={{ width: "13%" }} />
-            <col style={{ width: "13%" }} />
-            <col style={{ width: "13%" }} />
-            <col style={{ width: "53%" }} />
+            <col style={{ width: "8% !important"  }} />
+            <col style={{ width: "13% !important" }} />
+            <col style={{ width: "13% !important" }} />
+            <col style={{ width: "13% !important" }} />
+            <col style={{ width: "53% !important" }} />
           </colgroup>
           <thead className="">
             <tr className="">

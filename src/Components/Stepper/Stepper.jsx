@@ -93,7 +93,7 @@ const lang = i18n.language;
           )}
           {currentStep == 3 && (
             <>
-              {/* <AssessmentData result={true} /> */}
+              <AssessmentData result={true} />
               <Pdf data={data} />
             </>
           )}
