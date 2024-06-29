@@ -71,12 +71,13 @@ const Assessment3Details = () => {
         <p className='special-p large-mb'>
             {t('ass3p7')}
         </p>
-
+            
+        <h2 className='large-mb light-blue'  >{t('COt')}</h2>
         <h2 className='large-mb'>{t('ass3h23')}</h2>
 
-        <p className='special-p'>
+        {/* <p className='special-p'>
             {t('ass3p7')}
-        </p>
+        </p> */}
 
         <ul className=' med-mb'>
 
@@ -90,7 +91,7 @@ const Assessment3Details = () => {
                 
             )}    
         </ul>
-        <Stepper Questions={ass3Questions} />
+        <Stepper Questions={ass3Questions} title='COI' />
 
         {/* <Evaluation3 Table/> */}
         {/* <EvaluationTable table={ass3EvaluationTable} /> */}

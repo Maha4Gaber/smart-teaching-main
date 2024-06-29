@@ -16,10 +16,17 @@ const Assessment3 = () => {
   let navigate =useNavigate()
         // if (!localStorage.user_data) {navigate('/login')}
         useEffect(() => {
-    if (!userData.user_data) {navigate('/login')}
-    // if (localStorage.user_data & localStorage.user_data =='null') {navigate('login')}
+            if (! userData.user_data) {navigate('/login')}
+            // if (localStorage.token & localStorage.token =='null') {navigate('login')}
+                if (userData.user_data.role==='user') {
+                    // if(){
         
-    }, []);
+                    // }
+                    console.log(userData.user_data.group);
+                    navigate('/login')
+                }
+                
+            }, []);
 return (
     
     <div>

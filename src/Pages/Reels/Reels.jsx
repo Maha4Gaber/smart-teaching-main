@@ -8,6 +8,7 @@ const Reels = () => {
       <ServicesHeader
         title='Reels'
         bold={true}
+        
       />
       <ReelsAll />
     </>

@@ -19,23 +19,26 @@
   /* margin-left: 20px; */
   font-weight: 700;
   line-height: 26.4px;
-  text-align: left !important;
-
+  /* text-align: left !important; */
+width: 100%;
 }
 .foot__link .links {
+
   /* display: flex; */
   /* flex-direction: column; */
   /* align-items: center; */
 
   gap: 10px;
-  text-align: left !important;
+  /* text-align: left !important; */
+
+  padding-left: 0 !important ;
 
 
 }
 .foot__link .links li ,
 .foot__link .links a
 {
-  text-align: left !important;
+  /* text-align: left !important; */
 
   list-style: none;
   color: var(--white, var(--white, #fff));
@@ -45,7 +48,7 @@
   font-weight: 300;
   text-decoration-line: underline;
   cursor: pointer;
-  text-align: center;
+  /* text-align: center; */
   margin: 10px 0;
 
 text-decoration: none;}

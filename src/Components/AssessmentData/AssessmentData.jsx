@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import rightLogo from "../../assests/Register/right.png";
 // import { TiTick } from "react-icons/ti";
-const AssessmentData = ({ result, type, student }) => {
+const AssessmentData = ({ result, type, student, title }) => {
   const { t } = useTranslation();
   let navigate = useNavigate();
   const [teachers, setteachers] = useState([]);
@@ -36,6 +36,7 @@ const AssessmentData = ({ result, type, student }) => {
     //   (item) => item.id == event.target.value
     // )[0].full_name);
   };
+  console.log(title);
   useEffect(() => {
     const getdata = async () => {
       try {
@@ -87,6 +88,7 @@ const AssessmentData = ({ result, type, student }) => {
   return (
     <>
       <div className=" data   mt-5">
+      <h2 className="py-3  fs-3" >{t(title)}</h2>
         <div className="row">
           <div className="col-lg-6 col-md-12 mt-3">
             <div className="row">

@@ -1406,9 +1406,9 @@ export const ass3Directions = [
     {
         desc: 'ass3dir'
     },
-    {
-        desc: 'ass3dir2'
-    }
+    // {
+    //     // desc: 'ass3dir2'
+    // }
 ]
 
 export const ass3EvaluationTable = [
@@ -1654,16 +1654,16 @@ export const ass4EvaluationTable = [
     {
         title: [
             {
-                name: 'Low level:'
+                name: 'ass4Ratn1'
             },
             {
-                name: 'Fair level:'
+                name: 'ass4Ratn2'
             },
             {
-                name: 'Satisfactory level:'
+                name: 'ass4Ratn3'
             },
             {
-                name: 'High level:'
+                name: 'ass4Ratn4'
             }
         ],
         evaluation: [

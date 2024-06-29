@@ -1,8 +1,10 @@
 import React from 'react'
 import './EvaluationTable.css'
+import { use } from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 const EvaluationTable = ({table}) => {
-
+    const {t}=useTranslation()
 
 return (
     
@@ -11,7 +13,7 @@ return (
         <thead>
             <tr>
                 {table[0].title.map(({name}, idx) => 
-                    <th scope="col" key={idx}> <div> {name} </div> </th>
+                    <th scope="col" key={idx}> <div> {t(name)} </div> </th>
                 )}
             </tr>
         </thead>

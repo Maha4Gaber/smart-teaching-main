@@ -9,6 +9,7 @@ import rightLogo from "../../../../assests/Register/right.png";
 import { Chart } from "react-google-charts";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { color } from "framer-motion";
 const AssessmentTable = ({
   Questions,
   columnHead = null,
@@ -66,7 +67,7 @@ const AssessmentTable = ({
   }
   async function handleSendData(values) {
     try {
-      console.log(values);
+      // console.log(values);
       if(g){
         values.G_score=3.5
       }
@@ -76,18 +77,19 @@ const AssessmentTable = ({
       let { data } = await axios.post(url, values);
 
       if (data) {
-        // console.log(data);
+        console.log(data);
         let newdata = data.data.percentage_level_score;
         cat = cat.split("");
         cat.forEach((el, index) => {
-          let color = "rgb(233, 50, 107)";
+          // let color = "rgb(233, 50, 107)";
+          let color = "rgb(48, 191, 206)" ;
           
-          if (newdata[el][0] > 25 && newdata[el][0] < 37.5) {
-            color = "rgb(92, 175, 34)";
+          if (newdata[el][0] >= 25 && newdata[el][0] < 37.5) {
+           color = "rgb(233, 50, 107)";
           } else if (newdata[el][0] > 37.5 && newdata[el][0] < 62.5) {
             color = "rgb(255, 152, 5)";
           } else if (newdata[el][0] < 87.5 && newdata[el][0] > 62.5) {
-            color = "rgb(48, 191, 206)";
+            color =   "rgb(92, 175, 34)";
           }
           recievddata.push([
             t(Questions[index]["category"]),
@@ -96,9 +98,24 @@ const AssessmentTable = ({
             newdata[el][0],
           ]);
         });
+        let color = "rgb(48, 191, 206)" ;
+        if (newdata.total_score_percentage[0] >= 25 && newdata.total_score_percentage[0] < 37.5) {
+          color = "rgb(233, 50, 107)";
+         } else if (newdata.total_score_percentage[0] > 37.5 && newdata.total_score_percentage[0] < 62.5) {
+           color = "rgb(255, 152, 5)";
+         } else if (newdata.total_score_percentage[0] < 87.5 && newdata.total_score_percentage[0] > 62.5) {
+           color =   "rgb(92, 175, 34)";
+         }
+        recievddata.push([
+          t('ass4cat9'),
+          newdata.total_score_percentage[0],
+          color,
+          newdata.total_score_percentage[0],
+        ])
 
-        // localStorage.data = JSON.stringify(recievddata);
+        localStorage.data = JSON.stringify(recievddata);
         addFun(recievddata)
+
         setTimeout(() => {
           let close = document.querySelector(".close-login");
           close.click();
@@ -249,7 +266,7 @@ const AssessmentTable = ({
               </tr>
               
           )}
-          <tr ><td  className="text-center position-relative  w-75">Index</td>
+          <tr ><td  className="text-center position-relative  w-75"></td>
               <td  className="text-center position-relative">1</td>
               <td  className="text-center position-relative">2</td>
               <td  className="text-center position-relative">3</td>
@@ -374,7 +391,7 @@ const AssessmentTable = ({
               ></button>
 
               <h1 className="modal-title mb-0" id="exampleModalToggleLabel4">
-                Evaluation completed successfully
+                {t('ass')}
               </h1>
 
               <img className="right-img mt-4" src={rightLogo} alt="" />

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import blogImg from "../../../assests/BlogDetails/Blog-Img.png";
 import ImageComp from "./../../ImageComp/ImageComp";
-
+import Calender from '../../../assests/Calender';
+import Person from '../../../assests/Person';
 // Icons
 import { PiUser } from "react-icons/pi";
 import { AiOutlineComment } from "react-icons/ai";
@@ -99,9 +100,9 @@ const BlogContent = ({
     <div className={`blog-content position-relative ${slice2 && "pb-4"}`}>
       {/* <ImageComp src={pic} alt= {title}/> */}
       <img className="" src={pic} alt={title} />
-      <div className="blog-desc px-3 bg-white">
-        <h1>{isRTL ? title_en : title_ar}</h1>
-        <div className="blog-details bg-white">
+      <div className="blog-desc  bg-white">
+        {/* <h1>{ title}</h1> */}
+        <div className="blog-details pt-3 bg-white">
           <div>
             <span>
               {/* <PiUser className="icon" /> {comments}{" "} */}
@@ -116,13 +117,18 @@ const BlogContent = ({
             </span>
               )
             } */}
+              {/* <br></br> */}
             {slice2 && (
+              <>
+              <Calender />
               <span>{created_at.slice(0, 10)}</span>
+              </>
               
               )}
           </div>
           {/* {liked>=0&&( */}
             <div>
+              <br></br>
             {/* <button onClick=
             {() => {
             handelllike()
@@ -135,6 +141,7 @@ const BlogContent = ({
             </button> */}
           </div>
           {/* )} */}
+        <h3 className="w-100">{title}</h3>
         </div>
 
           { detail&& <p className="" dangerouslySetInnerHTML={{ __html: description }} ></p> }

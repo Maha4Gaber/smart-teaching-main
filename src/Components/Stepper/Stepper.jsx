@@ -13,8 +13,9 @@ import EvaluationTable from "../AssessmentsComponents/EvaluationTable/Evaluation
 import AssessmentTable from "../AssessmentsComponents/AssessmentThree/AssessmentTable/AssessmentTable";
 import AssessmentData from "../AssessmentData/AssessmentData";
 import { useTranslation } from "react-i18next";
+import Slide3 from "./Slide3";
 // import { TiTick } from "react-icons/ti";
-const Stepper = ({ Questions, tableName,student }) => {
+const Stepper = ({ Questions, tableName,student,title }) => {
   const { t, i18n } = useTranslation();
 const lang = i18n.language;
   const [data, setdata] = useState([]);
@@ -66,7 +67,7 @@ const lang = i18n.language;
             </div>
           ))}
         </div>
-        <div className="body mt-5">
+        <div className="body ">
           {currentStep == 1 && (
             <AssessmentData
               type={
@@ -77,7 +78,8 @@ const lang = i18n.language;
                   : 3
               }
               student={student}
-            />
+              title={title}
+              />
           )}
           {currentStep == 2 && (
             <>
@@ -93,8 +95,11 @@ const lang = i18n.language;
           )}
           {currentStep == 3 && (
             <>
-              <AssessmentData result={true} />
-              <Pdf data={data} />
+              {/* <AssessmentData result={true} /> */}
+              <Slide3 
+                title={title}
+                data={data} />
+              {/* <Pdf data={data} /> */}
             </>
           )}
           {currentStep == 4 && (

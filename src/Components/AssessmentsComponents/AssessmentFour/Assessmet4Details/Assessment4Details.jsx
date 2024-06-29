@@ -43,7 +43,10 @@ const Assessment4Details = () => {
             )}
 
         </ul>
-        <Stepper Questions={ass4Questions} />
+        <div className="p-2">
+
+        <Stepper Questions={ass4Questions} title='TCA' />
+        </div>
 
 
         {/* <EvaluationTable table={ass4EvaluationTable}/> */}

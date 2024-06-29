@@ -368,7 +368,7 @@ const SingleStepForm = () => {
                   {t("job")}
                 </option>
                 <option value="instructor">Instructor</option>
-                <option value="user">User</option>
+                {/* <option value="user">User</option> */}
                 <option value="Principal">Principal</option>
                 <option value="supervisor">Supervisor</option>
               </select>

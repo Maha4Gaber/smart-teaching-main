@@ -80,12 +80,12 @@ function SpeedMoter() {
           <img src={ArrowImg} />
         </div>
       </div>
-      <div className="row">
+      {/* <div className="row">
         <div className="col-2"></div>
         <div className="col-2">
         <img className="" src={arrowimg} />
         </div>
-      </div>
+      </div> */}
       <div className={classes.inf__selcets}>
         <select
           value={inful}

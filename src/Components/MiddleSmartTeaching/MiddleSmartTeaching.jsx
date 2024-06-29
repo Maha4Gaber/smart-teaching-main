@@ -26,9 +26,11 @@ const MiddleSmartTeaching = () => {
       {/* <br /> */}
       {/* <br /> */}
       <div className={` row ${classes.middleSmart__z}`}>
+        <div className={` col-12 ${classes.title}`}>
+          <h4 className={` col-6 `}>{parse(t("becomeSmartSchoolTitle1"))}</h4>
+        </div>
         
         <div className={`col-sm-12 col-lg-8 ${classes.z__content}`}>
-          <h4>{parse(t("becomeSmartSchoolTitle1"))}</h4>
           <SmartText>{parse(t("becomeSmartSchoolInfo1"))}</SmartText>
           <SmartText>{parse(t("becomeSmartSchoolInfo2"))}</SmartText>
           <SmartText>{parse(t("becomeSmartSchoolInfo3"))}</SmartText>
@@ -40,17 +42,21 @@ const MiddleSmartTeaching = () => {
       <br />
       <br />
       <div className={` row ${classes.middleSmart__z}`}>
+      <div className={` col-12 ${classes.title}`}>
+      <div className="col-6"></div>
+      <h4 className='col-12'>
+            {t("becomeSmartSchoolTitle2")}
+            <small>®</small>
+            {t("becomeSmartSchoolTitle22")}
+          </h4>
+        </div>
         <div className={`${classes.image} col-sm-12 col-lg-4`}>
           <img src={Teacher} alt="teacher" id="blockB" />
         </div>
         <div
           className={`col-sm-12 col-lg-8 ${classes.z__content} ${classes.blockA}`}
         >
-          <h4>
-            {t("becomeSmartSchoolTitle2")}
-            <small>®</small>
-            {t("becomeSmartSchoolTitle22")}
-          </h4>
+          
           <SmartText>{t("becomeSmartSchoolInfo4")}</SmartText>
           <SmartText>
             {t("becomeSmartSchoolInfo5")}
@@ -62,17 +68,20 @@ const MiddleSmartTeaching = () => {
       <br />
       <br />
       <div className={` row ${classes.middleSmart__z}`}>
-        
+      <div className={` col-12 ${classes.title}`}>
+      <div className="col-6"></div>
+      <h4 className="position-relative">
+            {parse(t("becomeSmartSchoolTitle3"))}
+            <small>®</small>
+            {t("becomeSmartSchoolTitle33")}
+          </h4>
+        </div>
 
         <div
           className={`col-sm-12 col-lg-8 po ${classes.z__content}`}
           id="blockD"
         >
-          <h4 className="position-relative">
-            {parse(t("becomeSmartSchoolTitle3"))}
-            <small>®</small>
-            {t("becomeSmartSchoolTitle33")}
-          </h4>
+
           <SmartText>{t("becomeSmartSchoolInfo6")}</SmartText>
           <SmartText>{t("becomeSmartSchoolInfo7")}</SmartText>
         </div>
@@ -83,13 +92,16 @@ const MiddleSmartTeaching = () => {
       <br />
       <br />
       <div className={` row ${classes.middleSmart__z}`}>
+      <div className={` col-12 ${classes.title}`}>
+      <div className="col-6"></div>
+      <h4>{t("becomeSmartSchoolTitle4")}</h4>
+        </div>
         <div className={`${classes.image} col-sm-12 col-lg-4`}>
           <img src={AnaPic} alt="teacher" />
         </div>
         <div
           className={`col-sm-12 col-lg-8 ${classes.z__content} ${classes.blockZ}`}
         >
-          <h4>{t("becomeSmartSchoolTitle4")}</h4>
           <SmartText>{t("becomeSmartSchoolInfo8")}</SmartText>
           <SmartText>{t("becomeSmartSchoolInfo9")}</SmartText>
         </div>

@@ -82,7 +82,7 @@
 .end {
   background: var(--Green, #306c62);
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto !important;
   color: var(--white, #fff);
 
   font-family: 'Tajawal';

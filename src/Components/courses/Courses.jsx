@@ -12,7 +12,7 @@ useEffect(() => {
       try {
         await axios.get("api/v1/courses/").then((res) => {
           // console.log(res.data);
-          setCourses(res.data)
+          setCourses(res.data.slice(0,9))
         });
       } catch (error) {
         console.error("Error fetching data:", error);

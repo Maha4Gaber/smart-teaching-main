@@ -62,7 +62,7 @@ const Footer = ({ contactDetails }) => {
           <button>{t("Subscribe")}</button>
         </div> */}
       </div>
-      <footer className="footer">
+      <footer className="footer pt-5">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-3 col-md-6 col-sm-12">

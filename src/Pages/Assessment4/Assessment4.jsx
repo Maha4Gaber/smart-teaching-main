@@ -19,6 +19,13 @@ const Assessment4 = () => {
         useEffect(() => {
     if (! userData.user_data) {navigate('/login')}
     // if (localStorage.token & localStorage.token =='null') {navigate('login')}
+        if (userData.user_data.role==='user') {
+            // if(){
+
+            // }
+            console.log(userData.user_data.group);
+            navigate('/login')
+        }
         
     }, []);
   return (

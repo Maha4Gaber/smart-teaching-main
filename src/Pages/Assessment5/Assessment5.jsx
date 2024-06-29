@@ -17,10 +17,11 @@ const Assessment5 = () => {
     let navigate =useNavigate()
         // if (!localStorage.user_data) {navigate('/login')}
         useEffect(() => {
-        if (!userData.user_data.group[0]) {
+        if (userData.user_data.role !=='user') {
             // if(){
 
             // }
+            console.log(userData.user_data.group);
             navigate('/login')
         }
         

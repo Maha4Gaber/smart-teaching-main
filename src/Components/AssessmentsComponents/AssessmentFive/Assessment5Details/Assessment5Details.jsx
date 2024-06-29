@@ -83,11 +83,12 @@ const Assessment5Details = () => {
       </p>
 
       <p className="special-p">{t("ass5p9")}</p>
-      <div className=" my-5">
+      <div className=" m-5">
         <Stepper
           Questions={ass5QuestionsPartTwo}
           tableName={ass5QuestionsPartTwoTitles}
           student={true}
+          title='SRTT'
         />
       </div>
 
