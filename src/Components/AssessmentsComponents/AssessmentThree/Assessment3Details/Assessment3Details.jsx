@@ -91,7 +91,7 @@ const Assessment3Details = () => {
                 
             )}    
         </ul>
-        <Stepper Questions={ass3Questions} title='COI' />
+        <Stepper Questions={ass3Questions} title='COt' />
 
         {/* <Evaluation3 Table/> */}
         {/* <EvaluationTable table={ass3EvaluationTable} /> */}

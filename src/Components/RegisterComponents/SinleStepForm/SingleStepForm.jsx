@@ -367,10 +367,10 @@ const SingleStepForm = () => {
                 <option value="" disabled>
                   {t("job")}
                 </option>
-                <option value="instructor">Instructor</option>
+                <option value="instructor">{t('Instructor')}</option>
                 {/* <option value="user">User</option> */}
-                <option value="Principal">Principal</option>
-                <option value="supervisor">Supervisor</option>
+                <option value="Principal">{t('principal')}</option>
+                <option value="supervisor">{t('supervisors')}</option>
               </select>
 
               {formik.errors.job_title && formik.touched.job_title ? (

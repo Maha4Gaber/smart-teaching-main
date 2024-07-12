@@ -6,7 +6,7 @@ function CoursesInfo({ children, title }) {
   const {t}=useTranslation()
   return (
     <section className={classes.coursesInfo}>
-      <h3>{t('generalCourse')}</h3>
+      <h3>{t(title)}</h3>
       {children}
     </section>
   );

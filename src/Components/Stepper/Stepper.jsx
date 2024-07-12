@@ -102,7 +102,8 @@ const lang = i18n.language;
               {/* <Pdf data={data} /> */}
             </>
           )}
-          {currentStep == 4 && (
+          {title!=='SRTT'&&
+          currentStep == 4 && (
             <>
               <Instructions />
             </>

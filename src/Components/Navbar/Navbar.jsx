@@ -223,6 +223,18 @@ const Navbar = () => {
                       {t("ExpertTeacherAcademy")}
                     </NavLink>
                   </li>
+                  <li>
+                    <NavLink
+                      onClick={close}
+                      to="/SmartEducationAC"
+                      className={({ isActive }) =>
+                        isActive ? "active dropdown-item" : "dropdown-item"
+                      }
+                      end
+                    >
+                      {t("SmartEducationAC")}
+                    </NavLink>
+                  </li>
                   {/* <li>
                                         <NavLink onClick={close}
                                             to="/expert-teacher3"

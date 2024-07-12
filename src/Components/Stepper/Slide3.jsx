@@ -1,24 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Chart } from "react-google-charts";
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
-import { useTranslation } from 'react-i18next';
-import AssessmentData from '../AssessmentData/AssessmentData';
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
+import { useTranslation } from "react-i18next";
+import AssessmentData from "../AssessmentData/AssessmentData";
 import { useReactToPrint } from "react-to-print";
 import { useNavigate } from "react-router-dom";
 
-const Slide3 = ({data,title}) => {
-  const {t,i18n} = useTranslation()
+const Slide3 = ({ data, title }) => {
+  const { t, i18n } = useTranslation();
   const lang = i18n.language;
-  let isRTL = lang =='en'?'ltr':'rtl'
-  const navigate=useNavigate()
-  useEffect(()=>{
-// setTimeout(() => {
-//   handlePrint()
-  
-// }, 100);
-localStorage.title=title
-  },[])
+  let isRTL = lang == "en" ? "ltr" : "rtl";
+  let ar = lang == "en" ? true : false;
+  const navigate = useNavigate();
+  useEffect(() => {
+    // setTimeout(() => {
+    //   handlePrint()
+
+    // }, 100);
+    localStorage.title = title;
+    console.log(data);
+  }, []);
 
   // const data = JSON.parse(localStorage.getItem("data"));
   // var currentTime = new Date();
@@ -37,28 +39,24 @@ localStorage.title=title
   };
 
   function printDocument() {
-    const input = document.getElementById('divToPrint');
-    html2canvas(input)
-      .then((canvas) => {
-        let imgWidth = 208;
-        let imgHeight = canvas.height * imgWidth / canvas.width;
-        const imgData = canvas.toDataURL('img/png');
-        const pdf = new jsPDF('p', 'mm', 'a4');
-        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-        // pdf.output('dataurlnewwindow');
-        pdf.save("download.pdf");
-      })
-    ;
+    const input = document.getElementById("divToPrint");
+    html2canvas(input).then((canvas) => {
+      let imgWidth = 208;
+      let imgHeight = (canvas.height * imgWidth) / canvas.width;
+      const imgData = canvas.toDataURL("img/png");
+      const pdf = new jsPDF("p", "mm", "a4");
+      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+      // pdf.output('dataurlnewwindow');
+      pdf.save("download.pdf");
+    });
   }
   return (
     <div>
-  <div className=" bg  " style={{direction: isRTL  ,}} id="divToPrint" >
-  <div ref={componentRef}>
-    <AssessmentData
-                title={title}
-                result={true}  />
-    <div className="row text-center ">
-      {/* <div className="col-12 p-3 text-center ">
+      <div className=" bg  " style={{ direction: isRTL }} id="divToPrint">
+        <div ref={componentRef}>
+          <AssessmentData title={title} result={true} />
+          <div className="row text-center ">
+            {/* <div className="col-12 p-3 text-center ">
         <h1>{t('Teacherevaluationresults')}</h1>
       </div>
       <div className="col-6 fs-3 ">
@@ -69,17 +67,74 @@ localStorage.title=title
         
         {new Date().toISOString().slice(0,10)}
       </div> */}
-      <div className="col-12  chart">
-        <Chart
+            <div className="col-12  chart">
+              {data.map((item, idx) => (
+                <div key={idx} className="row my-2">
+                  {idx !== 0 && (
+                    <>
+                      <div
+                        className="col-6     "
+                        style={{
+                          fontSize: "14px",
+                          // textAlign:ar?'right':'left'
+                          textAlign: "right",
+                        }}
+                      >
+                        {item[0]}{" "}
+                      </div>
+                      <div
+                        className="col-6 d-flex fs-6"
+                        style={{
+                          fontSize: "3px",
+                        }}
+                      >
+                        <div
+                          className=" mx-2 "
+                          style={{
+                            width: item[1] + "%",
+                            height: "20px",
+                            backgroundColor: item[2],
+                            fontSize: "13px",
+                            textAlign: "right",
+                            color: "#fff",
+                          }}
+                        >
+                          {item[1] + " %"}
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </div>
+              ))}
+
+              {data.length !== 0 && (
+                <div className="row">
+                  <div className="col-6  "></div>
+                  <div className="col-6  d-flex ">
+                    {/* <span className=" text-start  ">0</span> */}
+                    <span className="">10</span>
+                    <span className="">20</span>
+                    <span className="">30</span>
+                    <span className="">40</span>
+                    <span className="">50</span>
+                    <span className="">60</span>
+                    <span className="">70</span>
+                    <span className="">80</span>
+                    <span className="">90</span>
+                    <span className=" text-end">100</span>
+                  </div>
+                </div>
+              )}
+              {/* <Chart
           chartType="BarChart"
           width="100%"
           height="300px"
           data={data}
           className=""
           options={options}
-        />
-      </div>
-      {/* <div className="col-12 mt-1">
+        /> */}
+            </div>
+            {/* <div className="col-12 mt-1">
               <h4>{t('Teacherevaluationreport')}</h4>
         <div className="table-responsive">
           <table className=" table-hover align-middle"
@@ -119,16 +174,26 @@ localStorage.title=title
           </table>
         </div>
       </div> */}
-    </div>
-  </div>
-    <div className="row align-items-center justify-content-center ">
-      <button onClick={()=>{navigate('/pdf')}} style={{width: 'fit-content',display:'block',}} className="m-5 print text-white  green-bg wf ">
-      {t('GPrint')}
-      </button>
+          </div>
+        </div>
+        {data.length !== 0 && (
+          <>
+            <div className="row align-items-center justify-content-center ">
+              <button
+                onClick={() => {
+                  navigate("/pdf");
+                }}
+                style={{ width: "fit-content", display: "block" }}
+                className="m-5 print text-white  green-bg wf "
+              >
+                {t("GPrint")}
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
-</div>
   );
-}
+};
 
 export default Slide3;

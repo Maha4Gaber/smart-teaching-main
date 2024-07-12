@@ -17,3 +17,23 @@
 .bg tr {
   border: 20px solid transparent !important;
 }
+.bg tr {
+  font-size: 12px;
+}
+.chart{
+  direction: ltr !important;
+}
+
+.chart span{
+  display: block;
+  width: 10%;
+  /* flex: 1; */
+  font-size: 11px;
+  text-align: right;
+  /* background-color: #7e7e7e; */
+  transform: translateX(10px);
+  /* border-left: 1px solid #8d8d8d; */
+}
+.chart .fs6s{
+  font-size: 11px;
+}

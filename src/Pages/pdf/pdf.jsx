@@ -13,6 +13,7 @@ function Pdf() {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
   let isRTL = lang == "en" ? "ltr" : "rtl";
+  let ar = lang == "en" ? true : false;
 
   useEffect(() => {
     setTimeout(() => {
@@ -58,7 +59,7 @@ function Pdf() {
         id="divToPrint"
       >
         <div>
-          <AssessmentData result={true} title={localStorage.title} />
+          <AssessmentData  result={true} title={localStorage.title} />
           <div className="row text-center ">
             {/* <div className="col-12 p-3 text-center ">
         <h1>{t('Teacherevaluationresults')}</h1>
@@ -71,36 +72,62 @@ function Pdf() {
         
         {new Date().toISOString().slice(0,10)}
       </div> */}
-            <div className="col-12 mt-5 pt-5"></div>
+            <div className="col-12 mt-5 "></div>
             <div className="col-12  chart">
               {data.map((item, idx) => (
-                <div key={idx} className="row my-2">
+                <div key={idx} className="row my-1">
                   {idx !== 0 && (
                     <>
                       <div
-                        className="col-6 text-end    "
+                        className="col-5    "
                         style={{
                           fontSize: "14px",
+                          // textAlign:ar?'right':'left'
+                          textAlign:'right',
                         }}
                       >
                         {item[0]}{" "}
                       </div>
-                      <div className="col-6 d-flex fs-6">
+                      <div className="col-6 d-flex fs-6"
+                      style={{
+                            
+                          fontSize: "3px",
+                          }}>
                         <div
-                        className=" mx-2 "
+                        className="  "
                           style={{
                             width: item[1] + "%",
                             height: "20px",
                             backgroundColor: item[2],
-                          fontSize: "11px",
+                          fontSize: "13px",
+                          textAlign:'right',
+                          color:'#fff'
                           }}
-                        ></div>
-                        {item[1] + ' %'}
+                        >
+                          {item[1] + ' %'}
+                        </div>
+                        
                       </div>
                     </>
                   )}
                 </div>
               ))}
+              <div className="row">
+              <div className="col-5  "></div>
+              <div className="col-6  d-flex fs6s ">0
+              {/* <span className=" text-start  ">0</span> */}
+              <span className="">10</span>
+              <span className="">20</span>
+              <span className="">30</span>
+              <span className="">40</span>
+              <span className="">50</span>
+              <span className="">60</span>
+              <span className="">70</span>
+              <span className="">80</span>
+              <span className="">90</span>
+              <span className=" text-end">100</span>
+              </div>
+              </div>
               {/* <Chart
                   chartType="BarChart"
                   width="90%"
@@ -110,10 +137,17 @@ function Pdf() {
                   options={options}
                 /> */}
             </div>
+            {ar&&localStorage.title==='TCA'&&<>
             <div className="col-12 mt-5 pt-5"></div>
             <div className="col-12 mt-5 pt-5"></div>
-            <div className="col-12 mt-5 pt-5">
-              <h4>{t("Teacherevaluationreport")}</h4>
+            <div className="col-12 mt-5 pt-5"></div>
+            </>
+            }
+            {
+              localStorage.title!=='SRTT'&&
+              <>
+              <div className="col-12 ">
+              {/* <h4>{t("Teacherevaluationreport")}</h4> */}
               <div className="table-responsive">
                 <table className=" table-hover align-middle">
                   <thead className="table-light">
@@ -164,6 +198,9 @@ function Pdf() {
                 </table>
               </div>
             </div>
+              </>
+            }
+            
           </div>
         </div>
       </div>

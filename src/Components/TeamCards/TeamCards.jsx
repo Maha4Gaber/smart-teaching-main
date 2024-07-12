@@ -48,7 +48,7 @@ const TeamCards = ({cards}) => {
             {cards?.map((card, idx) => (
                 <div className="col-md-3 p-3 bg-card" key={idx} data-aos="flip-left">
                     <ImageComp src={card.src} alt={card.title} />
-                    <h5 className='text-center'>{card.title}</h5>
+                    {/* <h5 className='text-center'>{card.title}</h5> */}
                     <h3 className='text-center'>{card.name}</h3>
                 </div>
 

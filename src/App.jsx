@@ -23,8 +23,9 @@
     import { useTranslation } from "react-i18next";
     import Pdf from "./Pages/pdf/pdf";
     import Profile from "./Pages/Profile/Profile";
-import Messages from "./Pages/Resources/Messages";
-
+import Messages from "./Pages/Resources/Messages";  
+import SmartEducationAC from "./Pages/SmartEducationAC/SmartEducationAC.jsx"
+import SmartEducationACDetails from "./Pages/SmartEducationACdetails/SmartEducationACdetails.jsx"
     const LazyAbout = React.lazy(() => import("./Pages/About/About"));
     const LazyLogin = React.lazy(() => import("./Pages/Login/Login"));
     const LazyRegister = React.lazy(() => import("./Pages/Register/Register"));
@@ -52,7 +53,7 @@ import Messages from "./Pages/Resources/Messages";
     const LazyAssessmentFive = React.lazy(() =>
     import("./Pages/Assessment5/Assessment5")
     );
-
+        
     
     function App() {
     const { i18n } = useTranslation();
@@ -120,6 +121,26 @@ import Messages from "./Pages/Resources/Messages";
             </React.Suspense>
             ),
         },
+        // {
+        //     path: "/SmartEducationAC",
+        //     element: (
+        //     <React.Suspense>
+        //         {" "}
+        //         <SmartEducationAC  />{" "}
+        //     </React.Suspense>
+        //     ),
+        // },
+        // {
+        //     path: "/SmartEducationACDetails/:slug",
+        //     element: (
+        //     <React.Suspense>
+        //         {" "}
+        //         <SmartEducationACDetails  />{" "}
+        //     </React.Suspense>
+        //     ),
+        // },
+        {path: "/SmartEducationAC", element: <SmartEducationAC /> },
+        {path: "/SmartEducationACDetails/:slug", element: <SmartEducationACDetails /> },
         { path: "/course-details/:id", element: <CourseDetails /> },
         { path: "/quiz", element: <QuizPage /> },
         { path: "/certification", element: <Certification /> },

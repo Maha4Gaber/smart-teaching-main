@@ -88,7 +88,8 @@ const AssessmentData = ({ result, type, student, title }) => {
   return (
     <>
       <div className=" data   mt-5">
-      <h2 className="py-3  fs-3" >{t(title)}</h2>
+      {result?<><h1 className="py-1 text-center w-100  fs-2 " >{t(title)}</h1></>:<><h2 className="py-1  fs-5 " >{t(title)}</h2></>}
+      
         <div className="row">
           <div className="col-lg-6 col-md-12 mt-3">
             <div className="row">
@@ -123,18 +124,19 @@ const AssessmentData = ({ result, type, student, title }) => {
               <div className="col-6 userlable"> {t("name Of Assessor")} </div>
               <div className="col-6 userdata">
                 <div className="static">
-                  {userdata &&
-                    userdata.full_name}
+                  {JSON.parse(localStorage.getItem("user_data"))&&JSON.parse(localStorage.getItem("user_data")).full_name}
                 </div>
               </div>
             </div>
           </div>
           <div className="col-lg-6 col-md-12 mt-3">
             <div className="row">
-              <div className="col-6 userlable"> {t("subject")}</div>
+              <div className="col-6 userlable"> 
+              {t("subject")}</div>
               <div className="col-6 userdata">
                 {result ? (
-                  <div className="static">{localStorage.subject}</div>
+                  <div className="static">
+                  {localStorage.subject}</div>
                 ) : (
                   <input
                     className=""
@@ -146,6 +148,7 @@ const AssessmentData = ({ result, type, student, title }) => {
                     placeholder={t("subject")}
                   />
                 )}
+                {/* {subject} */}
               </div>
             </div>
           </div>
@@ -154,7 +157,7 @@ const AssessmentData = ({ result, type, student, title }) => {
               <div className="col-6 userlable"> {t("Role Of Assessor")}</div>
               <div className="col-6 userdata">
                 {result ? (
-                  <div className="static">{localStorage.assesrol}</div>
+                  <div className="static">{t(localStorage.assesrol)}</div>
                 ) : (
                   <>
                     {student ? (
@@ -180,18 +183,18 @@ const AssessmentData = ({ result, type, student, title }) => {
                           {" "}
                         </option>
                         {type == 1 && (
-                          <option value="Self" className="">
+                          <option value="self" className="">
                           {t('self')}
                           </option>
                         )}
-                        <option value="Principal" className="">
+                        <option value="principal" className="">
                           {t('principal')}
                         </option>
-                        <option value="Peers" className="">
+                        <option value="peers" className="">
                           
                           {t('peers')}
                         </option>
-                        <option value="Supervisors" className="">
+                        <option value="supervisors" className="">
                           {t('supervisors')}
                         </option>
                         {/* <option value="Students" className="">
@@ -318,8 +321,8 @@ const AssessmentData = ({ result, type, student, title }) => {
                   {
                     type==1&&
                     (
-                      <option value="Self" className="">
-                      Self
+                      <option value="Selfe" className="">
+                      Selfe
                     </option>
                     )
                   }
