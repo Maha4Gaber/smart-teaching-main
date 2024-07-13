@@ -33,12 +33,12 @@ const SmartEducationAC = () => {
       <CoursesInfo title="SmartEducationAC">
         <div className="row">
           {courses.map((cours, id) => (
-            <div key={id} className="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+            <div key={id} className=" col-lg-3 col-md-6 col-sm-12">
               <div className="card" onClick={()=>{
                 navigate('/SmartEducationACDetails/'+cours.slug)
               }}>
                 <img className="" src={cours.pic} />
-                <h4>{lang=='en'?cours.title_en:cours.title_ar}</h4>
+                <h4 className="text-center  ">{lang=='en'?cours.title_en:cours.title_ar}</h4>
               </div>
             </div>
           ))}
