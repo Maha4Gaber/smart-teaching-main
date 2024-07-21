@@ -35,7 +35,7 @@ const SmartEducationACdetails = () => {
         <div className="w-100 mt-4 align-items-center d-flex justify-content-center" >
           <img className="m-auto myimg " src={teammember.pic} />
         </div>
-        <div className="text-center  mt-3 "  dangerouslySetInnerHTML={{ __html: lang=='en'?teammember.description_en:teammember.description_ar }} >
+        <div className="text-center m-auto  mt-4 col-lg-8 col-md-10 col-sm-12 "  dangerouslySetInnerHTML={{ __html: lang=='en'?teammember.description_en:teammember.description_ar }} >
         {}
         </div>
       </div>

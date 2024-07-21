@@ -290,7 +290,7 @@ const Home = () => {
       </section>
       <Courses />
       {/* Teachers Section */}
-      <section className="py-5 mb-4 teachers-home">
+      {/* <section className="py-5 mb-4 teachers-home">
         <h5 className="green-color text-center" data-aos="zoom-in">
           {t("ExpertTeacher")}
         </h5>
@@ -300,7 +300,7 @@ const Home = () => {
         </h1>
 
         <TeamCards cards={homeTeam} />
-      </section>
+      </section> */}
       {/* <Bg.Img src={logo} /> */}
       <section className="py-5">
         <FeatureCards cards={homeFeatures} />
