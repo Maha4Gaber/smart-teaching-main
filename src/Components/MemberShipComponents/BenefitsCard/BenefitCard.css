@@ -13,8 +13,8 @@
     align-items: baseline !important;
 }
 .benefit-card .benefitIcon-box{
-    width: 5.125rem;
-    height: 5.125rem;
+    width:110px;
+    height:110px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,7 +31,7 @@
 }
 
 .benefit-icon{
-    font-size: 2.25rem;
+    font-size: 4rem;
     color: var(--white-color);
     transition: all .3s;
 }
@@ -46,7 +46,7 @@
 
 .benefit-card li{
     padding: 0 !important;
-    margin-bottom: 1.19rem !important;
+    margin-bottom: .5rem !important;
 }
 .benefit-card:hover li .desc{
 color: aliceblue;

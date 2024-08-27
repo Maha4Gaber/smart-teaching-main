@@ -3,23 +3,38 @@ table{
     border-radius: .5rem !important;
 }
 
-table .main-head tr th{
-    background-color: var(--darkgreen-color);
+table .main-head .member1 th{
+    /* background-color: var(--darkgreen-color); */
+    border-color: transparent;
+    text-align: center;
+    font-size: 14px;
+}
+table .main-head .member1 th{
+
+}
+table .main-head tr th img{
+    width: 4.33rem;
+    margin:0 auto 10px ;
+    height: auto !important;
+    text-align: center !important;
+
 }
 
 table:first-child{
-    font-weight: 600 !important;
+    /* font-weight: 600 !important; */
 }
 
 table th{
     font-family: Inter;
     font-weight: 600;
-    font-size: .75rem;
-    width: 20%;
+    font-size: 1rem;
+    /* width: 20%; */
+    /* border: 1px solid  #EEECE1; */
 }
 table .member th{
     text-align: center;
-
+    font-size: 1rem;
+    background-color: #EEECE1;
 }
 
 table td{
@@ -29,11 +44,86 @@ table td{
 }
 
 table tr th:first-child{
-    width: 25% !important;
+    width: 10% !important;
+    text-align: center;
+}
+table  th.head{
+    height: 320px;
+    width: 10% !important;
+    
+}
+table  th .head{
+display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color:#fff;
+    text-align: center;
 }
 
+.myth{ width: "27.67%" !important }
+@media (max-width:767px) {
+    table .main-head .member1 th{
+
+    }
+    table .main-head tr th img{
+        width: 2.33rem;
+        margin:10 auto 10px ;
+        height: auto !important;
+        text-align: center !important;
+    
+    }
+    
+    table  th.head{
+        height: 320px;
+        width: 10% !important;
+        
+    }
+    .myth{
+        width: 50% !important;
+    }
+}
 table tr{
     display: table-row;
 }
+table  th .head.plan0{
+    background-color: #008000;
+}
+table  tr.subplan0 th,    table  tr.subplan0 td{
+    background-color: #DDFFDD;
+}
 
 
+table  th .head.plan1{
+    background-color: #7030A0;
+}
+table  tr.subplan1 th,    table  tr.subplan1 td{
+    background-color: #E5E5FF;
+}
+
+table  th .head.plan2{
+    background-color: #0070C0;
+}
+table  tr.subplan2 th,    table  tr.subplan2 td{
+    background-color: #E5FFFF;
+}
+
+table  th .head.plan3{
+    background-color: #C00000;
+}
+table  tr.subplan3 th,    table  tr.subplan3 td{
+    background-color: #FDEADA;
+}
+
+
+
+.join{
+    padding: 5px  ;
+    height: 100%;
+    /* margin:20px auto; */
+    background-color: var(--darkgreen-color);
+    font-size: 14px;
+    color: #fff;
+    border-radius: 10px;
+    border: 1px solid var(--yellow-color);
+}

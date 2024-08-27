@@ -34,9 +34,10 @@ import part4 from '../src/assests/partner-4.png'
 import part5 from '../src/assests/partner-5.png'
 
 // Import Memberships Plans Imgs
-import plan1 from '../src/assests/MemberShip/price__1.png'
-import plan2 from '../src/assests/MemberShip/price__2.png'
-import plan3 from '../src/assests/MemberShip/price__2.png'
+import plan1 from '../src/assests/MemberShip/img1.png'
+import plan2 from '../src/assests/MemberShip/img2.png'
+import plan3 from '../src/assests/MemberShip/img3.png'
+import plan4 from '../src/assests/MemberShip/img4.png'
 
 // Import Comments Imgs
 import person1 from '../src/assests/Comments/person1.png'
@@ -239,38 +240,38 @@ export const loginInputField = [
 
 export const MemeberShipTypesData = [
     {
-        head: 'FREE Teacher Membership',
+        head: 'membersidehead1',
         lists: [
 
         { icon: <FaCheck />,
-            list: 'Become a part of the Smart Teaching education community by signing up for your FREE Teacher membership',
+            list: 'list1',
         },
         {
             icon: <FaCheck />,
-            list: 'Access to hundreds of courses, tools, forms, worksheets, articles and printable materials and programs to enhance your life and your career.'
+            list: 'list2'
         }
         ]
     },
     {
-        head: 'Expert Teacher Membership',
+        head: 'membersidehead2',
         lists: [
 
         { icon: <FaCheck />,
-            list: 'Expert Membership is for teachers, supervisors, administrators, and other education professionals who registers in the Smart Teaching Professional Development Programme',
+            list: 'list3',
         }
         ]
     },
     {
-        head: 'School Membership',
+        head: 'membersidehead3',
         lists: [
 
         { icon: <FaCheck />,
-            list: 'School Members are organisations that view Smart Teaching System as a strategic platform. This includes Educational Institutions of all sizes and types including schools, colleges, universities, and training providers',
+            list: 'list4',
         },
-        {
-            icon: <FaCheck />,
-            list: 'School Membership will allow all teachers unlimited access to the site.'
-        }
+        // {
+        //     icon: <FaCheck />,
+        //     list: 'School Membership will allow all teachers unlimited access to the site.'
+        // }
         ]
     }
 ]
@@ -278,19 +279,19 @@ export const MemeberShipTypesData = [
 export const JoinOurCommunity = [
     {
         icon: <FaCheck />,
-        desc: 'STS offers you the best in resources and support materials to help deepen your understanding of successful teaching, assessment, and evaluation practices. Our teacher-centred professional resources will help you zero in on the key issues confronting you and your students in today’s classrooms.'
+        desc: 'memberp1'
     },
     {
         icon: <FaCheck />,
-        desc: 'Foster mutual support and engagement through powerful resources for driving teacher and school improvement.'
+        desc: 'memberp2'
     },
     {
         icon: <FaCheck />,
-        desc: 'Join and participate in the STS Working Groups, industry collaborations that develop teaching professionalism and educational opportunities.'
+        desc: 'memberp3'
     },
     {
         icon: <FaCheck />,
-        desc: 'Use the STS member logo on your own site and have your logo listed on our members’ page and in other promotional material.'
+        desc: 'memberp4'
     }
 ]
 
@@ -298,148 +299,139 @@ export const BenefitCards = [
     {
         id: '01',
         icon: <FaArrowUpRightDots className="benefit-icon"/>,
-        head: 'Boost Your <br/> Knowledge and Skills',
+        head: 'memberbenefithead3',
         lists: [
             {
-                list: 'up to 50% discounts on our STS Expert Teacher programmes and events including seminars, workshops, on-site training, and self-study courses.'
+                list: 'memberbenefitp1'
             },
             {
-                list: 'Free access to Research reports and case studies conducted by other members in the profession.'
+                list: 'memberbenefitp2'
             },
             {
-                list: 'Free access to a high quality Competency assessment model.'
+                list: 'memberbenefitp3'
             },
             {
-                list: '​​Access to wide range of essential tools and resources.'
+                list: 'memberbenefitp4'
             }
         ]
     },
     {
         id: '02',
         icon: <FaUsers className="benefit-icon"/>,
-        head: 'Stay Connected',
+        head: 'memberbenefithead2',
         lists: [
             {
-                list: 'Grow your personal and professional support system.'
+                list: 'memberbenefitp5'
             },
             {
-                list: '​Expand your network and professional presence by participating in the network groups.'
+                list: 'memberbenefitp6'
             },
             {
-                list: '​Build strong connections while learning best practices.'
+                list: 'memberbenefitp7'
             },
             {
-                list: 'Share your expertise by your case studies and articles in the smart Teaching platform.'
+                list: 'memberbenefitp8'
             },
             {
-                list: '​​Gain new ideas, best practices, and industry news through networking.'
-            }
+                list: 'memberbenefitp9'
+            },
         ]
     },
     {
         id: '03',
         icon: <PiCertificateLight className="benefit-icon"/>,
-        head: 'Gain More Confidence',
+        head: 'memberbenefithead1',
         lists: [
             {
-                list: 'The Expert Teacher certifications is the most prestigious in the teaching industry.'
+                list: 'memberbenefitp12'
             },
             {
-                list: 'Receive training, professional recognition, and opportunities for continued growth that is difficult to get elsewhere.'
+                list: 'memberbenefitp11'
             },
             {
-                list: 'Opportunities to showcase your teaching skills and expertise by speaking at conferences and events and contributing to industry and professional publications.'
-            }
+                list: 'memberbenefitp10'
+            },
         ]
     }
 ]
 
 export const memberShipLinks = [
     {
-        link: 'Organizations that join the STS'
+        link: 'memberlink1'
     },
     {
-        link: 'Benefits of membership'
+        link: 'memberbenefittitle'
     },
     {
-        link: 'Training'
+        link: 'memberlink3'
     },
     {
         link: 'Assessments'
     },
     {
-        link: 'Resources'
+        link: 'articls'
     },
     {
-        link: 'Networking'
+        link: 'memberlink6'
     },
     {
         link: 'Groups',
     },
     {
-        link: 'Members of Smart Teaching System'
+        link: 'memberlink8'
     }
 ]
 
 export const membershipsPlans = [
     {
         id: 0,
-        head: 'FREE Teacher <br/> membership',
+        head: 'memberPlanhead1',
         img: plan1,
-        cost: 0,
-        title: 'FREE Teacher membership',
+        cost: 'free',
+        title: 'memberPlantitle1',
         lists: [
             {
-                list: 'Membership provides many opportunities to interact and exchange ideas with teachers, educationalists, researchers and a wide range of high-profile education events.'
+                list: 'memberPlanp1'
             },
-            {
-                list: 'Increase your knowledge and skills and advance your career to the next level with our professional development tools and resources.'
-            },
-            {
-                list: 'Meet, communicate and collaborate with your peers within the education community through a variety of networking opportunities'
-            },
-            {
-                list: 'Strengthen your skills and capacities whether you are a school director, a school manager, a teacher, educator, or provide administration support.'
-            }
+            
         ]
     },
     {   
         id: 1,
-        head: 'Expert Teacher <br/> Membership',
+        head: 'memberPlanhead2',
         img: plan2,
-        cost: 8,
-        title: 'Expert Teacher Membership',
+        cost: 'memberPlanp5',
+        title: 'memberPlantitle1',
         lists: [
             {
-                list: 'Expert Membership is for teachers, supervisors, administrators, and other education professionals who registers in the Smart Teaching Professional Development Programme.'
+                list: 'memberPlanp2'
             },
-            {
-                list: 'Expert membership package provides many opportunities to interact and exchange ideas with teachers, educationalists, researchers and a wide range of education tools and resources.'
-            },
-            {
-                list: 'Expert Teacher Membership is one of the best professional development investments you can make.'
-            },
-            {
-                list: 'Allows one user to unlimited access to all resources on the site. Only $8per month!'
-            }
+            
         ]
     },
     {   
         id: 2,
-        head: 'Institutional <br/> Membership',
+        head: 'memberPlanhead3',
         img: plan3,
-        cost: 4,
-        title: 'Institutional Membership',
+        cost: 'contactUs',
+        title: 'memberPlantitle3',
         lists: [
             {
-                list: 'School membership is an organisational membership giving teachers access to our dedicated School Members Area, incorporating our educational resources, assessment tools, research materials and case studies.'
-            },
-            {
-                list: 'School Membership is open to any school interested in developing and improving teaching practices'
-            },
-            {
-                list: 'Use the STS member logo on your own site and have your logo listed on our members’ page and in other promotional material.'
+                list: 'memberPlanp3'
             }
+        ]
+    },
+    {   
+        id: 3,
+        head: 'memberPlanhead4',
+        img: plan4,
+        cost: 'contactUs',
+        title: 'memberPlantitle4',
+        lists: [
+            {
+                list: 'memberPlanp4'
+            },
+            
         ]
     }
 ]
@@ -447,377 +439,641 @@ export const membershipsPlans = [
 
 export const benefitsDetails = [
     {
-        title : 'Home',
-        cases: [
+        head : 'free',
+        plan:[
             {
-                case: true,
+                title : 'freeplan1',
+                cases: [
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
             },
             {
-                case: true,
+                title : 'freeplan2',
+                cases: [
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
             },
             {
-                case: true,
+                title : 'freeplan3',
+                cases: [
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
             },
             {
-                case: true,
+                title : 'freeplan4',
+                cases: [
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
             },
+            {
+                title : 'freeplan5',
+                cases: [
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'freeplan6',
+                cases: [
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'freeplan7',
+                cases: [
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'freeplan8',
+                cases: [
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+
         ]
     },
     {
-        title: 'Smart Teaching System',
-        cases: [
+        head : 'memberPlanp5',
+        plan:[
             {
-                case: true,
+                title : 'freeplan9',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
             },
             {
-                case: true,
+                title : 'freeplan10',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
             },
             {
-                case: true,
+                title : 'freeplan11',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
             },
             {
-                case: true,
+                title : 'freeplan12',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
             },
+            {
+                title : 'freeplan13',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'freeplan14',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'freeplan15',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            
+
         ]
     },
     {
-        title: 'Factors Affecting Student Achievement',
-        cases: [
+        head : 'contactUs',
+        plan:[
             {
-                case: false,
+                title : 'plan31',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
             },
             {
-                case: true,
+                title : 'plan32',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
             },
             {
-                case: true,
+                title : 'plan33',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
             },
             {
-                case: true,
+                title : 'plan34',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
             },
+            {
+                title : 'plan35',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan36',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan37',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan38',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan39',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan310',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan311',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan312',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan313',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan314',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            
+
         ]
     },
     {
-        title: 'Expert Teacher',
-        cases: [
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Academy',
-        cases: [
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Individual Professional Development Plan',
-        cases: [
-            {
-                case: false,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Assessments',
-        cases: [
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Classroom Observation Instruments',
-        cases: [
-            {
-                case: false,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Students Rating their Teachers',
-        cases: [
-            {
-                case: false,
-            },
-            {
-                case: false,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Simplified Teachers Competency Assessment',
-        cases: [
-            {
-                case: false,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Teacher Competency Assessment (Self)',
-        cases: [
-            {
-                case: false,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Teacher Competency Assessment (Superior)',
-        cases: [
-            {
-                case: false,
-            },
-            {
-                case: false,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Resources',
-        cases: [
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Articles (Read)',
-        cases: [
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Articles (Read and comment)',
-        cases: [
-            {
-                case: false,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Library (Access to Free Courses)',
-        cases: [
-            {
-                case: false,
-            },
-            {
-                case: false,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Introduction to STS (Arabic)',
-        cases: [
-            {
-                case: false,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Membership',
-        cases: [
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Expert Teacher Training Programme',
-        cases: [
-            {
-                case: false,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'Expert Teacher Certification',
-        cases: [
-            {
-                case: false,
-            },
-            {
-                case: false,
-            },
-            {
-                case: true,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'School Projects',
-        cases: [
-            {
-                case: false,
-            },
-            {
-                case: false,
-            },
-            {
-                case: false,
-            },
-            {
-                case: true,
-            },
-        ]
-    },
-    {
-        title: 'School Advertising',
-        cases: [
-            {
-                case: false,
-            },
-            {
-                case: false,
-            },
-            {
-                case: false,
-            },
-            {
-                case: true,
-            },
+        head : 'contactUs',
+        plan:[
+            {
+                title : 'plan41',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan42',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan43',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan44',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan45',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan46',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+            {
+                title : 'plan47',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
+
         ]
     },
 

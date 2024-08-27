@@ -4,20 +4,24 @@ import { FaCircleCheck } from "react-icons/fa6"; // with circle
 
 import './MemeberShipTypes.css'
 import { MemeberShipTypesData } from './../../../data';
+import { useTranslation } from 'react-i18next';
 
 const MemeberShipTypes = () => {
+    const { t } = useTranslation();
+
+
 
     return (
     <div className='member-type p-3 mb-0 mb-lg-4'>
 
 
-        <h2 className='mt-3'>Types of MemberShip</h2>
-        <p>There are three types of membership</p>
+        <h2 className='mt-3'>{t('membersidetitle')}</h2>
+        <div>{t('membersidedesc')}</div>
     
         {MemeberShipTypesData.map (({head, lists}, idx) => 
 
             <div key={idx}>
-                <h3>{head}</h3>
+                <h2>{t(head)}</h2>
                 
                 <ul>
                     {lists.map((list, idx) =>
@@ -25,7 +29,7 @@ const MemeberShipTypes = () => {
                             <span className='simple-icon'>{list.icon}</span>
                             <span className='mx-2'></span>
                             <span className='desc'>
-                                {list.list}
+                                {t(list.list)}
                             </span>
                         </li>
                     )}

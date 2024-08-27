@@ -1,107 +1,124 @@
-.member-plan{
-    position: relative;
-    padding: 1.25rem 2.5rem;
-    border-radius: 0.625rem;
-    background: var(--white-color);
-    box-shadow: 0px 0px 20px 0px rgba(95, 45, 237, 0.15);
-    transition: all .5s;
+.member-plan {
+  position: relative;
+  padding: 20px 10px;
+  border-radius: 0.625rem;
+  background: var(--white-color);
+  box-shadow: 0px 0px 20px 0px rgba(95, 45, 237, 0.15);
+  transition: all 0.5s;
 }
 
-.member-plan h1{
-    color:#0F0F0F;
-    font-family: Inter;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0;
-    margin-top: 2.12rem;
-    transition: all .5s;
-}
-
-.member-plan img{
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    width: 11.1875rem;
-    height: 5.625rem;
-}
-
-.member-plan .plan-price .dollar-sign{
-    color: #0F0F0F;
-    font-family: Inter;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    transition: all .5s;
-}
-
-.member-plan .plan-price .member-price{
-    font-family: Inter;
-    font-size: 2.25rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+.member-plan h1 {
+  color: #0f0f0f !important;
+  background-color: transparent !important;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  /* margin-top: 2.12rem; */
+  transition: all 0.5s;
 
 }
-.member-plan .plan-price .duration{
-    font-family: Inter;
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: #ACACAC;
-    transition: all .5s;
+
+.plans .img {
+    height: 100px;
+}
+    .plans .img img {
+  width: 100px;
+  height: auto;
+  margin: 10px auto;
 }
 
-.member-plan h4{
-    color:#0F0F0F;
-    font-family: Inter;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.1875rem;
-    margin-top: 1rem;
-    margin-bottom: 2.5rem;
-    transition: all .5s;
+.plans .title {
+  padding: 10px 2px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  background-color: var(--darkgreen-color);
+  color: #fff;
 }
 
-.member-plan .icon-plan{
-    padding: 1px 3px;
-    width: fit-content;
-    height: fit-content;
-    font-size: .75rem;
+.plans .border-y {
+  border: 1px solid var(--yellow-color);
 }
-.plan0 .icon-plan  , .plan2 .icon-plan{
-    background-color: var(--yellow-color);
-    transition: all .5s;
-}
-
-.plan1 .icon-plan{
-    color: var(--white-color);
-    background-color: var(--green-color);
-    transition: all .5s;
+.member-plan .plan-price .dollar-sign {
+  color: #0f0f0f;
+  font-family: Inter;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: all 0.5s;
 }
 
-.member-plan ul{
-    margin-bottom: 2.5rem !important;
+.member-plan .plan-price .member-price {
+  font-family: Inter;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.member-plan .plan-price .duration {
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #acacac;
+  transition: all 0.5s;
 }
 
-.member-plan button{
-    width: 100% !important;
-    border: 0 ;
-    height: 2.5rem !important;
-    border-radius: 4.0625rem !important;
-    color: var(--white-color) !important;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    transition: all .5s;
+.member-plan h4 {
+  color: #0f0f0f;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1875rem;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  transition: all 0.5s;
 }
 
-.plan1 button{
-    background-color: var(--green-color);
+.member-plan .icon-plan {
+  padding: 1px 3px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 0.75rem;
+}
+.plan0 .icon-plan,
+.plan2 .icon-plan {
+  background-color: var(--yellow-color);
+  transition: all 0.5s;
 }
 
-.plan0 button, .plan2 button{
-    background-color: #DEBD63;
+.plan1 .icon-plan ,
+    .plan3 .icon-plan {
+  color: var(--white-color);
+  background-color: var(--green-color);
+  transition: all 0.5s;
+}
+
+.member-plan ul {
+  margin-bottom: 2.5rem !important;
+}
+
+.member-plan button {
+  width: 100% !important;
+  border: 0;
+  height: 2.5rem !important;
+  border-radius: 4.0625rem !important;
+  color: var(--white-color) !important;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.5s;
+}
+
+.plan1 button {
+  background-color: var(--green-color);
+}
+
+.plan0 button,
+.plan2 button {
+  background-color: #debd63;
 }
 
 /* .plan0 button:hover, .plan2 button:hover{
@@ -110,28 +127,27 @@
     background-color: var(--white-color) !important;
 } */
 .plan:hover {
-    color: var(--white-color);
-    background-color: var(--green-color);
+  color: var(--white-color);
+  background-color: var(--green-color);
 }
-.plan:hover h1{
-    color: var(--white-color);
+.plan:hover h1 {
+  color: var(--white-color);
 }
-.plan:hover .dollar-sign{
-    color: var(--white-color);
+.plan:hover .dollar-sign {
+  color: var(--white-color);
 }
-.plan:hover h4{
-    color: var(--white-color);
+.plan:hover h4 {
+  color: var(--white-color);
 }
-.plan:hover .icon-plan{
-    color: var(--green-color);
-    background-color: var(--white-color);
+.plan:hover .icon-plan {
+  color: var(--green-color);
+  background-color: var(--white-color);
 }
-.plan:hover button{
-    color: #DEBD63 !important;
-    border: 1px solid var #DEBD63 !important;
-    background-color: var(--white-color) !important;
+.plan:hover button {
+  color: #debd63 !important;
+  border: 1px solid var #debd63 !important;
+  background-color: var(--white-color) !important;
 }
 
-.plan:hover button{
-
+.plan:hover button {
 }

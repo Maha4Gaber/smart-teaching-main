@@ -17,10 +17,10 @@
         padding-right: 1rem;
     }
 }
-.main-membership-img h1{
-    /* font-size: 3rem; */
-    /* font-weight: 700;
-    color: var(--white-color); */
+.join-community h1{
+    font-weight: 700;
+    color: var(--white-color);
+    background-color: var(--darkgreen-color);
 }
 
 .membership{
@@ -40,6 +40,11 @@
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
 }
 
+@media  (max-width: 990px) {
+    .membership .member-type{
+        display: none;
+    }
+}
 .membership .member-type h2{
     font-family: Arial;
     font-size: 1.5rem;
@@ -52,8 +57,8 @@
 
 .membership .member-type p,
     .membership .member-type h3{
-    margin-left: 30px;
-    text-align: left;
+    /* margin-left: 30px; */
+    /* text-align: left; */
 
 }
 .membership ul{
@@ -92,7 +97,16 @@
 }
 
 
-
+.BenefitsPlanheader{
+    width: fit-content;
+    padding: 10px 30px;
+    margin:20px auto;
+    background-color: var(--darkgreen-color);
+    font-size: 24px;
+    color: #fff;
+    border-radius: 20px;
+    border: 1px solid var(--yellow-color);
+}
 
 
 
