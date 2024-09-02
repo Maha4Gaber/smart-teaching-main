@@ -386,7 +386,7 @@ export const membershipsPlans = [
     {
         id: 0,
         head: 'memberPlanhead1',
-        img: plan1,
+        img: plan4,
         cost: 'free',
         title: 'memberPlantitle1',
         lists: [
@@ -399,7 +399,7 @@ export const membershipsPlans = [
     {   
         id: 1,
         head: 'memberPlanhead2',
-        img: plan2,
+        img: plan3,
         cost: 'memberPlanp5',
         title: 'memberPlantitle1',
         lists: [
@@ -412,7 +412,7 @@ export const membershipsPlans = [
     {   
         id: 2,
         head: 'memberPlanhead3',
-        img: plan3,
+        img: plan2,
         cost: 'contactUs',
         title: 'memberPlantitle3',
         lists: [
@@ -424,7 +424,7 @@ export const membershipsPlans = [
     {   
         id: 3,
         head: 'memberPlanhead4',
-        img: plan4,
+        img: plan1,
         cost: 'contactUs',
         title: 'memberPlantitle4',
         lists: [
@@ -1204,7 +1204,7 @@ export const expertTeacherLinks = [
     },
     {
         link: 'resources',
-        path: '/'
+        path: '/resources'
     },
     {
         link: 'blogs',

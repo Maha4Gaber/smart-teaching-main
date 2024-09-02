@@ -89,7 +89,7 @@ margin-left: 30px;
     background-position: center; */
     width: 50%;
     margin: auto;
-    height: 370px;
+    height: auto;
 }
 
 
@@ -99,7 +99,7 @@ margin-left: 30px;
     }
     .expert-teacher-details .graph{
         width: 100% !important;
-        height: 18rem !important;
+        /* height: 18rem !important; */
     }
     .expert-teacher-details  th {
         font-size: 10;

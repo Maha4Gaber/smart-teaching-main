@@ -13,13 +13,15 @@ function Book({book}) {
     <motion.div className={classes.book}>
       <div className={classes.book__container}>
         <img
+        className='h-auto    '
           alt='bookImg'
           src={book.image}
         />
       </div>
       <h4>{book.title}</h4>
-      <p className="cat">{book.category}</p>
+      
       {/* <hr /> */}
+      {classes.book__tag&& <p className="mb-0">{book.category}</p>}
       <div className={classes.book__tag}>
         <span>{book.type}</span>
         <a
