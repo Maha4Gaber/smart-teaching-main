@@ -96,7 +96,9 @@ const BenefitsPlan = () => {
                 <tr key={idx} className={` subplan${id} `}  >
                 <th className={ar} >{t(title)} </th>
               {cases.map((item, idx) => (
-                <td key={idx}>{item.case && <FaCheck />}</td>
+                <td key={idx}>{
+                  typeof(item.case)==='boolean'?item.case && <FaCheck />:item.case
+                }</td>
               ))}
               <br />
                 </tr>
@@ -107,14 +109,14 @@ const BenefitsPlan = () => {
               
             </>
           ))}
-          <tr className="">
+          {/* <tr className="">
             <th className=""></th>
             <th className="">{t('plan48')}</th>
             <th ></th>
             <th >1</th>
             <th >10</th>
             <th >20</th>
-            </tr>
+            </tr> */}
             <tr className="">
             <th className=""></th>
             <th className=""></th>

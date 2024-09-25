@@ -583,6 +583,7 @@ export const benefitsDetails = [
     {
         head : 'memberPlanp5',
         plan:[
+
             {
                 title : 'freeplan9',
                 cases: [
@@ -702,8 +703,23 @@ export const benefitsDetails = [
                     },
                 ]
             },
-            
-
+            {
+                title : 'plan48',
+                cases: [
+                    {
+                        case: '',
+                    },
+                    {
+                        case: '1',
+                    },
+                    {
+                        case: '10',
+                    },
+                    {
+                        case: '20',
+                    },
+                ]
+            },
         ]
     },
     {
@@ -879,23 +895,23 @@ export const benefitsDetails = [
                     },
                 ]
             },
-            // {
-            //     title : 'plan311',
-            //     cases: [
-            //         {
-            //             case: false,
-            //         },
-            //         {
-            //             case: false,
-            //         },
-            //         {
-            //             case: true,
-            //         },
-            //         {
-            //             case: true,
-            //         },
-            //     ]
-            // },
+            {
+                title : 'plan311',
+                cases: [
+                    {
+                        case: false,
+                    },
+                    {
+                        case: false,
+                    },
+                    {
+                        case: true,
+                    },
+                    {
+                        case: true,
+                    },
+                ]
+            },
             // {
             //     title : 'plan312',
             //     cases: [
