@@ -4,7 +4,7 @@ import SidebarLinks from "./../../Components/SidebarLinks/SidebarLinks";
 import { expertTeacherLinks } from "../../data";
 import Assessment4Details from "../../Components/AssessmentsComponents/AssessmentFour/Assessmet4Details/Assessment4Details";
 import Assessment4Sidebar from "../../Components/AssessmentsComponents/AssessmentFour/Assessment4Sidebar/Assessment4Sidebar";
-import '../Assessment2/Assessment2.css'
+import "../Assessment2/Assessment2.css";
 import "./Assessment4.css";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
@@ -14,20 +14,21 @@ const Assessment4 = () => {
   const lang = i18n.language;
   let isRTL = lang == "en" ? "ltr" : "rtl";
   const userData = useSelector((state) => state.userData);
-  let navigate =useNavigate()
-        // if (!localStorage.user_data) {navigate('/login')}
-        useEffect(() => {
-    if (! userData.user_data) {navigate('/login')}
+  let navigate = useNavigate();
+  // if (!localStorage.user_data) {navigate('/login')}
+  useEffect(() => {
+    if (!userData.user_data) {
+      navigate("/login");
+    }
     // if (localStorage.token & localStorage.token =='null') {navigate('login')}
-        if (userData.user_data.role==='user') {
-            // if(){
+    if (userData.user_data.role === "user") {
+      // if(){
 
-            // }
-            console.log(userData.user_data.group);
-            navigate('/login')
-        }
-        
-    }, []);
+      // }
+      console.log(userData.user_data.group);
+      navigate("/login");
+    }
+  }, []);
   return (
     <div>
       {/* <figure className="main-ass2-img main-img d-flex align-items-center ">
@@ -46,7 +47,6 @@ const Assessment4 = () => {
           <div className="col-lg-9 px-3">
             <Assessment4Details />
           </div>
-          
         </div>
       </section>
     </div>
