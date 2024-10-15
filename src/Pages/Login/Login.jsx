@@ -16,7 +16,7 @@ import { BiSolidShow } from "react-icons/bi";
 import "./Login.css";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import {  Newuser } from "../../Slices/User/User";
+import { Newuser } from "../../Slices/User/User";
 
 const Login = ({}) => {
   const { t, i18n } = useTranslation();
@@ -29,40 +29,36 @@ const Login = ({}) => {
   const user_data = useSelector((state) => state.userData);
   const dispatch = useDispatch();
 
-async function handleLogin(values) {
+  async function handleLogin(values) {
     // setLoading(true);
     // try {
-      dispatch(Newuser(values));
-      setTimeout(() => {
-        // console.log(user_data);
+    dispatch(Newuser(values));
+    setTimeout(() => {
+      // console.log(user_data);
 
-        if (user_data.error !==null) {
-          seterrMsg(user_data.error['non_field_errors'][0]);
-          // console.log(err);
-    // setLoading(false);
-          // console.log(user_data);
+      if (user_data.error !== null) {
+        seterrMsg(user_data.error["non_field_errors"][0]);
+        // console.log(err);
+        // setLoading(false);
+        // console.log(user_data);
         //   // localStorage.token = user_data.tokens.access;
         //   // localStorage.user_data = JSON.stringify(user_data);
-          
-        }
-        else{
-          // let model = document.getElementById("model2");
-          // model.click();
-          // handleVerificationSubmit();
-          // setTimeout(() => {
-          //   if (user_data.role == "user") {
-          //     navigate("/StudentsRatingtheirTeachers");
-          //   } else navigate("/");
-          // }, 1900);
-    }
-      }, 1000);
-      // let { data } = await axios.post("api/v2/login/", values);
+      } else {
+        // let model = document.getElementById("model2");
+        // model.click();
+        // handleVerificationSubmit();
+        // setTimeout(() => {
+        //   if (user_data.role == "user") {
+        //     navigate("/StudentsRatingtheirTeachers");
+        //   } else navigate("/");
+        // }, 1900);
+      }
+    }, 1000);
+    // let { data } = await axios.post("api/v2/login/", values);
     // } catch (err) {
-}
+  }
 
-    
-    // setLoading(false);
-  
+  // setLoading(false);
 
   let validationSchema = Yup.object({
     email_or_phone: Yup.string()

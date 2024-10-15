@@ -3,3 +3,72 @@
         text-align: center;
     }
 }
+
+.multi-form input, .multi-form #inputGroupSelect01 {
+    width: 100% !important;
+}
+
+.multi-form #inputGroupSelect01 option:hover{
+    background-color: #214A4A !important;
+}
+
+
+.rec{
+    width: 1.875rem;
+    height: 0.3125rem;
+    border-radius: 0.5rem;
+    background: #ACACAC;
+}
+
+.active-rec{
+    width: 3.125rem;
+    height: 0.3125rem;
+    border-radius: 0.5rem;
+    background: #214A4A ;
+}
+
+@media screen and (mx-width: 992px) {
+    .name-input{
+        margin-top: 100px !important;
+    }
+}
+
+@media screen and(max-width: 1200px) {
+    .active-rec{
+        width: 2.5rem !important;
+    }
+    .rec{
+        width: 1.275rem !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .active-rec{
+        width: 3.125rem !important;
+    }
+    .rec{
+        width: 1.875rem !important;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .name-input{
+        margin-top: 80px !important;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .select-form{
+        width: 90% !important;
+    }
+}
+
+
+/* .form-floating>.form-select~label{
+    transform: none !important;
+}
+
+.multi-form #floatingSelect:focus>label{
+    transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+} */
