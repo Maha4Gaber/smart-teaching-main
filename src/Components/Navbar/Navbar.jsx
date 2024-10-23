@@ -406,6 +406,18 @@ const Navbar = () => {
                   {t("membership")}
                 </NavLink>
               </li>
+              <li>
+                <NavLink
+                  onClick={close}
+                  to="/contactus"
+                  className={({ isActive }) =>
+                    isActive ? "active nav-item" : "nav-item"
+                  }
+                  end
+                >
+                  {t("contactUs")}
+                </NavLink>
+              </li>
 
               {userData.user_data!==null ? (
                 <>
