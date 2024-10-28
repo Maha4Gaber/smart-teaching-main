@@ -34,8 +34,7 @@ function BookPage() {
       <div className="info__layout row">
         {books.map((book, idx) => (
           <div className="col-lg-2 col-md-3 col-4 mt-3" key={idx}>
-          <Book  book={book} />
-
+            <Book book={book} />
           </div>
         ))}
       </div>

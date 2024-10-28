@@ -139,7 +139,15 @@ const BenefitsPlan = () => {
           <tr className="">
             <th className=""></th>
             <th className=""></th>
-            <th></th>
+            <th>
+            <div
+                data-bs-target="#exampleModalToggle3"
+                data-bs-toggle="modal"
+                className="w-100  text-center join cursor-pointer"
+                onClick={() => sendRequest("Expert")}
+              >
+                {t("joinUs")}
+              </div></th>
             <th>
               <div
                 data-bs-target="#exampleModalToggle3"
