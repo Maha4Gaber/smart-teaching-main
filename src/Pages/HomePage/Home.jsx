@@ -193,7 +193,7 @@ const Home = () => {
                 {" "}
                 <Link
                   className="p-0 text-dark d-flex align-items-center"
-                  to="/expertteacher"
+                  to="/login"
                 >
                   {" "}
                   {t(
